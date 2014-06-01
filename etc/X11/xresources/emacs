@@ -1,0 +1,77 @@
+emacs.bitmapIcon: off
+
+emacs.BorderWidth: 2
+emacs.borderWidth: 4
+
+Emacs*internalBorder: 1
+Emacs*reverseVideo:off
+
+! Emacs.pane.menubar.RESOURCE:  VALUE
+! font
+! foreground
+! background
+! buttonForeground
+! horizontalSpacing:3
+! verticalSpacing
+! arrowSpacing
+! shadowThickness
+! margin
+! Emacs.pane.menubar.font:  8x16
+!
+#ifdef COLOR
+Emacs*borderColor: gold
+Emacs*pointerColor: OrangeRed
+Emacs*cursorColor: orchid
+
+!Emacs*foreground: #bffffffffc00
+Emacs*foreground: WhiteSmoke
+Emacs*background: black
+
+Emacs*modeline.attributeForeground: lightgray
+Emacs*modeline.attributeBackground:  Navy
+! colors for menubar
+Emacs*pane.menubar*foreground:  lightgray
+Emacs*pane.menubar*background:  #28f033330000
+Emacs*pane.menubar.buttonForeground: LightGoldenRod
+
+Emacs*popup*background: #28f033330000
+Emacs*menu*.foreground: Blue
+Emacs*menu*.background: NidnightBlue
+
+#endif
+
+#ifndef COLOR
+Emacs*foreground: White
+Emacs*background: black
+Emacs*mouse:      white
+Emacs*cursor:     white
+#endif
+
+!emacs.font: -dejavu-dejavu sans mono-medium-r-normal--12-87-100-100-c-73-iso10646-1
+!Emacs*font: DejaVu Sans Mono-9
+!emacs.font: DejaVu Sans Mono-9
+!Emacs*font: DejaVu Sans Mono-9
+!emacs*font: DejaVu Sans Mono-9
+Emacs*font: DejaVu Sans Mono-9
+emacs*font: DejaVu Sans Mono-9
+
+!Emacs*font: Liberation Mono
+!emacs*font: Liberation Mono
+!Emacs*font: -unknown-Liberation Mono-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1
+!emacs*font: -unknown-Liberation Mono-normal-normal-normal-*-12-*-*-*-m-0-iso10646-1
+!Emacs*font: DejaVu Sans Mono-9
+!emacs.font: DejaVu Sans Mono-9
+!Emacs*font: DejaVu Sans Mono-8
+!emacs.font: DejaVu Sans Mono-8
+!Emacs.font: -dejavu-dejavu sans mono-medium-r-normal--11-0-0-0-m-0-iso10646-1
+!Emacs.font: -rfx-courier-medium-r-normal--12-120-75-75-m-70-iso10646-1
+!Emacs.font: -cronyx-courier-medium-r-normal--10-100-75-75-m-60-iso10646-1
+!Emacs.font: -misc-fixed-medium-r-normal-*-13-*-*-*-*-*-*-*
+Emacs*menubar*font: 9x15
+Emacs.pane.menubar.font: 9x15
+
+!*FontBackend: xft,x
+!Emacs.FontBackend:	xft,x
+*FontBackend: xft
+Emacs.FontBackend:	xft
+!Emacs.FontBackend:	ftx

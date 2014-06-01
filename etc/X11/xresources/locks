@@ -1,0 +1,24 @@
+! Ignore top left, bottom left (emacs is there, etc)
+! Top right means no lock, bottom right means lock now
+! Order top left, top right, bottom left,  bottom  right.
+Xautolock.corners: 0-0+
+! Time to wait before we pay attention to corners
+Xautolock.cornerdelay:5
+! Time to wait before we pay attention to corners after an unlock
+Xautolock.cornerredelay: 30
+
+! How long to wait (minutes) before we lock
+Xautolock.time:30
+
+! seconds to give warnings
+Xautolock.notify:60
+Xautolock.bell:60
+
+! Size of the corner, in pixels
+Xautolock.cornersize:50
+
+
+!       xlock font default
+
+xlock*font:             -*-new century schoolbook-bold-r-normal-*-14-*
+xlock*mode:random

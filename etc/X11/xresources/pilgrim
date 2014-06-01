@@ -1,0 +1,45 @@
+
+! {{{ Notice and notes
+
+notes*foreground: lightBlue
+notes*background: grey20
+Notice*foreground: Black
+Notice*background: grey90
+
+! }}}
+
+! {{{ Xpips
+
+xpips_client*XmPushButton*fontList:-adobe-courier-bold-r-*-*-18-*-*-*-*-*-*-*
+xpips_client*XmLabel*fontList:-adobe-courier-bold-o-*-*-18-*-*-*-*-*-*-*
+xpips_client*XmCascadeButton*fontList:-adobe-courier-bold-r-*-*-18-*-*-*-*-*-*-*
+xpips_client*XmSelectionBox*labelFontList:-adobe-courier-bold-o-*-*-18-*-*-*-*-*-*-*
+xpips_client*XmSelectionBox*buttonFontList:-adobe-courier-bold-r-*-*-18-*-*-*-*-*-*-*
+xpips_client*XmMessageBox*labelFontList:-adobe-courier-medium-o-*-*-18-*-*-*-*-*-*-*
+xpips_client*XmMessageBox*buttonFontList:-adobe-courier-medium-r-*-*-18-*-*-*-*-*-*-*
+xpips_client*XmList*fontList:-adobe-courier-bold-r-*-*-14-*-*-*-*-*-*-*
+xpips_client*XmText*fontList:-adobe-courier-bold-r-*-*-14-*-*-*-*-*-*-*
+
+! for color.
+#ifdef COLOR
+xpips_client*background:gray
+xpips_client*foreground:black
+
+xpips_client*XmList*background:LightGray
+xpips_client*XmList*foreground:black
+
+!xpips_client*XmPushButton*foreground:black
+!xpips_client*XmPushButton*background:PowderBlue
+
+!xpips_client*XmSelectionBox*XmManager*foreground:black
+#else
+! for black white
+xpips_client*background:white
+xpips_client*foreground:black
+xpips_client*XmPushButton*background:black
+xpips_client*XmPushButton*foreground:white
+xpips_client*XmText*background:black
+xpips_client*XmText*foreground:white
+#endif
+
+! }}}

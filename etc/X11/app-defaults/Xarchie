@@ -1,0 +1,15 @@
+! {{{ Xarchie defaults
+
+! Possible values are: exact, substr, subcase, or regexp
+Xarchie.searchType:     regexp
+
+! Possible values are: default, invdate
+!Xarchie.sortType:       invdate
+
+! Make this True if you like horizontal scrolling also
+Xarchie*Viewport*allowHoriz:            True
+! Size of grips
+Xarchie*Grip*height:            5
+Xarchie*Grip*width:             5
+
+! }}}

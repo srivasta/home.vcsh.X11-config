@@ -1,0 +1,10 @@
+# This file created by FvwmAnimate
+
+# Animations are controlled by this module
+# You could also use Frame, Lines, Flip, Turn, Twist, Random and None.
+DestroyModuleConfig FvwmAnimate: *
+*FvwmAnimate: Effect Flip
+*FvwmAnimate: Delay 0
+*FvwmAnimate: Iterations 30
+#*FvwmAnimate: Twist 1
+*FvwmAnimate: Width 2

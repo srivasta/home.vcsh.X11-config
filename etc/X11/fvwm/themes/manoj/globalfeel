@@ -1,0 +1,230 @@
+########################      FOCUS STUFF     ##############################
+# Set windows to auto-raise after 750 milliseconds if you like it.
+# Autoraise can sometimes obscure pop-up windows. Performance is now
+# similar to olvwm's auto-raise feature.
+#AutoRaise 750
+
+# Normally, we'll be in focus-follows mouse mode, but uncomment this 
+# for mwm-style click-to-focus
+#ClickToFocus
+
+# or, you might like SloppyFocus, which is like focus-follow (the default
+# mode), but the focus won't be removed until you go into another window
+# Style "*" SloppyFocus
+
+# 
+Style *                     MouseFocus
+Style *                     MouseFocusClickRaises
+Style *                     ClickToFocusPassesClickOff
+Style *                     FPClickRaisesFocused
+Style *                     !FPPassRaiseClick
+Style *                     !FPFocusByProgram
+Style *                     FPIgnoreRaiseClickMotion
+
+
+########################      BorderStyle     ##############################
+#
+# This sets how the border of windows will be displayed.
+# Format:  BorderStyle [state] [style] [ -- [!flag] ... ]
+# State is either Active or Inactive
+# The commands below set the borders to solid colors
+# NoInset HiddenHandles
+#BorderStyle -- Flat, Noinset
+BorderStyle Active -- Raised
+BorderStyle Inactive -- Sunk
+
+# Style * TitleAtRight
+# Style * RightTitleRotatedCCW    # CCW = counter-clock-wise, default: CW
+# Style * !UseTitleDecorRotation  # don't rotate titlebar pixmaps/gradients
+
+########################      IconBox     ##############################
+#
+# this is used for non-selected windows, menus, and the panner
+##Style "*"          	    IconBox -240 540 -1 675
+Style "*"            	    IconBox -160 800 -1 1000
+Style "Emacs"        	    IconBox -160 400 -1 795
+Style "XTerm"        	    IconBox -160 180 -1 395
+
+Style *                        IconTitleRelief 0
+Style *                        IconBackgroundRelief 0
+Style *                        IconBackgroundPadding 0
+Style *                        IndexedIconName
+
+Style *            	    Icon unknown1.xpm
+Style *                     WindowShadeShrinks, WindowShadeSteps 20, WindowShadeLazy
+
+# EdgeScroll horizontal vertical
+#   Sets the percentage of a page to scroll when the cursor is on the edge
+#   of the screen. 
+# flip by whole pages on the edge of the screen.
+EdgeScroll 100 100
+
+# Panning. Use with care. With this, as you move to the edge, it panns
+# you in that direction by 40 % of the screen.
+#EdgeCommand east  FuncScrollMoveH  40p -5p
+#EdgeCommand west  FuncScrollMoveH -40p  5p
+#EdgeCommand north FuncScrollMoveV -40p  5p
+#EdgeCommand south FuncScrollMoveV  40p -5p
+
+#####
+# You can automatically move the viewport into adjacent pages when the pointer
+# hits the screen edge,
+
+# EdgeResistance scrolling moving
+#   Sets how hard it is to change the desktop viewport
+#   scrolling is in milliseconds
+#   moving is in pixels (how far a window's edge must move to move off-screen
+#
+# A modest delay before flipping pages seems to be nice...
+# I thresh in a 50 pixel Move-resistance too, just so people
+# can try it out.
+EdgeResistance 50
+Style * EdgeMoveDelay 50
+Style * EdgeMoveResistance 900 90
+
+# EdgeThickness controls edge scrolling and EdgeCommand. Set the
+# thickness of the edge to 2
+EdgeThickness 2
+
+# OpaqueMoveSize percentage
+# OpaqueMoveSize allows you to stop Large windows from being moved opaquely
+#   This option tells fvwm the maximum size window that it should move
+#   with contents intact (ie, not 'rubber-banding')  You should keep this
+#   low if you don't have good video hardware.
+# if the window occupies less than N% of the screen, 
+# then opaque move is used. 0 <= N <= 100
+OpaqueMoveSize 50
+
+OpaqueMoveSize              40
+Style *                     ResizeOpaque
+
+# Do not hide the geometry window
+HideGeometryWindow Never
+
+
+# SnapAttraction lets nearby windows snap together, or snap to edges
+# so that they are easier to align on your desktop, The default is
+# off, if you set it too large it's annoying as hell, Make our windows
+# snap-up against other windows and make icons snap up against other
+# icons
+Style * SnapAttraction 10 SameType Screen
+# tell fvwm to use a grid of 3 pixels to place windows and icons.
+Style * SnapGrid        3 3
+
+
+
+########################      WINDOW PLACEMENT     #######################
+# RandomPlacement prevents user interaction while placing windows:
+# RandomPlacement
+
+# SmartPlacement makes new windows pop-up in blank regions of screen 
+# if possible, or falls back to random or interactive placement.
+#Style "*"            	    RandomPlacement, SmartPlacement, CleverPlacement
+Style "*"            	    MinOverlapPercentPlacement
+
+# Windows being shaded have their contents scrolled
+Style * WindowShadeScrolls
+Style *  WindowShadeSteps 20, ResizeOpaque
+
+SetAnimation  10  -.01 0 .01 .03 .08 .18 .3 .45 .6 .75 .85 .90 .94 .97 .99 1.0
+
+
+Style * MaxWindowSize 100 100
+
+
+Style FvwmButtons ParentalRelativity
+Style Fvwm* ParentalRelativity
+
+# With SmartPlacement, windows will normally place themselves over icons. 
+# Uncomment this to change that.
+#! StubbornPlacement
+
+# NoPPosition instructs fvwm to ignore the PPosition field in window 
+# geometry hints. Emacs annoyingly sets PPosition to (0,0)!
+Style "*" NoPPosition
+
+########################      DECORATIONS     #######################
+# If you want decorated transient windows, uncomment this:
+Style *            	    DecorateTransient
+Style *     RaiseTransient, LowerTransient, StackTransientParent
+
+########################      MWM EMULATION     #######################
+#
+# My feeling is that everyone should use MWMDecorHints and MWMFunctionHints,
+# since some applications depend on having the window manager respect them
+
+# MWMFunction hints parses the function information in the MOTIF_WM_HINTS
+# property, and prohibits use of these functions on the window. Appropriate
+# portions of the window decorations are removed.
+Style * MWMFunctions
+
+# MWM is kinda picky about what can be done to transients, and it was keeping
+# me from iconifying some windows that I like to iconify, so here's an
+# over-ride that will allow me to do the operation, even tough the menu
+# item is shaded out.
+Style * HintOverride
+
+# MWMDecor hints parses the decoration information in the MOTIF_WM_HINTS
+# property, and removes these decoratons from the window. This does not affect
+# the functions that can be performed via the menus.
+Style * MWMDecor
+Style * SlipperyIcon
+
+# These are affect minor aspects for the look-and-feel.
+# Sub-menus placement mwm-style?
+#MWMMenus
+
+# mwm-style border reliefs (less deep than default fvwm) ?
+Style * MWMBorder, DepressableBorder
+
+# Maximize button does mwm-inversion thingy
+Style * MWMButtons
+
+# Override the border widths
+Style       *  BorderWidth 6, HandleWidth 6
+
+######################################################################
+
+
+## 
+# set XORvalue to something visible.  This sets the coloration of the
+# 'rubber-band' window-borders when moving and resizing windows.
+XORvalue 16777215         # (It's the decimal equivalent of 0xffffff.)
+#XORvalue 3772              # Rubberbands swap 3 lsbs
+#TitleStyle raised
+
+######
+# Fvwm uses a default ClickTime of 150ms, which is way too short for me.
+# A Click that lasts <= ClickTime is considered a `Click` in functions,
+# > ClickTime is a `Hold`.
+#################
+# ClickTime 550
+
+#
+# Leave a band on the right alone?
+#EwmhBaseStruts 0 0 0 25
+#EwmhBaseStruts 0 100 0 0
+#EWMHPlacementUseWorkingArea ?
+
+# If you use a staysontop window, and also try to put a EWMH compliant
+# application into fullscreen mode, this makes sure your staysontop
+# pager gets stacked behind.
+Style * EWMHUseStackingOrderHints 
+Style * GNOMEUseHints
+# Style * IgnoreGnomeHints
+
+# Use hints applications provide about window state
+Style * EWMHUseStateHints
+
+# Set EWMH icon hints
+Style * EWMHDonateIcon
+Style * EWMHDonateMiniIcon
+
+
+# FlickeringMoveWorkaround disables ConfigureNotify events that
+# are usually sent to an application while it is moved. If some
+# windows flicker annoyingly while being moved, this option may
+# help you. Note that if this problem occurs it is not an fvwm
+# bug, it is a problem of the application.
+
+BugOpts FlickeringMoveWorkaround True

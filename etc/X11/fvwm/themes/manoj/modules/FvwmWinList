@@ -1,0 +1,14 @@
+#_____________________________________________________  E.5 FvwmWinList
+# E.5 FvwmWinList
+*FvwmWinList: FocusColorset 18
+*FvwmWinList: Colorset 17
+*FvwmWinList: IconColorset 19
+
+*FvwmWinListAction Click1 Iconify -1,Focus
+*FvwmWinListAction Click2 Iconify
+*FvwmWinListAction Click3 Module "FvwmIdent" FvwmIdent
+*FvwmWinListUseSkipList
+*FvwmWinListGeometry +0-1
+*FvwmWinListUseIconNames
+# Animation
+*FvwmWinList: NoIconAction SendToModule FvwmAnimate animate

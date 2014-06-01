@@ -1,0 +1,34 @@
+Xde*topShadowColor:                     cadet blue
+Xde*bottomShadowColor:                  medium blue
+Xde*foreground:                         DarkGreen
+xde*background:                         NavajoWhite
+!
+Xde.io*topShadowColor:                  NavajoWhite
+Xde.io*bottomShadowColor:               dark slate gray
+Xde.io*foreground:                      dim gray
+Xde.io*background:                      light gray
+!
+Xde.file*topShadowColor:                pale green
+Xde.file*bottomShadowColor:             dark green
+Xde.file*foreground:                    green
+Xde.file*background:                    forest green
+!
+Xde.context*topShadowColor:             medium violet red
+Xde.context*bottomShadowColor:          indian red
+Xde.context*foreground:                 blue
+Xde.context*background:                 yellow
+!
+Xde.variable*topShadowColor:            medium violet red
+Xde.variable*bottomShadowColor:         indian red
+Xde.variable*foreground:                NovajoWhite
+Xde.variable*background:                salmon
+!
+Xde.executionMenu*topShadowColor:       medium violet red
+Xde.executionMenu*bottomShadowColor:    indian red
+Xde.executionMenu*foreground:           blue
+Xde.executionMenu*background:           NovajoWhite
+!
+Xde.userDefinedMenu*topShadowColor:     medium violet red
+Xde.userDefinedMenu*bottomShadowColor:  indian red
+Xde.userDefinedMenu*foreground:         NovajoWhite
+Xde.userDefinedMenu*background:         blue

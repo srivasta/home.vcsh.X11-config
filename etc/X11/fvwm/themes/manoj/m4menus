@@ -1,0 +1,51 @@
+#=====================================================  1. M4 macros
+#  1. M4 macros
+
+undefine('include')
+changequote({[,]})
+define(stripquote, {[substr(substr($1,1), 0, index(substr($1,1),'))]})
+define(XSIZE, ifelse(CLIENTHOST, `anzu', 34, CLIENTHOST, `spark', 14, CLIENTHOST, `calidity', 12, CLIENTHOST, `glaurung', 16, 17))dnl
+define(YSIZE, ifelse(CLIENTHOST, `anzu', 11, CLIENTHOST, `spark',  9, CLIENTHOST, `calidity',  9, CLIENTHOST, `glaurung', 12, 13))dnl
+
+define(XPIX,  eval(stripquote(WIDTH) / XSIZE))dnl
+define(YPIX,  eval(stripquote(HEIGHT) / YSIZE))dnl
+
+define(xsize, {[eval((1000 * $1 / stripquote(WIDTH) + 5) / 10)]})dnl
+DestroyMenu "m4-Settings"
+AddToMenu "m4-Settings" "M4 Settings for fvwm FVWM_VERSION" Title
++              "{[TWM_TYPE=]}TWM_TYPE" Nop
++              "{[FVWM_VERSION=]}FVWM_VERSION" Nop
++              "{[FVWMDIR=]}FVWMDIR" Nop
++              "{[CMD_OPTIONS=]}CMD_OPTIONS" Nop
++              "{[FVWM_MODULEDIR=]}FVWM_MODULEDIR" Nop
++              "{[FVWM_USERDIR=]}FVWM_USERDIR" Nop
++              "Hosts Info" Title
++              "{[SERVERHOST=]}SERVERHOST" Nop
++              "{[CLIENTHOST=]}CLIENTHOST" Nop
++              "{[HOSTNAME=]}HOSTNAME" Nop
++              "{[OSTYPE=]}OSTYPE" Nop
++              "{[SESSION_MANAGER=]}SESSION_MANAGER" Nop
++              "User Info" Title
++              "{[USER=]}USER" Nop
++              "{[HOME=]}HOME" Nop
++              "Vendor Info" Title
++              "{[VENDOR=]}VENDOR" Nop
++              "{[VERSION=]}VERSION" Nop
++              "{[RELEASE=]}RELEASE" Nop
++              "{[REVISION=]}REVISION" Nop
++              "{[OPTIONS=]}OPTIONS" Nop
++              "Screen Size and resolution" Title
++              "{[WIDTH=]}WIDTH" Nop
++              "{[HEIGHT=]}HEIGHT" Nop
++              "{[X_RESOLUTION=]}X_RESOLUTION" Nop
++              "{[Y_RESOLUTION=]}Y_RESOLUTION" Nop
++              "{[XSIZE=]}XSIZE" Nop
++              "{[YSIZE=]}YSIZE" Nop
++              "{[XPIX=]}XPIX" Nop
++              "{[YPIX=]}YPIX" Nop
++              "Color and stuff" Title
++              "{[CLASS=]}CLASS" Nop
++              "{[COLOR=]}COLOR" Nop
++              "{[PLANES=]}PLANES" Nop
++              "{[BITS_PER_RGB=]}BITS_PER_RGB" Nop
+

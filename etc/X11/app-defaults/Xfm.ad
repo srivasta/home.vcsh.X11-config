@@ -1,0 +1,3 @@
+! Search paths for icon files
+*bitmapPath: /usr/X11R6/lib/X11/xfm/bitmaps:/usr/include/X11/bitmaps:/usr/local/share/graphics/xbm/bw-32:/usr/local/share/graphics/xbm/bw-48
+*pixmapPath: /usr/X11R6/lib/X11/xfm/pixmaps:/usr/include/X11/pixmaps:/usr/local/share/graphics/xpm/cl-32:/usr/local/share/graphics/xpm/cl-48

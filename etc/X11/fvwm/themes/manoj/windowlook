@@ -1,0 +1,11 @@
+# TitleStyle RightJustified
+
+#####
+# Window Styles
+###########
+Style "*" UseDecor MyDecor
+
+Style "*"       BorderWidth 5, HandleWidth 6
+Style "*"       FvwmBorder, FirmBorder
+Style "*"       BorderColorset            3
+Style "*"       HilightBorderColorset     4

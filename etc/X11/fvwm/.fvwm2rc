@@ -1,0 +1,147 @@
+#!/usr/bin/fvwm
+# startx /usr/bin/fvwm -- Xnest :1
+
+ImagePath +:/usr/share/icons:/usr/share/pixmaps:/usr/share/icons/wm-icons
+ImagePath +:/usr/X11R6/include/X11/pixmaps/:/usr/X11R6/include/X11/bitmaps/
+ImagePath +:/usr/include/X11/bitmaps/:/usr/local/include/pixmaps/
+ImagePath +:/usr/local/graphics/xpm/fvwm:/usr/local/graphics/xpm/
+ImagePath +:/usr/local/graphics/xpm/3d_pixmaps_1.0/3dpixmaps/
+ImagePath +:/usr/local/include/bitmaps/:/usr/local/graphics/images/xpm
+ImagePath +:$[HOME]/media/images:$[HOME]/media/images/fvwm_menuicons/
+
+DestroyFunc FuncFvwmLoadAllHooks
+AddToFunc   FuncFvwmLoadAllHooks
++ I FuncFvwmStartWheel
++ I FuncFvwmStartStroke
++ I FuncFvwmStartFvwmEvent-Sound
++ I FuncFvwmStartThemeModules
++ I FuncFvwmStartFvwmEvent-Events
++ I FuncFvwmStartWindowButtons
++ I FuncFvwmStartColors
++ I FuncFvwmStartBindings
++ I FuncFvwmStartFvwmAnimate
++ I FuncFvwmStartThemeBackground
+
+DestroyFunc FuncFvwmResetInitFunctions
+AddToFunc   FuncFvwmResetInitFunctions
++ I DestroyFunc StartFunction
++ I DestroyFunc InitFunction
++ I DestroyFunc RestartFunction
++ I DestroyFunc SessionInitFunction
++ I DestroyFunc SessionRestartFunction
++ I AddToFunc StartFunction
++ I + I FuncFvwmLoadAllHooks
+
+DestroyFunc FuncFvwmRestartFvwmTheme
+AddToFunc   FuncFvwmRestartFvwmTheme
++ I KillModule FvwmTheme
++ I DestroyModuleConfig FvwmTheme: *
++ I ModuleSynchronous FvwmTheme
+
+# ---------------------------------------------------
+# Some global functions, extending FVWM functionality
+
+DestroyFunc FuncFvwmStopModule
+AddToFunc   FuncFvwmStopModule
++ I KillModule $0
+
+DestroyFunc FuncFvwmStopModuleByAlias
+AddToFunc   FuncFvwmStopModuleByAlias
++ I KillModule $0 $1
+
+DestroyFunc FuncFvwmRestartModule
+AddToFunc   FuncFvwmRestartModule
++ I FuncFvwmStopModule $0
++ I Module $0
+
+DestroyFunc FuncFvwmRestartModuleByAlias
+AddToFunc   FuncFvwmRestartModuleByAlias
++ I FuncFvwmStopModuleByAlias $0 $1
++ I Module $0 $1 $2
+
+DestroyFunc FuncFvwmRemoveAllButtons
+AddToFunc   FuncFvwmRemoveAllButtons
++ I Style "*" NoButton 1, NoButton 3, NoButton 5, NoButton 7, NoButton 9
++ I Style "*" NoButton 2, NoButton 4, NoButton 6, NoButton 8, NoButton 0
++ I TitleStyle Height 5
+
+
+FuncFvwmResetInitFunctions
+
+SetEnv fvwm_theme_top $./themes/manoj
+
+Read $[fvwm_theme_top]/startup
+
+Read $[fvwm_theme_top]/colors-decor
+Read $[fvwm_theme_top]/colors
+
+Read $[fvwm_theme_top]/background
+Read $[fvwm_theme_top]/decor
+Read $[fvwm_theme_top]/buttons
+Read $[fvwm_theme_top]/bindings
+Read $[fvwm_theme_top]/globalfeel
+Read $[fvwm_theme_top]/fonts
+Read $[fvwm_theme_top]/globallook
+Read $[fvwm_theme_top]/cursors
+Read $[fvwm_theme_top]/icons
+
+Read $[fvwm_theme_top]/functions
+Read $[fvwm_theme_top]/functions-appbind
+
+### We will decide later whether to use full paths here.
+Read $[fvwm_theme_top]/settings/autoraise/disabled
+Read themes/default/settings/events-handler/disabled
+Read $[fvwm_theme_top]/settings/iconstyles/wm-icons
+
+
+Read $[fvwm_theme_top]/sound
+# Need to look at enabling these (the other non-disabled options
+# probably do not work)
+Read $[fvwm_theme_top]/settings/sound-player/disabled
+
+# Section: Menus
+#
+# This section defines a small menu structure.  The main menu contains
+# some typical entries, and uses a hook (main-menu.hook) to allow the
+# user to add new entries.  Most of the default entries are submenus,
+# which are also defined here.
+
+Read $[fvwm_theme_top]/settings/menu-system/enabled
+Read $[fvwm_theme_top]/menus
+
+Read $[fvwm_theme_top]/settings/xinerama/disabled
+Read $[fvwm_theme_top]/settings/gnome/panel-staysput/disabled
+
+
+Read $[fvwm_theme_top]/windowlook
+Read $[fvwm_theme_top]/styles
+Read $[fvwm_theme_top]/menustyle
+
+
+#=====================================================  E. modules
+Read $[fvwm_theme_top]/modules/main
+
+#Read $[fvwm_theme_top]/settings/animation/enabled
+Read $[fvwm_theme_top]/settings/automenus/headlines/enabled
+Read $[fvwm_theme_top]/settings/background/theme
+Read $[fvwm_theme_top]/settings/banner/enabled
+Read $[fvwm_theme_top]/settings/gnome/system-menu/disabled
+Read $[fvwm_theme_top]/settings/gnome/anotherlevel-menu/disabled
+Read $[fvwm_theme_top]/settings/gnome/user-menu/disabled
+Read $[fvwm_theme_top]/settings/session-manager/none
+Read $[fvwm_theme_top]/settings/stroke/enabled
+Read $[fvwm_theme_top]/settings/wheel/enabled
+
+
+#FuncFvwmUnReloadGlobalLook
+#FuncFvwmStopThemeModules
+#FuncFvwmStopWindowButtons
+#FuncFvwmStopColors
+
+DestroyFunc FuncFvwmStartAllHooks
+AddToFunc   FuncFvwmStartAllHooks
++ I FuncFvwmReloadGlobalLook
++ I FuncFvwmStartThemeModules
++ I FuncFvwmStartWindowButtons
++ I FuncFvwmStartColors
+

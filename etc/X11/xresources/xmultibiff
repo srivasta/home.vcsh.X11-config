@@ -1,0 +1,79 @@
+!
+! set up colors
+!
+#ifdef COLOR
+XMultibiff*foreground:          WhiteSmoke
+XMultibiff*background:          CornflowerBlue
+!XMultibiff*foreground:          lightyellow3
+!XMultibiff*background:          cornsilk4
+XMultibiff*borderColor:         azure
+!
+! Make the "dismiss" button stand out
+!
+XMultibiff*shell*Command*foreground:    yellow
+XMultibiff*shell*Command*background:    red
+
+#else
+XMultibiff*foreground:          white
+XMultibiff*background:          black
+#endif
+
+
+XMultibiff*shortname: TRUE
+XMultibiff*polltime: 60
+XMultibiff.horiz: TRUE
+XMultibiff*mailboxes: /home/srivasta/var/spool/mail/important:/home/srivasta/var/spool/mail/admin:/home/srivasta/var/spool/mail/gcif:/home/srivasta/var/spool/mail/gcifcases:/home/srivasta/var/spool/mail/digital:/home/srivasta/var/spool/mail/debian.spool:/home/srivasta/var/spool/mail/consult:/home/srivasta/var/spool/mail/bcast:
+
+
+
+!XMultibiff*newsboxes:   pilgrim.admin: pilgrim.bugs:pilgrim.misc
+
+XMultibiff*box1.title: IMP
+XMultibiff*box2.title: Adm
+XMultibiff*box3.title: GCI
+XMultibiff*box4.title: CIT
+XMultibiff*box5.title: DEC
+XMultibiff*box6.title: Deb
+XMultibiff*box7.title: Con
+XMultibiff*box8.title: USG
+XMultibiff*box9.title: Agt
+XMultibiff*box10.title: AUC 
+XMultibiff*box11.title: Hyp
+XMultibiff*box12.title: Ang
+XMultibiff*box13.title: Dst 
+XMultibiff*box14.title: Dbn
+XMultibiff*box15.title: Ups
+XMultibiff*box16.title: Bgs
+XMultibiff*box17.title: Xc
+XMultibiff*box18.title: Cmd
+XMultibiff*box19.title: Sc
+XMultibiff*box20.title: Osf
+XMultibiff*box21.title: FVW
+XMultibiff*box22.title: BBB
+
+XMultibiff*box1.font:6x13
+XMultibiff*box2.font:-misc-fixed-medium-r-normal--13-*-100-100-c-50-iso8859-1
+XMultibiff*box3.font:6x13
+XMultibiff*box4.font:-misc-fixed-medium-r-normal--13-*-100-100-c-50-iso8859-1
+XMultibiff*box5.font:6x13
+XMultibiff*box6.font:6x13
+XMultibiff*box7.font:6x13
+XMultibiff*box8.font:6x13 
+XMultibiff*box9.font:6x13
+XMultibiff*box10.font:6x13
+XMultibiff*box11.font:6x13 
+XMultibiff*box12.font:6x13
+XMultibiff*box13.font:6x13
+XMultibiff*box14.font:6x13
+XMultibiff*box15.font:6x13
+XMultibiff*box16.font:6x13
+XMultibiff*box17.font:6x13
+XMultibiff*box18.font:6x13
+XMultibiff*box19.font:6x13
+XMultibiff*box20.font:6x13
+
+!  xmultibiff -bg Gray17 -fg CornSilk -mail 
+!      ./var/spool/mail/important 
+!      ./var/spool/mail/admin
+!      ./var/spool/mail/digital
+!      ./var/spool/mail/bcast

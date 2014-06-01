@@ -1,0 +1,20 @@
+# Enable FVWM workaround for xsm DiscardCommand bug.
+SetEnv SESSION_MANAGER_NAME xsm
+
+DestroyFunc FuncFvwmSaveSession
+DestroyFunc FuncFvwmSaveQuitSession
+
+# quit menu
+DestroyMenu MenuFvwmQuit
+AddToMenu   MenuFvwmQuit "Really Quit Session?" Title
++ "&Restart%menu/restart.xpm%"          Restart
++  "" Nop
++ "Re&fresh Screen%menu/refresh.xpm%"   Refresh
++ "Re&capture Screen%menu/refresh.xpm%" Recapture
++ "" Nop
++ "&Yes, Really Quit%menu/choice-yes.xpm%"           Exec exec killall -TERM xsm
++ "Yes, Quit and &Save Session%menu/choice-yes.xpm%" Exec exec killall -TERM xsm
++ "Quit FVWM &Only%menu/quit.xpm%"      Quit
++ "&Save Session Only%menu/windows.xpm%" Exec exec killall -USR1 xsm
++  "" Nop
++ "&No, Don't Quit%menu/choice-no.xpm%" Nop

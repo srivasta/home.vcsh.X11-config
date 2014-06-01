@@ -1,0 +1,62 @@
+X-From-Line: <@mongo.pixar.com:debian-user-request@Pixar.com>  Tue Nov 14 09:31:37 1995
+Received: from mongo.pixar.com (mongo.pixar.com [138.72.50.60]) by plymouth.pilgrim.umass.edu (8.6.12/8.6.12) with ESMTP id JAA10381 for <srivasta@pilgrim.umass.edu>; Tue, 14 Nov 1995 09:31:31 -0500
+Resent-Date: Tue, 14 Nov 1995 09:31:31 -0500
+Received: by mongo.pixar.com (8.7.1) id GAA20865; Tue, 14 Nov 1995 06:31:01 -0800 (PST)
+Old-Return-Path: <steve%eowyn@gte.com>
+Message-Id: <199511141425.JAA13985@bunny.gte.com>
+Date: Tue, 14 Nov 1995 09:25:44 -0500
+From: Steve Preston <steve%eowyn@gte.com>
+To: debian-user@Pixar.com
+Subject: Re: Can't make rxvt pay attention to resources.
+Resent-Message-ID: <"FHpFu.A.C-E.BcKqw"@mongo>
+Resent-From: debian-user@Pixar.com
+X-Mailing-List: <debian-user@Pixar.com> archive/latest/2670
+X-Loop: debian-user@Pixar.com
+Precedence: list
+Resent-Sender: debian-user-request@Pixar.com
+X-Filter: mailagent [version 3.0 PL44] for srivasta@pilgrim.umass.edu
+Xref: belthil.pilgrim.umass.edu debian:3408
+Lines: 41
+
+>>>>> Philip Tuckey <pat@rs3.univ-fcomte.fr> writes:
+
+> ... rxvt doesn't interrogate the database of X resources maintained
+> by the X server, but only looks in the file .Xdefaults. (I think
+> this used to be the way X resources were specified, a long time
+> ago???)  According to the doc, rxvt is smaller than xterm because it
+> doesn't implement the X toolkit; maybe this is related?
+> ...
+
+That explains it.  According to one of my favorite X books, "The X
+Window System ..." by Young, the Xt Intrinsics load resources using
+this algorithm:
+
+1. Load /usr/lib/X11/${LANG}app-defaults/<class>
+2. If step 1 fails, load /usr/lib/X11/app-defaults/<class>
+3. Load $XAPPLRESLANGPATH<class>
+4. If step 3 fails, load $XAPPLRESDIR<class>
+5. Load data in RESOURCE_MANAGER property.
+6. If RESOURCE_MANAGER property does not exist, load $HOME/.Xdefaults.
+7. Load file specified by $XENVIRONMENT.
+8. If $XENVIRONMENT is not set, load $HOME/.Xdefaults-<host>
+9. Load command line options.
+
+Where <class> is the class of the application, which is often the name
+of the executable with the first letter or two capitalized.  The man
+page or equivalent should document the class name.
+
+The RESOURCE_MANAGER property of the root window is conveniently set
+(or retrieved) using xrdb.
+
+The <host> above is the hostname of the machine on which the client is
+running.
+
+The interesting and sometimes tricky thing is that $HOME/.Xdefaults is
+ignored if the RESOURCE_MANAGER property is set.
+
+Anyway, it seems clear that rxvt does not conform to the Xt algorithm. 
+
+-- 
+Steve Preston (spreston@gte.com)
+
+

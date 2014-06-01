@@ -1,0 +1,14 @@
+
+NetHack*font:                           9x15
+! If True, a popup for y/n questions is _not_ used.
+NetHack*slow: True
+!
+! If True, the message window has a line that seperates old and new messages.
+NetHack*message_line: False
+
+NetHack*nethack.background:     wheat
+NetHack*map*foreground:         magenta
+NetHack*map*font:              nh10
+!NetHack*map*font:   8x13
+NetHack*status_info*background: wheat
+NetHack*status_info*foreground: Sienna

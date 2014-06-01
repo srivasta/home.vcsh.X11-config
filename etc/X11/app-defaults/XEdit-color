@@ -1,0 +1,6 @@
+xedit*foreground:                       PaleGoldenrod
+xedit*background:                       sienna
+xedit*Command.foreground:               red
+xedit*Command.background:               NavajoWhite
+xedit*Text*foreground:                  DarkSlateBlue
+xedit*Text*background:                  BlanchedAlmond

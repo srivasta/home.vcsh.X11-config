@@ -1,0 +1,5 @@
+
+Xautolock.corners: 0-0+
+Xautolock.notify:60
+Xautolock.cornersize:50
+Xautolock.time:30

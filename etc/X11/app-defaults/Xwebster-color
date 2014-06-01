@@ -1,0 +1,11 @@
+
+Xwebster*hostAddrList:          36.8.0.231 26.0.0.73 10.0.0.51
+Xwebster*hostPort:              103
+!Xwebster*useEditorAsDisplay:   true
+!Xwebster*displayHelp:          false
+Xwebster*highlightColor:        white
+Xwebster*highlightTile:         foreground
+Xwebster*display.foreground:    White
+Xwebster*display.background:    IndianRed
+Xwebster*word_input*foreground: Green
+Xwebster*word_input*background: Black

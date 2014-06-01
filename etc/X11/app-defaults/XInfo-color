@@ -1,0 +1,22 @@
+
+XInfo.geometry:                                 800x995
+XInfo*IconPixmap:                               xinfo.bm
+XInfo*font:                                    TERMFONT
+! More specific xinfo widget defaults:
+
+XInfo*Font:     -adobe-times-medium-r-*-*-14-*-*-*-*-*-*-*
+XInfo*info.pane1*Command.borderWidth:           5
+XInfo*info.pane1.box1*Command.Font:-adobe-itc avant garde gothic-book-r-*-*-14-*-*-*-*-*-*-*
+
+
+! These look nice on color systems; enable if you want a flashier interface.
+!
+XInfo*Background:                               MidNightBlue
+XInfo*Foreground:                               Azure
+XInfo*BorderColor:                              LightCyan1
+XInfo*info.pane1*Command.Foreground:            Gold
+XInfo*info.pane1*Command.Background:            RoyalBlue3
+XInfo*info.pane1*Label.Foreground:              Yellow
+XInfo*info.pane1*Label.Background:              RoyalBlue4
+XInfo*info.help*Background:                     DarkGoldenRod
+XInfo*info.need_argument*Background:            grey4

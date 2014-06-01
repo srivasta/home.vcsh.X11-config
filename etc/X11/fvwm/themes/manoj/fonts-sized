@@ -1,0 +1,82 @@
+
+undefine('include')
+define(stripquote, {[substr(substr($1,1), 0, index(substr($1,1),'))]})
+# Start
+
+
+# This file is really created to disrtinguish between my laptop and
+# the destop. For the desktop XPIX and YPIX are 24 and 32; for the
+# laptop it is 32 and 43 respectively. Please note that by themselves,
+# these are not enough; you need the physical sixe of the screen to
+# make a call.
+define(XSIZE, ifelse(CLIENTHOST, `anzu', 34, CLIENTHOST, `spark', 14, CLIENTHOST, `calidity', 12, CLIENTHOST, `glaurung', 16, 17))dnl
+define(YSIZE, ifelse(CLIENTHOST, `anzu', 11, CLIENTHOST, `spark',  9, CLIENTHOST, `calidity',  9, CLIENTHOST, `glaurung', 12, 13))dnl
+
+define(XPIX,  eval(WIDTH / XSIZE))dnl
+define(YPIX,  eval(HEIGHT / YSIZE))dnl
+
+ifelse(eval(XPIX < 100), 1, `
+DefaultFont "$[font_shadow_12]"
+WindowFont  "$[font_shadow_12]"
+', `
+DefaultFont "$[font_shadow_18]"
+WindowFont  "$[font_shadow_18]"
+')dnl
+
+
+# Styles
+ifelse(eval(XPIX < 100), 1, `
+SetEnv fvwm_default_font "'-misc-dejavu sans mono-medium-r-normal--12-*-*-*-*-*-iso10646-1"
+MenuStyle *  Font                 "$[font_shadow_14b]"
+MenuStyle * TitleFont             "$[font_shadow_16b]"
+Style    "*" Font                 "$[font_shadow_14]"
+Style    "Xbuffy" Font            "$[font_10]"
+Style     *  IconFont             "$[font_14]"
+Style "login" Font                "$[font_14]"
+*FvwmIdentFont                    "$[font_12]"
+*FvwmIconBoxFont                  "$[font_12]"
+*FvwmPagerFont                    "$[font_10]"
+*FvwmPagerSmallFont               "$[font_8]"
+*FvwmWinListFont                  "$[font_10]"
+*FvwmButtonsFont                  "$[font_11]"
+*FvwmTaskBar: Font                "$[font_14]"
+*FvwmTaskBar: SelFont             "$[font_14]"
+*FvwmPager: BalloonFont           "$[font_11]"
+*FvwmTaskBar: StatusFont          fixed
+', `
+#Style    "*" Font  "Shadow=1 NE:-bitstream-bitstream vera sans mono-medium-r-normal--*-*-*-*-m-*-iso10646-1"
+SetEnv fvwm_default_font "'-misc-dejavu sans mono-medium-r-normal--18-*-*-*-*-*-iso10646-1"
+MenuStyle *  Font                  "$[font_shadow_14b]"
+MenuStyle * TitleFont              "$[font_shadow_16b]"
+Style    "*" Font                  "$[font_shadow_14]"
+Style     *  IconFont              "$[font_18]"
+Style "login" Font                 "$[font_18]"
+Style "xterm" Font                 "$[font_14]"
+Style "uxterm" Font                "$[font_14]"
+*FvwmIdentFont                     "$[font_17]"
+*FvwmIconBoxFont                   "$[font_17]"
+*FvwmPagerFont                     "$[font_11]"
+*FvwmPagerSmallFont                "$[font_9]"
+*FvwmWinListFont                   "$[font_18]"
+*FvwmButtonsFont                   "$[font_18]"
+*FvwmTaskBar: Font                 "$[font_17]"
+*FvwmTaskBar: SelFont              "$[font_17]"
+*FvwmPager: BalloonFont            "$[font_18]"
+*FvwmTaskBar: StatusFont fixed
+')dnl
+
+# FvwmForm differences
+ifelse(eval(XPIX < 100), 1, `
+*FvwmForm-Form: Input Font 63 "8x13bold"
+*FvwmForm-Form: Input InputFont 63 "8x13bold"
+*FvwmForm-Form: Input ButtonFont 63 "8x13bold"
+*FvwmForm-RootCursor: ButtonFont	6x13
+', `
+*FvwmForm-Form: Input Font 63 "8x16"
+*FvwmForm-Form: Input InputFont 63 "8x16"
+*FvwmForm-Form: Input ButtonFont 63 "8x16"
+*FvwmForm-RootCursor: ButtonFont	9x15
+Style "xterm" Font  "$[font_18]"
+Style "uxterm" Font "$[font_18]"
+')dnl
+

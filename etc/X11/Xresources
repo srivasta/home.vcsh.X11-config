@@ -1,0 +1,33 @@
+#define MY_RESOURCE_DIR HOME/**//etc/X11/xresources
+*bitmapFilePath:               /usr/local/X11/graphics/xbm
+
+Xft.rgba: rgb
+Xft.antialias: true
+xft.hinting: true
+xft.dpi: 100
+Xft.hintstyle:   hintfull
+
+# include "/home/srivasta/etc/X11/xresources/colors"
+# include "/home/srivasta/etc/X11/xresources/display"
+# include "/home/srivasta/etc/X11/xresources/default-font"
+# include "/home/srivasta/etc/X11/xresources/motif"
+# include "/home/srivasta/etc/X11/xresources/locks"
+# include "/home/srivasta/etc/X11/xresources/clocks"
+# include "/home/srivasta/etc/X11/xresources/emacs"
+# include "/home/srivasta/etc/X11/xresources/xicon"
+# include "/home/srivasta/etc/X11/xresources/pilgrim"
+# include "/home/srivasta/etc/X11/xresources/xmultibiff"
+# include "/home/srivasta/etc/X11/xresources/xterms"
+# include "/home/srivasta/etc/X11/xresources/tgif"
+# include "/home/srivasta/etc/X11/xresources/angband"
+# include "/home/srivasta/etc/X11/xresources/zangband"
+
+*fieldBox*field1.menu.options.showUnselectable: False
+
+!LC_CTYPE=en_GB.UTF-8 xterm  -fn '-Misc-Fixed-Medium-R-SemiCondensed--13-120-75-75-C-60-ISO10646-1'
+
+! Local Variables:
+! mode: fundamental
+! comment-column: 0
+! comment-start: "! "
+! End: 

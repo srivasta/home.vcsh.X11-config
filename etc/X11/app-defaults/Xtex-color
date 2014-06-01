@@ -1,0 +1,11 @@
+Xtex*foreground:                PaleGoldenrod
+Xtex*background:                navajowhite4
+Xtex*Label*foreground:          seashell
+Xtex*Table*foreground:          seashell
+Xtex*Command.foreground:        red
+Xtex*Command.background:        NavajoWhite
+Xtex*Text*foreground:           DarkSlateBlue
+Xtex*Text*background:           BlanchedAlmond
+Xtex*xtex-page.form.background: navajowhite4
+Xtex*xtex-page*background:      BlanchedAlmond
+Xtex*xtex-page*foreground:      black

@@ -1,0 +1,11 @@
+DestroyFunc FuncFvwmStartFvwmEvent-Sound
+AddToFunc   FuncFvwmStartFvwmEvent-Sound
+
+DestroyFunc FuncFvwmStopFvwmEvent-Sound
+AddToFunc   FuncFvwmStopFvwmEvent-Sound
+
+DestroyFunc FuncFvwmAddToMenusStartSoundEffect
+AddToFunc   FuncFvwmAddToMenusStartSoundEffect
+
+DestroyFunc FuncFvwmAddToMenusStopSoundEffect
+AddToFunc   FuncFvwmAddToMenusStopSoundEffect

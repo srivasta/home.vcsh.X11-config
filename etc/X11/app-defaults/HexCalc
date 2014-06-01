@@ -1,0 +1,6 @@
+
+! {{{ hex calculator
+
+hexcalc*borderWidth:            1
+hexcalc*font:                   *schoolbook-medium-r-normal--14*
+hexcalc*Label*font:             *helvetica-medium-r-normal--14*

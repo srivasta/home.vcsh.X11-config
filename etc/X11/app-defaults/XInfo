@@ -1,0 +1,10 @@
+
+XInfo.geometry:                                 800x995
+XInfo*IconPixmap:                               xinfo.bm
+XInfo*font:                                    TERMFONT
+! More specific xinfo widget defaults:
+
+XInfo*Font:     -adobe-times-medium-r-*-*-14-*-*-*-*-*-*-*
+XInfo*info.pane1*Command.borderWidth:           5
+XInfo*info.pane1.box1*Command.Font:-adobe-itc avant garde gothic-book-r-*-*-14-*-*-*-*-*-*-*
+

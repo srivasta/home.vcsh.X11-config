@@ -1,0 +1,64 @@
+#_____________________________________________________  E.6 IconBox
+# E.6 FvwmIconBox
+# Make no icon to be shown in root window
+#    by spcifying in your .fvwmrc
+# (1) "SuppressIcons" if PRUNE is defined in configure.h, or
+# This gets rid of the icon's above the titles.
+# If you uncomment this, and make sure that the WindowList is bound to
+# something, it works pretty much like an icon manager.
+##SuppressIcons
+#Style     "*"  NoIcon
+DestroyModuleConfig FvwmIconBox: *
+           
+
+#*FvwmIconBox: Colorset             12
+#*FvwmIconBox: IconColorset        19
+#*FvwmIconBox: IconHiColorset      20
+
+
+*FvwmIconBoxGeometry    5x1+0+0
+*FvwmIconBoxMaxIconSize 64x38
+*FvwmIconBoxSortIcons
+*FvwmIconBoxPadding     4
+*FvwmIconBoxLines       10
+*FvwmIconBoxPlacement   Left Top
+*FvwmIconBoxPixmap      fvwm.xpm
+#*FvwmIconBoxHideSC Horizontal
+#
+# mouse bindings
+#
+*FvwmIconBoxMouse       1       Click           RaiseLower
+*FvwmIconBoxMouse       1       DoubleClick     Iconify
+*FvwmIconBoxMouse       2       Click           Iconify -1, Focus
+*FvwmIconBoxMouse       3       Click           Module "FvwmIdent" FvwmIdent
+#
+# Key bindings
+#
+*FvwmIconBoxKey         r       RaiseLower
+*FvwmIconBoxKey         space   Iconify
+*FvwmIconBoxKey         d       Close
+#
+# FvwmIconBox built-in functions
+#
+*FvwmIconBoxKey         n       Next
+*FvwmIconBoxKey         p       Prev
+*FvwmIconBoxKey         h       Left
+*FvwmIconBoxKey         j       Down
+*FvwmIconBoxKey         k       Up
+*FvwmIconBoxKey         l       Right
+#
+# Icon file spcifications
+#
+*FvwmIconBox            "*"             unknown1.xpm
+*FvwmIconBox            "Fvwm*"         -
+*FvwmIconBox            "FvwmFileMgr"   folder2.xpm
+*FvwmIconBox            "rxvt"          term.xpm
+*FvwmIconBox            "xterm"         xterm.xpm
+*FvwmIconBox            "uxterm"        xterm.xpm
+*FvwmIconBox            "editres"       editres.xpm
+*FvwmIconBox            "xman"          xman.xpm
+*FvwmIconBox            "xbiff"         mail1.xpm
+*FvwmIconBox            "xmh"           mail1.xpm
+*FvwmIconBox            "xcalc"         xcalc.xpm
+*FvwmIconBox            "FvwmButtons"     toolbox.xpm
+                

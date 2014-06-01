@@ -1,0 +1,134 @@
+
+# Vectors are basically just a set of co-ordinates, each button is a
+# grid of 100x100 points (or you can use pixels..it's up to you),
+# following each vector you must specify a line type:
+#
+#   @0 Shadow (sh)
+#   @1 Hilight (hi)
+#   @2 Background (bg)
+#   @3 Foreground (fg)
+#   @4 Invisible (just move the pointer, dont draw anything)
+#
+#
+
+# Button 1 Square
+# Button 3 double headed arrow (i use it to maximise window vertically)
+# Button 5 double headed arrow  sideways
+# Button 7 double headed arrow  diagonally
+# Button 9 resize
+
+# Button 2 An X shaped button
+# Button 4 Iconify square (bunch of windows getting smaller)
+# Button 4 Lower window
+# Button 6 Shade button
+# Button 0 sticky
+
+####
+# Window Decor
+###########
+DestroyDecor MyDecor
+AddToDecor   MyDecor
++ TitleStyle    RightJustified Height 24
++ TitleStyle    MiniIcon -- Left
++ AddTitleStyle ActiveUp     (-- Flat)       
++ AddTitleStyle ActiveDown   (-- Raised)     
++ AddTitleStyle InactiveUp   (-- Flat)
++ AddTitleStyle InactiveDown (-- Sunk)
++ ButtonStyle 1 Vector  5 25x25@1 25x75@1 75x75@0 75x25@0 25x25@1
++ ButtonStyle 3 Vector 11 30x30@1 50x10@1 70x30@0 55x30@0 55x70@0 70x70@1 50x90@0 30x70@0 45x70@1 45x30@1 30x30@0
++ ButtonStyle 5 Vector 11 30x30@1 10x50@1 30x70@0 30x55@0 70x55@0 70x70@1 90x50@0 70x30@0 70x45@1 30x45@1 30x30@0
++ ButtonStyle 7 Vector 11 10x10@1 40x10@1 25x20@0 80x70@1 90x60@1 90x85@0 60x85@0 70x75@1 20x30@0 10x40@0 10x10@1
++ ButtonStyle 9 Vector 13  10x0@1  80x0@1 80x10@1 80x80@0 0x80@0   0x60@1 10x65@1 70x65@0  70x0@0  55x0@1 55x10@1 55x55@0 10x55@0
++ ButtonStyle 2 Vector 16 20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@0 60x50@0 80x70@0 80x80@0 70x80@0 50x60@0 30x80@0 20x80@0 20x70@0 40x50@1 20x30@1
++ ButtonStyle 4 Vector 16 60x40@1 60x80@0 15x80@0 15x40@1 60x40@1 40x40@1 40x25@1 75x25@1 75x60@0 60x60@0 75x60@0 75x40@0 85x40@0 85x15@0 60x15@1 60x25@1
++ ButtonStyle 6 Vector 10 45x65@2 45x75@0 20x75@0 20x50@1 45x50@1 45x65@0 75x65@3 75x25@3 35x25@3 35x47@3
++ ButtonStyle 8 Vector  5 25x45@1 75x45@1 75x55@1 25x55@0 25x45@1
++ ButtonStyle 0 Vector 12 10x23@0 90x23@0 90x28@0 10x28@1 10x47@1 90x47@0 90x52@0 10x52@1 10x70@2 90x70@0 90x76@0 10x76@1
++ ButtonStyle 0 ActiveDown -- Sunk
++ ButtonStyle 0 ActiveUp   -- Raised
++ ButtonStyle 1 ActiveDown -- Sunk
++ ButtonStyle 1 ActiveUp   -- Raised
++ ButtonStyle 2 ActiveDown -- Sunk
++ ButtonStyle 2 ActiveUp   -- Raised
++ ButtonStyle 3 ActiveDown -- Sunk
++ ButtonStyle 3 ActiveUp   -- Raised
++ ButtonStyle 4 ActiveDown -- Sunk
++ ButtonStyle 4 ActiveUp   -- Raised
++ ButtonStyle 5 ActiveDown -- Sunk
++ ButtonStyle 5 ActiveUp   -- Raised
++ ButtonStyle 6 ActiveDown -- Sunk
++ ButtonStyle 6 ActiveUp   -- Raised
++ ButtonStyle 7 ActiveDown -- Sunk
++ ButtonStyle 7 ActiveUp   -- Raised
++ ButtonStyle 8 ActiveDown -- Sunk
++ ButtonStyle 8 ActiveUp   -- Raised
++ ButtonStyle 9 ActiveDown -- Sunk
++ ButtonStyle 9 ActiveUp   -- Raised
+
+# Button 4 Iconify square (big box cross by an arrow to a little box in the opposite colour)
+# ButtonStyle 4 Vector 14 20x20@1 20x70@1 70x70@0 70x20@0 20x20@1 60x60@0 60x50@0 60x60@0 50x60@0 60x60@0 60x80@0 80x80@0 80x60@0 60x60@0
+
+#ButtonStyle 2 Vector 13 26x29@1 34x21@1 50x35@1 70x21@1 79x29@1 63x48@0 79x65@1 70x75@0 50x61@0 34x75@0 26x65@0 44x48@1 26x29@0
+# Another X shaped Button
+#AddButtonStyle 8 Active     Vector 9 40x40@2 45x35@2 55x35@2 60x40@2 60x45@2 50x50@2 50x55@2 50x65@4 50x65@2 -- Flat
+#AddButtonStyle 8 InActive   Vector 9 40x40@3 45x35@3 55x35@3 60x40@3 60x45@3 50x50@3 50x55@3 50x65@4 50x65@3 -- Flat
+#AddButtonStyle 8 AllUp      Vector 7 40x45@1 45x40@1 55x40@1 60x50@4 50x60@1 50x75@4 50x75@1 -- Flat
+#AddButtonStyle All Active   Vector 9 80x60@4 80x40@2 60x20@2 40x20@2 20x40@2 20x60@2 40x80@2 60x80@2 80x60@2 -- Flat
+#AddButtonStyle All Inactive Vector 9 80x60@4 80x40@2 60x20@2 40x20@2 20x40@2 20x60@2 40x80@2 60x80@2 80x60@2 -- Flat
+# up triangles
+# ButtonStyle 8 4 50x35@1 65x65@0 35x65@0 50x35@1
+# ButtonStyle 8 Vector 4 50x30@1 70x70@0 30x70@0 50x30@1
+# down triangle
+# ButtonStyle 6 Vector 4 50x65@1 35x35@1 65x35@1 50x65@0
+# Raise window
+# ButtonStyle 8 Vector 10 45x65@2 45x75@3 20x75@3 20x50@3 35x50@3 35x65@1 35x25@1 75x25@1 75x65@0 35x65@0
+
+# These two vectors draw a circle around the vectors above, uncomment 
+# them and see what you think.
+#+ AddButtonStyle  All Active Vector 9 80x60@4 80x40@2 60x20@2 40x20@2 20x40@2 20x60@2 40x80@2 60x80@2 80x60@2 -- Flat
+#+ AddButtonStyle  All Inactive Vector 9 80x60@4 80x40@2 60x20@2 40x20@2 20x40@2 20x60@2 40x80@2 60x80@2 80x60@2 -- Flat
+
+# Childish vectors (look like drawn by a 5 year old)
+#AddButtonStyle 1 Vector 8 30x30@3 30x70@3 70x70@3 55x55@3 80x50@3 70x30@3 \
+#        45x45@3 30x30@3
+#AddButtonStyle 2 Vector 13 30x70@0 24x65@3 46x52@3 26x36@3 35x28@3 58x47@3 \
+#        70x36@3 78x48@3 63x54@3 79x70@3 73x75@3 55x55@3 30x70@3
+#AddButtonStyle 3 Vector 5 30x30@3 30x40@3 70x50@3 70x30@3 30x30@3
+#AddButtonStyle 4 Vector 12 30x30@0 70x27@3 74x70@3 28x72@3 30x30@3 \
+#        30x40@3 70x35@3 70x30@4 84x17@3 70x16@3 84x17@4 87x28@3
+#AddButtonStyle 5 Vector 5 23x48@0 78x45@3 60x45@3 50x70@3 40x45@3
+#AddButtonStyle 6 Vector 9 30x70@0 42x67@3 70x70@3 30x70@3 30x30@4 \
+#        50x50@3 76x24@3 50x50@4 47x22@3
+
+
+# And thse are some ascetic -- clean triangles and bars
+#AddButtonStyle 1 3 50x69@0 69x44@0 50x69@0
+#AddButtonStyle 1 3 31x44@1 50x69@1 31x44@1
+#AddButtonStyle 1 3 69x44@0 31x44@0 69x44@0
+#AddButtonStyle 1 3 31x44@1 69x44@1 31x44@1
+#
+#AddButtonStyle 2 3 50x25@0 69x50@0 50x25@0
+#AddButtonStyle 2 3 50x25@1 31x50@1 50x25@1
+#AddButtonStyle 2 3 69x50@0 31x50@0 69x50@0
+#AddButtonStyle 2 5 31x69@0 69x69@0 69x56@0 69x69@0 31x69@0
+#AddButtonStyle 2 5 31x69@1 31x56@1 69x56@1 31x56@1 31x69@1
+#
+#AddButtonStyle 3 6 31x38@1 31x25@1 69x25@1 69x38@1 31x38@1 31x38@1
+#AddButtonStyle 3 5 31x38@0 69x38@0 69x25@0 69x38@0 31x38@0
+#AddButtonStyle 3 3 50x44@0 69x69@0 50x44@0
+#AddButtonStyle 3 3 69x69@0 31x69@0 69x69@0
+#AddButtonStyle 3 3 31x69@1 50x44@1 31x69@1
+#
+#AddButtonStyle 4 3 50x25@0 69x50@0 50x25@0
+#AddButtonStyle 4 3 50x25@1 31x50@1 50x25@1
+#AddButtonStyle 4 3 69x50@0 31x50@0 69x50@0
+#
+#AddButtonStyle 5 5 50x69@1 31x44@1 69x44@1 50x69@1 50x69@1
+#AddButtonStyle 5 6 31x38@1 31x25@1 69x25@1 69x38@1 31x38@1 31x38@1
+#AddButtonStyle 5 5 31x38@0 69x38@0 69x25@0 69x38@0 31x38@0
+#AddButtonStyle 5 3 50x69@0 69x44@0 50x69@0
+#
+#AddButtonStyle 6 5 31x69@1 31x56@1 69x56@1 69x69@1 31x69@1
+#AddButtonStyle 6 5 31x69@0 69x69@0 69x56@0 69x69@0 31x69@0
+#AddButtonStyle 6 4 50x50@1 31x25@1 69x25@1 50x50@1
+#AddButtonStyle 6 3 50x50@0 69x25@0 50x50@0

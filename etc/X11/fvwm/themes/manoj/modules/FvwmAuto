@@ -1,0 +1,35 @@
+
+DestroyFunc RestoreIconified
+AddToFunc   RestoreIconified
++ I Current (Iconic) Iconify false
+
+
+KillModule FvwmAuto
+#Module FvwmAuto 5250 Raise Nop
+Module FvwmAuto 3000 RestoreIconified Nop
+
+# Shade windows after a bit
+#Module FvwmAuto 300 "ThisWindow (Shaded) WindowShade off"
+
+# Unachade shaded windows
+#Module FvwmAuto 200 "Silent WindowShade off" "Silent WindowShade on"
+
+AddToFunc funky_cancel
++ I UnsetEnv funky_shade_w
++ I WindowShade 
+
+# shade only windows that were previously unshaded when they received
+# focus.
+AddToFunc funky_shade
++ I WindowId $[funky_shade_w] (!shaded) WindowShade on
+
+AddToFunc funky_unshade
++ I funky_shade
++ I UnsetEnv funky_shade_w
++ I ThisWindow (shaded) SetEnv funky_shade_w $[w.id]
++ I WindowShade off
+
+AddToFunc StartFunction
++ I UnsetEnv funky_shade_w
++ I FvwmAuto 300 "Silent funky_unshade" "Silent funky_shade"
+

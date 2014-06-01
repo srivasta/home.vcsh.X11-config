@@ -1,0 +1,21 @@
+#####
+# MenuStyles
+###########
+MenuStyle * MenuFace DGradient 128 2 lightgrey 50 blue 50 white
+
+MenuStyle * !HilightBack, Hilight3DThick, BorderWidth 2, Animation
+MenuStyle * ActiveFore
+
+MenuStyle * PopupDelayed, PopupDelay 300, PopdownDelayed, PopdownDelay 200
+MenuStyle * PopupActiveArea 80
+MenuStyle * PopupAsSubmenu,  HoldSubmenus,  SubmenusRight
+MenuStyle * PopupOffset 1 100
+
+MenuStyle * TitleWarp
+MenuStyle * TitleUnderlines1, SeparatorsShort, TrianglesSolid
+
+
+MenuStyle * ItemFormat "%.2|%.5i%.5l%.5i%2.3>%2|"
+MenuStyle * AutomaticHotKeys
+MenuStyle * VerticalItemSpacing 1 1, VerticalTitleSpacing 2 2
+

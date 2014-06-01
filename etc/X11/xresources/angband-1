@@ -1,0 +1,21 @@
+
+angband*angband*font:		9x15
+angband*angband*geometry:	+300+220
+angband*recall*font:		7x13
+angband*term-1*font:		7x13
+angband*recall*geometry:	80x15+460+0
+angband*term-1*geometry:	80x15+460+0
+angband*choice*font:		7x13
+angband*term-2*font:		7x13
+angband*choice*geometry:	+0+440
+angband*term-2*geometry:	+0+440
+angband*mirror*font:		7x13
+angband*term-3*font:		7x13
+angband*mirror*geometry:	80x15+460+590
+angband*term-3*geometry:	80x15+460+590
+angband*color6:			#3070f0
+angband*color7:			#907027
+angband*term-4*iconic:		true
+angband*term-5*iconic:		true
+angband*term-6*iconic:		true
+angband*term-7*iconic:		true

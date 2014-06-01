@@ -1,0 +1,70 @@
+!
+! This will demonstrate how to set resources for multiple 
+! instantiations of multibiff
+!
+! Say for example, you wanted to run one multibiff to just watch
+! mail and one multibiff to just watch news.
+!
+! by starting one version like this:
+!
+!     % xmultibiff -name xmbnews
+!
+! and the other like this:
+!
+!     % xmultibiff -name xmbmail
+!
+! You can specifiy X resources by resource name
+!
+
+xmultibiff*polltime: 60
+xmultibiff*headertime: 20
+xmultibiff*shortnames: TRUE
+xmultibiff*mailboxes: $HOME/vars/pool/mail/important:$HOME/vars/pool/mail/admin:$HOME/vars/pool/mail/misc:$HOME/vars/pool/mail/bcast
+XMultibiff*defaultDistance:     0
+XMultibiff*hSpace:              0
+XMultibiff*vSpace:              0
+
+!
+! I want my four mailboxes to have a larger font
+!
+XMultibiff*font:                -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+XMultibiff*box1*font:           -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+XMultibiff*box2*font:           -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+XMultibiff*box3*font:           -adobe-helvetica-bold-r-*-*-10-*-*-*-*-*-*-*
+!
+! set up colors
+!
+#ifdef COLOR
+XMultibiff*bordercolor: white
+XMultibiff*foreground:  Blue1
+XMultibiff*background:  LightSteelBlue1
+!XMultibiff*foreground:          grey
+!XMultibiff*background:          steelblue
+!XMultibiff*borderColor:         steelblue
+!XMultibiff*foreground:          lightyellow3
+!XMultibiff*background:          cornsilk4
+!XMultibiff*borderColor:         cornsilk4
+#else
+XMultibiff*foreground:          white
+XMultibiff*background:          black
+#endif
+
+XMultibiff*shortname:           TRUE
+!
+! Make the "dismiss" button stand out
+!
+XMultibiff*shell*Command*foreground:    yellow
+XMultibiff*shell*Command*background:    red
+
+!
+! Make the shell have a fixed width font
+!
+XMultibiff*shell*font:  *adobe-courier-bold-r-*-120-*-m-*
+XMultibiff*box1.title: Urgnt
+XMultibiff*box2.title: Admn
+XMultibiff*box3.title: Misc
+XMultibiff*box4.title: CS
+
+
+
+

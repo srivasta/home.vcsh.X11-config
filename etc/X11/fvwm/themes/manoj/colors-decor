@@ -1,0 +1,12 @@
+# background for window title, buttons and border
+#
+DestroyFunc FuncFvwmDecorBackground
+AddToFunc   FuncFvwmDecorBackground
++ I TitleStyle          InactiveUp    Colorset 1 
++ I TitleStyle          InactiveDown  Colorset 1
++ I TitleStyle          activeUp      Colorset 2
++ I TitleStyle          activeDown    Colorset 2
+
+FuncFvwmDecorBackground
+
+

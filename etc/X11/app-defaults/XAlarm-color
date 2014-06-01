@@ -1,0 +1,16 @@
+! {{{ XAlarm defaults
+
+!#/usr/skel/.Xdefaults /usr/include/X11/keysymdef.h
+! We can't surround this by "#ifdef COLOR ... #endif" and have it in'
+! .../lib/X11/app-defaults/XAlarm because stuff in there is not pre-processed
+! with cpp like wot xrdb does.  Now why is that...?
+
+! If you want colour, you have to stick this in your ~/.xresources file (where
+! you can surround it with #ifdefs).
+
+
+XAlarm*background:                      LightYellow
+XAlarm*foreground:                      IndianRed
+XAlarm*Command.background:              IndianRed
+XAlarm*Command.foreground:              LightYellow
+

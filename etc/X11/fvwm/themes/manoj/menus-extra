@@ -1,0 +1,372 @@
+#=====================================================  A. menus
+#  A. menus - defer bindings until later
+# Delete
+#  Fvwm checks to see if the window understands the "Delete"
+#  protocol. Not all windows do. If it understands "Delete", fvwm sends
+#  the delete message to the window. If the program operating the window
+#  is working well, it will remove itself sometime in the relatively
+#  near future. (May not be immediate, the application may pop-up a
+#  confirm box, may save its state, whatever). As far as fvwm is
+#  concerned, the "Delete" action is done when the message is sent, even
+#  if the window still exists.
+# Close
+#  Similar to delete, but if the window doesn't understand "Delete", the
+#  window is destroyed. At this point, you have either sent two delete
+#  messages, or have beeped and destroyed the window. When destroying a
+#  window, Fvwm actually removes the window, and the program usually,
+#  but not always, crashes.
+# Destroy
+#  This will make fvwm actually destroy the window. Chances are, this
+#  will happen before any of the "Delete" messages are handled by the
+#  application.
+# 
+#  The correct thing to put in your menu, is a simple "Close" this will
+#  correctly remove all windows, except those that understand "Delete"
+#  and are misbehaving (crashing, poorly written, whatever). To handle
+#  the case of a misbehaving window, have a separate item "Destroy"
+#  which you invoke only if the window doesn't respond to "Close"
+
+# This menu is invoked as a sub-menu - it allows you to quit,
+# restart, or switch to another WM.
+DestroyMenu Quit-Verify
+AddToMenu "Quit-Verify" "Really Quit Fvwm?" Title
++              "&Yes, Really Quit%mini.exit.xpm%" Quit
++              "&Restart fvwm2%mini.calc.xpm%" Restart /usr/bin/X11/fvwm2
++              "&No, Don't Quit%mini.checkmark.xpm%" Nop
+
+
+
+DestroyMenu Bell
+AddToMenu Bell  "Loud"  Exec xset b 100
++               "Quiet" Exec xset b 30
++               "Off"   Exec xset b 0
+
+DestroyMenu Keyclick
+AddToMenu Keyclick      "Loud"  Exec xset c 100
++                       "Quiet" Exec xset c 13
++                       "Off"   Exec xset c 0
+
+DestroyMenu Paging
+AddToMenu "Paging" "Paging Functions" Title
++              "Paging OFF"     		EdgeScroll 0 0
++              "Paging ON"     			EdgeScroll 100 100
++              "Horizontal Paging Only"     	EdgeScroll 100 0
++              "Vertical Paging Only"     	EdgeScroll 0 100
++              "Partial Paging"     		EdgeScroll 50 50
+
+
+##+              "Neon Pager"     		Read .new_pager
+##+              "Default Pager"  		Read .old_pager
+
+
+# AddToFunc StartTin      "I"     Desk 0 0
+# +       "I"     GotoPage 0 1
+# +       "I"     Exec xterm -geometry 98x64+0+0 -ls -e /usr/bin/tin &
+# This should move to desk 0, then to the second page down on the left,
+# then start up an xterm running tin.  Seems to work from any initial
+# desk. or xterm -geometry +0+`expr $SCREENHEIGHT`
+
+# Build a menu of all .jpg files in $HOME/lib/public_html/images
+#AddToMenu ImageMenu foo title
+#+ DynamicPopupAction Function MakeImageMenu
+
+DestroyMenu Forms
+AddToMenu Forms "&Q. QuitVerify" Module FvwmForm FvwmForm-QuitVerify
+AddToMenu Forms "&C. Capture"    Module FvwmForm FvwmForm-Capture
+AddToMenu Forms "&R. Rlogin"     Module FvwmForm FvwmForm-Rlogin
+AddToMenu Forms "&T. Talk"       Module FvwmForm FvwmForm-Talk
+AddToMenu Forms "&F. FORM"       Module FvwmForm FvwmForm-Form
+AddToMenu Forms "&O. RootCursor" Module FvwmForm FvwmForm-RootCursor
+
+#
+# Some Example Menus
+#
+#
+
+DestroyMenu "Remote-Popup"
+AddToMenu "Remote-Popup" "somewhere"    exec uxterm +ai -aw -sl 1024 -cr white -fg white -bg \#114433 -T Oneway -e ssh -l me somewhere.com
++              "generic" FvwmForm Ssh
+
+DestroyMenu "Graphics-Popup"
+AddToMenu "Graphics-Popup" "The GIMP" Exec uxterm +ai -aw -fg \#30d030 -bg black -T gimpit -geometry 80x5+602+787 -e /usr/bin/gimp
++              "Tgif" Exec tgif
++              "Xpaint" Exec xpaint
++              "Xmag" Exec xmag
++              "XView" Exec xv
++              "Image Magick" Exec display
+
+DestroyMenu "Development-Popup"
+AddToMenu "Development-Popup"  "X-gdb" Exec xxgdb
++              "ddd" Exec ddd
++              "X-man" Exec xman
+
+DestroyMenu "Accessories-Popup"
+AddToMenu "Accessories-Popup" "Calculator" Exec xcalc
++              "Seyon" Exec seyon -modems /dev/cuaa1
++              "Nedit" Exec nedit
++              "Lock" Exec xlock -mode swarm
+
+DestroyMenu "Games-Popup"
+AddToMenu "Games-Popup" "X-kobo" Exec xkobo
++              "X-boing" Exec xboing
++              "Mahjong" Exec xmj
++              "Minesweeper" Exec xmine
++              "X-Emeraldia" Exec xemeraldia -noscore
++              "Solitaire" Exec tksol
+
+DestroyMenu "Sound-Popup"
+AddToMenu "Sound-Popup" "X-Mixer" Exec xmmix
++              "Xm-CD Player" Exec xmcd
+
+DestroyMenu TestMenu
+AddToMenu TestMenu "TestäI" Title
++ "More Gämes" Popup "Games-Popup"
++ "More Sound"	Popup "Sound-Popup"
+
+
+DestroyMenu MiscUtilities
+AddToMenu MiscUtilities
++	"Paging"	Popup Paging
++	"Forms"	Popup Forms
++	"Graphics-Popup"	Popup "Graphics-Popup"
++	"Development-Popup"	Popup "Development-Popup"
++	"Accessories-Popup"	Popup "Accessories-Popup"
++	"Games-Popup"	Popup "Games-Popup"
++	"Sound-Popup"	Popup "Sound-Popup"
++       "Move Methods"  Popup FvwmMoveMethods
++ DynamicPopupAction Function MakeImageMenu
++ "Images" Popup ImageMenu
++ DynamicPopupAction Function WallpaperBrowser
++ "WallPaper Browser" Popup WallpaperBrowserMenu
++ MissingSubmenuFunction FuncFvwmMenuDirectory
++ "WallPapers" Popup $[fvwm_image_path]/wallpaper/
++ "Test Menu"  Popup TestMenu
+
+
+# Sub menu for Utilities
+AddToMenu "System-Edits" "System Edits" Title
++              "Edit .fvwmrc" Exec emacs_once .fvwmrc &
++              "Edit .xsession" Exec emacs_once .xsession &
++              "Edit .Xresources" Exec emacs_once .Xresources &
++              "Source .Xresources" Exec xrdb -merge .Xresources &
++              "Restart fvwm2" Restart fvwm2
+
+PipeRead 'fvwm-menu-desktop --desktop kde-sys'
+#PipeRead 'fvwm-menu-xlock --name MenuSSaver --title "Screensaver" \
+#  --icon-item mini-bball.xpm --special-first -- -nice 19 -nolock'
+#PipeRead 'fvwm-menu-xlock --name MenuSLock --title "Lock Screen" \
+#  --icon-item mini-rball.xpm --special-first -- -nice 19 -nolock'
+
+PipeRead 'perl $[fvwm_script]/bookmarks-menu'
+
+AddToMenu "Utilities" 
+# This menu will fire up some very common utilities
+Test (f  /etc/X11/fvwm/menudefs.hook) + "$[gt.&Reread System Menu]%menu/terminal.xpm%" Read "/etc/X11/fvwm/menudefs.hook"
+Test (f  /etc/X11/fvwm/menudefs.hook) + "$[gt.&Update My Debian Menu]%menu/terminal.xpm%" PipeRead 'update-menus &&  echo "Read menudefs.hook"'
++ "&Apps"                       Popup /Debian/Applications
+#+ "&CrossOver"                 Popup /Debian/CrossOver
++ "&Games"                      Popup /Debian/Games
++ "&FVWM_Modules"               Popup /Debian/FVWM_Modules
++ "&Window_Managers"            Popup /Debian/Window_Managers
++ "&Help"                       Popup /Debian/Help
++ "&Screen"                     Popup /Debian/Screen
++ "KDE System Menu"             Popup kde-sys
++ "Misc"                        Popup MiscUtilities
++ "Headlines"                   Popup MenuFvwmHeadlines
++ "&XShells"                    Popup /Debian/Applications/Terminal_Emulators
+#+ "MenuWmIcons"                 Popup "/DebianWmIcons"
+#+ "&Menus"                      Popup MenuFvwmPrograms
++ "&Iconstyles"                 Popup MenuFvwmIconSets
++ "&Gnus"                       Function MyMail
++ "&Emacs"                      Function MyEditor
++ "&Firefox"                    Function Warp-or-Run-Browser
++ %16x16/bookmark_folder.png%"Bookmarks"      Popup bookmarks_start
++ %16x16/bookmark_folder.png%"Re-read Bookmarks" PipeRead 'perl $[fvwm_script]/bookmarks-menu'
++ "Manpage: fvwm%help.xpm%"     Exec exec uxterm +ai -aw -g 68x45-0-5 -fn \
+        9x15 -fb 9x15bold -T "Manpage: fvwm2" -n "fvwm2" -e mcview \
+       /usr/share/man/man1/fvwm2.1.gz
++ ""                            Nop
++ "Refresh Screen"              Refresh
++ "System Edits"                Popup System-Edits
++ ""                            Nop
++ "E&xit Fvwm%mini.exit.xpm%" 	Popup Quit-Verify
+
+# Make sure that the Debian menus, and the icons they reference, are 
+# available if we have /etc/X11/fvwm/menudefs.hook
+DestroyFunc SetDebianMenu
+AddToFunc   SetDebianMenu
++ I Read /etc/X11/fvwm/menudefs.hook
++ I Test (F $[FVWM_USERDIR]/menudefs.hook) Read menudefs.hook quiet
++ I Test (F $[FVWM_USERDIR]/wm-icons/menudefs.hook) Read wm-icons/menudefs.hook quiet
+
+Test (f  /etc/X11/fvwm/menudefs.hook) SetDebianMenu
+
+AddToMenu Misc-Ops "Misc Config Opts" Title
++                  "Sloppy Focus"        ChangeDefaultFocus SloppyFocus
++                  "Click To Focus"      ChangeDefaultFocus ClickToFocus
++                  "Focus Follows Mouse" ChangeDefaultFocus FocusFollowsMouse
++                  "" Nop
++                  "Colormap Follows Mouse" ColormapFocus FollowsMouse
++                  "Colormap Follows Focus" ColormapFocus FollowsFocus
++                  "" Nop
++                  "Full Paging ON"         EdgeScroll 100 100
++                  "All Paging OFF"         EdgeScroll 0 0
++                  "Horizontal Paging Only" EdgeScroll 100 0
++                  "Vertical Paging Only"   EdgeScroll 0 100
++                  "Partial Paging"         EdgeScroll 50 50
++                  "Full Paging && Edge Wrap" EdgeScroll 100000 100000
+
+# WinRearrange 
+DestroyMenu WinRearrange
+AddToMenu   WinRearrange
++ "&Cascade%mini.windows.xpm%" FvwmRearrange -cascade -m 3 3 -incx 2
++ "Tile &horizontally%mini.windows.xpm%" FvwmRearrange -tile -h -m 2 2 98 98
++ "Tile &vertically%mini.windows.xpm%" FvwmRearrange -tile -m 2 2 98 98
++ "" Nop
++ "&ScrollBar (1/2 app)%mini.window.xpm%"  Module FvwmScroll 2 2
++ "%mini.window.xpm%&Scroll&Bar (75%% scr)" Module FvwmScroll 75p 75p
++ "" Nop
++ "&Arrange Icons%mini.icons.xpm%" All (CurrentDesk Iconic) RecaptureWindow
++ "&Refresh Screen%mini.ray.xpm%" Refresh
+
+AddToMenu "move_with_window_to_desk"
++ "Desk &1"   MoveToDeskWith 0 0
++ "Desk &2"   MoveToDeskWith 0 1
++ "Desk &3"   MoveToDeskWith 0 2
++ "Desk &4"   MoveToDeskWith 0 3
++ "Desk &5"   MoveToDeskWith 0 4
++ "Desk &6"   MoveToDeskWith 0 5
++ "Desk &7"   MoveToDeskWith 0 6
++ "Desk &8"   MoveToDeskWith 0 7
++ "Desk &9"   MoveToDeskWith 0 8
++ "Desk 1&0"  MoveToDeskWith 0 9
++ "Desk 11(&-)"  MoveToDeskWith 0 10
++ "Desk 12(&=)"  MoveToDeskWith 0 11
++ "Desk 13(&q)"  MoveToDeskWith 0 12
++ "Desk 14(&w)" MoveToDeskWith 0 13
++ "Desk 15(&e)"  MoveToDeskWith 0 14
++ "Desk 16(&r)"  MoveToDeskWith 0 15
++ "Desk 17(&t)"  MoveToDeskWith 0 16
++ "Desk 18(&y)"  MoveToDeskWith 0 17
++ "Desk 19(&u)" MoveToDeskWith 0 18
++ "Desk 20(&i)"  MoveToDeskWith 0 19
++ "Desk 21(&o)"  MoveToDeskWith 0 20
++ "Desk 22(&p)"  MoveToDeskWith 0 21
++ "Desk 23(&[)"  MoveToDeskWith 0 22
++ "Desk 24(&])"  MoveToDeskWith 0 23
+
+AddToMenu "send_window_to_desk"
++ "Desk &1"   MoveToDesk 0 0
++ "Desk &2"   MoveToDesk 0 1
++ "Desk &3"   MoveToDesk 0 2
++ "Desk &4"   MoveToDesk 0 3
++ "Desk &5"   MoveToDesk 0 4
++ "Desk &6"   MoveToDesk 0 5
++ "Desk &7"   MoveToDesk 0 6
++ "Desk &8"   MoveToDesk 0 7
++ "Desk &9"   MoveToDesk 0 8
++ "Desk 1&0"  MoveToDesk 0 9
++ "Desk 11(&-)" MoveToDesk 0 10
++ "Desk 12(&=)" MoveToDesk 0 11
++ "Desk 13(&q)" MoveToDesk 0 12
++ "Desk 14(&w)" MoveToDesk 0 13
++ "Desk 15(&e)" MoveToDesk 0 14
++ "Desk 16(&r)" MoveToDesk 0 15
++ "Desk 17(&t)" MoveToDesk 0 16
++ "Desk 18(&y)" MoveToDesk 0 17
++ "Desk 19(&u)" MoveToDesk 0 18
++ "Desk 20(&i)" MoveToDesk 0 19
++ "Desk 21(&o)" MoveToDesk 0 20
++ "Desk 22(&p)" MoveToDesk 0 21
++ "Desk 23(&[)" MoveToDesk 0 22
++ "Desk 24(&])" MoveToDesk 0 23
+
+
+DestroyMenu Window-Ops
+AddToMenu "Window-Ops" "Windows"       Title
++    "work&2%mini.xterm.xpm%" 	  Exec exec xterm +ai -aw -fg $[fg.cs30] -bg $[bg.cs30] -ut -T Work2 &
++    "work&3%mini.xterm.xpm%" 	  Exec exec xterm +ai -aw -fg $[fg.cs32] -bg $[bg.cs32] -ut -T Work3 &
++    "&Root%mini.xterm.xpm%" 	  Exec exec xterm +ai -aw -fg $[fg.cs33] -bg $[bg.cs33]     -T Root -e /bin/su -c '/bin/bash -rcfile "~srivasta/.rootrc" -i' root&
++    "Hidden Console"                 Function StartHiddenConsole
++    "Window Operations" 		  Title
++    "&Move%mini.move.xpm%" 	  Function Move-or-Raise
++    "Re&size%mini.resize.xpm%" 	  Function Resize-or-Raise
++    "Raise%mini.raise.xpm%" 	  Raise
++    "Lower%mini.lower.xpm%" 	  Lower
++    "(De)&Iconify%mini.iconify.xpm%" Iconify
++    "(Un)&Stick%mini.stick.xpm%" 	Stick
++    "(Un)Maximize%mini.resize.xpm%" Function max_vert_func
++    "Window List Skip"              WindowStyle WindowListSkip
++    "Window List UnSkip"            WindowStyle !WindowListSkip
++    "" 				Nop
++     "&Rearrange/Scroll%mini.windows.xpm%" Popup WinRearrange
++     "Send to &Page..."    SendWindowTopage
++     "Se&nd to desk"       Popup send_window_to_desk
++     "Mo&ve to desk"       Popup move_with_window_to_desk
++     ""                                Nop
++    "Destroy%mini.destroy.xpm%" 	Destroy
++    "Close%mini.bomb.xpm%" 	        Close
++    "" 				Nop
++    "ScrollBar"                    Module FvwmScroll 2 2
++    "Re&fresh Screen" 		Refresh
++    "Refresh Window"                RefreshWindow
++    "Print"                        PrintFunction
++    "Print Reverse"                PrintReverseFunction
+
+#    "work&2%mini.xterm.xpm%" 		Exec exec mlterm -f $[fg.cs30] -b $[bg.cs30] -t -T Work2 -e /bin/bash &
+#    "work&3%mini.xterm.xpm%" 		Exec exec mlterm -f $[fg.cs32] -b $[bg.cs32]  -t -T Work3 -e /bin/bash &
+#    "&Root%mini.xterm.xpm%" 		Exec exec mlterm -f $[fg.cs33] -b $[bg.cs33] -t -T Root -e /bin/su -c '/bin/bash -rcfile "~srivasta/.rootrc" -i' root&
+
+
+# A trimmed down version of "Window-Ops", good for binding to decorations
+DestroyMenu Window-Ops2
+AddToMenu "Window-Ops2" "Window" Title
++              "&Move%mini.move.xpm%" Function Move-or-Raise
++              "&Resize%mini.resize.xpm%" Function Resize-or-Raise
++              "Raise%mini.raise.xpm%" Raise
++              "&Lower%mini.lower.xpm%" Lower
++              "&Iconify%mini.iconify.xpm%" Iconify
++              "(Un)&Stick%mini.stick.xpm%" Stick
++              "Select" Function SelectWindow
++              "Iconify With Thumbnail"   Function IconifyWithScreenshot
++              "" Nop
++              "&Rearrange/Scroll%mini.windows.xpm%" Popup WinRearrange
++              "Send to &Page..."    SendWindowTopage
++              "Se&nd to desk"       Popup send_window_to_desk
++              "Mo&ve to desk"       Popup move_with_window_to_desk
++              "" Nop
++              "Destroy%mini.destroy.xpm%" Destroy
++              "Close%mini.bomb.xpm%" Close
++              "" Nop
++              "ScrollBar" Module FvwmScroll 2 2
+
+DestroyMenu "Desktop-Popup"
+AddtoMenu "Desktop-Popup"
++ "Tiling:"		Nop
++ "&Veritcal"		FvwmRearrange -tile -h -nostretch -noraise 0 10 100 100
++ "&Horizontal"		FvwmRearrange -tile -v nostretch -noraise 0 10 100 100
++ "Auto Raise On"	FvwmAuto 200 Raise Nop
++ "Auto Raise Off"	KillModule FvwmAuto
++ "Backer (broken)"	Module FvwmBacker
+
+DestroyMenu General
+AddToMenu "General" "Generic Functions" Title
++              "&Stick" 		Stick
++              "&All windows" 		WindowList 0
++              "&Local windows" 	WindowList 2
++              "&Refresh" 		Refresh
++              "&Next Desk" 		Desk 1
++              "&Desktop"               Popup Desktop-Popup
++              "Circulate&Up" 		CirculateUp
++              "Circulate&Down" 	CirculateDown
++              "Previous Focus"         Prev (AcceptsFocus) Focus
++ 	       "Next Focus"             Next (AcceptsFocus) Focus
++ 	       ""                       Nop
++              "m4-Settings" 		Popup m4-Settings
++	       "Bell"                  	Popup Bell
++              "Keyclick"              	Popup Keyclick
++              "Toggle Paging"		Toggle-Page
++              "Paging Functions" 	Popup Paging		
++              "Recapture screen"       Recapture
++              "&Forms"                 Popup Forms
++              "Reset X defaults"       Exec xrdb -load $HOME/.Xresources

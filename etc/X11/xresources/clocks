@@ -1,0 +1,64 @@
+
+xclock.x:164
+xclock.y:164
+#ifdef COLOR
+xclock*InternalBorder:Blue
+xclock*Highlight: White
+xclock*Border: maroon
+#endif
+xclock*BorderWidth:2
+xclock*mode:digital
+!xclock*font:vbee-36
+
+!       oclock defaults
+
+oclock*geometry:                80x80-0+0
+#ifdef  COLOR
+oclock*Background:              grey
+oclock*BoarderColor:            light blue
+oclock*hour:                    yellow
+oclock*jewel:                   blue
+oclock*minute:                  yellow
+#endif
+
+! }}}
+! {{{ xchrono defaults
+
+xchrono.width:          802
+xchrono.height:         270
+xchrono.x:              20
+xchrono.y:              40
+xchrono.clockWidth:     125
+xchrono.clockHeight:    125
+!xchrono*font:          ncenr12
+!xchrono*labelFont:     ncenb14
+xchrono*foreground:     black
+xchrono*background:     white
+xchrono.clockBox.background:    blue
+xchrono.clockBox.forceBars:     on
+xchrono.clockBox.useLeft:       on
+xchrono.clockBox.useRight:      on
+xchrono*hands:          green
+xchrono*highlight:      black
+xchrono*borderColor:    red
+xchrono*borderWidth:    2
+xchrono.boston:         on
+xchrono.newyork:        on
+xchrono.chicago:        on
+xchrono.denver:         on
+xchrono.la:             on
+xchrono.hawaii:         on
+xchrono.tokyo:          on
+xchrono.sydney:         on
+xchrono.london:         on
+xchrono.paris:          on
+xchrono.frankfurt:      on
+
+! }}}
+! {{{ dclock default
+
+#ifdef  COLOR
+dclock*background:                      LightGoldenrod
+#endif
+
+! }}}

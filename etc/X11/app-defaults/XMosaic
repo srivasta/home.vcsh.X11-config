@@ -1,0 +1,5 @@
+XMosaic*warpPointerForIndex: True
+XMosaic*fancySelections: True
+XMosaic*globalHistoryFile: "lib/mosaic/mosaic-global-history"
+XMosaic*defaultHotlistFile: "lib/mosaic/mosaic-hotlist-default"
+XMosaic*personalAnnotationDirectory: "lib/mosaic/personal-annotations"

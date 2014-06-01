@@ -1,0 +1,6 @@
+
+Xpostit.geometry:               48x48+560-0
+Xpostit*saveNotes:              true
+Xpostit*scrollOnOverflow:       true
+Xpostit*noteDir:                lib/.postitnotes
+Xpostit*scrollBar:              true

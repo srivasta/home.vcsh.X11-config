@@ -1,0 +1,21 @@
+*FvwmTaskBar: Colorset 17
+*FvwmTaskBar: FocusColorset 18
+*FvwmTaskBar: IconColorset 19
+*FvwmTaskBar: TipsColorset 16
+
+*FvwmTaskBar: Geometry +0-0
+
+
+*FvwmTaskBar: Action Click1 DeiconifyRaiseAndFocus
+*FvwmTaskBar: Action Click2 Iconify On
+*FvwmTaskBar: Action Click3 Lower
+
+*FvwmTaskBar: UseSkipList
+*FvwmTaskBar: UseIconNames
+*FvwmTaskBar: AutoStick
+*FvwmTaskBar: AutoHide
+*FvwmTaskBar: ShowTips
+*FvwmTaskBar: NoIconAction SendToModule FvwmAnimate animate
+*FvwmTaskBar: WindowButtonsLeftMargin 8
+# Animation
+*FvwmTaskBar: NoIconAction SendToModule FvwmAnimate animate

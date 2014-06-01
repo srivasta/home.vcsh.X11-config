@@ -1,0 +1,143 @@
+
+!
+!
+! First, try to figure out which display we are on.
+!
+! If you would like to understand why and how I define the following
+! variables, you need to understand cpp and read the source code of
+! xrdb in X11R5 distribution tape number one.
+!
+!-----------------------------------------------------------------------------
+!
+! Check display type first.
+! 
+! Abbreviations to shorten tests on display size
+
+#if (WIDTH >= 1280 ) && (HEIGHT >= 1024)
+#  define W_1280
+#elif (WIDTH >= 1152 ) && (HEIGHT >= 864)
+#  define W_1152
+#elif (WIDTH >= 1024 ) && (HEIGHT >= 768)
+#  define W_1024
+#elif (WIDTH >= 800) && (HEIGHT >= 600)
+#  define W_800
+#endif
+
+! In Sweet Hall, IBM RISC 6000s display offers the highest resolution and the
+! richest color contrast, next is SUN SPARCstaions display.  DEC 3100s
+! display is not very mentionable.  A fact you can see from the
+! numbers given below, from  highest to the lowest. 
+!
+#if ((HEIGHT == 864) && (WIDTH == 1024) && (X_RESOLUTION==3075)  && (PLANES==8))
+!PMAX 1
+#define PMAX 1
+#endif
+
+
+#if ((WIDTH == 1280) && (HEIGHT == 1024) && (X_RESOLUTION > 3700) && (PLANES==8))
+! PMAXLARGE 1
+#define PMAXLARGE 1
+#endif
+
+#if ((WIDTH == 1280) && (HEIGHT == 1024) && (X_RESOLUTION < 3700) & (PLANES == 4))
+! IBM_19g  1
+#define IBM_19g  1
+#endif 
+
+
+#if ((WIDTH == 1280) && (HEIGHT == 1024) && (X_RESOLUTION < 3700) & (PLANES == 8))
+! IBM_19c  1
+#define IBM_19c  1
+#endif
+
+#if ((WIDTH == 1280) && (HEIGHT == 1024) && (X_RESOLUTION > 3700) & (PLANES == 8))
+! NCD_19c  1
+#define NCD_19c  1
+#endif
+
+#if ((WIDTH == 1280) && (HEIGHT == 1024) && (X_RESOLUTION > 3700))
+! NCD_19   1
+#define NCD_19   1
+#endif
+
+#if ((WIDTH == 1024) && (HEIGHT == 800)  && (X_RESOLUTION < 3000))
+! NCD_19b  1
+#define NCD_19b  1
+#endif
+
+#if ((WIDTH == 1024) && (HEIGHT == 800)  && (X_RESOLUTION > 4000))
+! NCD_15   1
+#define NCD_15   1
+#endif
+
+#if ((WIDTH == 1024) && (HEIGHT == 1024))
+! NCD_16   1
+#define NCD_16   1
+#endif
+
+#if ((WIDTH == 1024) && (HEIGHT == 768) && (X_RESOLUTION < 4000))
+! NCD_17   1
+#define NCD_17   1
+#endif
+
+#if ((WIDTH == 1024) && (HEIGHT == 768) && (X_RESOLUTION > 4000))
+! NCD_14   1
+#define NCD_14   1
+#endif
+
+#if ((WIDTH == 1152) && (HEIGHT == 900))
+! SunCons  1
+#define SunCons  1
+#endif
+
+#if ((WIDTH == 800)  && (HEIGHT == 600))
+! GraphOn  1
+#define GraphOn  1
+#endif
+
+#if (SunCons && ((RELEASE > 999) && (RELEASE <  4000)))
+! OpenWin  1
+#define OpenWin  1
+#endif
+
+#if (SunCons && ((RELEASE < 999) || (RELEASE >= 5000)))
+! MITX11   1
+#define MITX11   1
+#endif
+
+!       We define IBM if this is one of our mutant IBM X systems
+#if ((IBM_19g || IBM_19c))
+! IBM      1
+#define IBM      1
+#endif
+
+!       We define DEC if this is one of our DEC X systems
+#if (PMAX ||  PMAXLARGE)
+! DEC      1
+#define DEC      1
+#endif
+
+!       We define REMOTE if this is a NCD or other remote-cpu X terminal
+!#if (NCD_19 || NCD_19b || NCD_19c || NCD_16 || NCD_17 || NCD_15 || NCD_14)
+!#define REMOTE  
+!#endif
+
+!       We define SLOW if this is a "GraphOn" or other slow X terminal
+! SLOW    GraphOn
+! #define SLOW    GraphOn
+
+
+
+#if ((HEIGHT == 900) && (WIDTH == 1152))
+!       STDSUN 1
+#define STDSUN 1
+#endif
+
+
+!       We define UNKNOWN if this is a server we have not defined above
+#if  ( ! (REMOTE || GraphOn || SunCons || IBM || DEC))
+! UNKNOWN  1
+#define UNKNOWN  1
+#endif
+
+! }}}

@@ -1,0 +1,5 @@
+gnuplot*borderWidth: 5
+gnuplot*internalBorder: 5
+gnuplot*geometry:1280x950+0+0
+gnuplot*title:Gnu Plot
+gnuplot*iconName:Gnu Plot

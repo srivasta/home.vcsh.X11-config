@@ -1,0 +1,11 @@
+
+xtank*playerName:    Manoj      
+xtank*tankName:      Behemoth 
+xtank*color.cursor: Orange
+xtank*escherWidth:   3          
+!-  Specifies the width of the Escher Border
+!'if you don't like escher borders, set
+                        
+Xtank*playername:    Manoj      
+!Xtank*tankname:      Behemoth
+Xtank*escherwidth:   3          

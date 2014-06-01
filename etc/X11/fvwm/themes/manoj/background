@@ -1,0 +1,47 @@
+#_____________________________________________________  E.7 Backer
+# E.7 FvwmBacker -- Set Up Backgrounds for different desktops.
+# FvwmBacker can change wallpaper as you change desks or pages, or
+# execute commands.
+DestroyModuleConfig FvwmBacker: *
+
+
+*FvwmBacker: Command (Desk 0) Exec fvwm-root -r $[fvwm_wallpaper0]
+*FvwmBacker: Command (Desk 1) Exec fvwm-root -r $[fvwm_wallpaper1]
+
+#*FvwmBacker: Command (Desk 0) Exec xsetbg -fullscreen $[fvwm_wallpaper0]
+#*FvwmBacker: Command (Desk 1) Exec xsetbg -fullscreen $[fvwm_wallpaper1]
+
+#*FvwmBacker: Command (Desk 0) Exec xsetroot -mod 4 4 -fg rgb:54/6/6 -bg grey20
+#*FvwmBacker: Command (Desk 1) Exec xpmroot $./images/decor/border-inactive.xpm
+
+
+DestroyFunc FuncFvwmStartThemeBackground
+AddToFunc   FuncFvwmStartThemeBackground
++ I FuncFvwmRestartModule FvwmBacker
+
+DestroyFunc FuncFvwmStopThemeBackground
+AddToFunc   FuncFvwmStopThemeBackground
++ I FuncFvwmStopModule FvwmBacker
+
+DestroyFunc FuncFvwmBackgroundSolidColor
+AddToFunc   FuncFvwmBackgroundSolidColor
++ I DestroyFunc FuncFvwmStartThemeBackground
++ I AddToFunc   FuncFvwmStartThemeBackground
++ I + I Exec exec fvwm-themes-root --solid "$0"
+
+DestroyFunc FuncFvwmStartThemeBackground
+AddToFunc   FuncFvwmStartThemeBackground
++ I Exec exec fvwm-root $./images/background/gothic-angel2.jpg
+
+DestroyFunc FuncFvwmBackgroundPixmapColors
+AddToFunc   FuncFvwmBackgroundPixmapColors
++ I DestroyFunc FuncFvwmStartThemeBackground
++ I AddToFunc   FuncFvwmStartThemeBackground
++ I + I Exec exec fvwm-themes-images --in-file $FT_DATADIR/images/background/stone.xpm --colorize --colorize-colors $* --setroot
+
+DestroyFunc FuncFvwmBackgroundImage
+AddToFunc   FuncFvwmBackgroundImage
++ I DestroyFunc FuncFvwmStartThemeBackground
++ I AddToFunc   FuncFvwmStartThemeBackground
++ I + I Exec exec fvwm-themes-root --adjust $./images/background/'$0'
+

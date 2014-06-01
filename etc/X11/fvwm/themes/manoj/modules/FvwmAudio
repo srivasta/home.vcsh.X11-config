@@ -1,0 +1,26 @@
+#_____________________________________________________  E.8 Audio
+# E.8 FvwmAudio -- Set Up Sounds.
+
+*FvwmAudioPlayCmd /usr/local/bin/AF/aplay
+*FvwmAudioDir /usr/local/share/sound_files/fvwm
+
+*FvwmAudio startup                 hi.snd
+*FvwmAudio shutdown                Goodbye.au
+*FvwmAudio new_page                Oomph.au
+*FvwmAudio res_class               beep_metal.au
+*FvwmAudio focus_change            thrust.au
+*FvwmAudio add_window              drip.au
+*FvwmAudio destroy_window          flush.au
+*FvwmAudio deiconify               ploop.au
+*FvwmAudio unknown                 doh.au
+*FvwmAudio iconify                 beep_pure_saw.au
+*FvwmAudio icon_name               beep_robotic.au
+*FvwmAudio window_name             beep_fm.au
+*FvwmAudio new_desk                Teeswing.au
+*FvwmAudio raise_window            arrp.au
+*FvwmAudio lower_window            tap3.au
+*FvwmAudio configure_window        dadan.au
+*FvwmAudio res_name                Cork.au
+*FvwmAudio end_windowlist          hasta_la_vista.au
+*FvwmAudio toggle_paging           ST_laser.au        
+

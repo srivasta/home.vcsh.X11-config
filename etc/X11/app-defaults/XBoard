@@ -1,0 +1,12 @@
+
+! {{{ xboard defaults
+
+!
+!XBoard*boardSize: large
+!XBoard*searchTime:600
+!XBoard*timeControl:150
+!XBoard*movesPerSession:40
+!XBoard*clockMode: True
+!XBoard*showCoords:True
+
+! }}}

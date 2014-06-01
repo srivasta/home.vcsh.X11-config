@@ -1,0 +1,17 @@
+
+! {{{ hex calculator
+
+hexcalc*borderWidth:            1
+hexcalc*font:                   *schoolbook-medium-r-normal--14*
+hexcalc*Label*font:             *helvetica-medium-r-normal--14*
+
+hexcalc*foreground:             blue
+hexcalc*background:             grey60
+hexcalc*off*foreground:         black
+hexcalc*off*background:         white
+hexcalc*baseKey*foreground:     white
+hexcalc*baseKey*background:     Dark Slate Blue
+hexcalc*Label*foreground:       red
+hexcalc*Label*background:       black
+
+! }}}

@@ -1,0 +1,326 @@
+###########################################################################
+# set up the colors
+#
+
+# Highlight color
+#
+# This sets the textcolor and background color for the active window
+#Set the foreground and background color for selected windows
+#Style * HilightFore #ff5555, HilightBack #1ea819
+HilightColor   MidnightBlue #c06077
+
+#                    COLORSETS USED BY FVWM-THEMES
+#
+#This file includes the default colors@ component file (I, II, III and IV) and
+#some comments on where these colorsets are used (V and VI). fvwm-themes uses
+#internally colorsets 0 to 39, some colorsets are reserved for the future use.
+#So, a user can freely use colorsets starting from 40 (for example, in his
+#colors-extra@ component) if he ever needs any additional colorsets.
+#
+# I.   FVWM Colorsets (0 to 9)
+#       I.1. Default Colorsets
+#       I.2. Window Decorations
+#       I.3. Menu Colorsets
+#
+#Colorset N |          Meaning           |           Usage Examples
+#-----------+----------------------------+-------------------------------------
+#         0 | default                    | feedback windows, FvwmScroll
+#         1 | inactive window            | window/icon titles, windows in Pager
+#         2 | active window              | window/icon titles, windows in Pager
+#         3 | inactive borders           | window borders (may copy 1)
+#         4 | active borders             | window borders (may copy 2)
+#         5 | inactive menu item         | menus (may have pixmap or gradient)
+#         6 | active menu item           | menus (only bg/fg used)
+#         7 | greyed menu item           | menus (only fg used)
+#         8 | reserved                   | for the fvwm-themes future use
+#         9 | reserved                   | for the fvwm-themes future use
+
+#
+# II.  Module Colorsets (10 to 29)
+#       II.1. Common Colorsets
+#       II.2. Window List Module Colorsets
+#       II.3. Other Module Colorsets
+#       II.4. External Colorsets
+#
+#Colorset N |          Meaning           |           Usage Examples
+#-----------+----------------------------+-------------------------------------
+#        10 | modules, default           | Button Bar, Pager, other modules
+#        11 | modules, default hilight   | Button Bar
+#        12 | modules, special           | gradient for IconMan/IconBox
+#        13 | modules, swallowed apps    | bg, fg, sh, hi for xclock/xload etc.
+#        14 | modules, default #2        | alternative for Pager, Button Bar
+#        15 | modules, default hilight #2| alternative for Pager
+#        16 | modules, balloons          | TaskBar, Pager
+#        17 | modules, winlist, standard | item of IconMan, WinList, TaskBar
+#        18 | modules, winlist, active   | --.--
+#        19 | modules, winlist, iconified| --.--
+#        20 | modules, winlist, pointed  | --.--
+#        21 | modules, ident             | FvwmIdent
+#        22 | modules, console           | FvwmConsole
+#        23 | modules, transparent       | Button Bar
+#        24 | modules, reserved          | for the fvwm-themes future use
+#        25 | modules, reserved          | for the fvwm-themes future use
+#        26 | reserved                   | for the fvwm-themes future use
+#        27 | reserved                   | for the fvwm-themes future use
+#        28 | reserved                   | for the fvwm-themes future use
+#        29 | dynamical/temporary        | tools for choosing/previewing colors
+
+
+#
+# III. Application Colorsets (30 to 35)
+#
+#Colorset N |          Meaning           |           Usage Examples
+#-----------+----------------------------+-------------------------------------
+#        30 | regular terminal           | xterm/rxvt or any other terminal
+#        31 | admin terminal             | terminal for root (su)
+#        32 | remote terminal            | terminal with ssh/rsh/telnet
+#        33 | viewer terminal            | man, less, tail -f
+#        34 | console application        | top, editor
+#        35 | dialog main area           | FvwmScript, FvwmForm, xmessage
+#
+#Colorset N |          Meaning           |           Usage Examples
+#-----------+----------------------------+-------------------------------------
+#        36 | dialog text area           | FvwmScript, FvwmForm, xmessage
+#        37 | reserved                   | for the fvwm-themes future use
+#        38 | reserved                   | for the fvwm-themes future use
+#        39 | reserved                   | for the fvwm-themes future use
+
+# ****************************************************************************
+# IV.  Start/Stop functions
+#
+# V.   Module Configurations (under modules/)
+#
+# VI.  Miscellaneous Configurations
+# 
+# ****************************************************************************
+# for feedback windows (like geometry window and NoteMessage) and FvwmScroll
+#
+Colorset 0 fg black, bg #70A0A0
+
+# -----------------------
+# I.2. Window Decorations
+# -----------------------
+
+# The following colors are used in FvwmPager for the window colors
+# and in a title bar of windows (shade/hilight colors, computed from
+# the bg color, but might be specified directly by sh and hi).
+# The title bar background is defined below using TitleStyle.
+
+# window title, inactive and active
+#
+Colorset 1 fg black, bg rgb:88/7C/66 
+Colorset 2 fg black, bg rgb:CC/BA/99 
+
+# window borders, inactive and active
+#
+Colorset 3 fg black, bg rgb:88/7C/66 
+Colorset 4 fg black, bg rgb:CC/BA/99 
+
+
+
+# -------------------
+# I.3. Menu Colorsets
+# -------------------
+
+# inactive menu item fg+bg and menu face if any
+#
+#Colorset 5 fg black, bg rgb:A0/B8/D0 
+#Colorset 5 RootTransparent, fg rgb:A0/B8/D0, bg rgb:08/08/03, CGradient 50 rgb:50/50/78 rgb:40/40/5a 
+# Colorset 5 RootTransparent buffer, Tint rgb:00/30/30 20
+# Colorset 5 RootTransparent buffer, bg average, Tint black 30, bgTint black 30
+Colorset 5 Transparent, fg rgb:C7/DF/F7, fgsh grey30, Tint rgb:30/20/10 30
+
+
+# active menu item fg+bg
+#
+# Colorset 6 RootTransparent, fg rgb:95/12/12, bg rgb:D0/D9/E8 
+# Colorset 6 RootTransparent, fg rgb:f8/f8/f3, bg rgb:40/5a/40, Tint black 20, bgTint black 20
+Colorset 6 Transparent, fg rgb:f8/f8/f3, Tint black 20, bgTint black 20
+
+# greyed menu item fg
+#
+Colorset 7 fg black, bg white, sh white, RootTransparent Buffer, Tint #f6f6f6 20
+# Colorset 7 RootTransparent, fg grey48, bg grey48 
+# Colorset 7 Transparent, fg grey48
+
+
+# -------------------------------------------------
+# Colorsets 8 and 9 are reserved for the future use.
+
+# ============================================================================
+# II. Module Colorsets
+# ============================================================================
+
+# ----------------------
+# II.1. Common Colorsets
+# ----------------------
+
+# default for modules
+# For FvwmButtons, FvwmPager, can be also used for FvwmIconMan, FvwmIconBox.
+#
+# Colorset 10 fg black, bg rgb:80/A0/A0 
+# Colorset 10 fg rgb:A9/99/A9, bg rgb:28/20/28 
+Colorset 10 fg rgb:A9/99/A9, bg rgb:28/20/28
+#Colorset 10 fg rgb:A9/99/A9, RootTransparent buffer
+
+
+# default hilight for modules
+# For hilighting a part of a button bar (some swallowed apps for example).
+#
+# Colorset 11 fg black, bg white 
+#Colorset 11 fg rgb:CA/B3/CA, bg rgb:08/10/58 
+Colorset 11 fg rgb:CA/B3/CA, bg rgb:08/10/58
+
+
+# special or funny: a gradient or a pixmap
+# May be used in certain FvwmButtons, FvwmIconMan, FvwmIconBox.
+#
+Colorset 12 fg MistyRose, bg rgb:25/26/30, \
+	VGradient 20 rgb:25/20/30 rgb:69/65/70, 
+
+
+
+# swallowed window: the hilight and shadow colors should be defined
+# (-hd of xclock and -hl of xload use sh, and -hl of xclock uses hi)
+#
+Colorset 13 fg HoneyDew, bg rgb:25/26/2C, hi Red, sh Gray10, \
+	Plain, 
+
+
+# default #2
+# FvwmPager or to get more colors in FvwmButtons, can be set to 10.
+#
+Colorset 14 fg rgb:A0/90/A0, bg rgb:12/14/16 
+#Colorset 14 fg rgb:A0/90/A0,  RootTransparent
+
+# default hilight #2
+# FvwmPager or to get more colors in FvwmButtons, can be set to 11.
+#
+#Colorset 15 RootTransparent, fg black, bg rgb:C0/F0/F0 
+Colorset 15 fg rgb:DA/C3/DA, bg Sienna4 
+
+# tips/balloons (TaskBar and FvwmPager)
+#
+#Colorset 16 RootTransparent, fg black, bg rgb:F0/F0/C0 
+Colorset 16 Transparent, fg Yellow
+
+# ----------------------------------
+# II.2. Window List Module Colorsets
+# ----------------------------------
+
+# standard item
+# Colorset 17 fg black, bg rgb:80/A0/A0 
+Colorset 17 fg black, bg rgb:90/A0/A0 
+
+# active item
+Colorset 18 fg black, bg rgb:A0/C8/C8 
+
+# iconified item
+Colorset 19 fg white, bg rgb:60/78/78 
+
+# pointed item
+Colorset 20 fg black, bg rgb:88/AA/AA 
+
+
+# ----------------------------
+# II.3. Other Module Colorsets
+# ----------------------------
+
+# FvwmIdent
+#
+Colorset 21 fg black, bg bisque 
+
+
+# FvwmConsole
+#
+Colorset 22 fg white, bg rgb:00/30/60 
+
+# transparent
+Colorset 23 fg $[fg.cs10], bg $[bg.cs10], Transparent 
+#Colorset 23 fg $[fg.cs10], Transparent, Tint rgb:00/30/60 10
+#Colorset 23 fg $[fg.cs10], RootTransparent, Tint rgb:00/30/60 10
+
+# ------------------------
+# II.4. External Colorsets
+# ------------------------
+
+# ----------------------------
+# reserved for modules@: 24-25
+
+# ----------------------------------
+# reserved for the future use: 26-28
+
+# temporary colorset: 29, has no static definition, used dynamically
+
+# ============================================================================
+# III. Application Colorsets
+# ============================================================================
+
+# regular terminal (xterm, rxvt, Eterm) Work2
+#
+Colorset 30 fg WhiteSmoke, bg rgb:05/06/07 
+
+# admin terminal (su xterm) (root)
+#
+Colorset 31 fg FloralWhite, bg rgb:03/03/05 
+
+# remote terminal (ssh, telnet) Work3
+#
+Colorset 32 fg OldLace, bg rgb:06/04/04 
+
+# viewer terminal (man, less, tail -f) Root
+#
+Colorset 33 fg honeydew, bg rgb:06/06/04 
+
+# application run in the terminal, text editor using ft-xrdb
+#
+Colorset 34 fg rgb:FF/FF/E8, bg rgb:03/08/08 
+
+# dialog main background (FvwmScript, FvwmForm, xmessage, ft-xrdb)
+#
+Colorset 35 fg black, bg rgb:80/A0/80 
+
+# dialog text area (FvwmScript, FvwmForm, xmessage, ft-xrdb)
+#
+Colorset 36 fg black, bg rgb:A0/C8/A0 
+
+# --------------------------------------------------
+# Colorsets 37 to 39 are reserved for the future use.
+
+Colorset 40 fg SkyBlue, bg rgb:13/13/13
+
+Colorset 41 fg Red, bg Black 
+
+
+# window borders, inactive and active
+#
+Colorset 42 fg rgb:88/7C/66, bg black 
+
+
+Colorset 43 fg rgb:CC/BA/99, bg black 
+
+
+#Colorset 50 Transparent, bg pink3, fg gray20
+#Colorset 50 Transparent, fg rgb:A9/A9/A9, bg rgb:20/20/20 
+Colorset 50 Transparent, fg rgb:E9/E9/E9
+
+# Used for menus and titles
+#Colorset 51 RootTransparent buffer, fg gray80, bg #050218
+#Colorset 52 fg #151228, VGradient 40 #a17aa1 #714a71, bg average
+
+Colorset 51 fg Red, bg SkyBlue4
+Colorset 52 fg SkyBlue, VGradient 40 #8888aa #8888ee, bg Red
+
+Colorset 71 fg black, bg black, sh black, RootTransparent, Tint #f6f6f6 0 
+colorset 77 transparent
+
+# ----------------------------------------------------------------------------
+# IV. Start/Stop Functions
+
+DestroyFunc FuncFvwmStartColors
+AddToFunc   FuncFvwmStartColors
++ I Style "FvwmIdent" ParentalRelativity
+
+DestroyFunc FuncFvwmStopColors
+AddToFunc   FuncFvwmStopColors
++ I Style "FvwmIdent" Opacity

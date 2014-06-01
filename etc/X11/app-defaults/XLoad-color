@@ -1,0 +1,7 @@
+xload*foreground: Black
+xload*Highlight: Red
+
+xload*Update: 30
+xload*Bodyfont:-adobe-times-medium-i-*-*-12-*-*-*-*-*-*-*
+xload*Borderwidth:5
+xload*ReverseVideo:off

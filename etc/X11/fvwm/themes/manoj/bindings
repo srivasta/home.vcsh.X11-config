@@ -1,0 +1,405 @@
+# Binding Functions
+#
+# "I" stands for Immediate
+# "M" stands for Motion
+# "C" stands for Click
+# "H" stands for Hold
+# "D" stands for Double Click
+
+DestroyFunc FuncFvwmMoveOrRaiseOrShade
+AddToFunc   FuncFvwmMoveOrRaiseOrShade
++ H     Move
++ M     Move
++ C     Raise
++ D     WindowShade
+
+DestroyFunc FuncFvwmResizeOrRaiseOrShade
+AddToFunc   FuncFvwmResizeOrRaiseOrShade
++ H     Resize$0
++ M     Resize$0
++ C     Raise
++ D     WindowShade
+
+DestroyFunc FuncFvwmMoveOrRaiseLower
+AddToFunc   FuncFvwmMoveOrRaiseLower
++ H     Move
++ M     Move
++ C     RaiseLower
+
+DestroyFunc FuncFvwmMoveOrIconify
+AddToFunc   FuncFvwmMoveOrIconify
++ M     Move
++ D     Iconify
+
+##DestroyFunc FuncFvwmMaximizeFullScreen
+##AddToFunc   FuncFvwmMaximizeFullScreen
+##+ I ThisWindow (Maximized) WindowStyle Title, Borders
+##+ I TestRc (!Match) WindowStyle !Title, !Borders
+##+ I TestRc (!Match) Raise
+##+ I TestRc (!Match) UpdateStyles
+##+ I Maximize ewmhiwa
+
+DestroyFunc FuncFvwmMaximizeFullScreen
+AddToFunc   FuncFvwmMaximizeFullScreen
+    + I ThisWindow (Maximized) Style $n Title, BorderWidth 4, HandleWidth 4
+    + I KeepRc TestRc (!Match) Style $n !Title, BorderWidth 16, HandleWidth 16
+    + I KeepRc TestRc (!Match) Raise
+    + I KeepRc TestRc (!Match) UpdateStyles
+    + I Maximize ewmhiwa
+
+
+DestroyFunc FuncFvwmWindowOpsOrAction
+AddToFunc   FuncFvwmWindowOpsOrAction
++ I Menu MenuFvwmWindowOps2 $*
+#+ C Menu MenuFvwmWindowOps3
+#+ D $*
+
+DestroyFunc FuncFvwmSetTitleBindings
+AddToFunc   FuncFvwmSetTitleBindings
++ I Mouse 1     $0      A       FuncFvwmMoveOrRaiseOrShade
++ I Mouse 1     $0      C       FuncFvwmMoveOrRaiseLower
++ I MouseXX 2 3 $0      A       FuncFvwmMoveOrRaiseLower
++ I MouseXX 3 2 $0      A       Menu MenuFvwmWindowOps2
++ I MouseXX 3 2 $0      M       Menu MenuFvwmWindowOps
+
+DestroyFunc FuncFvwmUnsetTitleBindings
+AddToFunc   FuncFvwmUnsetTitleBindings
++ I Mouse 1     $0      A       -
++ I Mouse 1     $0      C       -
++ I MouseXX 2 3 $0      A       -
++ I MouseXX 3 2 $0      A       -
++ I MouseXX 3 2 $0      M       -
+
+
+
+# ---------------------------------------------------------------------------
+# Contexts:
+#     R = Root Window                 rrrrrrrrrrrrrrrrrrrrrr
+#     W = Application Window          rIrrrrFSSSSSSSSSFrrrrr
+#     F = Frame Corners               rrrrrrS13TTTT642Srrrrr
+#     S = Frame Sides                 rIrrrrSwwwwwwwwwSrrrrr
+#     T = Title Bar                   rrrrrrSwwwwwwwwwSrrrrr
+#     I = Icon                        rIrrrrFSSSSSSSSSFrrrrr
+#                                     rrrrrrrrrrrrrrrrrrrrrr
+# Numbers are buttons: 1 3 5 7 9   0 8 6 4 2
+#
+# Modifiers: (A)ny, (C)ontrol, (S)hift, (M)eta, (N)othing
+
+
+#=====================================================  D. key bindings
+#   D. key bindings
+
+Key  space A SM   Menu root c c "Utilities"
+
+# Arrow Keys
+# When on an icon, in the given direction, for the next window that's
+# on the current page and is iconic, to focus it. 
+Key Up          I A Direction North (CurrentPage, Iconic) Focus
+Key Down        I A Direction South (CurrentPage, Iconic) Focus
+Key Right       I A Direction East  (CurrentPage, Iconic) Focus
+Key Left        I A Direction West  (CurrentPage, Iconic) Focus
+# The enter key binding deiconifies the app 
+Key Return      I A Current (Iconic) Iconify off
+
+# press arrow on root, and scroll by 1 page
+Key Left        RD       AN      Scroll -100000 0
+Key Right       RD       AN      Scroll +100000 +0
+Key Up          RD       AN      Scroll +0   -100000
+Key Down        RD       AN      Scroll +0   +100000
+
+
+# press arrow + control anywhere, and scroll by 1 page
+Key Left        FIRST   C       Scroll -100000  0
+Key Right       FIRST   C       Scroll +100000 +0
+Key Up          FIRST   C       Scroll +0      -100000
+Key Down        FIRST   C       Scroll +0      +100000
+
+# press arrow + Alt anywhere Move window 5% 
+Key Left        FIRST   M       Move w-5 0 Warp
+Key Right       FIRST   M       Move w+5 0 Warp
+Key Up          FIRST   M       Move 0 w-5 Warp
+Key Down        FIRST   M       Move 0 w+5 Warp
+
+# press arrow + Shift key, and scroll by 1/10 of a page
+Key Left        FIRST   S       Scroll -10000 +0
+Key Right       FIRST   S       Scroll +10000 +0
+Key Up          FIRST   S       Scroll +0   -10000
+Key Down        FIRST   S       Scroll +0   +10000
+
+# directing a window to move in a given direction (Up, Down, Left,
+# Right) until it hits something; eg a screen edge or another window.
+Key Down        WTFS    CSM      PackWrapperDown
+Key Up          WTFS    CSM      PackWrapperUp
+Key Left        WTFS    CSM      PackWrapperLeft
+Key Right       WTFS    CSM      PackWrapperDown
+
+
+## # press Control+Alt arrow anywhere, and move the pointer by 1% of a page
+Key Left        FIRST       SM      CursorMove -1 +0
+Key Right       FIRST       SM      CursorMove +1 +0
+Key Up          FIRST       SM      CursorMove +0 -1
+Key Down        FIRST       SM      CursorMove +0 +1
+
+# press shift arrow + control anywhere, and move the pointer by 5% of a page
+Key Left        FIRST   SC  CursorMove -5 0
+Key Right       FIRST   SC  CursorMove +5 +0
+Key Up          FIRST   SC  CursorMove +0   -5
+Key Down        FIRST   SC  CursorMove +0   +5
+
+# press Shift-Ctrl-Alt arrow anywhere, and scroll by 10% of a page
+Key Left        FIRST       CM     Scroll -10  +0
+Key Right       FIRST       CM     Scroll +10  +0
+Key Up          FIRST       CM     Scroll  +0 -10
+Key Down        FIRST       CM     Scroll  +0 +10
+
+
+# Keyboard accelerators
+Key F1  FIRST S      Popup "Utilities"
+Key F2  FIRST S      Popup "Window-Ops"
+Key F2      A S      Maximize grow grow
+Key F3  FIRST S      Module FvwmWinList 
+Key F4  FIRST S      Iconify
+#   Save the window geometry
+Key F4  A     CS     Pick SaveWindowGeometry $[w.name] $[w.x] $[w.y] $[w.width] $[w.height]
+Key F5  FIRST S      Move
+Key F6  FIRST S      Resize
+Key F7  FIRST S      CirculateUp
+Key F8  FIRST S      CirculateDown
+
+# Alt+Fx takes us to various pages
+Key F1  A     M      GotoDeskAndPage 0 0 0
+Key F2  A     M      GotoDeskAndPage 0 1 0
+Key F3  A     M      GotoDeskAndPage 0 2 0
+Key F4  A     M      GotoDeskAndPage 0 3 0
+Key F5  A     M      GotoDeskAndPage 1 0 0
+Key F6  A     M      GotoDeskAndPage 1 1 0
+Key F7  A     M      GotoDeskAndPage 1 2 0
+Key F8  A     M      GotoDeskAndPage 1 3 0
+Key F9  A     M      GotoDeskAndPage 2 0 0
+Key F10 A     M      GotoDeskAndPage 2 1 0
+Key F11 A     M      GotoDeskAndPage 2 2 0
+Key F12 A     M      GotoDeskAndPage 2 3 0
+
+Key F9  RD    C      Exec "Netscape go" exec firefox -remote "openURL "`xselection PRIMARY` &
+Key F10 RD    C      FvwmForm FvwmForm-QuitVerify
+Key F11 RD    C      Restart
+
+# Take a multi-desk screenshot
+Key F12 A     S      Screenshot 
+
+# direction commands, Ctrl+KP_N (do not always work)
+Key KP_1        A       C       Direction SouthWest FuncFvwmSelectWindow
+Key KP_2        A       C       Direction South     FuncFvwmSelectWindow
+Key KP_3        A       C       Direction SouthEast FuncFvwmSelectWindow
+Key KP_4        A       C       Direction West      FuncFvwmSelectWindow
+Key KP_5        A       C       Direction Center    FuncFvwmSelectWindow
+Key KP_6        A       C       Direction East      FuncFvwmSelectWindow
+Key KP_7        A       C       Direction NorthWest FuncFvwmSelectWindow
+Key KP_8        A       C       Direction North     FuncFvwmSelectWindow
+Key KP_9        A       C       Direction NorthEast FuncFvwmSelectWindow
+# move to page, Shift+Ctrl+KP_N
+Key KP_1        A       SC      MoveToPage 0 2
+Key KP_2        A       SC      MoveToPage 1 2
+Key KP_3        A       SC      MoveToPage 2 2
+Key KP_4        A       SC      MoveToPage 0 1
+Key KP_5        A       SC      MoveToPage 1 1
+Key KP_6        A       SC      MoveToPage 2 1
+Key KP_7        A       SC      MoveToPage 0 0
+Key KP_8        A       SC      MoveToPage 1 0
+Key KP_9        A       SC      MoveToPage 2 0
+Key KP_0        A       SC      MoveToPage prev
+# go to page, Ctrl+Alt+KP_N (these keys do not always work)
+Key KP_1        A       CM      GotoPage 0 2
+Key KP_2        A       CM      GotoPage 1 2
+Key KP_3        A       CM      GotoPage 2 2
+Key KP_4        A       CM      GotoPage 0 1
+Key KP_5        A       CM      GotoPage 1 1
+Key KP_6        A       CM      GotoPage 2 1
+Key KP_7        A       CM      GotoPage 0 0
+Key KP_8        A       CM      GotoPage 1 0
+Key KP_9        A       CM      GotoPage 2 0
+Key KP_0        A       CM      GotoPage prev
+# move without the cursor, Shift+Alt+KP_N
+Key KP_1        A       SM      Move w-1 w+1
+Key KP_2        A       SM      Move w   w+1
+Key KP_3        A       SM      Move w+1 w+1
+Key KP_4        A       SM      Move w-1 w
+Key KP_5        A       SM      Move w   w
+Key KP_6        A       SM      Move w+1 w
+Key KP_7        A       SM      Move w-1 w-1
+Key KP_8        A       SM      Move w   w-1
+Key KP_9        A       SM      Move w+1 w-1
+
+
+
+Key KP_Add      A       M       Next (AcceptsFocus CurrentDesk !Iconic) Focus
+Key KP_Subtract A       M       Prev (AcceptsFocus CurrentDesk !Iconic) Focus
+
+
+
+mouse 1 IFSTW 3 Move
+mouse 1 IFSTW 23 Move
+
+Key 5   FIST   M      Move m+0 m+0 Warp
+Key 1   FIST   M      Move  0 -0 Warp
+Key 2   FIST   M      Move 50 -0 Warp
+Key 3   FIST   M      Move -0 -0 Warp
+Key 4   FIST   M      Move -0 50 Warp
+Key 6   FIST   M      Move  0 50 Warp
+Key 7   FIST   M      Move  0 -0 Warp
+Key 8   FIST   M      Move 50  0 Warp
+Key 9   FIST   M      Move -0  0 Warp
+
+# move to desk, Shift+Ctrl+N
+Key 1   A      SC     MoveToDesk 0 0
+Key 2   A      SC     MoveToDesk 0 1
+Key 3   A      SC     MoveToDesk 0 2
+Key 4   A      SC     MoveToDesk 0 3
+Key 0   A      SC     MoveToDesk prev
+
+
+#Page Up/Dapge Down keys are used to scroll by one desktop page
+# in any context, press page up/down + control
+# in root context, just pressing page up/down is OK
+# 
+# I prefer the wrapping scroll.
+Key Next        RD       N       Scroll 100000 0  
+Key Prior       RD       N       Scroll -100000 0
+
+# non-iconified windows on the current page of the current desk
+Key Next        RD   S       Next [!iconic CurrentScreen CurrentDesk] focus-and-raise
+Key Prior       RD   S       Prev [!iconic CurrentScreen CurrentDesk] focus-and-raise
+
+# non-iconified windows on the current desk
+Key Next        RD   M       Next [!iconic CurrentDesk] focus-and-raise
+Key Prior       RD   M       Prev [!iconic CurrentDesk] focus-and-raise
+
+# non-iconified windows
+Key Next        RD   C       Next [!iconic] focus-and-raise
+Key Prior       RD   C       Prev [!iconic] focus-and-raise
+
+# any window or icon on the current page of the current desk,
+# including those otherwise skipped
+Key Next        RD   MC Next [CurrentScreen CurrentDesk CirculateHit] focus-and-raise
+Key Prior       RD   MC Prev [CurrentScreen CurrentDesk CirculateHit] focus-and-raise
+
+# any window or icon on the current desk including those otherwise
+# skipped
+Key Next        RD   MS      Next [CurrentDesk CirculateHit] focus-and-raise
+Key Prior       RD   MS      Prev [CurrentDesk CirculateHit] focus-and-raise
+
+# any window or icon including those otherwise skipped
+Key Next        RD   CS      Next [CirculateHit *] focus-and-raise
+Key Prior       RD   CS      Prev [CirculateHit *] focus-and-raise
+
+DestroyFunc MouseXX
+AddToFunc   MouseXX
++ I Mouse $0 $2 $3 $4 "$5" "$6" "$7" "$8" "$9"
+
+# For stroke:
+# Mouse 3 on root window without modifier
+DestroyFunc FuncFvwmButton3OnRootWindow
+AddToFunc   FuncFvwmButton3OnRootWindow
++ I Menu MenuFvwmWindowOps
+
+# Alt Mouse 3 into a normal window
+DestroyFunc FuncFvwmButton3OnWindow
+AddToFunc   FuncFvwmButton3OnWindow
++ I Menu MenuFvwmWindowOps
+
+# For ewmh
+DestroyFunc FuncFvwmEWMHBindingsButton3OnRootWindow
+AddToFunc   FuncFvwmEWMHBindingsButton3OnRootWindow
++ I Mouse 3 R M Menu MenuFvwmWindowOps
+
+DestroyFunc FuncFvwmNoEWMHBindingsButton3OnRootWindow
+AddToFunc   FuncFvwmNoEWMHBindingsButton3OnRootWindow
++ I Mouse 3 R A Menu MenuFvwmWindowOps
+
+DestroyFunc FuncFvwmEWMHButton2OnRootWindow
+AddToFunc   FuncFvwmEWMHButton2OnRootWindow
++ I WindowList
+
+
+Key KP_Add A M Next (CurrentDesk !Iconic) Focus
+Key KP_Subtract A M Prev (CurrentDesk !Iconic) Focus
+
+
+
+# Hey, key strokes in the root window can now mean s'thing!
+Key e     RD    N       WindowId Emacs 1 WarpToWindow 50 50
+Key e   FIST    M       Popup "General"              
+Key g   TSF     M       MyWinShade
+Key h   TSF     M       MyWinShadeOff
+Key h   TFIS    CS      Current ToggleShade West
+Key j   TFIS    CS      Current ToggleShade South
+Key k   TFIS    CS      Current ToggleShade North
+Key l   TFIS    CS      Current ToggleShade East
+Key m   FIRST   M       Popup "Mod-Popup"         
+Key N   FIRST  SC       Current Next ($[w.class]) MyFocusAndRaise
+Key q   FIRST   M       Popup "Quit-Verify"          
+Key r   FIRST   M       Popup "Mod-Popup"         
+Key s   FIRST   CM      Exec sleep 15; import -window root /tmp/screenshot.png
+Key T   A      CM       Pick ToggleWindowTitle  # Ctrl-Alt-T to toggle title
+Key u   FIRST   M       Popup "Utilities"            
+Key w   FIRST   M       Popup "Window-Ops"           
+
+Key Super_L  FISTRD  S  WindowList (CurrentPage) NoGeometry
+Key Super_R  FIRST  S  WindowList Root c c SelectOnRelease "", NoDeskSort
+##Key Menu     FIRST  S  Menu MenuFvwmRoot
+
+# resize a window with the keyboard in small steps. (does not work for xterms)
+# Ctrl-Alt-Home works, but not Ctrl-Alt-End.
+Key Home A CM Pick PipeRead `echo Resize $(($[cw.width]-1))p $(($[cw.height]-1))p`
+Key End  A CM Pick PipeRead `echo Resize $(($[cw.width]+1))p $(($[cw.height]+1))p`
+
+
+
+Key Tab A M WindowList Root c c NoDeskSort
+# Key Tab A M WindowList Root c c CurrentDesk NoGeometry
+Key Tab   A      M  WindowList Root c c NoDeskSort
+Key Tab   A      S  Prev ("CurrentPage" "!Iconic" !"Fvwm*") FocusRaise
+Key Tab   FIRST  C  Next (AcceptsFocus, CurrentPage, !Iconic) Focus
+Key Tab   FIRST SC  Prev (AcceptsFocus, CurrentPage, !Iconic) Focus
+
+# FvwmProxy initialization commands:
+# Meta-Q
+Key Q A M SendToModule FvwmProxy Circulate ScanForWindow West North (CurrentPage)
+
+# Alt-Esc to switch the proxies on and off
+Key Escape A M SendToModule FvwmProxy ShowToggle
+
+#Undo and redo can be easily mapped to any keys.
+Key Z A 3 SendToModule FvwmProxy Undo
+Key R A 3 SendToModule FvwmProxy Redo
+
+
+
+# The following binds right shit to launch xterms
+#Key Shift_R A A Exec xterm
+
+Key KP_Insert A C Next (CirculateHit, "Emacs") MyEditor
+
+
+
+# I use the following setup to not use the mouse. I identify the windows on there
+# names. When I press CTRL ALT S fvwm looks for a window with the name MAINscreen.
+# If there is on it will be raised and focused. If not the above command will be
+# executed.
+# Key	Q	A	SC	SmartStart GQ "gq"
+# Key	X	A	SC	Exec exec xterm -T xterm       -ls
+# Key	S	A	SC	SmartStart MAINscreen "xterm -T MAINscreen  -ls -e ssh -t $SCREENSERVER /usr/src/tg/screen-3.9.13/screen -x main"
+# Key	D	A	SC	SmartStart DEVELscreen "xterm -T DEVELscreen -ls -e ssh -t $SCREENSERVER screen -x devel"
+# Key	L	A	SC	SmartStart LOCALscreen "xterm -T LOCALscreen -ls -e screen -R"
+# Key	N	A	SC	SmartStart "Netscape:*" $NETSCAPE
+# Key	O	A	SC	SmartStart "Opera*" $OPERA
+# Key	B	A	SC	SmartStart "bluescreen" "xterm -T bluescreen -bg \\#${OVERLAYCOLOR} -fg white -ls"
+# Key	M	A	SC	SmartStart "*Firefox" $MOZILLA
+# Key	W	A	SC	SmartStart "faui47" $CITRIX
+# Key	G	A	SC	SmartStart "*GVIM" $GVIM
+# Key	C	A	SC	SmartStart CONSOLEscreen "xterm -T CONSOLEscreen -ls -e ssh -t $SCREENSERVER /local/console/bin/cscreen -x"
+# Key	A	A	SC	SmartStart "*.pdf"
+# Key	P	A	SC	SmartStart "MPlayer"
+# Key	U	A	SC	SmartStart "UMLinux"
+# Key	R	A	SCM	Restart $FVWM
+# Key	F4	A	M	Exec exec $XLOCK -mode blank -remote

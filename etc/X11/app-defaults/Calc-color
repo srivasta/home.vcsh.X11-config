@@ -1,0 +1,9 @@
+
+Calc.x:                                 300
+Calc.y:                                 200
+Calc.width:                             190
+Calc.height:                            240
+Calc*foreground:                        DarkSlateGrey
+Calc*background:                        Turquoise
+Calc*sqrtFontFamily:*-*-Symbol-*-R-*--*-*-*-*-P-*-*-*
+Calc*keyFontFamily: *-*-Times-Bold-R-Normal--*-*-*-*-P-*-*-1

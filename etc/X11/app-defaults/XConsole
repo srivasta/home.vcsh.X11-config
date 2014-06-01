@@ -1,0 +1,12 @@
+XConsole*reverseVideo:          off
+
+!
+XConsole.geometry:              -0+50
+XConsole.retain:                false
+XConsole.mapped:                false
+XConsole*text.width:            500
+XConsole*text.height:           64
+XConsole*title.font:            *schoolbook-bold-r-normal--14*
+XConsole*thickness:             10
+XConsole*closeWindow.font:      *schoolbook-bold-r-normal--14*
+XConsole*displayNonPrinting:    false

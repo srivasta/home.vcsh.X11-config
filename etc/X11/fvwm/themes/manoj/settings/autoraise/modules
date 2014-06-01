@@ -1,0 +1,39 @@
+DestroyFunc FuncFvwmModulesAutoRaise
+AddToFunc   FuncFvwmModulesAutoRaise  
++ I PointerWindow (FvwmButtons) Raise
++ I PointerWindow (FvwmIconBox) Raise
++ I PointerWindow (FvwmIconMan) Raise
++ I PointerWindow (FvwmTaskBar) Raise
++ I PointerWindow (FvwmWinList) Raise
++ I PointerWindow (FvwmPager) Raise
++ I PointerWindow (panel) Raise
++ I PointerWindow (gnome-panel) Raise
++ I PointerWindow (kicker) Raise
++ I PointerWindow (xsm) Raise
+
+DestroyFunc FuncFvwmModulesAutoLower
+AddToFunc   FuncFvwmModulesAutoLower 
++ I Nop
+
+# ----------------------------------------------------------------------------
+
+DestroyFunc FuncFvwmRestartFvwmAutoRaiseModules
+AddToFunc   FuncFvwmRestartFvwmAutoRaiseModules
++ I KillModule FvwmAuto
++ I FvwmAuto 300 -menterleave "Silent FuncFvwmModulesAutoRaise" "Silent FuncFvwmModulesAutoLower"
+
+DestroyFunc FuncFvwmLoadFvwmAutoRaise
+AddToFunc   FuncFvwmLoadFvwmAutoRaise
++ I FuncFvwmRestartFvwmAutoRaiseModules
+
+DestroyFunc FuncFvwmAddToMenusFvwmAutoRaise
+AddToFunc   FuncFvwmAddToMenusFvwmAutoRaise
++ I AddToMenu MenuFvwmStartRegularModules "Auto Raise Modules%menu/window-raise.xpm%" FuncFvwmRestartFvwmAutoRaiseModules
+
+DestroyFunc FuncFvwmUnLoadFvwmAutoRaise
+AddToFunc   FuncFvwmUnLoadFvwmAutoRaise
++ I DestroyFunc FuncFvwmModulesAutoRaise
++ I DestroyFunc FuncFvwmModulesAutoLower
++ I DestroyFunc FuncFvwmAddToMenusFvwmAutoRaise
++ I KillModule FvwmAuto
+

@@ -1,0 +1,35 @@
+KillModule FvwmProxy
+
+DestroyModuleConfig FvwmProxy: *
+*FvwmProxy: Width 250
+*FvwmProxy: Height 140
+*FvwmProxy: ShowMiniIcons true
+*FvwmProxy: EnterSelect true
+*FvwmProxy: ProxyMove true
+*FvwmProxy: ProxyIconified true
+*FvwmProxy: Action Click2 Move
+*FvwmProxy: Action ModifierRelease 4M SendToModule FvwmProxy Hide
+
+*FvwmProxy: GroupSlot 2
+*FvwmProxy: GroupCount 5
+
+*FvwmProxy: SlotStyle 1 MiniIcon
+*FvwmProxy: SlotStyle 7 Pixmap "squeeze.xpm"
+*FvwmProxy: SlotStyle 8 Pixmap "mini-up.xpm"
+*FvwmProxy: SlotStyle 9 Pixmap "mini-bball.xpm"
+*FvwmProxy: SlotStyle 10 Pixmap "mini-cross.xpm"
+
+*FvwmProxy: SlotAction 1 Click1 Popup WindowMenu
+*FvwmProxy: SlotAction 7 Click1 SendToModule FvwmProxy IsolateToggle
+*FvwmProxy: SlotAction 8 Click1 SendToModule FvwmProxy SoftToggle
+*FvwmProxy: SlotAction 9 Click1 Iconify
+*FvwmProxy: SlotAction 10 Click1 Delete
+
+
+*FvwmProxy: Group	"GIMP"		SoftInclude	"The GIMP"
+*FvwmProxy: Group	"GIMP"		SoftInclude	"Module Manager"
+*FvwmProxy: Group	"GIMP"		SoftInclude	"Unit Editor"
+*FvwmProxy: Group	"GIMP"		AutoInclude
+*FvwmProxy: Group	"GIMP"		AutoSoft
+*FvwmProxy: Group	"GIMP"		Exclude		"Preferences"
+

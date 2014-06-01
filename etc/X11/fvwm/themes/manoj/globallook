@@ -1,0 +1,103 @@
+DefaultColorset 0
+
+DestroyModuleConfig FvwmScroll: Colorset*
+*FvwmScroll: Colorset 0
+
+Style * Colorset 1
+Style * HilightColorset 2
+Style * BorderColorset 3
+Style * HilightBorderColorset 4
+
+MenuStyle * MenuFace, ActiveFore, HilightBack
+MenuStyle * MenuColorset 5, ActiveColorset 6, GreyedColorset 7
+
+DestroyModuleConfig FvwmIdent: *
+FuncFvwmSetFont-FvwmIdent
+*FvwmIdent: Colorset 21
+
+DestroyModuleConfig FvwmScript: DefaultColorset*
+*FvwmScript: DefaultColorset 35
+
+DestroyModuleConfig FvwmFormDefault: Colorset*
+*FvwmFormDefault: Colorset 35
+
+DestroyModuleConfig FvwmFormDefault: Colorset*
+*FvwmFormDefault: Colorset 35
+
+DestroyModuleConfig FvwmFormDefault: ItemColorset*
+*FvwmFormDefault: ItemColorset 36
+
+DestroyModuleConfig FvwmScript: DefaultColorset*
+*FvwmScript: DefaultColorset 35
+
+
+DestroyModuleConfig FvwmPager: Colorset*
+*FvwmPager: Colorset 1 10
+*FvwmPager: Colorset 0 14
+*FvwmPager: BalloonColorset * 16
+*FvwmPager: HilightColorset 1 11
+*FvwmPager: HilightColorset 0 15
+
+
+
+
+DestroyModuleConfig FvwmButtons: Colorset*
+*FvwmButtons: Colorset 23
+
+DestroyModuleConfig FvwmIconMan: Colorset*
+*FvwmIconMan: FocusAndSelectColorset 16
+*FvwmIconMan: FocusColorset 16
+*FvwmIconMan: Colorset 15
+*FvwmIconMan: *Colorset 77
+
+DestroyModuleConfig FvwmIconBox: Colorset*
+*FvwmIconBox: IconColorset     19
+*FvwmIconBox: IconHiColorset      20
+*FvwmIconBox: Colorset             12
+
+Style * HilightIconTitleColorset  20
+Style * IconTitleColorset      19
+Style * IconBackGroundColorset 19
+
+
+
+# FvwmEvent can bind Commands to Events
+DestroyModuleConfig FvwmEvent: *
+*FvwmEvent: PassID
+*FvwmEvent: Delay 5
+*FvwmEvent: StartDelay 10
+
+DestroyFunc FuncFvwmUnReloadGlobalLook
+AddToFunc   FuncFvwmUnReloadGlobalLook
++ I DestroyModuleConfig FvwmIdent: Font*
++ I MenuStyle * MenuFace, ActiveFore, HilightBack
+#+ I MenuStyle * MenuColorset 5, ActiveColorset 6, GreyedColorset 7
+
+DestroyFunc FuncFvwmReloadGlobalLook
+AddToFunc   FuncFvwmReloadGlobalLook
++ I FuncFvwmSetFont-FvwmIdent
+
+
+DestroyModuleConfig GridButtons
+#*GridButtons: geometry 144x96
+*GridButtons: columns 2
+*GridButtons: rows 2
+*GridButtons: (Title "0",  Action "MoveLastWindowToPage 0 0")
+*GridButtons: (Title "2",  Action "MoveLastWindowToPage 1 0")
+*GridButtons: (Title "1",  Action "MoveLastWindowToPage 0 1")
+*GridButtons: (Title "3",  Action "MoveLastWindowToPage 1 1")
+
+# FvwmScroll swallows applications into smaller containers, sometimes handy.
+DestroyModuleConfig FvwmScroll: *
+*FvwmScroll: Back #f6f6f6
+*FvwmScroll: Fore #f6f6f6
+
+Style "Root"                Colorset 40
+Style "root*"               Colorset 40
+Style "Root"                HilightColorset 41
+Style "root*"               HilightColorset 41
+Style "Root"                BorderColorset 42
+Style "root*"               BorderColorset 42
+Style "Root"                HilightBorderColorset 43
+Style "root*"               HilightBorderColorset 43
+

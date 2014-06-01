@@ -1,0 +1,166 @@
+
+!
+!       xrn defaults.  You can learn a lot from studing this example
+!       C. Fang 5/27/91
+
+!#
+Xrn*newsrcFile:         ~/.newsrc
+!# *nntpServer:         risky.ecs.umass.edu
+Xrn*editorCommand:      /usr/local/bin/emacsclient %s
+Xrn*tmpDir:                     /tmp
+Xrn*mailer:                     /usr/lib/sendmail -oi -t
+!#
+Xrn*Gripe.geometry:     +50+50
+Xrn*Information.geometry: +400+400
+Xrn*Composition.geometry:       660+0+0
+!#
+!*CsignatureFile:       ~/.signature
+Xrn*saveDir: ~/src
+Xrn*deadLetters: ~/src/.dead-letter
+Xrn*savePostings:       ~/src/.articles
+Xrn*saveString: | $HOME/bin/filthead >> $HOME/src/
+!#
+Xrn*cc: on
+Xrn*displayLineCount: on
+Xrn*authorFullName: on
+Xrn*organization: University of Massachusetts at Amherst
+Xrn*replyTo: srivasta@pilgrim.umass.edu
+!#
+Xrn*confirm:ngQuit,ngExit,ngCatchUp,artCatchUp,ngUnsub,artUnsub 
+Xrn*info: on
+Xrn*topLines:                   9
+Xrn*saveMode:                   mailbox,headers
+Xrn*minLines:                   3
+Xrn*maxLines:                   6
+Xrn*killFiles: off
+Xrn*rescanTime: 600
+Xrn*updateNewsrc: on
+Xrn*scrollBar: on
+Xrn*sortedSubjects: on
+Xrn*printCommand: lpr 
+Xrn*pageArticles: on
+!##
+Xrn*Box.artNextUnread.font:-dec-*-medium-*-wide-*-*-*-*-*-*-*-iso8859-*
+Xrn*dialog*fontlist: -adobe-helvetica-bold-r-*-*-14-*-*-*-*-*-*-*
+Xrn*Command.fontlist: -adobe-itc avant garde gothic-book-r-*-*-14-*-*-*-*-*-*-*
+!#
+Xrn*dialog*Text.borderWidth:5
+Xrn*dialog.scrollHorizontal: always
+!*leaveHeaders:subject,from,date,organization
+Xrn*stripHeaders: path,message-id,references,Xref,Followup-To,sender,lines,reply-to,distribution,Newsgroups,Keywords
+Xrn*subjectRead: on
+Xrn*Information.pane.text.displayCaret:  True
+Xrn*articleText.showGrip:        True
+Xrn*titlebar.showGrip:     True
+Xrn*indexinfo.showGrip:     False
+Xrn*indexbuttons.showGrip:    False
+Xrn*textinfo.showGrip:     True
+Xrn*Information.pane.label.showGrip: True
+Xrn*Information.pane.text.showGrip: True
+!#
+Xrn*breakLength:                0
+Xrn*Composition*Text*wrap:      never
+Xrn*Composition*Text*autoFill:  true
+!#
+
+!#
+Xrn*vpane.index.thickness: 22
+Xrn*vpane.articleText.thickness: 10
+!#
+
+! }}}
+!
+
+
+XRn*font:-adobe-courier-medium-r-*-*-14-*-*-*-*-*-*-*
+!#
+XRn.vpane.index.thickness: 22
+XRn.vpane.articleText.thickness: 10
+!#
+!#
+XRn*index.accelerators: #override \n\
+                <Key>Down:      next-line() \n\
+                <Key>Up:        previous-line()
+XRn.ngBindings: #override\n\
+   <Key>Q:          ngQuit()  \n\
+   <Key>0xff80:      ngRead()  \n\
+   <Key>R:          ngRead()  \n\
+   <Key>G:          ngGoto()  \n\
+   <Key>P:          ngPrev() \n\
+   <Key>N:          ngNext() \n\
+   <Key>C:          ngCatchUp()\n\
+  <Key>0x20:    doTheRightThing(goto)   \n\
+  <Key>y:       doTheRightThing(goto)   \n\
+  :<Key>u:      ngUnsub()       \n\
+  :<Key>c:      ngCatchUp()     \n\
+  <Key>n:       ngNext()        \n\
+  <Key>p:       ngPrev()        \n\
+  <Key>-:       ngPrevGroup()   \n\
+  :<Key>g:      ngGoto()        \n\
+  :<Key>L:      ngAllGroups()   \n\
+  <Key>q:       ngQuit()
+XRn.addBindings:        #override\n\
+   <Key>Q:          addQuit()  \n\
+   <Key>F:          addFirst()  \n\
+   <Key>L:          addLast()  \n\
+   <Key>A:          addAfter() \n\
+   <Key>0xff80:      addUnsub()  \n\
+   <Key>U:          addUnsub()
+XRn.allBindings:        #override\n\
+   <Key>Q:          allQuit()  \n\
+   <Key>S:          allSub()  \n\
+   <Key>F:          allFirst()  \n\
+   <Key>G:          allGoto()  \n\
+   <Key>L:          allLast()  \n\
+   <Key>A:          allAfter() \n\
+   <Key>U:          allUnsub()
+XRn.artBindings: #override\n\
+  m<Key>v:              artScrollBack() \n\
+  m<Key>>:              artScrollEnd()  \n\
+  m<Key><:              artScrollBeginning()  \n\
+  ^<Key>N:      artSubNext()    \n\
+  c<Key>n:      artScrollLine() \n\
+  ^<Key>P:      artSubPrev()    \n\
+  c<Key>p:      artScrollBackLine() \n\
+  c<Key>v:      artScroll()     \n\
+  ^<Key>X:      artRot13()      \n\
+  :<Key>-:      artLast()       \n\
+  :<Key>/:      artSubSearch()  \n\
+  :<Key>c:      artCatchUp()    \n\
+  :<Key>C:      artCancel()     \n\
+  :<Key>j:      artMarkRead()   \n\
+  :<Key>K:      artKillLocal()  \n\
+  :<Key>k:      artKillSession()        \n\
+  :<Key>n:      artNextUnread() \n\
+  :<Key>N:      artNext()       \n\
+  :<Key>U:      artUnsub()      \n\
+  :<Key>v:      artHeader()     \n\
+  :<Key>X:      artRot13()      \n\
+   <Key>0xff80:         artScroll()  \n\
+   <Key>0x20:           doTheRightThing(goto)   \n\
+   <Key>|:              artSave()       \n\
+   <Key>.:              artGotoArticle()        \n\
+   <Key>%:              artSave("| uudecode")   \n\
+   <Key>b:              artScrollBack()         \n\
+   <Key>C:              artCatchUp() \n\
+   <Key>F:              artForward()  \n\
+   <Key>f:              artFollowup()   \n\
+   <Key>G:              artNextGroup()  \n\
+   <Key>K:              artKillSession()  \n\
+   <Key>L:              artLast()  \n\
+   <Key>l:              artLast()  \n\
+   <Key>m:              artMarkUnread() \n\
+   <Key>N:              artNext()  \n\
+   <Key>n:              artNext()  \n\
+   <Key>q:              artQuit()\n\
+   <Key>Q:              artQuit()  \n\
+   <Key>P:              artPrev()       \n\
+   <Key>r:              artMarkRead() \n\
+   <Key>S:              artSave()  \n\
+   <Key>s:              artSave()       \n\
+   <Key>T:              artHeader()  \n\
+   <Key>u:              artMarkUnread()\n\
+   <Key>w:              artSave()       \n\
+   <Key>X:              artRot13()  \n\
+
+XRn*borderwidth:        5

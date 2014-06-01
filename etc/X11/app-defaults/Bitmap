@@ -1,0 +1,20 @@
+
+
+bitmap*Background: midnightblue
+bitmap*Border: seashell
+bitmap*Command.background: blue
+bitmap*Command.foreground: white
+bitmap*Dialog.icon.foreground: cornflower blue
+bitmap*Foreground: aliceblue
+bitmap*Highlight: grey30
+bitmap*MenuButton.background: thistle
+bitmap*MenuButton.foreground: navy blue
+bitmap*Mouse: black
+bitmap*Toggle.background: steel blue
+bitmap*Toggle.foreground: white
+bitmap*background:  cornsilk
+bitmap*borderColor: plum
+bitmap*foreground: blue4
+bitmap*frame: deep sky blue
+bitmap*highlight: red
+bitmap*status.foreground: dark slate blue

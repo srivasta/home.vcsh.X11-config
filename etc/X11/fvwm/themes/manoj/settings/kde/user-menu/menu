@@ -1,0 +1,7 @@
+##
+AddToMenu MenuFvwmPrograms "My Kde menu%menu/kde.xpm" popup kde-user
+
+CopyMenuStyle "*" MenuStyleFvwmKdeUser
+
+AddToMenu kde-user DynamicPopupAction PipeRead 'fvwm-menu-desktop --desktop kde-user --enable-mini-icons --menu-style MenuStyleFvwmKdeUser'
+

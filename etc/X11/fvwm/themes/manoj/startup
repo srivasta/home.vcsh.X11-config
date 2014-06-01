@@ -1,0 +1,170 @@
+
+
+#####
+# You can set simple options like this, using variables.
+# If you need something more complex, read the man pages for FvwmCPP,
+# FvwmM4 or FvwmPerl.
+#################
+SetEnv fvwm_video_path $[HOME]/media/video
+SetEnv fvwm_video_exec xine
+
+SetEnv fvwm_audio_path $[HOME]/media/audio
+SetEnv fvwm_audio_exec "alsaplayer -l 90"
+
+SetEnv fvwm_image_path $[HOME]/media/images
+SetEnv fvwm_image_exec display
+
+SetEnv fvwm_rom_path $[HOME]/lib/
+SetEnv fvwm_rom_exec
+
+SetEnv fvwm_wallpaper_dir $[fvwm_image_path]/wallpaper
+SetEnv fvwm_wallpaper0 $[fvwm_wallpaper_dir]/gothic-angel.png
+SetEnv fvwm_wallpaper1 $[fvwm_wallpaper_dir]/insodus.png
+
+
+SetEnv fvwm_webbrowser /usr/bin/firefox
+SetEnv fvwm_term /usr/bin/xterm
+SetEnv fvwm_mail emacslient -c --eval "(vm)"
+SetEnv fvwm_media_player /usr/bin/audacity
+SetEnv fvwm_video_player /usr/bin/mplayer
+
+# This could even be $./scripts
+SetEnv fvwm_script $[HOME]/bin
+
+# Define some fonts here
+SetEnv font_shadow_12  "Shadow=1 0 NE:StringEncoding=UTF-8:xft:DejaVu Sans Mono:Medium:pixelsize=12:minspace=False:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--12-*-*-*-m-*-iso10646-1"
+SetEnv font_shadow_14  "Shadow=1 0 NE:StringEncoding=UTF-8:xft:DejaVu Sans Mono:Medium:pixelsize=14:minspace=False:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--14-*-*-*-m-*-iso10646-1"
+SetEnv font_shadow_18  "Shadow=1 0 NE:StringEncoding=UTF-8:xft:DejaVu Sans Mono:Medium:pixelsize=18:minspace=False:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--18-*-*-*-m-*-iso10646-1"
+
+SetEnv font_shadow_14b "Shadow=1 0 NE:StringEncoding=UTF-8:xft:DejaVu Sans Mono:Bold:pixelsize=14:minspace=True:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--14-*-*-*-m-*-iso10646-1"
+SetEnv font_shadow_16b "Shadow=1 0 NE:StringEncoding=UTF-8:xft:DejaVu Sans Mono:Bold:pixelsize=16:minspace=True:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--16-*-*-*-m-*-iso10646-1"
+
+SetEnv font_8   'StringEncoding=UTF-8:xft:DejaVu Sans Mono:Medium:pixelsize=8:minspace=False:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--8-*-*-*-m-*-iso10646-1'
+SetEnv font_9   'StringEncoding=UTF-8:xft:DejaVu Sans Mono:Medium:pixelsize=9:minspace=False:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--9-*-*-*-m-*-iso10646-1'
+SetEnv font_10  'StringEncoding=UTF-8:xft:DejaVu Sans Mono:Medium:pixelsize=10:minspace=False:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--10-*-*-*-m-*-iso10646-1'
+SetEnv font_11  'StringEncoding=UTF-8:xft:DejaVu Sans Mono:Medium:pixelsize=11:minspace=False:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--11-*-*-*-m-*-iso10646-1'
+SetEnv font_12  'StringEncoding=UTF-8:xft:DejaVu Sans Mono:Medium:pixelsize=12:minspace=False:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--12-*-*-*-m-*-iso10646-1'
+SetEnv font_14  'StringEncoding=UTF-8:xft:DejaVu Sans Mono:Medium:pixelsize=14:minspace=False:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--14-*-*-*-m-*-iso10646-1'
+SetEnv font_17  'StringEncoding=UTF-8:xft:DejaVu Sans Mono:Medium:pixelsize=17:minspace=False:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--17-*-*-*-m-*-iso10646-1'
+SetEnv font_18  'StringEncoding=UTF-8:xft:DejaVu Sans Mono:Medium:pixelsize=18:minspace=False:encoding=iso10646-1:antialias=True;-dejavu-dejavu sans mono-medium-r-normal--18-*-*-*-m-*-iso10646-1'
+
+
+
+#####
+# If you use Thumbnails, how big would you like the Icons to be?
+# Try one of these, from tiny to large: 32, 64, 96, 128
+#################
+SetEnv fvwm_icon_size 64
+
+# make fvwm try to transliterate the _NET_WM_NAME if it can't be
+# represented in the current locale instead of falling back to
+# WM_NAME.
+BugOpts TransliterateUtf8 on
+
+#
+# Section: Various global settings
+#
+# These settings are personal. 
+#
+# DeskTopSize sets the size of the desktop in units of physical screen
+# `pages'.  I prefer to use separate desktops instead of pages, but
+# many reasonable people do it the other way.  My reason is that this
+# makes it possible to have different backgrounds when changing the
+# workspace.
+#
+
+#####
+# http://www.fvwm.org/documentation/faq/#5.5
+#################
+IgnoreModifiers L25
+
+#=====================================================  5. miscellaneous
+# 5. miscellaneous
+
+#####
+# Set up the virtual desktop and pager
+#
+# Desktop [Horizontal]x[vertical]  Defines the virtual desktop size,
+#       1x1 = one physical screen size (no virtual desktop
+# Use 4 pages per desktop, arranged in a square, like this:
+#
+#   +-----+-----+
+#   |     |     |
+#   +-----+-----+
+#   |     |     |
+#   +-----+-----+
+#################
+DeskTopSize 2x2
+DesktopName 0 Work
+DesktopName 1 Personal
+
+
+#
+# Section: Init and restart functions
+#
+#=====================================================  8. Special functions
+#  8. Special functions
+# Stuff to do at start-up
+
+#AddToFunc enter_handler
+#+ I autohide FvwmButtons 250 500 N
+#            ^           ^   ^   ^
+#            |           |   |   |___  Shade direction (optional)
+#            |           |   |________ Hide delay
+#            |           |___________  Show delay
+#            |_______________________  Unique window name/resource
+
+# AddToFunc ChangeRootHourly
+#   + I Exec exec cgbg
+#   + I Schedule 3600000 ChangeRootHourly
+
+DestroyFunc ChangeRootHourly
+AddToFunc   ChangeRootHourly
++ I PipeRead `dump-2-config-lines-for-colorset-51-and-52`
++ I Schedule 3600000 ChangeRootHourly
+
+
+
+#*FvwmBacker: Command (Desk 0) Colorset 51
+#*FvwmBacker: Command (Desk 1) Colorset 52
+
+# The StartFunction is run each time FVWM is started, while the
+# InitFunction is run after the StartFunction when FVWM is first
+# initialized and the RestartFunction runs after the StartFunction
+# when FVWM is restarted.  
+
+DestroyFunc StartFunction
+AddToFunc StartFunction
++   I Module FvwmButtons
++   I Module FvwmBacker
++   I Module FvwmCommandS
++   I Module FvwmAnimate
++   I Module FvwmProxy
+
+AddToFunc StartFunction
++       I Module FvwmPerl
++       I Module FvwmEvent FvwmEvent-NewWindow
++       I Module FvwmCommandS
++       I Module FvwmAuto FvwmAutohide -menter enter_handler
+
+DestroyFunc InitFunction
+AddToFunc   InitFunction
++ I Exec exec xscreensaver
+
+DestroyFunc RestartFunction
+AddToFunc   RestartFunction
++ I Nop
+
+
+#+ I ChangeRootHourly
+#+ I FvwmBacker
+
+#ModuleSynchronous FvwmM4 -lock screendiffs.hook
+
+DestroyFunc SessionInitFunction
+AddToFunc SessionInitFunction
++ I Module FvwmBanner
+
+DestroyFunc SessionRestartFunction
+AddToFunc SessionRestartFunction
++ I Nop

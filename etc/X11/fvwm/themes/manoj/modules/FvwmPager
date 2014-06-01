@@ -1,0 +1,20 @@
+#_____________________________________________________  E.4 Pager 
+# E.4 Pager 
+
+*FvwmPager: Pixmap none 
+
+# Tells  FvwmPager  to  not show the windows that are using the
+# WindowListSkip style.
+*FvwmPager: UseSkipList
+
+*FvwmPager: Window3DBorders
+*FvwmPager:  SloppyFocus
+
+*FvwmPagerGeometry x78-83-1
+*FvwmPager: MiniIcons
+*FvwmPager: WindowLabelFormat   "%t"
+*FvwmPager: MoveThreshold 3
+
+*FvwmPager: Balloons             Pager
+*FvwmPager: BalloonStringFormat  "%t"
+

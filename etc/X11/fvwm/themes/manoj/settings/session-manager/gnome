@@ -1,0 +1,37 @@
+# bindings:
+Mouse 1 	R S GnomeButton
+MouseXX 2 3	R S GnomeButton
+MouseXX 3 2	R S GnomeButton
+
+AddToFunc   FuncFvwmRemoveBindings
++ I Mouse 1	R S -
++ I Mouse 2	R S -
++ I Mouse 3	R S -
+
+DestroyFunc FuncFvwmSaveSession
+AddToFunc   FuncFvwmSaveSession
++ I Test (x gnome-session-save) Exec save-session --gui
++ I TestRc (Match) Break
++ I SaveSession
+
+DestroyFunc FuncFvwmSaveQuitSession
+AddToFunc   FuncFvwmSaveQuitSession
++ I Test (x gnome-session-save) Exec save-session --kill
++ I TestRc (Match) Break
++ I SaveQuitSession
+
+# quit menu
+DestroyMenu MenuFvwmQuit
+AddToMenu   MenuFvwmQuit "Quit GNOME Session?" Title
++ "&Restart%menu/restart.xpm%"          Restart
++  "" Nop
++ "Re&fresh Screen%menu/refresh.xpm%"   Refresh
++ "Re&capture Screen%menu/refresh.xpm%" Recapture
++ "" Nop
++ "&Yes, Quit Session%menu/choice-yes.xpm%"		QuitSession
++ "Yes, Save and Quit Session%menu/choice-yes.xpm%"	FuncFvwmSaveQuitSession
++  "" Nop
++ "Quit FVWM &Only%menu/quit.xpm%"		Quit
++ "&Save Session Only%menu/windows.xpm%"	FuncFvwmSaveSession   
++ "" Nop
++ "&No, Don't Quit%menu/choice-no.xpm%"    Nop

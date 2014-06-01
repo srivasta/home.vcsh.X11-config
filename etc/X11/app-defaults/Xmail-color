@@ -1,0 +1,72 @@
+xmail.editorCommand: emacs -display %s %s
+
+xmail*Abort.background:                    white
+xmail*Abort.foreground:                    red
+xmail*Autograph.background:                cyan
+xmail*autograph.background:                paleturquoise
+xmail*aliasList*Background:                yellow
+xmail*aliasList.table.entry.background:    cyan
+xmail*alwaysignore*foreground:             seegreen
+xmail*noalwaysignore*foreground:           red
+xmail*autoprint*foreground:                seegreen
+xmail*noautoprint*foreground:              red
+xmail*background:                          navajo white
+xmail*borderColor:                         brown
+xmail*Bcc.background:                      cyan
+xmail*Bcc*AsciiSink*Background:            cyan
+xmail*Cancel.background:                   misty rose
+xmail*Cancel.foreground:                   black
+xmail*Cc.background:                       cyan
+xmail*Cc*AsciiSink*Background:             cyan
+xmail*Copy.foreground:                     blue
+xamil*commandPanel.background:             goldenrod
+xmail*copy.background:                     linen
+xmail*Deliver.background:                  green
+xmail*Deliver.foreground:                  brown
+xmail*Deliver.borderColor:                 brown
+xmail*delete.foreground:                   red
+xmail*delete.background:                   white
+xmail*Drop.foreground:                     red
+xmail*exit.foreground:                     midnight blue
+xmail*expert*foreground:                   seegreen
+xmail*noexpert*foreground:                 red
+xmail*Folder.background:                   navajo white
+XMail*Font:                                TERMFONT
+xmail*fileWindow*background:               blanched almond
+xmail*foreground:                          navy
+xmail*forward.foreground:                  green3
+xmail*full.foreground:                     red
+xmail*hold*foreground:                     seegreen
+xmail*nohold*foreground:                   red
+xmail*icon*background:                     gold
+xmail*icon*foreground:                     brown
+xmail*inc.background:                      cyan
+xmail*indexWindow*background:              bisque
+xmail*list.background:                     tan
+xmail*menu.background:                     tan
+xmail*Newmail.foreground:                  midnight blue
+xmail*next.foreground:                     green3
+xmail*previous.foreground:                 blue
+xmail*quit.foreground:                     red
+xmail*quit.background:                     white
+xmail*ReEdit.background:                   khaki
+xmail*ReEdit.foreground:                   brown
+xmail*replyall.background:                 green
+xmail*save.background:                     linen
+xmail*Save.foreground:                     blue
+xmail*set_menu*background:                 bisque
+xmail*statusWindow.background:             brown
+xmail*statusWindow.foreground:             yellow
+xmail*Subject.background:                  cyan
+xmail*Subject*AsciiSink*Background:        cyan
+xmail*textWindow*background:               navajo white
+xmail*textWindow.face.background:          white
+xmail*titleBar*Background:                 brown
+xmail*titleBar*Foreground:                 yellow
+xmail*titleBar.logo.background:            white
+xmail*titleBar.logo.foreground:            blue
+xmail*To.Background:                       cyan
+xmail*To*AsciiSink*Background:             cyan
+xmail*undelete.foreground:                 green3
+xmail*write.foreground:                    green3
+xmail*Write.foreground:                    red

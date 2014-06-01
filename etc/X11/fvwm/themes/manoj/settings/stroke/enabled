@@ -1,0 +1,244 @@
+# Stroke bindings
+
+
+####
+# First, define a StrokeFuncWrapper.
+#
+# Without this, you would have to execute all of your gestures
+# entirely on the Root Window, This lets you change the Context and
+# have a few other Neat Features, such as DrawMotion, which will draw
+# a line as you make your Gesture (Neat!).
+#
+
+DestroyFunc StrokeFuncWrapper
+AddToFunc StrokeFuncWrapper
++ I SetEnv     StrokeStart +$[pointer.x]+$[pointer.y]
++ I StrokeFunc DrawMotion FeedBack StrokeWidth 2 EchoSequence
+
+
+
+# ----------------------------------------------------------------------------
+# Where/when stroke is taken into account
+
+# mouse 3 with Alt on the root window
+Mouse   3       RD      M       StrokeFuncWrapper DrawMotion FeedBack StrokeWidth 2
+# mouse 3 with Alt on a window
+Mouse   3       WD      M       StrokeFuncWrapper FeedBack DrawMotion StrokeWidth 2
+
+
+# ----------------------------------------------------------------------------
+# The stroke bindings
+#
+# The Stroke bindings work as the mouse bindings, but:
+# 1. The first argument defines the stroke motion on a telephone grid:
+#
+#          1   2   3
+#
+#          4   5   6
+#
+#          7   8   9
+#
+# To try these out, hold down the Left mouse button and trace the
+# pattern on the Root Window, the sequence is a pattern on the grid
+# above, so 14789 would be down then Right.
+#
+#    Or on a numeric pad grid if the sequence starting with 'N'
+#
+#          7   8   9
+#
+#          4   5   6
+#
+#          1   2   3
+#
+#   We use the numeric pad grid since we have one on our machine.
+#   The 0 sequence defines a single click or very small motions.
+#
+# 2. The second argument is the mouse button for the old way of
+#    handling stroke. A 0 is for the StrokeFunc, the new way to use stroke.
+#
+# We use mostly simple stroke motion. For complex stroke motions we need
+# to consider many sloppy stroke motions for each action.
+
+
+# There is also EchoSequence, Feedback and NotStayPressed.
+# Note: EchoSequence prints sequences to STDERR.
+
+DestroyFunc StartStrokeXterm
+AddToFunc StartStrokeXterm I Exec exec uxterm -g $[StrokeStart]
+
+
+# Redefine the default bindings
+Stroke	0		0 	R	A 	FuncFvwmButton3OnRootWindow
+Stroke	0		0	WD	M	FuncFvwmButton3OnWindow
+
+
+# A | from the top to the bottom
+Stroke	N852		0	R	A	FuncFvwmTerminal
+Stroke	N852		0	WD	M	FuncFvwmTerminal
+
+# A / from the top to the bottom
+Stroke	N951		0	R	A	FuncFvwmEditor
+Stroke	N951		0	WD	M	FuncFvwmEditor
+
+# A \ from the top to the bottom
+Stroke	N753		0	R	A	FuncFvwm2Editor
+Stroke	N753		0	WD	M	FuncFvwm2Editor
+
+# A | from the bottom to the top
+Stroke	N258		0	R	A	FuncFvwm2Terminal
+Stroke	N258		0	WD	M	FuncFvwm2Terminal
+
+# A / from the bottom to the top
+Stroke	N159		0	R	A	FuncFvwmDocView
+Stroke	N159		0	WD	M	FuncFvwmDocView
+
+# A \ from the bottom to the top
+Stroke	N357		0	R	A	FuncFvwmIrc
+Stroke	N357		0	WD	M	FuncFvwmIrc
+
+# A - from the right to the left
+Stroke	N654		0	R	A	FuncFvwm2WmLock
+Stroke	N654		0	WD	M	FuncFvwm2WmLock
+
+# A - from the left to the right
+Stroke	N456		0	R	A	FuncFvwmWmLock
+Stroke	N456		0	WD	M	FuncFvwmWmLock
+
+# Down, Then Up.
+Stroke 25852            0       RD      A       Refresh
+
+# A N (from the bottom left)
+Stroke	7415963		0	R	A	FuncFvwmWWW
+Stroke	7415863		0	R	A	FuncFvwmWWW
+Stroke	74148963	0	R	A	FuncFvwmWWW
+Stroke	74158963	0	R	A	FuncFvwmWWW
+Stroke	7418963		0	R	A	FuncFvwmWWW
+Stroke	415963		0	R	A	FuncFvwmWWW
+#
+Stroke	7415963		0	WD	M	FuncFvwmWWW
+Stroke	7415863		0	WD	M	FuncFvwmWWW
+Stroke	74148963	0	WD	M	FuncFvwmWWW
+Stroke	74158963	0	WD	M	FuncFvwmWWW
+Stroke	7418963		0	WD	M	FuncFvwmWWW
+Stroke	415963		0	WD	M	FuncFvwmWWW
+
+# A C from the top
+Stroke	N9874123	0	R	A	FuncFvwmCalculator
+Stroke	N987423		0	R	A	FuncFvwmCalculator
+Stroke	N9874123	0	WD	M	FuncFvwmCalculator
+Stroke	N987423		0	WD	M	FuncFvwmCalculator
+
+# A C from the bottom
+Stroke	N3214789	0	R	A	FuncFvwmProcess
+Stroke	N3214789	0	WD	M	FuncFvwmProcess
+
+# A L from the top left
+Stroke	N74123		0	R	A	FuncFvwmHelp
+Stroke	N74123		0	WD	M	FuncFvwmHelp
+
+# A L from the bootom right
+Stroke	N32147		0	R	A	FuncFvwm2Help
+Stroke	N32147		0	WD	M	FuncFvwm2Help
+
+# A _| from the bottom left
+Stroke	N12369		0	R	A	FuncFvwmImageView
+Stroke	N12369		0	WD	M	FuncFvwmImageView
+
+# A _| from the top right
+Stroke	N96321		0	R	A	FuncFvwmImageView
+Stroke	N96321		0	WD	M	FuncFvwm2ImageView
+
+# A |_| from the top left
+Stroke	N7412369	0	R	A	FuncFvwmImageEdit
+Stroke	N7412369	0	WD	M	FuncFvwmImageEdit
+
+# A |_| from the top right
+Stroke	N9632147	0	R	A	FuncFvwm2ImageEdit
+Stroke	N9632147	0	WD	M	FuncFvwm2ImageEdit
+
+# A |-| (an arch) form the bottom left
+Stroke	N1478963	0	R	A	FuncFvwmMail
+Stroke	N1478963	0	WD	M	FuncFvwmMail
+
+# A back and forth - starting from the left
+Stroke	N45654		0	R	A	FuncFvwmCdPlayer
+Stroke	N45654		0	WD	M	FuncFvwmCdPlayer
+
+# A back and forth - starting from the right
+Stroke	N65456		0	R	A	FuncFvwmSound
+Stroke	N65456		0	WD	M	FuncFvwmSound
+
+# A clockwise box from the top left
+Stroke	N78963214	0	R	A	FuncFvwmQuitVerify
+Stroke	N789632147	0	R	A	FuncFvwmQuitVerify
+Stroke	N78963214	0	WD	M	FuncFvwmQuitVerify
+Stroke	N789632147	0	WD	M	FuncFvwmQuitVerify
+
+# ----------------------------------------------------------------------------
+# Don't forget to destroy the bindings
+DestroyFunc FuncFvwmStartStroke
+AddToFunc   FuncFvwmStartStroke
+
+DestroyFunc FuncFvwmStopStroke
+AddToFunc   FuncFvwmStopStroke
+#+ I Mouse	3	R	A	-
+#+ I Mouse	3 	W 	M 	-
++ I Stroke	0 		0	R	A	-
++ I Stroke	0 		0	WD	M	-
++ I Stroke	N852		0	R	A	-
++ I Stroke	N852		0	WD	M	-
++ I Stroke	N951		0	R	A	-
++ I Stroke	N951		0	WD	M	-
++ I Stroke	N753		0	R	A	-
++ I Stroke	N753		0	WD	M	-
++ I Stroke	N258		0	R	A	-
++ I Stroke	N258		0	WD	M	-
++ I Stroke	N159		0	R	A	-
++ I Stroke	N159		0	WD	M	-
++ I Stroke	N357		0	R	A	-
++ I Stroke	N357		0	WD	M	-
++ I Stroke	7415963		0	R	A	-
++ I Stroke	7415863		0	R	A	-
++ I Stroke	74148963	0	R	A	-
++ I Stroke	74158963	0	R	A	-
++ I Stroke	7418963		0	R	A	-
++ I Stroke	415963		0	R	A	-
++ I Stroke	7415963		0	WD	M	-
++ I Stroke	7415863		0	WD	M	-
++ I Stroke	74148963	0	WD	M	-
++ I Stroke	74158963	0	WD	M	-
++ I Stroke	7418963		0	WD	M	-
++ I Stroke	415963		0	WD	M	-
++ I Stroke	N654		0	R	A	-
++ I Stroke	N654		0	WD	M	-
++ I Stroke	N456		0	R	A	-
++ I Stroke	N456		0	WD	M	-
++ I Stroke	N9874123	0	R	A	-
++ I Stroke	N987423		0	R	A	-
++ I Stroke	N9874123	0	WD	M	-
++ I Stroke	N987423		0	WD	M	-
++ I Stroke	N3214789	0	R	A	-
++ I Stroke	N3214789	0	WD	M	-
++ I Stroke	N74123		0	R	A	-
++ I Stroke	N74123		0	WD	M	-
++ I Stroke	N32147		0	R	A	-
++ I Stroke	N32147		0	WD	M	-
++ I Stroke	N12369		0	R	A	-
++ I Stroke	N12369		0	WD	M	-
++ I Stroke	N7412369	0	R	A	-
++ I Stroke	N7412369	0	WD	M	-
++ I Stroke	N96321		0	R	A	-
++ I Stroke	N96321		0	WD	M	-
++ I Stroke	N9632147	0	R	A	-
++ I Stroke	N9632147	0	WD	M	-
++ I Stroke	N1478963	0	R	A	-
++ I Stroke	N1478963	0	WD	M	-
++ I Stroke	N45654		0	R	A	-
++ I Stroke	N45654		0	WD	M	-
++ I Stroke	N45654		0	R	A	-
++ I Stroke	N45654		0	WD	M	-
++ I Stroke	N78963214	0	R	A	-
++ I Stroke	N789632147	0	R	A	-
++ I Stroke	N78963214	0	WD	M	-
++ I Stroke	N789632147	0	WD	M	-
++ I Stroke      25852           0       RD      A       -

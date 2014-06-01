@@ -1,0 +1,101 @@
+
+#=====================================================  E. modules
+#_____________________________________________________  E.1 FvwmButtons
+# E.1 FvwmButtons
+
+# Colors
+*FvwmButtonsFore Black
+*FvwmButtonsBack #908090
+
+*FvwmButtonsBoxSize smart
+*FvwmButtonsRows 5
+
+*FvwmButtonsPadding 2 4
+
+# Font
+*FvwmButtonsFont -adobe-helvetica-bold-r-*-*-11-*-*-*-*-*-*-*
+*FvwmButtonsGeometry -1+1
+
+# Define the buttons to use.....
+
+*FvwmButtons(Container(Rows 5, Frame 3, Padding 2 4))
+
+# The leftmost 4 buttons (next,prev,lower,raise)
+*FvwmButtons(4x4,Container(Fore MistyRose,Back DimGray, \
+                           Rows 4,Frame 3, Padding 2 4))
+*FvwmButtons(1x2,Title Next,     Icon  arrow.xpm    Action "Desk  1 0")
+*FvwmButtons(1x2,Title Prev,     Icon  arrowb.xpm   Action "Desk -1 0")
+*FvwmButtons(1x2,Title Lower,    Icon Down,         Action Lower)
+*FvwmButtons(1x2,Title Raise,    Icon Up,           Action Raise)
+*FvwmButtons(End)
+
+# Add in the pager ....
+*FvwmButtons(8x4,Container(Rows 4,Frame -3, Padding 2 4))
+*FvwmButtons(8x4, Swallow(UseOld) "FvwmPager" `FvwmPager 0 1` Frame -3)
+*FvwmButtons(End)
+
+*FvwmButtons(16x4,Container(Fore honeydew,Back DimGray,Rows 4, Frame -4, Padding 2 4))
+*FvwmButtons(16x1,Frame -4, Swallow(UseOld,NoKill) "xticktalk" \
+  `Exec nice xticktalk -before -approximate -fg honeydew -bg DimGray \
+       -fn '-adobe-times-bold-r-*-*-20-*-*-*-*-*-*-*' -geometry -1500-1500&`)
+*FvwmButtons(12x1,Frame -4, Swallow(UseOld,NoKill) "xclock" \
+   `Exec nice xclock -digital -padding 0 -bg DimGray -update 10  \
+       -fn '-adobe-times-bold-r-*-*-20-*-*-*-*-*-*-*' -geometry -1500-1500&`)
+*FvwmButtons(4x1,Frame 4,Back darkolivegreen, Fore Yellow,\
+    Title Exit, Action "Popup Quit-Verify")
+*FvwmButtons(4x2,Frame -4, Swallow(UseOld,NoKill) "xload" \
+ `Exec xload -label $HOSTDISPLAY -fg honeydew \
+    -bg DimGray  -geometry -1500-1500 &`)
+*FvwmButtons(2x2,Frame -4, Swallow(UseOld,NoKill) "oclock" \
+  `Exec nice oclock -jewel Blue -minute Red \
+		-hour Red -geometry -1500-1500 -bg DimGray &`)
+
+*FvwmButtons(10x2,Container(Fore MidnightBlue,Back Gray55, \
+                           Rows 2,Frame 2, Padding 2 4))
+*FvwmButtons(2x2,Swallow(UseOld,NoKill) "dctrlIcon" \
+   `Exec nice dctrl -iconic -control-window &`)
+*FvwmButtons(2x2,Frame 3,Title Resize,   Icon resize.xpm,  Action Resize)
+*FvwmButtons(2x2,Fore Red, Frame 3,Title Kill, Icon rbomb.xpm,\
+                 Action Destroy)
+*FvwmButtons(2x2,Frame 3,Title Move, Icon arrows2.xpm, Action Move)
+*FvwmButtons(2x2,Fore BLUE,Frame 3,Title Root, Icon supermn1.xpm, \
+             Action  `Exec "Root" exec xterm -T Root -e \
+             /bin/su -c '/bin/bash  -rcfile \
+             "~srivasta/.rootrc" -i' root&`)
+*FvwmButtons(End)
+
+*FvwmButtons(End)
+
+# Now come the bottom row buttons:
+*FvwmButtons(28x1,Container(Fore CornSilk,Back DarkSlateGray, Rows 1))
+*FvwmButtons(4x1, Title Utils,         Action "Popup Utilities")
+*FvwmButtons(4x1, Title Window,        Panel (down)  WinOps )
+*FvwmButtons(4x1, Title Misc,          Action "Function general_ops_func")
+*FvwmButtons(16x1,Size 378 20,Swallow(UseOld,NoKill,Respawn) "xmultibiff" \
+    `Exec xmultibiff -geometry 370x20 -bg Gray17 -fg CornSilk -mail ~/var/spool/mail/{important,admin,gcif,gcifcases,digital,debian.spool,consult,bcast} &`)
+*FvwmButtons(End)
+
+
+*FvwmButtons(End)
+
+########## PANEL
+*FvwmButtonsPanel WinOps
+*FvwmButtonsBack bisque2
+*FvwmButtonsGeometry -3-3
+*FvwmButtonsColumns 1
+
+*FvwmButtons(Title Resize ,Icon resize.xpm ,Action Resize)
+*FvwmButtons(Title Move   ,Icon arrows2.xpm,Action Move  )
+*FvwmButtons(Title Lower  ,Icon Down       ,Action Lower )
+*FvwmButtons(Title Raise  ,Icon Up         ,Action Raise )
+*FvwmButtons(Title Iconify,Icon Iconify    ,Action Iconify)
+*FvwmButtons(Title Stick  ,Icon Stick      ,Action Stick )
+
+########## PANEL
+*FvwmButtonsPanel Tools
+*FvwmButtonsBack bisque2
+*FvwmButtonsGeometry -1-1
+*FvwmButtonsColumns 1
+
+*FvwmButtons(Title Kill  ,Icon bomb.xpm   ,Action Destroy)
+*FvwmButtons(Title Kill  ,Icon bomb.xpm   ,Action Destroy)

@@ -1,0 +1,107 @@
+
+#=====================================================  E. modules
+#_____________________________________________________  E.1 FvwmButtons
+# E.1 FvwmButtons
+KillModule FvwmButtons
+
+*FvwmButtonsBoxSize smart
+*FvwmButtonsRows 5
+
+*FvwmButtonsPadding 1 2
+#*FvwmButtonsGeometry -1+1
+*FvwmButtonsGeometry -160+0
+
+# We could set a geomettry as well:
+# *FvwmButtonsGeometry 1280x32+0-0
+# forbid resizing
+# *FvwmButtonsBoxSize  fixed
+
+# Define the buttons to use.....
+
+*FvwmButtons(Container(Rows 5, Frame 3, Padding 1 2))
+
+# The leftmost 4 buttons (next,prev,lower,raise)
+# *FvwmButtons(4x4,Container(Fore $[fg.cs13],Back $[bg.cs13], \
+#                            Rows 4,Frame 3, Padding 2 4))
+# *FvwmButtons(1x2,Title Next,     Icon  arrow.xpm    Action "Desk  1 0")
+# *FvwmButtons(1x2,Title Prev,     Icon  arrowb.xpm   Action "Desk -1 0")
+# *FvwmButtons(1x2,Title Lower,    Icon Down,         Action Lower)
+# *FvwmButtons(1x2,Title Raise,    Icon Up,           Action Raise)
+# *FvwmButtons(End)
+
+*FvwmButtons(18x4,Container(Colorset 23,Rows 4, Frame -4, Padding 2 4))
+*FvwmButtons(18x1,Frame -4, Swallow(UseOld,NoKill) "xticktalk" \
+  `Exec nice -15 xticktalk -before -approximate -fg $[fg.cs13] -bg $[bg.cs13] \
+       -fn '-bitstream-bitstream vera sans mono-medium-r-normal--17-120-100-100-m-*-*-*' -geometry -1500-1500&`)
+
+*FvwmButtons(12x3,Container(Colorset 23,Rows 3))
+*FvwmButtons(12x1,Frame -4, Swallow(UseOld,NoKill) "xclock" \
+   `Exec nice xclock -digital -padding 0 -fg $[fg.cs13]  -bg $[bg.cs13] -update 5  \
+       -fn '-bitstream-bitstream vera sans mono-medium-r-normal--17-120-100-100-m-*-*-*' -geometry -1500-1500&`)
+
+
+*FvwmButtons(2x2,Colorset 23,,Frame 3,Title Root, Icon supermn1.xpm, \
+             Action  `Exec "Root" exec uxterm -fg $[fg.cs31] -bg $[bg.cs31] \
+                         -T Root -e /bin/su -c '/bin/bash  -rcfile \
+             "~srivasta/.rootrc" -i' root&`)
+*FvwmButtons(2x2,Frame -4, Swallow(UseOld,NoKill) "oclock" \
+  `Exec nice oclock -jewel DarkBlue -minute $[fg.cs13] \
+		-hour $[fg.cs13] -geometry -1500-1500 -bg $[bg.cs13] &`)
+
+*FvwmButtons(3x2,Swallow(UseOld,NoKill,Respawn) "wmifs" \
+   `Exec nice wmifs -w  `)
+*FvwmButtons(Colorset 23, 6x2,Frame -4, Swallow(UseOld,NoKill) "xload" \
+ `Exec nice -15 xload  -label $HOSTDISPLAY -fg $[fg.cs13] \
+    -bg $[bg.cs13]  -geometry -1500-1500 &`)
+
+*FvwmButtons(End)
+
+# Add in the pager ....
+*FvwmButtons(6x3,Container(Rows 3,Frame -3, Padding 2 4))
+*FvwmButtons(6x3, Swallow(UseOld) "FvwmPager" `FvwmPager 0 1` Frame -3)
+*FvwmButtons(End)
+
+*FvwmButtons(End)
+
+# Now come the bottom row buttons:
+*FvwmButtons(18x1,Container(Colorset 12 Rows 1))
+*FvwmButtons(18x1,Size 395 20,Swallow(UseOld,NoKill,Respawn) "xbuffy" \
+    `Exec xbuffy -fg $[fg.cs12] -bg $[bg.cs12]  -fn '-bitstream-bitstream vera sans mono-medium-r-normal--17-120-100-100-m-*-*-*'  -geometry 388x20  -fill -center -horiz -boxfile ~/etc/xbuffy  &`)
+*FvwmButtons(End)
+
+
+*FvwmButtons(End)
+
+##########*FvwmButtons(2x3,Title CPU,Swallow(UseOld,NoKill) "wmMoonClock" \
+##########    `Exec nice -19 wmMoonClock -lat 30.45 -lon 88.18 &`)
+########   `Exec nice dctrl -iconic -control-window &`)
+#####*FvwmButtons(16x1,Size 378 20,Swallow(UseOld,NoKill,Respawn) "xmultibiff" \
+#####    `Exec xmultibiff -geometry 370x20 -bg Gray17 -fg CornSilk
+#####    -mail
+#####    ~/var/spool/mail/{important,admin,gcif,gcifcases,digital,debian.spool,consult,bcast}
+#####    &`) 
+######*FvwmButtons(2x2,Swallow(UseOld,NoKill,Respawn) "dctrlIcon" \
+######   `Exec ~/bin/getdctrl `)
+
+
+########## PANEL
+#*FvwmButtonsPanel WinOps
+#*FvwmButtonsBack bisque2
+#*FvwmButtonsGeometry -3-3
+#*FvwmButtonsColumns 1
+
+#*FvwmButtons(Title Resize ,Icon resize.xpm ,Action Resize)
+#*FvwmButtons(Title Move   ,Icon arrows2.xpm,Action Move  )
+#*FvwmButtons(Title Lower  ,Icon Down       ,Action Lower )
+#*FvwmButtons(Title Raise  ,Icon Up         ,Action Raise )
+#*FvwmButtons(Title Iconify,Icon Iconify    ,Action Iconify)
+#*FvwmButtons(Title Stick  ,Icon Stick      ,Action Stick )
+
+########## PANEL
+#*FvwmButtonsPanel Tools
+#*FvwmButtonsBack bisque2
+#*FvwmButtonsGeometry -1-1
+#*FvwmButtonsColumns 1
+
+#*FvwmButtons(Title Kill  ,Icon bomb.xpm   ,Action Destroy)
+#*FvwmButtons(Title Kill  ,Icon bomb.xpm   ,Action Destroy)

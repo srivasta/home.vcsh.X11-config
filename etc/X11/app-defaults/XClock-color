@@ -1,0 +1,8 @@
+
+XClock*font:                    *schoolbook-medium-r-normal--24*
+XClock*chime:                   false
+XClock*analog:                  true
+XClock*update:                  2
+XClock*geometry:                320x48-0+0
+XClock*foreground:              grey90
+XClock*background:               black

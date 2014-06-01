@@ -1,0 +1,5 @@
+DestroyFunc FuncFvwmStartStroke
+AddToFunc   FuncFvwmStartStroke
+
+DestroyFunc FuncFvwmStopStroke
+AddToFunc   FuncFvwmStopStroke

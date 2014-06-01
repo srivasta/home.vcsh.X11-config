@@ -1,0 +1,37 @@
+zangband*angband*color0:                         #000000
+zangband*angband*color1:                         #ffffff
+zangband*angband*color2:                         #a6a6a6
+zangband*angband*color3:                         #ff6302
+zangband*angband*color4:                         #ca0808
+zangband*angband*color5:                         #008e18
+zangband*angband*color6:                         #0000e3
+zangband*angband*color7:                         #814007
+zangband*angband*color8:                         #6b6b6b
+zangband*angband*color9:                         #d6d6d6
+zangband*angband*color10:                        #5100c2
+zangband*angband*color11:                        #fdf105
+zangband*angband*color12:                        #ff9259
+zangband*angband*color13:                        #26cf17
+zangband*angband*color14:                        #02b2f2
+zangband*angband*color15:                        #b28b48
+
+zangband*angband*font:          9x15
+zangband*angband*geometry:      +300+220
+zangband*recall*font:           7x13
+zangband*term-1*font:           7x13
+zangband*recall*geometry:       80x15+460+0
+zangband*term-1*geometry:       80x15+460+0
+zangband*choice*font:           7x13
+zangband*term-2*font:           7x13
+zangband*choice*geometry:       +0+440
+zangband*term-2*geometry:       +0+440
+zangband*mirror*font:           7x13
+zangband*term-3*font:           7x13
+zangband*mirror*geometry:       80x15+460+590
+zangband*term-3*geometry:       80x15+460+590
+! zangband*color6:                #3070f0
+! zangband*color7:                #907027
+! zangband*term-4*iconic:         true
+! zangband*term-5*iconic:         true
+! zangband*term-6*iconic:         true
+! zangband*term-7*iconic:         true

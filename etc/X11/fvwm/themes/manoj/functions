@@ -1,0 +1,1139 @@
+#
+# Section: Menus
+#
+# This section defines a small menu structure.  The main menu contains
+# some typical entries, and uses a hook (main-menu.hook) to allow the
+# user to add new entries.  Most of the default entries are submenus,
+# which are also defined here.
+#
+
+#=====================================================  9. user functions
+# 9. user functions
+# Now define some handy complex functions
+DestroyFunc page-and-warp
+AddToFunc page-and-warp "I" GotoPage $0 $1
++ "I" Next [!iconic CurrentScreen CurrentDesk] Focus
+
+DestroyFunc desk-and-warp
+AddToFunc desk-and-warp "I" Desk $0 $1
++ "I" Next [!iconic CurrentScreen CurrentDesk] Focus
+
+DestroyFunc Toggle-Page
+AddToFunc Toggle-Page   "I" EdgeScroll 0 0
++                       "I" EdgeScroll 100 100
+
+# use as Key F25      A N Popupat Window-Ops
+DestroyFunc Popupat
+AddToFunc Popupat "I" CursorMove -1000 -1000
++	          "I" Popup Window-Ops
+
+#The 'None' line says only do this if no window matching $0 exists.
+DestroyFunc MailFunction
+AddToFunc MailFunction     "I" Next [$0] Iconify -1
++                          "I" Next [$0] focus
++                          "I" None [$0] Exec $0 $1
+
+DestroyFunc warp-or-run
+AddToFunc warp-or-run "I" Next [$0 CirculateHit] Iconify -1
++ "I" Next [$0 CirculateHit] Focus
++ "I" None [$0] $1
+# Use as
+
+
+
+DestroyFunc lower-to-bottom
+AddToFunc lower-to-bottom
++ I Layer 0 2
++ I Lower
+
+DestroyFunc raise-to-top
+AddToFunc raise-to-top
++ I Layer 0 6
++ I Raise
+
+# This one moves and then raises the window if you drag the mouse,
+# only raises the window if you click,  or does a RaiseLower if you double
+# click
+DestroyFunc "Move-or-Raise"
+AddToFunc "Move-or-Raise" "M" Move
++              "M" Raise
++              "C" Raise
++              "D" RaiseLower
+
+AddToFunc Move-or-Raise2        M Raise
++                               M Move
++                               D Lower
+
+AddToFunc PrintFunction         I Raise
++                               I Exec xdpr -id $[w.id]
+
+# This one moves and then lowers the window if you drag the mouse,
+# only lowers the window if you click,  or does a RaiseLower if you double
+# click
+DestroyFunc "Move-or-Lower"
+AddToFunc "Move-or-Lower" "M" Move
++              "M" Lower
++              "C" Lower
++              "D" RaiseLower
+
+# This one moves or (de)iconifies:
+DestroyFunc "Move-or-Iconify"
+AddToFunc "Move-or-Iconify" "M" Move
++              "D" Iconify
++              "C" Iconify
+
+# This one resizes and then raises the window if you drag the mouse,
+# only raises the window if you click,  or does a RaiseLower if you double
+# click
+DestroyFunc "Resize-or-Raise"
+AddToFunc "Resize-or-Raise" "M" Resize
++              "M" Raise
++              "C" Raise
++              "D" RaiseLower
+
+
+# This one maximizes vertically if you click (leaving room for the
+# GoodStuff bar at the bottom, or does a full maximization if you
+# double click, or a true full vertical  maximization if you just
+# hold the mouse button down.
+DestroyFunc "max_vert_func"
+AddToFunc "max_vert_func" "M" Maximize 0 100
++              "C" Maximize 0 80
++              "D" Maximize 100 100
+
+
+# This one maximizes horizontally if you click, or does a full
+# maximization if you double click, or a true 80% horizontal
+# maximization if you just hold the mouse button down.
+DestroyFunc "max_hor_func"
+AddToFunc "max_hor_func" "M" Maximize 80 0
++              "C" Maximize 100 0
++              "D" Maximize 100 100
+
+# This one maximizes if you click, or does a full
+# maximization if you double click, or a true 50%  maximization if you
+# just hold the mouse button down.
+DestroyFunc "max_diag_func"
+AddToFunc "max_diag_func" "M" Maximize 50 50
++              "C" Maximize 80 80
++              "D" Maximize 100 100
+
+
+# The Focus command no longer raises the window automatically.
+# Here is a function that emulates the old Focus behavior.
+DestroyFunc focus-and-raise
+AddToFunc   focus-and-raise "I" Focus
++                           "I" Raise
++			    "I" WarpToWindow 5p 5p
+
+# Simulate the Warp function from older fvwm
+DestroyFunc Warp
+AddToFunc Warp "I" Next $1 Iconify -1
++              "I" Next $1 focus
++              "I" CursorMove 2 2
+
+AddToFunc FocusAndWarp I Focus
++                      I WarpToWindow 2p 2p
+
+AddToFunc DeiconifyFocusAndWarp I Iconify -1
++                               I FocusAndWarp
+
+AddToFunc ChangeDefaultFocus I Style * $0
++                            I Recapture
+
+#The  "CursorMove" does the  trick.   I suppose larger  values could be
+#used to get you to wherever you wanted to be within the window.
+
+AddToFunc XPMBack "I" Exec xpmroot /usr/local/share/graphics/xpm/$0
+AddToFunc ImageBack "I" Exec xv -root -quit /u/ericding/Pictures/images/$0
+
+# AddToFunc Rsh-Func "I" Exec rxterm $0 white:gray30 80x40 $DISPLAY "-cr
+# white -title $0 -e ~rod/bin/tcsh -l"
+
+AddToFunc Iconify-Func  "I" Iconify
++                       "I" Raise
+
+DestroyFunc FocusRaise
+AddToFunc FocusRaise I Raise
++ I Focus
++ I Iconify off
+
+# 1. if a window is already focussed, then do nothing
+DestroyFunc focus_a_window
+AddToFunc   focus_a_window
++ I Current (Focused) Break
+
+# 2. if no window was focussed, then focus a window under the mouse
+AddToFunc focus_a_window I PointerWindow (!Focused) Focus
+
+# 3. if no window was under the mouse, then focus a visible window
+AddToFunc focus_a_window 
++ I TestRc (NoMatch) Next (AcceptsFocus, Visible, CurrentPage) Focus
+
+
+# 4. if a window was not visible (because the just now disappeared
+#    window hid it), then try again to focus it
+AddToFunc focus_a_window
++ I TestRc (NoMatch) Next (AcceptsFocus, CurrentPage) Focus
+
+
+DestroyFunc RestoreWindowGeometry
+AddToFunc   RestoreWindowGeometry
+Read saved-window-geometries Quiet
+
+DestroyModuleConfig FvwmEvent-NewWindow: *
+*FvwmEvent-NewWindow: add_window RestoreWindowGeometry
+
+
+DestroyFunc SaveWindowGeometry
+AddToFunc   SaveWindowGeometry
++ I AddToFunc RestoreWindowGeometry
++ I + I ThisWindow ('$0') ResizeMove $1 $2 $3 $4
++ I Exec echo "+ I ThisWindow ('$0') ResizeMove $1 $2 $3 $4" >>$[FVWM_USERDIR]/saved-window-geometries
+
+
+#The plan is this, define a named button in FvwmButtons using Id:
+#  *FvwmButtons: (Id deskname, Text zero)
+#if you use MyGotoDesk instead of GotoDesk, the "zero" in FvwmButtons
+#will be automatically replaced with the current desk name.
+
+AddToFunc MyGotoDesk
++ I GotoDesk $*
++ I PipeRead `echo "SendToModule FvwmButtons ChangeButton deskname Text \
+        '\$[desk.name$0]'"
+
+# AddToFunc MyMove M Move
+# Mouse 1                W       4       MyMove
+
+# XXX: This doesnt change focus, should it?
+# Win+H to drop the hidden console down.
+DestroyFunc HiddenConsoleKeyBinding
+AddToFunc HiddenConsoleKeyBinding
++ I ThisWindow (Shaded) FuncAutoEnter
++ I TestRc (NoMatch) NoWindow FuncAutoEnter
+
+
+DestroyFunc SelectWindow
+AddToFunc   SelectWindow
+  + I Focus
+  + I Raise
+  + I WarpToWindow 50 50
+
+DestroyFunc ScreenDump
+AddToFunc ScreenDump
++ I schedule 0 0 exec xwd
++ I schedule <some delay> 0 ...
+
+DestroyFunc FuncFvwmDeiconifyFocusAndRaise
+AddToFunc   FuncFvwmDeiconifyFocusAndRaise
++ I Iconify off
++ I Focus
++ I Raise
+
+# switches to a window if it is not visible (or not on the current
+# page) and which iconifies the window if it is on top on the current
+# page (e.g. fully visible).
+DestroyFunc FuncFvwmIconifyOrFocusAndRaise
+AddToFunc   FuncFvwmIconifyOrFocusAndRaise
++ I ThisWindow (Iconic) Iconify off
++ I TestRc (NoMatch) ThisWindow (Raised) Iconify on
++ I ThisWindow (!Iconic) Focus
++ I ThisWindow (!Iconic) Raise
+
+*FvwmIconMan: action  Mouse 1 A sendcommand FuncFvwmIconifyOrFocusAndRaise
+
+DestroyFunc FuncFvwmDeiconifyFocusAndWarp
+AddToFunc   FuncFvwmDeiconifyFocusAndWarp
++ I Iconify off
++ I Focus
++ I WarpToWindow 10p 10p
+
+DestroyFunc FuncFvwmRestore
+AddToFunc   FuncFvwmRestore
++ I ThisWindow (!Iconic !Shaded Maximized) Maximize    false
++ I ThisWindow (!Iconic  Shaded          ) WindowShade false
++ I ThisWindow ( Iconic                  ) Iconify     false
+
+DestroyFunc FuncFvwmDelete
+AddToFunc   FuncFvwmDelete
++ I Delete
+
+DestroyFunc FuncFvwmDeleteOrDestroy
+AddToFunc   FuncFvwmDeleteOrDestroy
++ H Nop
++ M Nop
++ C Delete
++ D Destroy
+
+#DestroyFunc FuncFvwmMaximize
+#AddToFunc   FuncFvwmMaximize
+#+ M Nop
+#+ H Maximize 0 95
+#+ C Maximize 100 95
+#+ D Maximize 100 100
+
+DestroyFunc FuncFvwmMaximize
+AddToFunc   FuncFvwmMaximize
++ M Nop
++ H Nop
++ C Maximize
++ D Menu MenuFvwmWindowMaximize
+
+DestroyFunc FuncFvwmMaximizeVertically
+AddToFunc   FuncFvwmMaximizeVertically
++ H Maximize 0 100
++ M Maximize 0 100
++ C Maximize 0 100
+
+DestroyFunc FuncFvwmMaximizeHorizontally
+AddToFunc   FuncFvwmMaximizeHorizontally
++ H Maximize 100 0
++ M Maximize 100 0
++ C Maximize 100 0
+
+DestroyFunc FuncFvwmSimpleMaximize
+AddToFunc   FuncFvwmSimpleMaximize
++ I Maximize $0
+
+DestroyFunc FuncFvwmSimpleMaximizeVertically
+AddToFunc   FuncFvwmSimpleMaximizeVertically
++ I Maximize $0 0 100
+
+DestroyFunc FuncFvwmSimpleMaximizeHorizontally
+AddToFunc   FuncFvwmSimpleMaximizeHorizontally
++ I Maximize $0 100 0
+
+
+DestroyFunc FuncFvwmSimpleMaximizePartially
+AddToFunc   FuncFvwmSimpleMaximizePartially
++ I Maximize $0 0 95
+
+DestroyFunc FuncFvwmIconifySameResource
+AddToFunc   FuncFvwmIconifySameResource
++ I All ($r) Iconify $0
+
+DestroyFunc FuncFvwmIconify
+AddToFunc   FuncFvwmIconify
++ C Iconify
+
+DestroyFunc FuncFvwmConsole
+AddToFunc   FuncFvwmConsole
++ I Module FvwmConsole -fg $[fg.cs22] -bg $[bg.cs22] $*
+
+
+
+DestroyFunc FullScreen
+AddToFunc FullScreen
++ I ThisWindow (!Maximized) Style $[w.name] BorderWidth 0
++ I ThisWindow ( Maximized, !"bluescreen") Style $[w.name] BorderWidth 1
++ I ThisWindow Maximize
++ I ThisWindow (!Maximized) WarpToWindow -5p -5p
+
+DestroyFunc MaximizeFullScreen
+AddToFunc   MaximizeFullScreen
++ I ThisWindow (Maximized) WindowStyle Title, Borders
++ I TestRc (!Match) WindowStyle !Title, !Borders
++ I TestRc (!Match) Raise
++ I TestRc (!Match) UpdateStyles
++ I Maximize ewmhiwa
+
+AddToFunc MoveAndGotoPage
++ I Raise
++ I MoveToPage $0 $1
++ I GotoPage $0 $1
+
+DestroyFunc NextWindow
+AddToFunc NextWindow
++ I NoWindow Next (!Desktop*, CurrentPage, !Iconic, AcceptsFocus)
++ I FlipFocus NoWarp
++ I Current Raise
+
+DestroyFunc PrevWindow
+AddToFunc PrevWindow
++ I NoWindow Prev (!Desktop*, CurrentPage, !Iconic, AcceptsFocus)
++ I FlipFocus NoWarp
++ I Current Raise
+
+
+#Key Right W CM4 MoveAndGotoPage +1p +0p
+
+AddToFunc	Window-Menu-Func
++	I	ThisWindow (HasHandles) Menu Window-Menu Interior 0 0 Close
++	I	ThisWindow (!HasHandles) Menu Window-Menu-No-Handles Interior 0 0 Close
+
+AddToFunc move_to_center
++ I Piperead "echo move $(( ($[vp.width] - $[w.width]) / 2 ))p $(( ($[vp.height] - $[w.height]) / 2 ))p"
+
+AddToFunc MoveMozilla
++	I WindowID $0 ("*Firefox-bin*") PipeRead `echo MoveToPage 1 0`
+
+DestroyFunc SmartStart
+AddToFunc SmartStart
+	+ I Next ($0) Iconify off
+	+ I Next ($0) Raise
+	+ I Next (AcceptsFocus, $0) focus
+	+ I None ($0) Exec exec $1
+
+
+####
+# Auto hide stuff
+# These functions modified from the functions provided in the fvwm FAQ.
+# http://www.fvwm.org/documentation/faq/#7.17
+#################
+AddToFunc Autohide
++ I ThisWindow ($0) Deschedule $[w.id]
++ I TestRc (!Match) Deschedule -$[w.id]
++ I ThisWindow ($0) ThisWindow (shaded) AutohideShow $1 $3
++ I TestRc (!Match) All ($0, !shaded) AutohideHide $2 $3
+
+AddToFunc AutohideShow
++ I Schedule $0 -$[w.id] WindowShade $1 off
++ I Schedule $0 -$[w.id] Raise
++ I Schedule $0 -$[w.id] Deschedule $[w.id]
++ I Schedule $0 -$[w.id] Deschedule -$[w.id]
+
+AddToFunc AutohideHide
++ I Schedule $0 $[w.id] WindowShade $1 on
++ I Schedule $0 $[w.id] Deschedule $[w.id]
++ I Schedule $0 $[w.id] Deschedule -$[w.id]
+
+# With this setup one can double-click in the north, south, east or
+# west borders of a window and it will shade in that direction and
+# always have its title displayed. A double-click on the shaded window
+# restores the title to the top as I have set up.
+addtofunc shadewithdir
++ I thiswindow windowstyle $0
++ i thiswindow refreshwindow
++ I thiswindow windowshade $1
+
+addtofunc shaderight
++ I thiswindow (shaded) shadewithdir titleattop off
++ i testrc (nomatch) thiswindow shadewithdir titleatright right
+
+addtofunc shadeleft
++ I thiswindow (shaded) shadewithdir titleattop off
++ i testrc (nomatch) thiswindow shadewithdir titleatleft left
+
+addtofunc shadeup
++ I thiswindow (shaded) shadewithdir titleattop off
++ i testrc (nomatch) thiswindow shadewithdir titleattop up
+
+addtofunc shadebot
++ I thiswindow (shaded) shadewithdir titleattop off
++ i testrc (nomatch) thiswindow shadewithdir titleatbottom down
+
+
+
+
+AddToFunc winame_event
++ I ThisWindow (XTerm) ThisWindow ("*(root@*") Style $[w.name] Colorset 1, HilightColorset 7
++ I ThisWindow (XTerm) ThisWindow ("*(srivasta@*") Style $[w.name] Colorset 3, HilightColorset 4
+#*FvwmEvent: window_name winame_event
+
+#And for the future 2.5.8+ use a more appropriate:
+#  AddToFunc winame_event
+#  + I ThisWindow (XTerm) ThisWindow ("*(root@*") WindowStyle Colorset ...
+#  + I ThisWindow (XTerm) ThisWindow ("*(srivasta@*") WindowStyle Colorset ...
+
+
+AddToFunc SetShadabilityForCertainWindows
+  + I ThisWindow (Gaim) State 1
+  + I ThisWindow (Miag) State 1
+
+DestroyFunc StayOnTop-func
+AddToFunc StayOnTop-func
++ I Style "$0" StaysOnTop
++ I All ("$0") RecaptureWindow
+
+DestroyFunc Close-or-kill
+AddToFunc Close-or-kill
++ I Raise
++ C Close
++ H Destroy
++ H Beep
+
+##########################################################################
+# Function:     Disable ALL buttons
+#               (This needs to be called when resetting between styles
+#               with different numbers of buttons)
+#========================================================================#
+DestroyFunc     "RemoveAllButtons"
+AddToFunc       "RemoveAllButtons"
++ "I"   Style "*"       !Button 0, !Button 1, !Button 2, !Button 3, \
+                        !Button 4, !Button 5, !Button 6, !Button 7, \
+                        !Button 8, !Button 9
+
+DestroyFunc ToggleWindowTitle
+AddToFunc   ToggleWindowTitle
++ I ThisWindow (State 11) WindowStyle Title
++ I TestRc (!Match) WindowStyle !Title
++ I State 11 toggle
+
+#####
+# You can browse directories and files with the fvwm-menu-directory
+# script included with Fvwm, its very configurable (as you might expect!),
+# and very useful.
+#
+# http://www.mail-archive.com/fvwm%40hpc.uh.edu/msg05260.html
+#################
+DestroyFunc FuncFvwmMenuDirectory
+AddToFunc FuncFvwmMenuDirectory
++ I PipeRead 'case "$0" in \
+        "$[fvwm_rom_path]"*)   myexec="$[fvwm_rom_exec]"    \
+                               mypng=games_puzzles_dice.png;; \
+        "$[fvwm_video_path]"*) myexec="$[fvwm_video_exec]" \
+                               mypng=menu/video.xpm;; \
+        "$[fvwm_audio_path]"*) myexec="$[fvwm_audio_exec]" \
+                               mypng=menu/music.xpm;; \
+        "$[fvwm_image_path]"*) myexec="$[fvwm_image_exec]" \
+                               mypng=menu/viewer.xpm;; \
+    esac; \
+    fvwm-menu-directory --icon-title menu/folder-open.xpm \
+                        --icon-app   menu/utility.xpm     \
+                        --icon-file  ${mypng:-menu/item.xpm}       \
+                        --icon-dir   menu/folder.xpm   \
+                        --dir "$0" --xterm exec --exec-file "${myexec:-gvim}"'
+
+#####
+# `Pick` is very handy, if it's obvious which window you're talking about,
+# The command is executed immediately within the context of that window.
+#
+# If it isnt obvious, for example, you select `Move` from the Root menu, the
+# cursor becomes a crosshair, and you can select the window you you would like
+# to apply the command to by clicking it.
+#
+# This saves a lot of work, you can use `Pick` with everything that might be
+# Called without context and only write one function/menu instead of two.
+#
+# Note that the Center Window command subtracts (126/2) pixels to make way for my
+# Panel.
+#################
+DestroyMenu FvwmMoveMethods
+AddToMenu FvwmMoveMethods
++ "Move to Top" Pick AnimatedMove keep 0p
++ "Move to Left" Pick AnimatedMove 0p keep
++ "Move to Right" Pick PipeRead "echo AnimatedMove $$(($[vp.width] - $[w.width]))p keep"
++ "Move to Bottom" Pick PipeRead "echo AnimatedMove keep $$(($[vp.height] - $[w.height]))p"
++ "" Nop
++ "Center Window" Pick PipeRead "echo AnimatedMove $$(((($[vp.width]-$[w.width])/2)-(126/2)))p \
+    $$((($[vp.height]-$[w.height])/2))p"
++ "" Nop
++ "Pack Up" Pick PackWrapperUp
++ "Pack Left" Pick PackWrapperLeft
++ "Pack right" Pick PackWrapperRight
++ "Pack down" Pick PackWrapperDown
++ "" Nop
++ "Move To Page" Popup MenuPageList
++ "" Nop
++ "Interactive Move" Pick Move
+
+DestroyMenu MenuPageList
+AddToMenu MenuPageList
++ "1" Pick MoveToPage 0 0
++ "2" Pick MoveToPage 1 0
++ "3" Pick MoveToPage 2 0
++ "4" Pick MoveToPage 0 1
++ "5" Pick MoveToPage 1 1
++ "6" Pick MoveToPage 2 1
++ "7" Pick MoveToPage 0 2
++ "8" Pick MoveToPage 1 2
++ "9" Pick MoveToPage 2 2
+
+#####
+# Name:     PackWindowUp
+# Bound:    Alt+Shift+Up When a window is active
+# Purpose:  Interrogate all windows on the current page, find the window 
+#           with an edge closest to active window, and slide the
+#           Active window upto that edge, or the Page edge, if no
+#           window is in the way.
+#
+#           The Wrappers are required to look after the Context while
+#           we're testing windows. Could also do it with a load of
+#           variables, but this is nicer.
+#
+#           See PackWindowLeft for a description of the logic (i know
+#           it looks a little cryptic).
+#
+#           Sometimes terminals seem to need WindowRefresh, but 99% of
+#           the time it just works, it creates a little flicker so
+#           I'll leave it out until it starts to bug me.
+#
+#           Windows are also Raised, you can disable this.
+#
+#################
+DestroyFunc PackWindowUp
+AddToFunc PackWindowUp
++ I SetEnv low_w 0
++ I WindowId $3 Raise
++ I All (CurrentPage !Iconic AcceptsFocus \
+        !Shaded) PipeRead "test `expr $[w.y] + $[w.height]` -gt $[low_w] \
+        -a `expr $[w.y] + $[w.height]` -lt $0 \
+        -a \\( \\( $[w.x] -gt $1 -a $[w.x] -lt `expr $1 + $2` \\) \
+            -o \\( $1 -gt $[w.x] -a $1 -lt `expr $[w.x] + $[w.width]` \\) \
+            -o \\( $1 -le $[w.x] -a `expr $1 + $2` -ge `expr $[w.x] + $[w.width]` \\) \
+            -o \\( $[w.x] -lt $1 -a `expr $[w.x] + $[w.width]` -gt `expr $1 + $2` \\) \
+        \\) \
+        && echo SetEnv low_w `expr $[w.y] + $[w.height]` \
+        || echo Nop"
++ I WindowId $3 AnimatedMove keep $[low_w]p
+#+ I WindowId $3 RefreshWindow
+
+AddToFunc PackWrapperUp I NoWindow PackWindowUp $[w.y] $[w.x] $[w.width] $[w.id]
+
+#####
+# Name:     PackWindowDown
+# Bound:    Alt+Shift+Down When a window is active.
+# Purpose:  See PackWindowUp.
+#
+#################
+DestroyFunc PackWindowDown
+AddToFunc PackWindowDown
++ I SetEnv high_w $[vp.height]
++ I WindowId $3 Raise
++ I All (CurrentPage !Iconic AcceptsFocus \
+        !Shaded) PipeRead "test $[w.y] -lt $[high_w] \
+        -a $[w.y] -gt `expr $0 + $4`  \
+        -a \\( \\( $[w.x] -gt $1 -a $[w.x] -lt `expr $1 + $2` \\) \
+            -o \\( $1 -gt $[w.x] -a $1 -lt `expr $[w.x] + $[w.width]` \\) \
+            -o \\( $1 -le $[w.x] -a `expr $1 + $2` -ge `expr $[w.x] + $[w.width]` \\) \
+            -o \\( $[w.x] -lt $1 -a `expr $[w.x] + $[w.width]` -gt `expr $1 + $2` \\) \
+        \\) \
+        && echo SetEnv high_w $[w.y] \
+        || echo Nop"
++ I PipeRead "echo WindowId $3 AnimatedMove keep `expr $[high_w] - $4`p"
+#+ I WindowId $3 RefreshWindow
+
+AddToFunc PackWrapperDown I NoWindow PackWindowDown $[w.y] $[w.x] $[w.width] $[w.id] $[w.height]
+
+#####
+# Name:     PackWindowLeft
+# Bound:    Alt+Shift+Left When a window is active
+# Purpose:  See PackWindowUp.
+#
+# The Logic works likes this:
+#   1. Set Destination to the Left Edge
+#   2. For every window, Run these tests:
+#               + Is the Window's Right edge further _Right_ than
+#                 furthest edge seen yet?
+#       And: + Is it's Right edge Further _Left_ than Target Windows
+#               Left edge? (ie, in the way)
+#           Yes:
+#                   + Does the window start inside Target Window, and end below?
+#               Or + Does it start above, and end inside?  Or + Is it
+#                    the same vertical position/height/size, or start
+#                    inside and end inside?  Or + Does it start above,
+#                    and end below?
+#                   Yes:
+#                       This is the new Destination.
+#                   No:
+#                       Nop
+#           No:
+#               Nop
+#   3. Move to Destination.
+#
+#################
+DestroyFunc PackWindowLeft
+AddToFunc PackWindowLeft
++ I SetEnv left_w 0
++ I WindowId $3 Raise
++ I All (CurrentPage !Iconic AcceptsFocus \
+        !Shaded) PipeRead "test `expr $[w.x] + $[w.width]` -gt $[left_w] \
+        -a `expr $[w.x] + $[w.width]` -lt $1 \
+        -a \\( \\( $[w.y] -gt $0 -a $[w.y] -lt `expr $0 + $4` \\) \
+            -o \\( $[w.y] -lt $0 -a `expr $[w.y] + $[w.height]` -gt $0 \\) \
+            -o \\( $[w.y] -ge $0 -a `expr $[w.y] + $[w.height]` -le `expr $0 + $4` \\) \
+            -o \\( $[w.y] -lt $0 -a `expr $[w.y] + $[w.height]` -gt `expr $0 + $4` \\) \
+        \\) \
+        && echo SetEnv left_w `expr $[w.x] + $[w.width]`  \
+        || echo Nop"
++ I WindowId $3 AnimatedMove $[left_w]p keep
+#+ I WindowId $3 RefreshWindow
+
+AddToFunc PackWrapperLeft I NoWindow PackWindowLeft $[w.y] $[w.x] $[w.width] $[w.id] $[w.height]
+
+DestroyFunc PackWindowRight
+AddToFunc PackWindowRight
++ I SetEnv right_w $[vp.width]
++ I WindowId $3 Raise
++ I All (CurrentPage !Iconic AcceptsFocus \
+        !Shaded) PipeRead "test $[w.x] -lt $[right_w] \
+        -a $[w.x] -gt `expr $1 + $2` \
+        -a \\( \\( $[w.y] -gt $0 -a $[w.y] -lt `expr $0 + $4` \\) \
+            -o \\( $[w.y] -lt $0 -a `expr $[w.y] + $[w.height]` -gt $0 \\) \
+            -o \\( $[w.y] -ge $0 -a `expr $[w.y] + $[w.height]` -le `expr $0 + $4` \\) \
+            -o \\( $[w.y] -lt $0 -a `expr $[w.y] + $[w.height]` -gt `expr $0 + $4` \\) \
+        \\) \
+        && echo SetEnv right_w $[w.x] \
+        || echo Nop"
++ I PipeRead "echo WindowId $3 AnimatedMove `expr $[right_w] - $2`p keep"
+#+ I WindowId $3 RefreshWindow
+
+AddToFunc PackWrapperRight I NoWindow PackWindowRight $[w.y] $[w.x] $[w.width] $[w.id] $[w.height]
+
+#####
+# Name:     WheelToggleShade
+# Bound:    Mouse Buttons 4 and 5 (wheel up and down) on Titlebars
+# Purpose:  Shade or unshade the window when the Mouse wheel is rolled up or
+#           down on the Titlebar. Rolling the Wheel up calls the
+#           Function with argument `True` and rolling it down uses
+#           `False`, so rolling the wheel down when the window isnt
+#           shaded has no effect, which I like :)
+#
+#################
+DestroyFunc WheelToggleShade
+AddToFunc WheelToggleShade 
++ D WindowShade $0
+
+
+
+#####
+# Name:     DestroyOnHold
+# Bound:    Titlebar Button 2 (X)
+# Purpose:  When clicked, Raise the window Immediately.
+#           If the button is pressed and released, Close the
+#           Window. If it is pressed and held, Destroy it, and issue a
+#           Beep to confirm.
+#
+#           There is a 100ms delay before issuing `Close` so I have a
+#           chance to see the animation when the button changes from
+#           ActiveDown to ActiveUp :).
+#
+#################
+DestroyFunc DestroyOnHold
+AddToFunc DestroyOnHold I Raise
++ C Schedule 100 Close
++ H Destroy
++ H Beep
+
+
+#####
+# Name:     Thumbnail
+# Purpose:  Iconify a window with a reduced screenshot of the application
+#           Window, looks really cool.
+#
+#           Uses FvwmEvent to remove the Icon when deiconified.
+#
+#           Thumbnailing example:
+#
+# http://www.fvwm.org/screenshots/desktops/Tavis_Ormandy-desk-1152x864/screenshot.jpg
+#
+# If you have a slow machine, try changing -scale to -sample, the
+# quality of the Icons won't be as good, but they are generated much
+# faster.
+#
+##################
+DestroyFunc Thumbnail
+AddToFunc Thumbnail
++ I Raise
++ I SetEnv Icon-$[w.id] $[w.iconfile]
++ I ThisWindow (!Shaded Iconifiable !Iconic) PipeRead \
+    "xwd -silent -id $[w.id] | convert -scale $[fvwm_icon_size] -frame 1x1 \
+    -mattecolor black -quality 0 xwd:- png:$[HOME]/tmp/icon.tmp.$[w.id].png \
+    && echo WindowStyle IconOverride, Icon $[HOME]/tmp/icon.tmp.$[w.id].png \
+    || echo Nop"
++ I TestRc (Match) Test (f $[HOME]/icons/$[w.miniiconfile]) PipeRead "composite -geometry +2+4 \
+    $[fvwm_image_path]/icons/$[w.miniiconfile] $[HOME]/tmp/icon.tmp.$[w.id].png \
+    $[HOME]/tmp/icon.tmp.$[w.id].png && echo Nop \
+    || echo Beep"
++ I Iconify
+
+# XXX: No need for NoIconOverride.
+DestroyFunc DeThumbnail
+AddToFunc DeThumbnail
++ I PipeRead "echo WindowStyle Icon \\$\\[Icon-$[w.id]\\]"
++ I UnsetEnv Icon-$[w.id]
++ I Exec exec rm -f $[HOME]/tmp/icon.tmp.$[w.id].png
+
+*FvwmEvent: deiconify DeThumbnail
+
+DestroyFunc IconifyWithScreenshot
+AddToFunc IconifyWithScreenshot
++ I echo "Iconnify running"
++ I Raise
++ I PipeRead "import -geometry 64 -frame -resize 64 -silent -window $[w.id] $[FVWM_USERDIR]/snapshots/icon.tmp.$[w.id].png && echo WindowStyle IconOverride, Icon $[FVWM_USERDIR]/snapshots/icon.tmp.$[w.id].png || echo Nop"
++ I Iconify
+
+
+
+#####
+# Screenshot Functions (uses ImageMagick)
+###########
+DestroyFunc FvwmWindowScreenshot
+AddToFunc   FvwmWindowScreenshot
++ I ThisWindow (!Shaded !Iconic Iconifiable) \
+  Exec import -window $[w.id] -quality 100 -silent \
+  "$[FVWM_USERDIR]/snapshots/screenshot-`date +%F[%R]`.$[w.id].jpg"
+
+DestroyFunc FvwmDesktopScreenshot
+AddToFunc   FvwmDesktopScreenshot
++ I Exec sleep $0; import -window root -quality 100 -silent \
+  "$[FVWM_USERDIR]/snapshots/screenshot-`date +%F[%R]`.jpg"
+
+####
+# XRoach Invasion
+###########
+DestroyFunc XRoachInvasion
+AddToFunc   XRoachInvasion
++ I Exec exec xroach -roaches 5 -rc Cyan -speed 17
++ I Exec exec xroach -roaches 3 -rc Red -speed 15
++ I Exec exec xroach -roaches 7 -rc Green -speed 10
++ I Exec exec xroach -roaches 3 -rc Blue -speed 20
++ I Exec exec xroach -roaches 1 -rc Black -speed 30
++ I Exec exec xroach -roaches 1 -rc White -speed 40
+
+DestroyFunc XRoachExterminate
+AddToFunc   XRoachExterminate
++ I Exec killall xroach
+
+
+# FIXME: Make this more useful.
+# XXX: This doesnt do much yet, you can play with it if you like.
+# Example: http://dev.gentoo.org/~taviso/fvwm_expose.png
+DestroyFunc FvwmExpose
+AddToFunc FvwmExpose
++ I AddToMenu FvwmExposeMenu ".: e x p o s e :." Title
++ I All (!Iconic !Shaded CurrentPage AcceptsFocus)\
+    PipeRead "echo Raise; \
+        xwd -silent -id $[w.id] | convert -scale $[fvwm_icon_size] -quality 0 xwd:- \
+        png:$[HOME]/tmp/icon.exp.$[w.id].png \
+    && echo AddToMenu FvwmExposeMenu \
+    %$[HOME]/tmp/icon.exp.$[w.id].png%\\\'\"$[w.name]\"\\\' WindowID $[w.id] WarpToWindow 50 50 \
+        && echo AddToMenu FvwmExposeMenu \\\"\\\" Nop \
+    || Nop"
++ I Popup FvwmExposeMenu
++ I DestroyMenu FvwmExposeMenu
++ I Exec exec rm -f $[HOME]/tmp/icon.exp.*
+
+# Fvwm uses this function when selecting windows from the WindwList command
+# you can make this function do any thing you like, it is executed in the context
+# of the selected window.
+DestroyFunc WindowListFunc
+AddToFunc   WindowListFunc
++ I Iconify false
++ I FlipFocus
++ I Raise
++ I WarpToWindow 10p 10p
+
+DestroyFunc FuncAutoEnter
+AddToFunc FuncAutoEnter I Autohide HiddenConsole 250 500 N
+
+# Example: http://dev.gentoo.org/~taviso/screenshots/browsewall.png
+# XXX: Slooooow at first run.
+DestroyFunc WallpaperBrowser
+AddToFunc WallpaperBrowser
++ I AddToMenu WallpaperBrowserMenu DynamicPopDownAction DestroyMenu WallpaperBrowserMenu
++ I PipeRead 'cd $[fvwm_wallpaper_dir]; \
+             test ! -d "$[fvwm_wallpaper_dir]/.thumbs" && mkdir "$[fvwm_wallpaper_dir]/.thumbs"; echo >&2 "dir = $[fvwm_wallpaper_dir]/.thumbs"; \
+    for i in "$[fvwm_wallpaper_dir]/"*; do \
+        test -f "$[fvwm_wallpaper_dir]/.thumbs/${i##*/}" \
+            -a "${i}" -ot "$[fvwm_wallpaper_dir]/.thumbs/${i##*/}" || { \
+                convert -quality 0 -scale 32 "${i}" "png:$[fvwm_wallpaper_dir]/.thumbs/${i##*/}" 2>/dev/null \
+                    || continue; \
+            }; \
+        printf "+ %%\\"%s\\"%%\\"%s\\" Exec exec fvwm-root -r %s\\n" \
+            "$[fvwm_wallpaper_dir]/.thumbs/${i##*/}" "${i##*/}" "${i}"; \
+    done'
+
+DestroyFunc .
+AddToFunc .
++ I SendToModule FvwmPerl preprocess -c -- $*
+
+DestroyFunc SendWindowToPage
+AddToFunc SendWindowToPage
++ I SetEnv LAST_WIN_ID $[w.id]
++ I . FvwmButtons -g 144x96+%{$[pointer.x]-$[page.nx]*36-34}%+%{$[pointer.y]-$[page.ny]*24-20}% -transient GridButtons
+
+DestroyFunc MoveLastWindowToPage
+AddToFunc MoveLastWindowToPage
++ I WindowId $[LAST_WIN_ID] MoveToPage $0 $1
+
+DestroyFunc CenterViewportOnWindow
+AddToFunc CenterViewportOnWindow
++ I FlipFocus
++ I WarpToWindow 50 50
++ I PipeRead "echo Scroll $$((((-$[vp.width]/2)+$[pointer.x])))p $$(((-($[vp.height]/2)+$[pointer.y])))p
+
+# To warp to the top left corner of a window without switching pages
+# you can use
+
+AddToFunc my_warptowindow
++ I WindowId root 0 WarpToWindow $[w.x]p $[w.y]p
+
+DestroyFunc SnapshotAllWindows
+AddToFunc SnapshotAllWindows
++ I  GotoDesk 0
++ I  GotoPage 0 0
++ I  PipeRead `import -window root /tmp/desktop-000.png >/dev/null`
++ I  GotoPage 0 1
++ I  PipeRead `import -window root /tmp/desktop-001.png >/dev/null`
++ I  GotoPage 1 0
++ I  PipeRead `import -window root /tmp/desktop-010.png >/dev/null`
++ I  GotoPage 1 1
++ I  PipeRead `import -window root /tmp/desktop-011.png >/dev/null`
++ I  GotoDesk 1
++ I  GotoPage 0 0
++ I  PipeRead `import -window root /tmp/desktop-100.png >/dev/null`
++ I  GotoPage 0 1
++ I  PipeRead `import -window root /tmp/desktop-101.png >/dev/null`
++ I  GotoPage 1 0
++ I  PipeRead `import -window root /tmp/desktop-110.png >/dev/null`
++ I  GotoPage 1 1
++ I  PipeRead `import -window root /tmp/desktop-111.png >/dev/null`
+
+
+
+DestroyFunc Screenshot
+AddToFunc Screenshot
++ I      PipeRead `for ((x=0; x < $[desk.pagesx]; x++)); do                   \
+	        for ((y=0; y < $[desk.pagesy]; y++)); do                      \
+                   echo GotoPage ${x} ${y};                                   \
+		   xwd -root -silent -out $[FVWM_USERDIR]/page_${x}_${y}.xwd; \
+	        done;                                                         \
+              done;                                                           \
+	      montage -geometry $[vp.width]x$[vp.height] -tile                \
+                   $[desk.pagesx]x$[desk.pagesy] $[FVWM_USERDIR]/page_*_*.xwd \
+	       png:$[HOME]/screenshot.png; rm -f $[FVWM_USERDIR]/page_*_*.xwd `
+
+AddToFunc MyWinShade
++ I ThisWindow WindowStyle Title
++ I ThisWindow WindowShade True
+AddToFunc MyWinShadeOff
++ I ThisWindow WindowStyle !Title
++ I ThisWindow WindowShade False
+
+DestroyFunc ToggleShade
+AddToFunc   ToggleShade
++ I ThisWindow (Shaded) WindowStyle !Title
++ I ThisWindow (Shaded) UpdateStyles
++ I ThisWindow (Shaded) WindowShade false
++ I TestRc (1) Break
++ I WindowStyle TitleAt$0
++ I UpdateStyles
++ I WindowShade
++ I WindowStyle Title
+
+# 
+DestroyFunc StartHere
+AddToFunc   StartHere
++ I Style $1 SkipMapping, StartsOnPage $[desk.n] $[page.nx] $[page.ny]
++ I Schedule 20000 Style $1 !SkipMapping, StartsAnyWhere
++ I Exec sleep 2; $0
+
+# StartHere "xterm +sb" XTerm
+# StartHere firefox Firefox-bin
+
+# if you speak about a specific window those coordinates are known
+# ($[w.x], $[w.y], $[w.width], $[w.height]), then you may use the
+# answer from FAQ 3.18 to Move a newly appeared window to a calculated
+# position. Something like this:
+
+KillModule FvwmPerl
+FvwmPerl --export
+
+DestroyFunc PlaceNewWindowAtTheRight
+AddToFunc   PlaceNewWindowAtTheRight
++ I Pick Eval $a{x} = $[w.x] + $[w.width] + 2
++ I Pick Eval $a{y} = $[w.y]
++ I Exec $1
++ I Wait $0
++ I . Next ($0) Move %{ "$a{x}p $a{y}p" }%
+
+#PlaceNewWindowAtTheRight XT "xterm -name XT +sb"
+# This works (it prompts for a window and places a new xterm at the right
+# of it, with gap of 2 pixels). However the next line does not work in the
+# current cvs although it should work too:
+# Next (FvwmConsole) PlaceNewWindowAtTheRight XT "xterm -name XT +sb"
+
+# Seems like "Pick" is broken, it does not reuse the already existing
+# context window correctly and thus variables like $[w.x] are not expanded.
+# Dominik, would you like to fix "Pick"? So the following minimal example
+# works (it does not currently):
+#   AddToFunc testing I Pick Echo $[w.x]
+#   Next (FvwmConsole) testing
+
+DestroyFunc func_change_resolution
+AddToFunc func_change_resolution
++ I PipeRead `xrandr -s $0 && echo GotoPage 0 0 && echo Restart`
+
+# And if someone only wants to emulate fullscreen for a program that does
+# not normally supports it, then Restart is not needed, just a wrapper:
+# 	xrandr -s 800x600
+# 	some_prog            # Style some_prog !Borders, !Title
+# 	xrandr -s 1280x1024
+
+DestroyFunc DeiconifyAndRearrange
+AddToFunc DeiconifyAndRearrange
++ C Iconify off
++ C All (CurrentPage Iconic) PlaceAgain Icon
+
+# The goal is to show an overview of all the windows (inspired by the  
+# expose of MacOS), and then to be able to select a window, which will  
+# get focus, and the rest of the windows go back to their initial  
+# sizes and positions.  
+DestroyFunc Expose  
+AddToFunc Expose  
++ I ModuleSynchronous FvwmRearrange -tile -maximize -m -mn 3  
++ I NoWindow Pick DeExpose $$$$[w.id]  
+ 
+DestroyFunc DeExpose  
+AddToFunc DeExpose  
++ I All (CurrentPage, !Iconic, CirculateHit, !Sticky) Maximize Off  
++ I WindowId $0 WarpToWindow 50 50  
+
+
+DestroyFunc WMIArrange
+AddToFunc WMIArrange
++ I Current ResizeMove frame 50 100 0 0
++ I Current WindowStyle WindowListSkip
++ I Current WarpToWindow 50 1
++ I UpdateStyles
++ I ModuleSynchronous $[HOME]/.fvwm/FvwmRearrangeSync -tile -u -m -h 50 0 100 100
++ I Current WindowStyle WindowListHit
++ I Current Raise
+
+DestroyFunc Mixer-Volume
+AddToFunc Mixer-Volume
++ I Exec exec aumix -v $0 -w $0
+
+
+DestroyFunc RaiseOnTop
+AddToFunc RaiseOnTop
+	+ I Layer 0 4
+	+ I Raise 
+# cyclicly change a window layer 4 -> 10 -> 5 -> 9 -> 4
+
+DestroyFunc ActuallyDoLayer
+AddToFunc   ActuallyDoLayer
+ThisWindow (Layer  4) + Layer 10
+ThisWindow (Layer  5) + Layer  9
+ThisWindow (Layer  9) + Layer  4
+ThisWindow (Layer 10) + Layer  5
+ActuallyDoLayer
+
+#The script should dump 2 lines, something like:
+#  Colorset 51 Pixmap bg7.png
+#  Colorset 52 Pixmap bg4.png
+
+
+#AddtoFunc move_noresist
+#  + I EdgeResistance 10000 100
+#  + I Move
+#  + I EdgeResistance 10000 10000
+
+DestroyFunc FuncFvwmMaximizeFullScreen
+AddToFunc   FuncFvwmMaximizeFullScreen
+    + I ThisWindow (Maximized) Style $n Title, BorderWidth 4, HandleWidth 4
+    + I KeepRc TestRc (NoMatch) Style $n !Title, BorderWidth 16, HandleWidth 16
+    + I KeepRc TestRc (NoMatch) Raise
+    + I KeepRc TestRc (NoMatch) UpdateStyles
+    + I Maximize
+
+DestroyFunc FuncFvwmSelectWindow
+AddToFunc   FuncFvwmSelectWindow
++ I Focus
++ I Raise
++ I WarpToWindow 50 50
+
+
+
+AddToFunc MakeImageMenu
++ I DestroyMenu recreate ImageMenu
++ I AddToMenu ImageMenu Pictures Title
++ I PipeRead 'for i in $HOME/public_html/images/*.jpg  \
+                       $HOME/public_html/images/*.gif  \
+                       $HOME/public_html/images/*.png; \
+  do echo AddToMenu ImageMenu "`basename $i`" Exec display $i; done'
+
+DestroyFunc FuncFvwmShowMessage
+AddToFunc   FuncFvwmShowMessage
++ I Test (x xmessage) Exec echo "$1" | \
+        perl -pe 's/\^n/\n/g; s/\^t/\t/g; s/\^d/\$/g; s/\^\^/^/g' - | \
+        xmessage -g 480x124 -nearmouse -title "$0" -file - \
+        -xrm "*form*foreground:$[fg.cs35]" -xrm "*form*background:$[bg.cs35]" \
+        -xrm "*form*message*foreground:$[fg.cs36]" -xrm "*form*message*background:$[bg.cs36]"
++ I TestRc (!Match) FvwmPerl -e \
+        '$_ = qq{$1}; s/\^n/\n/g; s/\^t/\t/g; s/\^d/\044/g; s/\^\^/^/g; showMessage($_, $0, 1)'
+
+DestroyFunc FuncFvwmShowButtonInfo
+AddToFunc   FuncFvwmShowButtonInfo
++ I FuncFvwmShowMessage "Button Info" "$0"
+
+DestroyFunc FuncFvwmWithGtk
+AddToFunc   FuncFvwmWithGtk
++ I PipeRead `fvwm-config --supports-gtk && echo '$*' || \
+        echo 'FuncFvwmShowMessage "FVWM Error" "There is no GTK support in your FVWM.^nThe requested command is not executed."'`
+
+DestroyFunc FuncFvwmConfirm
+AddToFunc   FuncFvwmConfirm
++ I FvwmScript FvwmScript-Confirm --line2 `$0` --command `$1` \
+        `$2` `$3` `$4` `$5` `$6` `$7` `$8` `$9`
+
+DestroyFunc FuncFvwmShowColorset
+AddToFunc   FuncFvwmShowColorset
++ I FvwmPerl -e 'cmd("FuncFvwmShowMessage `Colorset $0 Information` `" . $module->track("Colorsets")->dump($0) . "`")'
+
+DestroyFunc FuncFvwmShowAllColorsets
+AddToFunc   FuncFvwmShowAllColorsets
++ I FvwmButtons X $[FT_DATADIR]/FvwmButtons-Colorsets
+
+DestroyFunc FuncFvwmNoColourTable
+AddToFunc   FuncFvwmNoColourTable
++ I FuncFvwmShowMessage "Information" "No palette defined for the current colors component"
+
+DestroyFunc FuncFvwmShowColourTable
+AddToFunc   FuncFvwmShowColourTable
++ I FuncFvwmNoColourTable
+
+
+###########################################################
+# Autoraise on a dynamic, per-window basis, with defaults #
+# bjd@xs4all.nl                                           #
+# note: using State 17 as Autoraise state                 #
+###########################################################
+
+# called when pointer enters window;
+# check if State 17 is set; if so, Raise window
+DestroyFunc AutoRaise
+AddToFunc AutoRaise
++ I Current (State 17) Raise
+
+# toggle Autoraise for current window;
+# this function is put on mb3 (see below), and called when mb3
+# on Titlebar or in Window (the latter for Titlebar-less windows)
+DestroyFunc AutoRaiseToggle
+AddToFunc AutoRaiseToggle
++ I Current State 17 toggle
++ I AutoRaise
+
+# attach AutoRaiseToggle to <win> mouse-3 press on Titlebar
+Mouse 3 T 3 AutoRaiseToggle
+
+AddToFunc InitFunction
++ I Module FvwmAuto 300 -menter "AutoRaise" "Nop"
+
+AddToFunc RestartFunction
++ I Module FvwmAuto 300 -menter "AutoRaise" "Nop"
+
+DestroyFunc   FuncScrollMoveV
+AddtoFunc FuncScrollMoveV
++ I Scroll 0 $0
++ I CursorMove 0 $1
+
+DestroyFunc   FuncScrollMoveH
+AddtoFunc FuncScrollMoveH
++ I Scroll $0 0
++ I CursorMove $1 0
+
+DestroyFunc RootWindowListFunc
+AddtoFunc RootWindowListFunc
++ I Iconify false
++ I Focus NoWarp
++ I Raise
++ I PlaceAgain Anim
+
+DestroyFunc AltTabWindowListFunc
+AddtoFunc AltTabWindowListFunc
++ I Iconify false
++ I Focus NoWarp
++ I Raise
++ I Current (!Visible) PlaceAgain Anim

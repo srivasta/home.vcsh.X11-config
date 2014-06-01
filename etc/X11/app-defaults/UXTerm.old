@@ -1,0 +1,103 @@
+
+!
+! A set of wonderful color setup from Jonathan Kamens, jik@Athena.MIT.EDU
+! Write your thank you message to him at the address shown above. 
+! 
+!' To see how neat they are, press your keyboard's Ctrl key, then press
+!' your mouse's left, middle, and right button in turn.
+!
+!       xterm defaults (applies to all terminal emulators that are of the
+!       class "UXTerm".  This includes the particular instance we call the
+!       "console" (see below) and the Kanji terminal emulator "kterm".
+!
+!UXTerm*menuFont:                 *helvetica-medium-r-normal--12*
+UXTerm*jumpScroll:               true
+UXTerm*reverseWrap:              true
+UXTerm*VT100*scrollBar:          true
+UXTerm*autoRaise: on
+!#xterm*font:-bitstream-*-medium-*-*--18-*-*-*-*-110-iso8859-*
+UXTerm*saveLines:                5000
+UXTerm*scrollBar: on
+UXTerm*scrollKey: on
+! UXTerm*fontMenu.Label:  VT Fonts
+! UXTerm*fontMenu*fontdefault*Label:    Default
+! UXTerm*fontMenu*font1*Label:  Unreadable
+! UXTerm*VT100*font1:           nil2
+! UXTerm*fontMenu*font2*Label:  Tiny
+! UXTerm*VT100*font2:           5x7
+! UXTerm*fontMenu*font3*Label:  Small
+! UXTerm*VT100*font3:           6x10
+! UXTerm*fontMenu*font4*Label:  Medium
+! UXTerm*VT100*font4:           7x13
+! UXTerm*fontMenu*font5*Label:  Large
+! UXTerm*VT100*font5:           9x15
+! UXTerm*fontMenu*font6*Label:  Huge
+! UXTerm*VT100*font6:           10x20
+! UXTerm*fontMenu*fontescape*Label:     Escape Sequence
+! UXTerm*fontMenu*fontsel*Label:                Selection
+!UXTerm*fontMenu.font1.label:    Icon
+! UXTerm*fontMenu.font2.label:    Thin
+! UXTerm*VT100*font2:              fixed
+!!UXTerm*fontMenu.font3.label:    Semicondensed
+!UXTerm*VT100*font3:              -*-*-bold-*-semicondensed-*-13-*-*-*-c-*-*-*
+!UXTerm*fontMenu.font4.label:    Small
+!UXTerm*VT100*font4:              -*-*-bold-*-*-*-13-*-*-*-c-*-*-*
+!UXTerm*fontMenu.font5.label:    Large
+!UXTerm*VT100*font5:              -*-*-bold-*-*-*-15-*-*-*-c-*-*-*
+!UXTerm*fontMenu.font6.label:    Huge
+!UXTerm*VT100*font6:              12x24
+
+!UXTerm*foreground:                       yellow
+UXTerm*foreground:                       light cyan
+!UXTerm*background:                       #171780
+UXTerm*background:                       midnight blue
+UXTerm*pointerColor: SkyBlue
+UXTerm*border: YellowGreen
+UXTerm*mouse: SkyBlue
+UXTerm*scrollBar.foreground: turquoise
+UXTerm*scrollBar.background: dimGrey
+UXTerm*cursorColor:                      yellow
+UXTerm*vtMenu.background:                black
+UXTerm*vtMenu*foreground:                #ff0000
+UXTerm*vtMenu*scrollbar*foreground:      #ff2900
+UXTerm*vtMenu*jumpscroll*foreground:     #ff5200
+UXTerm*vtMenu*reversevideo*foreground:   #ff7b00
+UXTerm*vtMenu*autowrap*foreground:       #ffa500
+UXTerm*vtMenu*reversewrap*foreground:    #ffbb00
+UXTerm*vtMenu*autolinefeed*foreground:   #ffd200
+UXTerm*vtMenu*appcursor*foreground:      #ffe800
+UXTerm*vtMenu*appkeypad*foreground:      #ffff00
+UXTerm*vtMenu*scrollkey*foreground:      #bfff00
+UXTerm*vtMenu*scrollttyoutput*foreground:#7fff00
+UXTerm*vtMenu*allow132*foreground:       #3fff00
+UXTerm*vtMenu*cursesemul*foreground:     #00ff00
+UXTerm*vtMenu*visualbell*foreground:     #00bf3f
+UXTerm*vtMenu*marginbell*foreground:     #007f7f
+UXTerm*vtMenu*altscreen*foreground:      #003fbf
+UXTerm*vtMenu*softreset*foreground:      #0000ff
+UXTerm*vtMenu*hardreset*foreground:      #3b20fa
+UXTerm*vtMenu*tekshow*foreground:        #7741f6
+UXTerm*vtMenu*tekmode*foreground:        #b261f2
+UXTerm*vtMenu*vthide*foreground:         #ee82ee
+UXTerm*mainMenu*background:              black
+UXTerm*mainMenu*foreground:              red
+UXTerm*mainMenu*securekbd*foreground:    white
+UXTerm*mainMenu*allowsends*foreground:   royalblue
+UXTerm*mainMenu*logging*foreground:      red
+UXTerm*mainMenu*redraw*foreground:       white
+UXTerm*mainMenu*suspend*foreground:      royalblue
+UXTerm*mainMenu*continue*foreground:     red
+UXTerm*mainMenu*interrupt*foreground:    white
+UXTerm*mainMenu*hangup*foreground:       royalblue
+UXTerm*mainMenu*terminate*foreground:    red
+UXTerm*mainMenu*kill*foreground:         white
+UXTerm*mainMenu*quit*foreground:         royalblue
+UXTerm*fontMenu*background:              black
+UXTerm*fontMenu*foreground:              maroon
+UXTerm*fontMenu*fontdefault*foreground:  grey
+UXTerm*fontMenu*font1*foreground:        maroon
+UXTerm*fontMenu*font2*foreground:        grey
+UXTerm*fontMenu*font3*foreground:        maroon
+UXTerm*fontMenu*font4*foreground:        grey
+UXTerm*fontMenu*fontescape*foreground:   maroon
+UXTerm*fontMenu*fontsel*foreground:      grey

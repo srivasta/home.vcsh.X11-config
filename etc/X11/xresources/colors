@@ -1,0 +1,19 @@
+#ifdef COLOR
+ *Customization: -color
+ *color0:    Black
+ *color1:      Red
+ *color2:    Green
+ *color3:   Yellow
+ *color4:     LightSkyBlue
+ *color5:  Magenta
+ *color6:     Cyan
+ *color7:    White
+ *highlight: #ffff00000000
+ *background:#bffffffffc00
+ *foreground:#28f033330000
+#else
+ *Customization:-mono
+ *foreground:    white
+ *background:    black
+ *ReverseVideo:          on
+#endif

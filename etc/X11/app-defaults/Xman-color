@@ -1,0 +1,32 @@
+
+Xman.x: +200
+Xman.y: +0
+Xman*Borderwidth: 2
+Xman*xmanSearch*font:           *times-bold-r-normal--24*
+Xman*xmanSections*font:         *helvetica-medium-r-normal--18*
+Xman*xmanCommands*font:         *times-bold-r-normal--17*
+Xman*manualFontNormal:          *schoolbook-medium-r-normal--14*
+Xman*manualFontBold:            *schoolbook-bold-r-normal--14*
+Xman*manualFontItalic:          *schoolbook-bold-i-normal--14*
+Xman*directoryFontNormal:       *helvetica-medium-r-normal--14*
+Xman.bothshown: true
+Xman.topbox: false
+Xman*verticalList:              true
+
+Xman.background: darkSlateGrey
+Xman.foreground: wheat
+Xman.border: white
+Xman.bordercolor: white
+Xman*topBox*background:                         BlanchedAlmond
+Xman*topBox*foreground:                         PeachPuff4
+Xman*topBox*Command.foreground:                 red
+Xman*help*foreground:                           black
+Xman*help*background:                           white
+Xman*OptionMenu*foreground:                     DarkGreen
+Xman*OptionMenu*background:                     white
+Xman*manualBrowser*foreground:                  black
+Xman*manualBrowser*background:                  NavajoWhite
+Xman*xmanSections*SimpleMenu*foreground:        black
+Xman*xmanSections*SimpleMenu*background:        NavajoWhite
+Xman*xmanCommands*foreground:                   black
+Xman*xmanCommands*background:                   white

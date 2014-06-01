@@ -1,0 +1,100 @@
+# 1. Icon related configuration
+# 2. Switch functions
+# 3. Theme module menus
+# 4. Modules configuration
+
+# ----------------------------------------------------------------------------
+# Icon related configuration
+
+Style * IconTitle
+# ----------------------------------------------------------------------------
+# Switch functions
+
+DestroyFunc FuncFvwmStartThemeModules
+AddToFunc   FuncFvwmStartThemeModules
++ I FuncFvwmStartNormalIcons
+# defined in the options files
+
+DestroyFunc FuncFvwmReloadThemeModules
+AddToFunc   FuncFvwmReloadThemeModules
++ I Read $./styles
++ I FuncFvwmStartNormalIcons
+
+DestroyFunc FuncFvwmReloadColorsModules
+AddToFunc   FuncFvwmReloadColorsModules
+# defined in buttonbar/* (only)
+ 
+DestroyFunc FuncFvwmStopThemeModules
+AddToFunc   FuncFvwmStopThemeModules
++ I KillModule FvwmButtons
++ I KillModule FvwmProxy
++ I KillModule FvwmPager FvwmPager-Single
++ I KillModule FvwmPager FvwmPager-Desker
++ I KillModule FvwmTaskBar
++ I KillModule FvwmIconBox
++ I KillModule FvwmIconMan
++ I KillModule FvwmWinList
++ I DestroyModuleConfig FvwmButtons: *
++ I DestroyModuleConfig FvwmProxy: *
++ I DestroyModuleConfig FvwmPager-Single: *
++ I DestroyModuleConfig FvwmPager-Desker: *
++ I DestroyModuleConfig FvwmIconBox: *
++ I DestroyModuleConfig FvwmIconMan: *
++ I DestroyModuleConfig FvwmTaskBar: *
++ I DestroyModuleConfig FvwmWinList: *
++ I FuncFvwmModulesDestroyStyle
++ I DestroyFunc FuncFvwmModulesDestroyStyle
+AddToFunc   FuncFvwmUnReloadColorsModules
++ I KillModule FvwmButtons
+
+DestroyFunc FuncFvwmUnReloadThemeModules
+AddToFunc   FuncFvwmUnReloadThemeModules
+
+# ----------------------------------------------------------------------------
+# Theme module menus
+
+DestroyMenu MenuFvwmStartThemeModules
+AddToMenu   MenuFvwmStartThemeModules "Default Modules" Title
++ "%menu/item.xpm%&Buttons"        FuncFvwmRestartModule FvwmButtons
++ "%menu/item.xpm%&Desker"         FuncFvwmRestartModuleByAlias FvwmPager FvwmPager-Desker '0 3'
++ "" Nop
++ "%menu/choice-no.xpm%No normal icons" Style * NoIcon  # for NoIcon modules
++ "%menu/choice-yes.xpm%Normal icons"   Style * !NoIcon
++ "%menu/item.xpm%IconB&ox"        FuncFvwmRestartModule FvwmIconBox
++ "%menu/item.xpm%Icon&Man"        FuncFvwmRestartModule FvwmIconMan
++ "%menu/item.xpm%&TaskBar"        FuncFvwmRestartModule FvwmTaskBar
++ "%menu/item.xpm%&Proxy"          FuncFvwmRestartModule FvwmProxy
++ "%menu/item.xpm%&WinList"        FuncFvwmRestartModule FvwmWinList
+
+DestroyMenu MenuFvwmStopThemeModules
+AddToMenu   MenuFvwmStopThemeModules "Default Modules" Title
++ "%menu/quit.xpm%Stop &Buttons" KillModule FvwmButtons
++ "%menu/quit.xpm%Stop &Desker"  KillModule FvwmPager FvwmPager-Desker
++ "%menu/quit.xpm%Stop IconB&ox" KillModule FvwmIconBox
++ "%menu/quit.xpm%Stop Icon&Man" KillModule FvwmIconMan
++ "%menu/quit.xpm%Stop &TaskBar" KillModule FvwmTaskBar
++ "%menu/quit.xpm%Stop &Proxy"   KillModule FvwmProxy
++ "%menu/quit.xpm%Stop &WinList" KillModule FvwmWinList
+
+# ----------------------------------------------------------------------------
+# Desktop names
+
+DesktopName 0 Work
+DesktopName 1 Personal
+DesktopName 2 Devel
+DesktopName 3 Games
+
+# ----------------------------------------------------------------------------
+# Modules configuration
+
+Read $./styles
+Read $./FvwmAnimate
+Read $./FvwmAuto
+Read $./FvwmAudio
+Read $./FvwmButtons
+Read $./FvwmIconBox
+Read $./FvwmIconMan
+Read $./FvwmPager
+Read $./FvwmTaskBar
+Read $./FvwmWinList
+Read $./FvwmProxy

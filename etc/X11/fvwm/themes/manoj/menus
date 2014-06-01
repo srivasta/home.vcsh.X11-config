@@ -1,0 +1,24 @@
+# This menu will fire up some very common utilities
+DestroyMenu Utilities
+AddToMenu "Utilities" "Utilities" Title
+Read $./menus-extra
+
+ModuleSynchronous FvwmM4 -lock $./m4menus
+
+
+#========================================================
+# One more complex function - couldn't be defined earlier because it used 
+# pop-up menus
+#
+# This creates a motif-ish sticky menu for the title-bar window-ops
+# pop-up
+# Menu acts like normal twm menu if you just hold the button down,
+# but if you click instead, the menu stays up, motif style
+AddToFunc "window_ops_func" "C" PopUp Window-Ops2
++              "M" PopUp Window-Ops2
+
+
+AddToFunc "general_ops_func" "M" PopUp General
++              "C" PopUp General
++              "D" PopUp General
+

@@ -1,0 +1,33 @@
+! {{{ axe color defaults
+
+!  
+! I got tired of watching a glaring white axe floating on my display, so
+!' let me give it some tasteful color choices :) :)  You MUST like 'em!
+! C. Fang  11/15/91
+!
+! Some users would like to have word wrap of the text wedget on always. OK.
+! you got it :)
+! C. Fang 11/18/91
+!
+Axe*ed.wrap:                    never
+Axe*ed.autoFill:                on
+!
+! For IBM RISC 6000s, the following IBM Rom font looks just beautiful!  So 
+! we use it.  For DEC 3100s and Sun SPARCs, the default is fine
+!
+!#ifdef  IBM
+!Axe*font:                       Rom14
+!#endif
+!
+!#ifdef  COLOR
+Axe*foreground:                 PaleGoldenrod
+Axe*background:                 sienna
+Axe*Label*foreground:           seashell
+Axe*Table*foreground:           seashell
+Axe*Command.foreground:         red
+Axe*Command.background:         NavajoWhite
+Axe*Text*foreground:            DarkSlateBlue
+Axe*Text*background:            BlanchedAlmond
+!#endif
+
+! }}}

@@ -1,0 +1,42 @@
+
+Style  FvwmCo*       Slippery
+
+
+
+Style "FvwmButtonsPanel" !Title, FocusFollowsMouse, Sticky, WindowListSkip
+Style FvwmScript-Quit MiniIcon plug.png
+Style FvwmShelf   HandleWidth 2, NeverFocus, !Title, StaysOnBottom, \
+                 Sticky, WindowListSkip, CirculateSkipIcon, CirculateSkip
+Style FvwmTabs           Title
+
+
+Style "FvwmButtons" !Button 1 , !Button 2 , TitleAtRight, \
+                   !Title, !Handles, Sticky, WindowListSkip, \
+                   FocusFollowsMouse, CirculateSkip, \
+                   BorderWidth 5, NeverFocus
+Style "FvwmIconBox" !Title, !Handles, Sticky, TitleAtTop, \
+        WindowListSkip, CirculateSkip
+Style "FvwmIconMan" !Title, !Handles, Sticky, TitleAtBottom, \
+        WindowListSkip, CirculateSkip, parentalrelativity,     \
+         handlewidth 0, borderwidth 0
+Style "FvwmPager" !Title, !Handles, Sticky, TitleAtTop, \
+        WindowListSkip, CirculateSkip, NoLenience
+Style "FvwmTaskBar" !Title, Sticky, TitleAtTop, !Handles, \
+        WindowListSkip, CirculateSkip, NeverFocus, BorderWidth 1,\
+        StaysOnBottom
+Style "FvwmWinList" !Title, !Handles, Sticky, TitleAtBottom, \
+        WindowListSkip, CirculateSkip
+Style  FvwmIdent*    Layer 6, WindowListHit ,!Button 1,!Button 2, \
+                     !Button 4, Title, MiniIcon label_tag_version.png,  State 17
+Style "FvwmPager"   WindowListSkip, BorderWidth 0, HandleWidth 0, \
+                    ParentalRelativity, TitleAtRight, State 17
+
+DestroyFunc FuncFvwmModulesDestroyStyle
+AddToFunc   FuncFvwmModulesDestroyStyle
++ I DestroyStyle "FvwmButtons"
++ I DestroyStyle "FvwmIconBox"
++ I DestroyStyle "FvwmIconMan"
++ I DestroyStyle "FvwmPager"
++ I DestroyStyle "FvwmTaskBar"
++ I DestroyStyle "FvwmWinList"
++ I DestroyStyle "FvwmPager"

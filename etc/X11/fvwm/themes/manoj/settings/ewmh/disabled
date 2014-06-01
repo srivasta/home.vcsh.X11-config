@@ -1,0 +1,6 @@
+#
+DestroyFunc FuncFvwmAddToMenusStartEWMH
+AddToFunc   FuncFvwmAddToMenusStartEWMH
+
+DestroyFunc FuncFvwmAddToMenusStopEWMH
+AddToFunc   FuncFvwmAddToMenusStopEWMH

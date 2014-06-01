@@ -1,0 +1,103 @@
+
+!
+! A set of wonderful color setup from Jonathan Kamens, jik@Athena.MIT.EDU
+! Write your thank you message to him at the address shown above. 
+! 
+!' To see how neat they are, press your keyboard's Ctrl key, then press
+!' your mouse's left, middle, and right button in turn.
+!
+!       xterm defaults (applies to all terminal emulators that are of the
+!       class "XTerm".  This includes the particular instance we call the
+!       "console" (see below) and the Kanji terminal emulator "kterm".
+!
+!XTerm*menuFont:                 *helvetica-medium-r-normal--12*
+XTerm*jumpScroll:               true
+XTerm*reverseWrap:              true
+XTerm*VT100*scrollBar:          true
+XTerm*autoRaise: on
+!#xterm*font:-bitstream-*-medium-*-*--18-*-*-*-*-110-iso8859-*
+XTerm*saveLines:                5000
+XTerm*scrollBar: on
+XTerm*scrollKey: on
+! XTerm*fontMenu.Label:  VT Fonts
+! XTerm*fontMenu*fontdefault*Label:    Default
+! XTerm*fontMenu*font1*Label:  Unreadable
+! XTerm*VT100*font1:           nil2
+! XTerm*fontMenu*font2*Label:  Tiny
+! XTerm*VT100*font2:           5x7
+! XTerm*fontMenu*font3*Label:  Small
+! XTerm*VT100*font3:           6x10
+! XTerm*fontMenu*font4*Label:  Medium
+! XTerm*VT100*font4:           7x13
+! XTerm*fontMenu*font5*Label:  Large
+! XTerm*VT100*font5:           9x15
+! XTerm*fontMenu*font6*Label:  Huge
+! XTerm*VT100*font6:           10x20
+! XTerm*fontMenu*fontescape*Label:     Escape Sequence
+! XTerm*fontMenu*fontsel*Label:                Selection
+!XTerm*fontMenu.font1.label:    Icon
+! XTerm*fontMenu.font2.label:    Thin
+! XTerm*VT100*font2:              fixed
+!!XTerm*fontMenu.font3.label:    Semicondensed
+!XTerm*VT100*font3:              -*-*-bold-*-semicondensed-*-13-*-*-*-c-*-*-*
+!XTerm*fontMenu.font4.label:    Small
+!XTerm*VT100*font4:              -*-*-bold-*-*-*-13-*-*-*-c-*-*-*
+!XTerm*fontMenu.font5.label:    Large
+!XTerm*VT100*font5:              -*-*-bold-*-*-*-15-*-*-*-c-*-*-*
+!XTerm*fontMenu.font6.label:    Huge
+!XTerm*VT100*font6:              12x24
+
+!XTerm*foreground:                       yellow
+XTerm*foreground:                       light cyan
+!XTerm*background:                       #171780
+XTerm*background:                       midnight blue
+XTerm*pointerColor: SkyBlue
+XTerm*border: YellowGreen
+XTerm*mouse: SkyBlue
+XTerm*scrollBar.foreground: turquoise
+XTerm*scrollBar.background: dimGrey
+XTerm*cursorColor:                      yellow
+XTerm*vtMenu.background:                black
+XTerm*vtMenu*foreground:                #ff0000
+XTerm*vtMenu*scrollbar*foreground:      #ff2900
+XTerm*vtMenu*jumpscroll*foreground:     #ff5200
+XTerm*vtMenu*reversevideo*foreground:   #ff7b00
+XTerm*vtMenu*autowrap*foreground:       #ffa500
+XTerm*vtMenu*reversewrap*foreground:    #ffbb00
+XTerm*vtMenu*autolinefeed*foreground:   #ffd200
+XTerm*vtMenu*appcursor*foreground:      #ffe800
+XTerm*vtMenu*appkeypad*foreground:      #ffff00
+XTerm*vtMenu*scrollkey*foreground:      #bfff00
+XTerm*vtMenu*scrollttyoutput*foreground:#7fff00
+XTerm*vtMenu*allow132*foreground:       #3fff00
+XTerm*vtMenu*cursesemul*foreground:     #00ff00
+XTerm*vtMenu*visualbell*foreground:     #00bf3f
+XTerm*vtMenu*marginbell*foreground:     #007f7f
+XTerm*vtMenu*altscreen*foreground:      #003fbf
+XTerm*vtMenu*softreset*foreground:      #0000ff
+XTerm*vtMenu*hardreset*foreground:      #3b20fa
+XTerm*vtMenu*tekshow*foreground:        #7741f6
+XTerm*vtMenu*tekmode*foreground:        #b261f2
+XTerm*vtMenu*vthide*foreground:         #ee82ee
+XTerm*mainMenu.background:              black
+XTerm*mainMenu*foreground:              red
+XTerm*mainMenu*securekbd*foreground:    white
+XTerm*mainMenu*allowsends*foreground:   royalblue
+XTerm*mainMenu*logging*foreground:      red
+XTerm*mainMenu*redraw*foreground:       white
+XTerm*mainMenu*suspend*foreground:      royalblue
+XTerm*mainMenu*continue*foreground:     red
+XTerm*mainMenu*interrupt*foreground:    white
+XTerm*mainMenu*hangup*foreground:       royalblue
+XTerm*mainMenu*terminate*foreground:    red
+XTerm*mainMenu*kill*foreground:         white
+XTerm*mainMenu*quit*foreground:         royalblue
+XTerm*fontMenu.background:              black
+XTerm*fontMenu*foreground:              maroon
+XTerm*fontMenu*fontdefault*foreground:  grey
+XTerm*fontMenu*font1*foreground:        maroon
+XTerm*fontMenu*font2*foreground:        grey
+XTerm*fontMenu*font3*foreground:        maroon
+XTerm*fontMenu*font4*foreground:        grey
+XTerm*fontMenu*fontescape*foreground:   maroon
+XTerm*fontMenu*fontsel*foreground:      grey

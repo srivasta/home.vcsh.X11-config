@@ -1,0 +1,92 @@
+
+XIcon.wmFrame: true
+XIcon.icons: xterm, emacs
+! 
+! xrlogin, xterm2, xload, Root, xdaliclock, xticktalk, xautolock
+! My window manager can do clever things with the name (like put
+! parentheses around it.
+XIcon*class:        XIcon
+! Gotta start somewhere...
+XIcon.xterm.startIconic: true
+XIcon.xterm2.startIconic: true
+XIcon.Nazgul.startIconic: true
+XIcon.Root.startIconic: true
+XIcon.xrn.startIconic: true
+XIcon.xrnMotif.startIconic: true
+XIcon.emacs.startIconic: true
+XIcon.chess.startIconic: true
+XIcon.moria.startIconic: true
+XIcon.xwininfo.startIconic: true
+XIcon.xrlogin.startIconic: true
+XIcon.xload.startIconic: true
+XIcon.xdaliclock.startIconic: true
+XIcon.xclock.startIconic: true
+XIcon.xticktalk.startIconic: true
+XIcon.xrload.startIconic: true
+XIcon.xvtdl.startIconic: true
+
+XIcon.xterm.class: XTerm
+XIcon.xterm2.class: XTerm
+XIcon.xrn.class: XRn
+XIcon.xrnMotif.class: XRnMotif
+XIcon.Root.class: XTerm
+XIcon.Nazgul.class: XTerm
+XIcon.emacs.class: Emacs
+XIcon.chess.class: XTerm
+XIcon.moria.class: XTerm
+XIcon.xwininfo.class: XTerm
+XIcon.xrlogin.class: XRlogin
+XIcon.xload.class: XLoad
+XIcon.xdaliclock.class: XDaliClock
+XIcon.xclock.class: XClock
+XIcon.xrload.class: Untitled
+XIcon.xvtdl.class: Xvtdl
+
+XIcon.xterm.command: uxterm  +ai -ut -T Work1 -fg grey90 -bd GoldenRod -bg rgb:0/0/2222 -geometry =80x25+750+300 -e /bin/bash
+XIcon.xterm2.command: mlterm -t -T Work2 -f white -geometry =80x25 -e /bin/bash
+XIcon.xrn.command: xrn 
+XIcon.xrnMotif.command: xrnMotif
+XIcon.Root.command: mlterm -t -T Root -f white -geometry =80x25+140+210 -e /bin/su -f root -c '/bin/bash -rcfile "~srivasta/.rootrc" -i'
+XIcon.emacs.command: emacs -geometry =80x62+0+0
+XIcon.chess.command: xboard 
+XIcon.xrlogin.command: xrlogin
+XIcon.xload.command: nice xload -geometry 150x100-0+0 
+XIcon.xdaliclock.command: nice xdaliclock -geometry 300x100-125-0 -cycle -shape -memory high -noseconds
+XIcon.xclock.command: nice xclock -geometry 148x148+715+715 -name EST -update 2
+XIcon.xticktalk.command: nice xticktalk -before -approximate \
+       -fn '-adobe-times-bold-r-*-*-24-*-*-*-*-*-*-*' -geometry +0+0 
+XIcon.xrload.command: \
+       nice xrload -cols 4 -fn '-adobe-courier-medium-r-*-*-10-*-*-*-*-*-*-*'
+XIcon.moria.command: xterm -T moria -e /usr/games/moria 
+XIcon.xvtdl.command: xvtdl -f "~srivasta/lib/.tododb"
+XIcon.xautolock.command: xautolock 
+XIcon.xwininfo.command: \
+     xterm -T 'window info' -e sh -c 'xwininfo -all ; cat > /dev/null'
+
+XIcon.xterm.iconName: Work1
+XIcon.xterm2.iconName: Work2
+XIcon.xrn.iconName: xrn
+XIcon.xrnMotif.iconName: xrn
+XIcon.xrlogin.iconName: xrlogin
+XIcon.xload.iconName: Load Averages
+XIcon.xdaliclock.iconName: xclock
+XIcon.xclock.iconName: xclock
+XIcon.xrload.iconName: xrload
+XIcon.Root.iconName: Root
+XIcon.Nazgul.iconName: Nazgul
+XIcon.emacs.iconName: Gnu Emacs
+XIcon.chess.iconName: xboard
+XIcon.moria.iconName:  moria
+XIcon.xwininfo.iconName: xwininfo
+XIcon.xticktalk.iconName: xticktalk
+XIcon.xvtdl.iconName: xfd_icon
+
+XIcon.xterm.Title: w1
+XIcon.xterm2.Title: w2
+XIcon.emacs.Title: Gnu Emacs
+XIcon.xrlogin.Title: remote logins
+!XIcon.chess.Title: xboard
+!XIcon.moria.Title:  moria
+!XIcon.xwininfo.Title: xwininfo
+
+! }}}

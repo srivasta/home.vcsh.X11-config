@@ -1,0 +1,242 @@
+
+#
+# Section: Styles, colors, fonts, and related things
+#
+# This section defines the looks, behavior, and other attributes of windows.
+# These are also quite personal.  Modify them in post.hook.
+#
+#
+# The following sets window colors.  This is highly personal,
+# of course.
+#
+
+#=====================================================  6. styles
+# 6. Set the decoration styles and window options
+# Order is important!!!!
+# If compatible styles are set for a single window in multiple Style
+# commands, then the styles are ORed together. If conflicting styles
+# are set, the last one specified is used.
+
+# These commands should command before any menus or functions are
+# defined, and before the internal pager is started.
+
+# I think I made a discovery - I asked a day ago about starting
+# applications on another desk *without* having fvwm switch back and
+# forth between desks when the application(s) are starting.
+
+# When browsing the source (style.c and placement.c) I noticed a style
+# called SkipMapping.  I added the SkipMapping style to the apps I
+# didnt want to map when starting in my .fvwmrc and lo and behold - IT
+# WORKED!
+
+# Is the SkipMapping an - OHH I LOVE THIS - and UNDOCUMENTED feature???
+# I couldnt find any ref to it in the man pages..
+
+
+
+
+# I want to lower the main window but leave the small status window visible
+Style * !LowerTransient, RaiseTransient, !StackTransientParent
+
+
+######
+# Menu Settings.
+#
+#   * PopupOffset allows you to control where submenus will appear, and
+#       whether they should overlap or not.
+#   * This menu uses a translucent Colorset
+#   * The Menu will look flat, with a 2 pixel border.
+#   * I changed the default ItemFormat to be a little more spacious.
+
+# Perhaps you have noticed that with the MWM menu style your sub menus
+# are shown as soon as the pointer enters their menu items, even if
+# you just want to scroll down the list.  You can prevent this with
+# the 'PopupDelay' and 'PopupDelayed' options of the MenuStyle command:
+
+#####
+# Application specific Style settings
+#
+# You might be interested in the IconOverride style, which will allow you to specify
+# an Icon for an application even if it has set its own previously, This can be very
+# useful for applications that insist on setting their own icons even if it doesnt
+# fit in with your theme :)
+#
+# You can change most settings for specific applications, based on Name,
+# Class or Resource. you can also use wildcards, eg Style "Fvwm*" !Title.
+#################
+Style fvwm_menu ParentalRelativity
+
+Style DeskControl !Title, NeverFocus, CirculateSkip, WindowListSkip, Sticky, StaysOnTop, Layer 7
+
+Style VCLSalFrame EWMHIgnoreWindowType
+
+
+Style OpenOffice* GNOMEIgnoreHints
+Style OpenOffice* EWMHIgnoreStackingOrderHints
+Style OpenOffice* EWMHIgnoreStateHints
+Style OpenOffice* EWMHIgnoreStrutHints
+Style OpenOffice* NoPPosition
+Style OpenOffice* NoUsposition 
+Style OpenOffice* FixedPPosition
+
+
+Style Gnus StartsOnDesk 0, SkipMapping                                         
+ 
+Style  "Xwall"       	    NoIcon
+Style "*BBDB*"       	    NoIcon
+Style "*Calendar*"   	    NoIcon
+Style "*Compilation*"	    NoIcon
+Style "*Fancy Diary*"	    NoIcon
+Style "*Help*"       	    NoIcon
+Style "*Holidays*"   	    NoIcon
+Style "*PostScript File"        !Title
+Style "*TeX Shell*"  	    NoIcon
+Style "*compilation*"	    NoIcon
+Style "*grep*"       	    NoIcon
+Style "*lock"        	    CirculateSkip
+Style "*lock"        	    !Title, !Handles, Sticky, WindowListSkip
+Style "*x-face*"     	    !Title,!Handles,WindowListSkip
+Style "*xfaces*"     	    !Title,!Handles,WindowListSkip
+Style "*xbiff"       	    CirculateSkip
+Style "*xbiff"       	    !Title,!Handles,Sticky,WindowListSkip
+Style "-(Tek)"       	    NoIcon
+Style "Appointment"  	    !Button 2, !Button 4
+Style "Dali Clock"   	    !Title,Sticky,WindowListSkip,NoIcon,CirculateSkip
+Style "FRAMEPOP"     	    !Title,Sticky,WindowListSkip,CirculateSkip
+
+Style "Garbage"      	    Title, Handles
+Style "Help On PostScript"  !Title,NoIcon
+Style "Information"         !Title
+Style "Load Averages"       !Title,Sticky,WindowListSkip,CirculateSkip
+Style "Message"             !Title
+Style "Work1"               Sticky
+Style "XClock"              !Title
+Style "XPbiff"              !Title
+Style "dctrl"               NoIcon
+Style "Dctrl"               NoIcon
+Style kcalc                 NoFuncHint, NoDecorHint
+Style "pgp-pixie"           !Title
+Style "popup"               !Title
+Style "sunclock"            !Title,Sticky,WindowListSkip
+Style "window info"         !Title
+Style "wmbattery"           !Title,Sticky,WindowListSkip,CirculateSkip
+Style "work1"               Sticky
+Style "xcb"                 Sticky,WindowListSkip,CirculateSkip
+Style "xcd"                 !Title
+Style "xchat"	            Sticky
+Style "xclock"              !Title,Sticky,WindowListSkip
+Style "xconsole"	          Sticky,WindowListSkip,CirculateSkip
+Style "xconsole"	    State 17
+
+Style "xload"               !Title,Sticky,WindowListSkip,NoIcon
+Style "xmoondial"           !Title
+Style "xmultibiff"          CirculateSkip
+Style "xmultibiff"          !Title,Sticky,StaysOnTop,WindowListSkip
+Style "xbuffy"              CirculateSkip
+Style "xbuffy"              !Title,Sticky,StaysOnTop,WindowListSkip
+Style "xticktalk"           !Title,Sticky,WindowListSkip,CirculateSkip
+
+Style "gkrellm"             !Title, Sticky, WindowListSkip,CirculateSkip, StaysOnBottom, NeverFocus
+Style Gkrellm2              !Title, Sticky, WindowListSkip,CirculateSkip, StaysOnBottom, NeverFocus
+Style gkrellm		    State 17
+
+Style Angband !Title
+
+Style XMMS* BorderWidth 0,Icon,GNOMEIgnoreHints
+Style XMMS* Sticky,!Title,StaysOnTop,!Handles
+Style xmms          UseUSPosition, UsePPosition
+Style XTerm       MiniIcon computer_x11.png
+Style Eterm       MiniIcon computer_x11.png
+Style Emacs       TitleAtLeft, LeftTitleRotatedCCW
+Style xcalc       ClickToFocus
+Style xman        ClickToFocus, MiniIcon book_help_paper.png
+Style xmag        ClickToFocus, MiniIcon document_database_view.png
+Style opera       EWMHMiniIconOverride, MiniIcon opera.png
+Style XVroot      GrabFocus
+Style gmrun       MiniIcon gears.png, NoFuncHint, NoDecorHint
+Style Calculator  MiniIcon calculator.png
+Style gcalctool   EWMHMiniIconOverride,MiniIcon calculator.png
+Style beep-media-player MiniIcon audio_horn.png, UsePPosition
+Style xmessage    UsePPosition, MiniIcon person_face_talking.png
+Style xchat-2     !FPFocusByProgram, NoFuncHint, NoDecorHint
+Style aterm       WindowShadeShrinks
+Style rxvt        WindowShadeShrinks
+Style Mulberry    MiniIcon mail.png
+Style Message     MiniIcon person_face_talking.png
+Style VMware      MiniIcon hardware_computers.png
+Style SDL_App     EWMHMiniIconOverride, MiniIcon games_jesters-cap.png
+Style XDosEmu     EWMHMiniIconOverride, MiniIcon games_jesters-cap.png
+Style pan         !FPFocusByProgram
+Style nautilus    EWMHMiniIconOverride, MiniIcon floppy_disk.png
+Style abiword     EWMHMiniIconOverride, MiniIcon document_letter_word-processor.png
+Style grip        EWMHMiniIconOverride, MiniIcon hardware_audio_cd.png
+Style xv          MiniIcon graphics_woman_panel.png
+Style xwrits      NoDecorHint, NoFuncHint
+Style gvim        EWMHMiniIconOverride, MiniIcon gvim.png
+Style Firefox-bin EWMHMiniIconOVerride, MiniIcon firefox.png
+Style HiddenConsole Sticky, WindowListSkip, Notitle, StaysOnTop, !Handles
+Style HiddenConsole WindowShadeSteps 100, ResizeHintOverride
+Style gaim        EWMHMiniIconOverride, MiniIcon instant-messenger.png
+Style Ddd         MiniIcon audio_waveform_view.png
+Style Eboard      MiniIcon games_chess.png
+Style gimp        EWMHMiniIconOverride, MiniIcon graphics_paint_edit.png
+Style gimp-2.0    EWMHMiniIconOverride, MiniIcon graphics_paint_edit.png
+Style findtextdialog NoFuncHint, NoDecorHint
+Style fvwm_menu   MiniIcon gears.png, !Button 4
+Style Xdialog  UsePPosition
+
+Style "login" HilightFore White 
+Style "login" HilightBack #9a5a9187d9da
+
+
+AddToDecor login
+#+ TitleStyle TiledPixmap purple-marble.xpm
+#+ TitleStyle Inactive TiledPixmap teal.xpm
+#+ BorderStyle Active TiledPixmap purple-marble.xpm
+#+ BorderStyle Inactive TiledPixmap teal.xpm
++ ButtonStyle 1 5 25x75@0 75x75@0 75x25@0 25x25@1 25x75@1
++ ButtonStyle 3 5 25x60@0 75x60@0 75x40@0 25x40@1 25x60@1
++ ButtonStyle 4 5 50x20@1 20x45@1 50x80@1 80x45@0 50x20@0
++ ButtonStyle 2 4 50x65@1 35x35@1 65x35@1 50x65@0
++ AddButtonStyle All -- UseTitleStyle
++ TitleStyle RightJustified
+
+Style XTerm StickyIcon, ResizeHintOverride
+Style "xterm" HilightFore Black 
+Style "uxterm" HilightFore Black 
+#Style "xterm" HilightFore #99ffaa 
+Style "xterm" HilightBack #9a5a9187d9da
+Style "uxterm" HilightBack #9a5a9187d9da
+
+AddToDecor xterm
+#+ TitleStyle TiledPixmap purple-marble.xpm
+#+ TitleStyle Inactive TiledPixmap grey-marble.xpm.xpm
+#+ BorderStyle Active TiledPixmap purple-marble.xpm
+#+ BorderStyle Inactive TiledPixmap grey-marble.xpm.xpm
++ ButtonStyle 1 5 25x75@0 75x75@0 75x25@0 25x25@1 25x75@1
++ ButtonStyle 3 5 25x60@0 75x60@0 75x40@0 25x40@1 25x60@1
++ ButtonStyle 4 5 50x20@1 20x45@1 50x80@1 80x45@0 50x20@0
++ ButtonStyle 2 4 50x65@1 35x35@1 65x35@1 50x65@0
++ AddButtonStyle All -- UseTitleStyle
++ TitleStyle RightJustified
+
+AddToDecor uxterm
+#+ TitleStyle TiledPixmap purple-marble.xpm
+#+ TitleStyle Inactive TiledPixmap grey-marble.xpm.xpm
+#+ BorderStyle Active TiledPixmap purple-marble.xpm
+#+ BorderStyle Inactive TiledPixmap grey-marble.xpm.xpm
++ ButtonStyle 1 5 25x75@0 75x75@0 75x25@0 25x25@1 25x75@1
++ ButtonStyle 3 5 25x60@0 75x60@0 75x40@0 25x40@1 25x60@1
++ ButtonStyle 4 5 50x20@1 20x45@1 50x80@1 80x45@0 50x20@0
++ ButtonStyle 2 4 50x65@1 35x35@1 65x35@1 50x65@0
++ AddButtonStyle All -- UseTitleStyle
++ TitleStyle RightJustified
+
+
+# Default
+#TitleStyle ActiveUp TiledPixmap purple-marble.xpm
+#TitleStyle ActiveDown TiledPixmap purple-marble.xpm
+#BorderStyle Active TiledPixmap purple-marble.xpm
+DestroyDecor recreate DecorBase
+AddToDecor DecorBase
++       TitleStyle      Centered

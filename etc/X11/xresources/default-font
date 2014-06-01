@@ -1,0 +1,114 @@
+
+!
+!'      set my standard font (I can't read fixed on color SUN/IBM monitors)
+!'      7x14 is recommanded for general use on IBM's mega pixel display
+!       C. Fang  08/24/91
+!      
+
+
+#ifdef  IBM 
+! TERMFONT      7x14
+#define TERMFONT        7x14 
+#endif
+
+#ifdef  STDSUN
+!       TERMFONT        7x13
+#define TERMFONT        7x13
+#endif
+
+#ifdef  PMAX
+! TERMFONT        fixed
+#define TERMFONT        fixed
+#endif
+
+#ifdef  PMAXLARGE
+! TERMFONT        fixed
+#define TERMFONT        fixed
+#endif
+
+#ifndef TERMFONT
+! TERMFONT        fixed
+#define TERMFONT        8x13
+#endif
+
+
+#ifdef  IBM
+!       TERMBFONT       7x14bold
+#define TERMBFONT       7x14bold
+#endif
+
+#ifdef  STDSUN
+! TERMBFONT       7x13bold
+#define TERMBFONT       7x13bold
+#endif
+
+#ifdef  PMAX
+! TERMBFONT       6x13bold 
+#define TERMBFONT       6x13bold 
+#endif
+
+#ifdef  PMAXLARGE
+! TERMBFONT       6x13bold 
+#define TERMBFONT       6x13bold 
+#endif
+
+#ifndef TERMBFONT
+! TERMBFONT       6x13bold 
+#define TERMBFONT       6x13bold 
+#endif
+
+#ifdef W_1152
+#  define FONT_NORMAL -*-fixed-bold-r-*-*-15-*-*-*-*-*-iso8859-1
+#  define FONT_LARGISH -misc-fixed-*-*-*-*-20-*-*-*-*-*-iso8859-1
+#  define FONT_LARGE -sony-fixed-*-*-*-*-24-*-*-*-*-*-iso8859-1
+#  define FONT_HUGE -b&h-lucidatypewriter-medium-r-*-*-24-*-*-*-*-*-iso8859-1
+#  define FONT_SMALL -misc-fixed-*-r-*-*-13-*-*-*-*-*-iso8859-1
+#  define FONT_TINY -b&h-lucidatypewriter-*-r-*-*-8-*-*-*-*-*-iso8859-1
+#endif 
+
+#ifdef W_1024
+#  define FONT_NORMAL -misc-fixed-*-*-*-*-13-*-*-*-c-*-iso8859-1
+#  define FONT_LARGISH -misc-fixed-*-*-*-*-15-*-*-*-c-*-iso8859-1
+#  define FONT_LARGE -bitstream-terminal-medium-*-*-*-18-*-*-*-c-*-iso8859-1
+#  define FONT_HUGE -sony-fixed-medium-*-*-*-24-*-*-*-c-*-iso8859-1
+#  define FONT_SMALL -b&h-lucidatypewriter-*-r-*-*-10-*-*-*-m-*-iso8859-1
+#  define FONT_TINY -*-fixed-*-r-*-*-7-*-*-*-c-*-iso8859-1
+#endif 
+
+#if !defined(FONT_NORMAL) || defined(W_800)
+! Default fonts
+
+#  define FONT_NORMAL -misc-fixed-medium-r-*-*-13-*-*-*-*-70-iso8859-1
+#  define FONT_LARGISH -misc-fixed-medium-r-*-*-13-*-*-*-*-iso8859-1
+#  define FONT_LARGE -misc-fixed-medium-r-*-*-14-*-*-*-*-*-iso8859-1
+#  define FONT_HUGE -misc-fixed-medium-r-*-*-15-*-*-*-*-*-iso8859-1
+#  define FONT_SMALL -b&h-lucidatypewriter-medium-r-*-*-10-*-*-*-*-*-iso8859-1
+#  define FONT_TINY -misc-fixed-medium-r-*--7-*-*-*-*-50-iso8859-1
+#endif 
+
+#if !defined(FONT_UNREADABLE)
+#  define FONT_UNREADABLE nil2
+#endif
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!
+! Fonts for terminal emulators
+!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+! XTerm*VT100*font:  FONT_NORMAL
+! XTerm*VT100*font1: FONT_UNREADABLE
+XTerm*VT100*font2: FONT_TINY
+! XTerm*VT100*font3: FONT_SMALL
+! XTerm*VT100*font4: FONT_LARGISH
+! XTerm*VT100*font5: FONT_LARGE
+! XTerm*VT100*font6: FONT_HUGE
+
+! rxvt takes over fonts from XTerm, but is has fewer font slots 
+! (normal and 1..4); we override the XTerm font settings by skipping
+! FONT_UNREADABLE and FONT_LARGISH
+Rxvt*font:  FONT_NORMAL
+Rxvt*font1: FONT_SMALL
+Rxvt*font2: FONT_TINY
+Rxvt*font3: FONT_LARGE
+Rxvt*font4: FONT_HUGE
+
