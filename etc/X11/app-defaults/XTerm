@@ -1,8 +1,8 @@
 
 !
 ! A set of wonderful color setup from Jonathan Kamens, jik@Athena.MIT.EDU
-! Write your thank you message to him at the address shown above. 
-! 
+! Write your thank you message to him at the address shown above.
+!
 !' To see how neat they are, press your keyboard's Ctrl key, then press
 !' your mouse's left, middle, and right button in turn.
 !
@@ -15,7 +15,9 @@ XTerm*menuFont:                 *helvetica-medium-r-normal--14*
 XTerm*jumpScroll:               true
 XTerm*reverseWrap:              true
 XTerm*VT100*scrollBar:          true
+XTerm*metaSendsEscape:          true
 XTerm*autoRaise: on
+
 !#xterm*font:-bitstream-*-medium-*-*--18-*-*-*-*-110-iso8859-*
 XTerm*saveLines:                5000
 XTerm*scrollBar: on
@@ -49,3 +51,9 @@ XTerm*scrollKey: on
 !XTerm*VT100*font6:              12x24
 
 xterm*reverseVideo: false
+!C-; is hyper C-, is alt C-. is super
+XTerm*VT100.translations: #override \n\
+  Ctrl <Key>semicolon: string(0x18) string("@h") \n\
+  Ctrl <Key>comma: string(0x18) string("@a") \n\
+  Ctrl <Key>period: string(0x18) string("@S") \n\
+  Shift <Key>Return: string(0x18) string("@s") string(0x0d)
