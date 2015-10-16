@@ -100,57 +100,57 @@ setxkbmap -option terminate:ctrl_alt_bksp
 ##
 ## # set +x
 ## # would ssh-agent die at termination?
-## if [ -x /usr/bin/ssh-agent ] ; then
-##   if [ -z ${SSH_AGENT_PID} ] ; then
-##     if test -f $default_dir/lib/.sec/ssh-agent-info && \
-##         kill -0 $(cat $default_dir/lib/.sec/ssh-agent-info) 2>/dev/null; then
-##         SSH_AGENT_PID=$(cat $default_dir/lib/.sec/ssh-agent.pid)
-##         SSH_AUTH_SOCK=$(cat $default_dir/lib/.sec/ssh-agent.info)
-##     else
-##         unset SSH_AUTH_SOCK
-##         unset SSH_AGENT_PID
-##         rm $default_dir/lib/.sec/ssh-agent.pid
-##         rm $default_dir/lib/.sec/ssh-agent.info
-##         #eval $(ssh-agent -a $default_dir/var/run/agent-$$ )
-##         eval $(ssh-agent)
-##         echo $SSH_AUTH_SOCK > $default_dir/lib/.sec/ssh-agent.info
-##         echo $SSH_AGENT_PID > $default_dir/lib/.sec/ssh-agent.pid
-##     fi
-##     export SSH_AUTH_SOCK
-##     export SSH_AGENT_PID
-##   fi
-## fi
-##
-## ssh-add -D
-## ssh-add </dev/null
-## #ssh-add /home/srivasta/.ssh/id_dsa </dev/null
-## #ssh-add /home/srivasta/.ssh/id_rsa </dev/null
-##
-## if [ -x /usr/bin/gpg-agent ] ; then
-##   if test -f $default_dir/lib/.sec/gpg-agent-info && \
-##     kill -0 $(cut -d: -f 2 $default_dir/lib/.sec/gpg-agent-info) 2>/dev/null; then
-##       GPG_AGENT_INFO=$(cat $default_dir/lib/.sec/gpg-agent-info)
-##   else
-##     eval $(gpg-agent --daemon)
-##     echo $GPG_AGENT_INFO >$default_dir/lib/.sec/gpg-agent-info
-##   fi
-##   export GPG_AGENT_INFO
-## fi
-
-if [[ -x /usr/bin/gpg-agent ]]; then
-    if [[ -r "${GNUPGHOME}/gpg-agent-info" ]] &&                            \
-        if kill -0 $(grep GPG_AGENT_INFO "${GNUPGHOME}/gpg-agent-info"  |   \
-                  cut -d: -f 2 ); then
-        . "${GNUPGHOME}/gpg-agent-info"
+if [ -x /usr/bin/ssh-agent ] ; then
+  if [ -z ${SSH_AGENT_PID} ] ; then
+    if test -f $default_dir/lib/.sec/ssh-agent-info && \
+        kill -0 $(cat $default_dir/lib/.sec/ssh-agent-info) 2>/dev/null; then
+        SSH_AGENT_PID=$(cat $default_dir/lib/.sec/ssh-agent.pid)
+        SSH_AUTH_SOCK=$(cat $default_dir/lib/.sec/ssh-agent.info)
     else
-        ssh-add -D 2>/dev/null || true
-        eval $(gpg-agent --daemon --enable-ssh-support                     \
-                 --write-env-file "${GNUPGHOME}/gpg-agent-info")
+        unset SSH_AUTH_SOCK
+        unset SSH_AGENT_PID
+        rm $default_dir/lib/.sec/ssh-agent.pid
+        rm $default_dir/lib/.sec/ssh-agent.info
+        #eval $(ssh-agent -a $default_dir/var/run/agent-$$ )
+        eval $(ssh-agent)
+        echo $SSH_AUTH_SOCK > $default_dir/lib/.sec/ssh-agent.info
+        echo $SSH_AGENT_PID > $default_dir/lib/.sec/ssh-agent.pid
     fi
-    export GPG_AGENT_INFO
     export SSH_AUTH_SOCK
     export SSH_AGENT_PID
+  fi
 fi
+
+ssh-add -D
+ssh-add </dev/null
+#ssh-add /home/srivasta/.ssh/id_dsa </dev/null
+#ssh-add /home/srivasta/.ssh/id_rsa </dev/null
+
+if [ -x /usr/bin/gpg-agent ] ; then
+  if test -f $default_dir/lib/.sec/gpg-agent-info && \
+    kill -0 $(cut -d: -f 2 $default_dir/lib/.sec/gpg-agent-info) 2>/dev/null; then
+      GPG_AGENT_INFO=$(cat $default_dir/lib/.sec/gpg-agent-info)
+  else
+    eval $(gpg-agent --daemon)
+    echo $GPG_AGENT_INFO >$default_dir/lib/.sec/gpg-agent-info
+  fi
+  export GPG_AGENT_INFO
+fi
+
+# if [[ -x /usr/bin/gpg-agent ]]; then
+#     if [[ -r "${GNUPGHOME}/gpg-agent-info" ]] &&                            \
+#         if kill -0 $(grep GPG_AGENT_INFO "${GNUPGHOME}/gpg-agent-info"  |   \
+#                   cut -d: -f 2 ); then
+#         . "${GNUPGHOME}/gpg-agent-info"
+#     else
+#         ssh-add -D 2>/dev/null || true
+#         eval $(gpg-agent --daemon --enable-ssh-support                     \
+#                  --write-env-file "${GNUPGHOME}/gpg-agent-info")
+#     fi
+#     export GPG_AGENT_INFO
+#     export SSH_AUTH_SOCK
+#     export SSH_AGENT_PID
+# fi
 
 
 # As root, invoke ssh with:
