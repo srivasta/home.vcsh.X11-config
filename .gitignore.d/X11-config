@@ -338,6 +338,7 @@
 !/media/images/wallpaper/full_KillBill.jpg
 !/media/images/wallpaper/gears.jpg
 !/media/images/wallpaper/Gintah.jpg
+!/media/images/wallpaper/.gitignore
 !/media/images/wallpaper/gothic-angel2.jpg
 !/media/images/wallpaper/gothic-angel.jpg
 !/media/images/wallpaper/gothic-angel.png
@@ -347,7 +348,6 @@
 !/media/images/wallpaper/insodus-small.png
 !/media/images/wallpaper/K-Nyle.jpg
 !/media/images/wallpaper/scab-picker.jpg
-!/media/images/wallpaper/.gitignore
 !/.sunclockrc
 !/.Xresources
 !/.xscreensaver
