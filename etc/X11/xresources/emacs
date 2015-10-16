@@ -52,8 +52,8 @@ Emacs*cursor:     white
 !emacs.font: DejaVu Sans Mono-9
 !Emacs*font: DejaVu Sans Mono-9
 !emacs*font: DejaVu Sans Mono-9
-Emacs*font: DejaVu Sans Mono-9
-emacs*font: DejaVu Sans Mono-9
+Emacs*font: DejaVu Sans Mono-11
+emacs*font: DejaVu Sans Mono-11
 
 !Emacs*font: Liberation Mono
 !emacs*font: Liberation Mono
