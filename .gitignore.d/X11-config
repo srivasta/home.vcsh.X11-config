@@ -1,4 +1,6 @@
 *
+!/bin
+!/bin/fvwm-gnome-session
 !/etc
 !/etc/X11
 !/etc/X11/app-defaults
