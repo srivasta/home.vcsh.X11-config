@@ -100,27 +100,30 @@ setxkbmap -option terminate:ctrl_alt_bksp
 ##
 ## # set +x
 ## # would ssh-agent die at termination?
-if [ -x /usr/bin/ssh-agent ] ; then
-    if test -z "$SSH_AUTH_SOCK" || test -z "$SSH_AGENT_PID" || \
-            test \! -S "$SSH_AUTH_SOCK"; then
-        if test -f $default_dir/lib/.sec/ssh-agent-info && \
-                kill -0 $(cat $default_dir/lib/.sec/ssh-agent-info) 2>/dev/null; then
-            SSH_AGENT_PID=$(cat $default_dir/lib/.sec/ssh-agent.pid)
-            SSH_AUTH_SOCK=$(cat $default_dir/lib/.sec/ssh-agent.info)
-        else
-            unset SSH_AUTH_SOCK
-            unset SSH_AGENT_PID
-            rm -f $default_dir/lib/.sec/ssh-agent.pid
-            rm -f $default_dir/lib/.sec/ssh-agent.info
-            #eval $(ssh-agent -a $default_dir/var/run/agent-$$ )
-            eval $(ssh-agent -s)
-            echo $SSH_AUTH_SOCK > $default_dir/lib/.sec/ssh-agent.info
-            echo $SSH_AGENT_PID > $default_dir/lib/.sec/ssh-agent.pid
+start_ssh_agent() {
+    if [ -x /usr/bin/ssh-agent ] ; then
+        if test -z "$SSH_AUTH_SOCK" || test -z "$SSH_AGENT_PID" || \
+                test \! -S "$SSH_AUTH_SOCK"; then
+            if test -f $default_dir/lib/.sec/ssh-agent-info && \
+                    kill -0 $(cat $default_dir/lib/.sec/ssh-agent-info) 2>/dev/null; then
+                SSH_AGENT_PID=$(cat $default_dir/lib/.sec/ssh-agent.pid)
+                SSH_AUTH_SOCK=$(cat $default_dir/lib/.sec/ssh-agent.info)
+            else
+                unset SSH_AUTH_SOCK
+                unset SSH_AGENT_PID
+                rm -f $default_dir/lib/.sec/ssh-agent.pid
+                rm -f $default_dir/lib/.sec/ssh-agent.info
+                #eval $(ssh-agent -a $default_dir/var/run/agent-$$ )
+                eval $(ssh-agent -s)
+                echo $SSH_AUTH_SOCK > $default_dir/lib/.sec/ssh-agent.info
+                echo $SSH_AGENT_PID > $default_dir/lib/.sec/ssh-agent.pid
+            fi
+            export SSH_AUTH_SOCK
+            export SSH_AGENT_PID
         fi
-        export SSH_AUTH_SOCK
-        export SSH_AGENT_PID
     fi
-fi
+}
+start_ssh_agent
 
 ssh-add -D
 ssh-add </dev/null
@@ -145,7 +148,7 @@ ssh-add </dev/null
 
 : "${GNUPGHOME:=$HOME/lib/.sec}"
 GPG_TTY=$(tty); export GPG_TTY
-find_gpg_agent() {
+start_gpg_agent() {
         local PID_FILE="$GNUPGHOME/gpg-agent-info-$(hostname)"
 
         test -d "$GNUPGHOME" || return 0
@@ -177,7 +180,7 @@ find_gpg_agent() {
         unset GPG_AGENT_INFO
         return 0
 }
-find_gpg_agent
+start_gpg_agent
 # As root, invoke ssh with:
 # ssh -C -o "CompressionLevel 9" -L 119:news.iglou.com:119 iglou.com
 # and use the local nntp server
