@@ -1,0 +1,62 @@
+# Merge in defaults and keymaps
+umask 022
+export default_dir=${default_dir:=$HOME}
+export ZDOTDIR=${ZDOTDIR:=$default_dir/etc/shells/zsh}
+export default_bashdir=${default_bashdir:=$default_dir/etc/shells/bash}
+
+# This makes X work when I su to root.
+if [ -z "$XAUTHORITY" ]; then
+        XAUTHORITY=$default_dir/.Xauthority
+        export XAUTHORITY
+fi
+
+#sudo setkeycodes e02c 159
+#sudo setkeycodes e025 179
+#sudo setkeycodes e026 180
+
+XAPPLRESDIR=$default_dir/etc/X11/app-defaults/
+export XAPPLRESDIR
+
+export JAVA_HOME=/usr/lib/jvm/java-6-sun
+# load common variables
+if [ -n "$BASH_VERSION" ]; then
+        if test -f "$default_bashdir/bash_vars" ; then
+                . "$default_bashdir/bash_vars"
+        fi
+elif [ -n "$ZSH_VERSION" ]; then
+  if [ -f $ZDOTDIR/variables ]; then
+                source $ZDOTDIR/variables
+        fi
+fi
+
+if [ ! $DISPLAY ] || [ $DISPLAY = ":0.0" ]; then
+     DISPLAY=$(hostname):0
+fi
+
+if [ -e $default_dir/etc/X11/xmodmap-$(uname -n) ]; then
+  export usermodmap=$default_dir/etc/X11/xmodmap-$(uname -n)
+fi
+
+export sysmodmap=/usr/lib/X11/.Xmodmap
+if [ -f $sysmodmap ]; then
+    xmodmap $sysmodmap
+fi
+if [ -f $usermodmap ]; then
+    xmodmap $usermodmap
+fi
+
+for i in ${XAPPLRESDIR}*; do xrdb -merge $i; done
+
+if [ -e "$default_dir/etc/X11/xbindkeysrc-$(uname -n)" ]; then
+    export userbindings=$default_dir/etc/X11/xbindkeysrc-$(uname -n)
+    xbindkeys -f $userbindings
+fi
+setxkbmap -option terminate:ctrl_alt_bksp
+
+xset -c b 95 s default &
+
+#export TZ=$(cat /etc/timezone)
+export LC_ALL="en_US.UTF-8"
+export LC_TYPE="en_US.UTF-8"
+export FVWM_USERDIR=$default_dir/etc/X11/fvwm
+

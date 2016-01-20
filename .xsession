@@ -101,41 +101,31 @@ setxkbmap -option terminate:ctrl_alt_bksp
 ## # set +x
 ## # would ssh-agent die at termination?
 if [ -x /usr/bin/ssh-agent ] ; then
-  if [ -z ${SSH_AGENT_PID} ] ; then
-    if test -f $default_dir/lib/.sec/ssh-agent-info && \
-        kill -0 $(cat $default_dir/lib/.sec/ssh-agent-info) 2>/dev/null; then
-        SSH_AGENT_PID=$(cat $default_dir/lib/.sec/ssh-agent.pid)
-        SSH_AUTH_SOCK=$(cat $default_dir/lib/.sec/ssh-agent.info)
-    else
-        unset SSH_AUTH_SOCK
-        unset SSH_AGENT_PID
-        rm $default_dir/lib/.sec/ssh-agent.pid
-        rm $default_dir/lib/.sec/ssh-agent.info
-        #eval $(ssh-agent -a $default_dir/var/run/agent-$$ )
-        eval $(ssh-agent)
-        echo $SSH_AUTH_SOCK > $default_dir/lib/.sec/ssh-agent.info
-        echo $SSH_AGENT_PID > $default_dir/lib/.sec/ssh-agent.pid
+    if test -z "$SSH_AUTH_SOCK" || test -z "$SSH_AGENT_PID" || \
+            test \! -S "$SSH_AUTH_SOCK"; then
+        if test -f $default_dir/lib/.sec/ssh-agent-info && \
+                kill -0 $(cat $default_dir/lib/.sec/ssh-agent-info) 2>/dev/null; then
+            SSH_AGENT_PID=$(cat $default_dir/lib/.sec/ssh-agent.pid)
+            SSH_AUTH_SOCK=$(cat $default_dir/lib/.sec/ssh-agent.info)
+        else
+            unset SSH_AUTH_SOCK
+            unset SSH_AGENT_PID
+            rm -f $default_dir/lib/.sec/ssh-agent.pid
+            rm -f $default_dir/lib/.sec/ssh-agent.info
+            #eval $(ssh-agent -a $default_dir/var/run/agent-$$ )
+            eval $(ssh-agent -s)
+            echo $SSH_AUTH_SOCK > $default_dir/lib/.sec/ssh-agent.info
+            echo $SSH_AGENT_PID > $default_dir/lib/.sec/ssh-agent.pid
+        fi
+        export SSH_AUTH_SOCK
+        export SSH_AGENT_PID
     fi
-    export SSH_AUTH_SOCK
-    export SSH_AGENT_PID
-  fi
 fi
 
 ssh-add -D
 ssh-add </dev/null
 #ssh-add /home/srivasta/.ssh/id_dsa </dev/null
 #ssh-add /home/srivasta/.ssh/id_rsa </dev/null
-
-if [ -x /usr/bin/gpg-agent ] ; then
-  if test -f $default_dir/lib/.sec/gpg-agent-info && \
-    kill -0 $(cut -d: -f 2 $default_dir/lib/.sec/gpg-agent-info) 2>/dev/null; then
-      GPG_AGENT_INFO=$(cat $default_dir/lib/.sec/gpg-agent-info)
-  else
-    eval $(gpg-agent --daemon)
-    echo $GPG_AGENT_INFO >$default_dir/lib/.sec/gpg-agent-info
-  fi
-  export GPG_AGENT_INFO
-fi
 
 # if [[ -x /usr/bin/gpg-agent ]]; then
 #     if [[ -r "${GNUPGHOME}/gpg-agent-info" ]] &&                            \
@@ -153,6 +143,41 @@ fi
 # fi
 
 
+: "${GNUPGHOME:=$HOME/lib/.sec}"
+GPG_TTY=$(tty); export GPG_TTY
+find_gpg_agent() {
+        local PID_FILE="$GNUPGHOME/gpg-agent-info-$(hostname)"
+
+        test -d "$GNUPGHOME" || return 0
+        export GNUPGHOME
+
+        test -n "$GPG_AGENT_INFO" && test -S "${GPG_AGENT_INFO%%:*}" && \
+            gpg-agent 2>/dev/null && return 0
+
+        unset GPG_AGENT_INFO
+        if test -s "$PID_FILE"; then
+                . "$PID_FILE"
+                export GPG_AGENT_INFO
+                test -n "$GPG_AGENT_INFO" && \
+                    test -S "${GPG_AGENT_INFO%%:*}" && \
+                    gpg-agent 2>/dev/null && return 0
+                rm -f "$PID_FILE"
+        fi
+
+        unset GPG_AGENT_INFO
+        eval $(gpg-agent --daemon --sh)
+        : "${GPG_AGENT_INFO:=$GNUPGHOME/S.gpg-agent:0:1}"
+        export GPG_AGENT_INFO
+        if test -n "$GPG_AGENT_INFO" && test -S "${GPG_AGENT_INFO%%:*}" && \
+            gpg-agent 2>/dev/null; then
+                echo "GPG_AGENT_INFO=$GPG_AGENT_INFO" >"$PID_FILE"
+                return 0
+        fi
+
+        unset GPG_AGENT_INFO
+        return 0
+}
+find_gpg_agent
 # As root, invoke ssh with:
 # ssh -C -o "CompressionLevel 9" -L 119:news.iglou.com:119 iglou.com
 # and use the local nntp server

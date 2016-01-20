@@ -1,0 +1,759 @@
+# Automatically generated file. Do not edit (see /usr/share/doc/menu/html/index.html)
+
+DestroyMenu "/DebianWmIcons/Applications/Accessibility"
+AddToMenu "/DebianWmIcons/Applications/Accessibility" "Accessibility" Title
++ "x&bindkeys%menu/programs.xpm%" Exec    /usr/bin/xbindkeys
++ "&Xmag%menu/programs.xpm%" Exec    xmag
++ "X&zoom%menu/programs.xpm%" Exec    xzoom
+
+DestroyMenu "/DebianWmIcons/Applications/Accessories"
+AddToMenu "/DebianWmIcons/Applications/Accessories" "Accessories" Title
++ "&xvkbd%menu/programs.xpm%" Exec    /usr/bin/xvkbd
+
+DestroyMenu "/DebianWmIcons/Applications/Data_Management"
+AddToMenu "/DebianWmIcons/Applications/Data_Management" "Data Management" Title
++ "&JabRef%menu/programs.xpm%" Exec    jabref
++ "&LibreOffice Base%menu/programs.xpm%" Exec    /usr/bin/libreoffice --base
++ "&password-gorilla%menu/programs.xpm%" Exec    /usr/bin/password-gorilla
++ "pgAdmin &III%menu/programs.xpm%" Exec    /usr/bin/pgadmin3
++ "pl&an%menu/programs.xpm%" Exec    /usr/bin/plan
++ "&TOra%menu/programs.xpm%" Exec    /usr/bin/tora
+
+DestroyMenu "/DebianWmIcons/Applications/Editors"
+AddToMenu "/DebianWmIcons/Applications/Editors" "Editors" Title
++ "Emacs &24 (text)%menu/editor.xpm%" Exec /usr/bin/X11/xterm -T "Emacs 24 (text)" -e /usr/bin/emacs24 -nw
++ "&Emacs 24 (X11)%menu/editor.xpm%" Exec    /usr/bin/emacs24
++ "&Gedit%menu/editor.xpm%" Exec    /usr/bin/gedit
++ "&prerex%menu/editor.xpm%" Exec /usr/bin/X11/xterm -T "prerex" -e /usr/bin/prerex
++ "&Textedit%menu/editor.xpm%" Exec    /usr/bin/textedit
++ "&vprerex%menu/editor.xpm%" Exec    /usr/bin/vprerex
++ "&Xedit%menu/editor.xpm%" Exec    xedit
+
+DestroyMenu "/DebianWmIcons/Applications/Education"
+AddToMenu "/DebianWmIcons/Applications/Education" "Education" Title
++ "&Arithmetic Quiz%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Arithmetic Quiz" -e sh -c 'arithmetic;echo PRESS ENTER;read line'
++ "A&rtha%menu/programs.xpm%" Exec    artha
++ "&Xoscope%menu/programs.xpm%" Exec    /usr/bin/xoscope
+
+DestroyMenu "/DebianWmIcons/Applications/Emulators"
+AddToMenu "/DebianWmIcons/Applications/Emulators" "Emulators" Title
++ "&aqemu%menu/programs.xpm%" Exec    /usr/bin/aqemu
++ "&Qemu Launcher%menu/programs.xpm%" Exec    /usr/bin/qemu-launcher
++ "&Virtualbricks%menu/programs.xpm%" Exec    /usr/bin/virtualbricks
+
+DestroyMenu "/DebianWmIcons/Applications/File_Management"
+AddToMenu "/DebianWmIcons/Applications/File_Management" "File Management" Title
++ "&Brasero%menu/programs.xpm%" Exec    /usr/bin/brasero
++ "burn%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "burn" -e /usr/bin/burn
++ "&CdCat%menu/programs.xpm%" Exec    /usr/bin/cdcat
++ "cdw%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "cdw" -e /usr/bin/cdw
++ "&Dvdisaster%menu/programs.xpm%" Exec    /usr/bin/dvdisaster
++ "&gdmap%menu/programs.xpm%" Exec    /usr/bin/gdmap
++ "&isomaster%menu/programs.xpm%" Exec    /usr/bin/isomaster
++ "&K3b%menu/programs.xpm%" Exec    /usr/bin/k3b
++ "&mc%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "mc" -e /usr/bin/mc
++ "&Nautilus%menu/programs.xpm%" Exec    /usr/bin/nautilus
++ "&ROX Filer%menu/programs.xpm%" Exec    /usr/bin/rox
++ "&Unison 2.32.52 (GTK)%menu/programs.xpm%" Exec    /usr/bin/unison-2.32.52-gtk
++ "Unison &2.40.102 (GTK)%menu/programs.xpm%" Exec    /usr/bin/unison-2.40.102-gtk
++ "&wmbutton%menu/programs.xpm%" Exec    /usr/bin/wmbutton
++ "&X cd-roast%menu/programs.xpm%" Exec    /usr/bin/xcdroast
++ "xdi&skusage%menu/programs.xpm%" Exec    xdiskusage
+
+DestroyMenu "/DebianWmIcons/Applications/Graphics"
+AddToMenu "/DebianWmIcons/Applications/Graphics" "Graphics" Title
++ "&Blender%menu/programs.xpm%" Exec    /usr/bin/blender
++ "&colorname%menu/programs.xpm%" Exec    /usr/bin/colorname
++ "&dotty%menu/programs.xpm%" Exec    /usr/bin/dotty
++ "&Flpsed%menu/programs.xpm%" Exec    /usr/bin/flpsed
++ "FontForge%menu/programs.xpm%" Exec    /usr/bin/fontforge
++ "F&ont Manager%menu/programs.xpm%" Exec    /usr/bin/font-manager
++ "F&racplanet%menu/programs.xpm%" Exec    /usr/bin/fracplanet
++ "G&eeqie%menu/programs.xpm%" Exec    /usr/bin/geeqie
++ "GPS Correlate%menu/programs.xpm%" Exec    /usr/bin/gpscorrelate-gui
++ "GrabC%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "GrabC" -e /usr/bin/grabc
++ "Gt&kmorph%menu/programs.xpm%" Exec    /usr/bin/gtkmorph
++ "&ImageMagick%menu/programs.xpm%" Exec    /usr/bin/display.im6 logo:
++ "I&nkscape%menu/programs.xpm%" Exec    /usr/bin/inkscape
++ "&LaTeXDraw%menu/programs.xpm%" Exec    /usr/bin/latexdraw
++ "left&y%menu/programs.xpm%" Exec    /usr/bin/lefty
++ "LibreOffice Draw%menu/programs.xpm%" Exec    /usr/bin/libreoffice --draw
++ "&Misfit Model 3d%menu/programs.xpm%" Exec    /usr/bin/mm3d
++ "pdfc&hain%menu/programs.xpm%" Exec    /usr/bin/pdfchain
++ "pixeli&ze%menu/programs.xpm%" Exec    /usr/bin/pixelize
++ "&Pixmap%menu/programs.xpm%" Exec    /usr/bin/pixmap
++ "pLoader%menu/programs.xpm%" Exec    /usr/bin/ploader
++ "PosteRazor%menu/programs.xpm%" Exec    /usr/bin/PosteRazor
++ "&QtikZ%menu/programs.xpm%" Exec    /usr/bin/qtikz
++ "&Schism Tracker Font Editor%menu/programs.xpm%" Exec    /usr/bin/schism --font-editor
++ "Screeenie (Qt)%menu/programs.xpm%" Exec    /usr/bin/screenie-qt
++ "swisswatch%menu/programs.xpm%" Exec    /usr/bin/swisswatch
++ "&Tgif%menu/programs.xpm%" Exec    /usr/bin/tgif
++ "The &GIMP%menu/programs.xpm%" Exec    /usr/bin/gimp
++ "ttfautohint G&UI%menu/programs.xpm%" Exec    /usr/bin/ttfautohintGUI
++ "&viewnior%menu/programs.xpm%" Exec    /usr/bin/viewnior
++ "&Waterfall%menu/programs.xpm%" Exec    /usr/bin/waterfall
++ "xcam%menu/programs.xpm%" Exec    /usr/bin/xcam
++ "xcb%menu/programs.xpm%" Exec    /usr/bin/xcb
++ "xfig%menu/programs.xpm%" Exec    /usr/bin/xfig
++ "Xpaint%menu/programs.xpm%" Exec    /usr/bin/xpaint
++ "XS&ane%menu/programs.xpm%" Exec    /usr/bin/xsane
++ "xscanimage%menu/programs.xpm%" Exec    /usr/bin/xscanimage
++ "&X Window Snapshot%menu/programs.xpm%" Exec    xwd | xwud
+
+DestroyMenu "/DebianWmIcons/Applications/Network/Communication"
+AddToMenu "/DebianWmIcons/Applications/Network/Communication" "Communication" Title
++ "&buffy%menu/programs.xpm%" Exec    /usr/bin/buffy
++ "&Ekiga%menu/programs.xpm%" Exec    /usr/bin/ekiga
++ "E&volution%menu/programs.xpm%" Exec    /usr/bin/evolution
++ "&GMail Notifier%menu/programs.xpm%" Exec    /usr/bin/gmail-notify
++ "gnubiff%menu/programs.xpm%" Exec    /usr/bin/gnubiff
++ "g&rdesktop%menu/programs.xpm%" Exec    /usr/bin/grdesktop
++ "&Icedove Mail%menu/programs.xpm%" Exec    icedove
++ "Identi&Curse%menu/programs.xpm%" Exec    identicurse
++ "&Mail Notification%menu/programs.xpm%" Exec    /usr/bin/mail-notification
++ "mc&abber%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "mcabber" -e /usr/bin/mcabber
++ "Minicom%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Minicom" -e /usr/bin/minicom
++ "Minicom (X&11)%menu/programs.xpm%" Exec    /usr/bin/xminicom
++ "M&utt%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Mutt" -e /usr/bin/mutt
++ "&network-config%menu/programs.xpm%" Exec    /usr/bin/network-config
++ "&Seyon%menu/programs.xpm%" Exec    /usr/bin/seyon
++ "&Telnet-SSL%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Telnet-SSL" -e /usr/bin/telnet-ssl
++ "&wmITime%menu/programs.xpm%" Exec    /usr/bin/wmitime
++ "Xbi&ff%menu/programs.xpm%" Exec    xbiff
++ "Xbuff&y%menu/programs.xpm%" Exec    /usr/bin/xbuffy
++ "&X Chat%menu/programs.xpm%" Exec    /usr/bin/xchat
++ "X-Chat GN&OME%menu/programs.xpm%" Exec    /usr/bin/xchat-gnome
+
+DestroyMenu "/DebianWmIcons/Applications/Network/File_Transfer"
+AddToMenu "/DebianWmIcons/Applications/Network/File_Transfer" "File Transfer" Title
++ "&Azureus%menu/programs.xpm%" Exec    /usr/bin/azureus
++ "&BitTornado Client%menu/programs.xpm%" Exec    /usr/bin/btdownloadgui.bittornado
++ "&git-annex assistant%menu/programs.xpm%" Exec    git-annex webapp
++ "&ncftp%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "ncftp" -e /usr/bin/ncftp3
+
+DestroyMenu "/DebianWmIcons/Applications/Network/Monitoring"
+AddToMenu "/DebianWmIcons/Applications/Network/Monitoring" "Monitoring" Title
++ "&Bandwidthcalc%menu/programs.xpm%" Exec    /usr/bin/bandwidthcalc
++ "bm&on%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "bmon" -e /usr/bin/bmon
++ "b&tscanner%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "btscanner" -e /usr/bin/btscanner
++ "&EtherApe%menu/programs.xpm%" Exec    /usr/bin/etherape
++ "etterc&ap (as root)%menu/programs.xpm%" Exec    ettercap-pkexec -G
++ "&Gip%menu/programs.xpm%" Exec    /usr/bin/gip
++ "&IPTraf%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "IPTraf" -e /usr/bin/su-to-root -c /usr/sbin/iptraf
++ "&jnettop%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "jnettop" -e /usr/bin/su-to-root -c /usr/sbin/jnettop
++ "&Mtr%menu/programs.xpm%" Exec    mtr
++ "Wi&reshark%menu/programs.xpm%" Exec    /usr/bin/wireshark
++ "&WMifs%menu/programs.xpm%" Exec    /usr/bin/wmifs
++ "wm&net%menu/programs.xpm%" Exec    /usr/bin/wmnet -l
+
+DestroyMenu "/DebianWmIcons/Applications/Network/Web_Browsing"
+AddToMenu "/DebianWmIcons/Applications/Network/Web_Browsing" "Web Browsing" Title
++ "&Chromium%menu/programs.xpm%" Exec    chromium
++ "&ELinks WWW browser%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "ELinks WWW browser" -e /usr/bin/elinks
++ "Epiphany we&b browser%menu/programs.xpm%" Exec    /usr/bin/epiphany-browser
++ "&Iceweasel%menu/programs.xpm%" Exec    iceweasel
++ "&Lynx-cur%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Lynx-cur" -e lynx
++ "&nomnom%menu/programs.xpm%" Exec    /usr/bin/nomnom
++ "&w3m%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "w3m" -e /usr/bin/w3m /usr/share/doc/w3m/MANUAL.html
+
+DestroyMenu "/DebianWmIcons/Applications/Network"
+AddToMenu "/DebianWmIcons/Applications/Network" "Network" Title
++ "&Communication%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Network/Communication"
++ "&File Transfer%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Network/File_Transfer"
++ "&Monitoring%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Network/Monitoring"
++ "&VNC Viewer%menu/programs.xpm%" Exec    xvnc4viewer
++ "Web &Browsing%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Network/Web_Browsing"
++ "&WMbiff%menu/programs.xpm%" Exec    /usr/bin/wmbiff
++ "&XTalk%menu/programs.xpm%" Exec    /usr/bin/xtalk
+
+DestroyMenu "/DebianWmIcons/Applications/Normal_applications"
+AddToMenu "/DebianWmIcons/Applications/Normal_applications" "Normal applications" Title
++ "&xcal%menu/programs.xpm%" Exec    /usr/bin/xcal
+
+DestroyMenu "/DebianWmIcons/Applications/Office"
+AddToMenu "/DebianWmIcons/Applications/Office" "Office" Title
++ "&Email-Reminder%menu/programs.xpm%" Exec    /usr/bin/email-reminder-editor
++ "g&numeric%menu/programs.xpm%" Exec    /usr/bin/gnumeric
++ "&GoldenDict%menu/programs.xpm%" Exec    /usr/bin/goldendict
++ "g&ramps%menu/programs.xpm%" Exec    /usr/bin/gramps
++ "&LibreOffice Calc%menu/programs.xpm%" Exec    /usr/bin/libreoffice --calc
++ "LibreOffice &Impress%menu/programs.xpm%" Exec    /usr/bin/libreoffice --impress
++ "LibreOffice &Writer%menu/programs.xpm%" Exec    /usr/bin/libreoffice --writer
++ "LyX &Document Processor%menu/programs.xpm%" Exec    lyx
++ "&pdfshuffler%menu/programs.xpm%" Exec    /usr/bin/pdfshuffler
+
+DestroyMenu "/DebianWmIcons/Applications/Programming"
+AddToMenu "/DebianWmIcons/Applications/Programming" "Programming" Title
++ "alleyoop%menu/programs.xpm%" Exec    /usr/bin/alleyoop
++ "&Autoproject%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Autoproject" -e /usr/bin/autoproject
++ "&BeanShell (text)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "BeanShell (text)" -e /usr/bin/bsh
++ "BeanShell (&windowed)%menu/programs.xpm%" Exec    /usr/bin/xbsh
++ "&Data Display Debugger%menu/programs.xpm%" Exec    /usr/bin/ddd
++ "Dev&Help%menu/programs.xpm%" Exec    /usr/bin/devhelp
++ "Dox&ywizard%menu/programs.xpm%" Exec    /usr/bin/doxywizard
++ "&Eclipse%menu/programs.xpm%" Exec    eclipse
++ "&fldiff%menu/programs.xpm%" Exec    /usr/bin/fldiff
++ "&GDB%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "GDB" -e /usr/bin/gdb
++ "Glade &3%menu/programs.xpm%" Exec    /usr/bin/glade
++ "G&NU gnee%menu/programs.xpm%" Exec    gnee
++ "Guile &1.8%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Guile 1.8" -e /usr/bin/guile-1.8
++ "Guile &2.0%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Guile 2.0" -e /usr/bin/guile-2.0
++ "&Ocaml%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Ocaml" -e /usr/bin/ocaml
++ "&Python (v2.6)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Python (v2.6)" -e /usr/bin/python2.6
++ "Python (v2.&7)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Python (v2.7)" -e /usr/bin/python2.7
++ "Python (v3.3)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Python (v3.3)" -e /usr/bin/python3.3
++ "&Qt4 Assistant%menu/programs.xpm%" Exec    /usr/lib/*/qt4/bin/assistant
++ "Qt4 &Linguist%menu/programs.xpm%" Exec    /usr/lib/*/qt4/bin/linguist
++ "&Ruby (irb1.9.1)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Ruby (irb1.9.1)" -e /usr/bin/irb1.9.1
++ "&Sun Java 6 Web Start%menu/programs.xpm%" Exec    /usr/lib/jvm/java-6-sun-1.6.0.26/bin/javaws -viewer
++ "&Tclsh8.4%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Tclsh8.4" -e /usr/bin/tclsh8.4
++ "Tclsh8.&5%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Tclsh8.5" -e /usr/bin/tclsh8.5
++ "Tclsh8.&6%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Tclsh8.6" -e /usr/bin/tclsh8.6
++ "TkWish8.&4%menu/programs.xpm%" Exec    x-terminal-emulator -e /usr/bin/wish8.4
++ "T&kWish8.5%menu/programs.xpm%" Exec    x-terminal-emulator -e /usr/bin/wish8.5
++ "TkWish&8.6%menu/programs.xpm%" Exec    x-terminal-emulator -e /usr/bin/wish8.6
++ "&UniversalIndentgui%menu/programs.xpm%" Exec    /usr/bin/universalindentgui
++ "&Valkyrie - valgrind memckeck GUI frontent%menu/programs.xpm%" Exec    /usr/bin/valkyrie
++ "v&isual-regexp%menu/programs.xpm%" Exec    /usr/bin/visual-regexp
++ "&xcolmix%menu/programs.xpm%" Exec    /usr/bin/xcolmix
++ "x&colors%menu/programs.xpm%" Exec    /usr/bin/xcolors
+
+DestroyMenu "/DebianWmIcons/Applications/Project_Management"
+AddToMenu "/DebianWmIcons/Applications/Project_Management" "Project Management" Title
++ "&Alarm Clock%menu/programs.xpm%" Exec    /usr/bin/alarmclock
++ "&GTimer%menu/programs.xpm%" Exec    /usr/bin/gtimer
++ "&wmwork%menu/programs.xpm%" Exec    /usr/bin/wmwork
+
+DestroyMenu "/DebianWmIcons/Applications/Science/Astronomy"
+AddToMenu "/DebianWmIcons/Applications/Science/Astronomy" "Astronomy" Title
++ "&Celestia (GLUT)%menu/programs.xpm%" Exec    /usr/bin/celestia-glut
++ "Celestia (&Gnome)%menu/programs.xpm%" Exec    /usr/bin/celestia-gnome
++ "&xplanet%menu/programs.xpm%" Exec    /usr/bin/xplanet
+
+DestroyMenu "/DebianWmIcons/Applications/Science/Biology"
+AddToMenu "/DebianWmIcons/Applications/Science/Biology" "Biology" Title
++ "Rasmol (&classic version)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Rasmol (classic version)" -e /usr/bin/rasmol-classic
++ "&Rasmol (GTK version)%menu/programs.xpm%" Exec    /usr/bin/rasmol-gtk
+
+DestroyMenu "/DebianWmIcons/Applications/Science/Chemistry"
+AddToMenu "/DebianWmIcons/Applications/Science/Chemistry" "Chemistry" Title
++ "&gElemental%menu/programs.xpm%" Exec    gelemental
+
+DestroyMenu "/DebianWmIcons/Applications/Science/Data_Analysis"
+AddToMenu "/DebianWmIcons/Applications/Science/Data_Analysis" "Data Analysis" Title
++ "&GNU R%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "GNU R" -e /usr/bin/R
++ "&Imview%menu/programs.xpm%" Exec    /usr/bin/imview
++ "&YGraph%menu/programs.xpm%" Exec    /usr/bin/ygraph
+
+DestroyMenu "/DebianWmIcons/Applications/Science/Engineering"
+AddToMenu "/DebianWmIcons/Applications/Science/Engineering" "Engineering" Title
++ "&Dia%menu/programs.xpm%" Exec    /usr/bin/dia
+
+DestroyMenu "/DebianWmIcons/Applications/Science/Geoscience"
+AddToMenu "/DebianWmIcons/Applications/Science/Geoscience" "Geoscience" Title
++ "&GPSMan%menu/programs.xpm%" Exec    /usr/bin/gpsman
++ "&MkgmapGui%menu/programs.xpm%" Exec    /usr/bin/mkgmapgui
++ "&SunClock%menu/programs.xpm%" Exec    /usr/bin/sunclock
++ "&wmMoonClock%menu/programs.xpm%" Exec    /usr/bin/wmMoonClock
++ "wmS&un%menu/programs.xpm%" Exec    /usr/bin/wmsun
++ "wmw&eather%menu/programs.xpm%" Exec    /usr/bin/wmweather
++ "wmwe&ather+%menu/programs.xpm%" Exec    /usr/bin/wmweather+
+
+DestroyMenu "/DebianWmIcons/Applications/Science/Mathematics"
+AddToMenu "/DebianWmIcons/Applications/Science/Mathematics" "Mathematics" Title
++ "&Bc%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Bc" -e /usr/bin/bc
++ "&Calc%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Calc" -e /usr/bin/calc
++ "calcoo%menu/programs.xpm%" Exec    /usr/bin/calcoo
++ "Convert&All%menu/programs.xpm%" Exec    /usr/bin/convertall
++ "&Dc%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Dc" -e /usr/bin/dc
++ "galculato&r%menu/programs.xpm%" Exec    /usr/bin/galculator
++ "&Geomview%menu/programs.xpm%" Exec    /usr/bin/geomview
++ "G&nuplot%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Gnuplot" -e /usr/bin/gnuplot
++ "Graph&Thing%menu/programs.xpm%" Exec    /usr/bin/graphthing
++ "&LibreOffice Math%menu/programs.xpm%" Exec    /usr/bin/libreoffice --math
++ "&Octave%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Octave" -e /usr/bin/octave
++ "&SpeedCrunch%menu/programs.xpm%" Exec    /usr/bin/speedcrunch
++ "Sto&pwatch%menu/programs.xpm%" Exec    stopwatch
++ "&Units%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Units" -e units
++ "&Wcalc%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Wcalc" -e /usr/bin/wcalc
++ "&Xabacus%menu/programs.xpm%" Exec    /usr/games/xabacus
++ "Xcalc%menu/programs.xpm%" Exec    xcalc
+
+DestroyMenu "/DebianWmIcons/Applications/Science/Medicine"
+AddToMenu "/DebianWmIcons/Applications/Science/Medicine" "Medicine" Title
++ "&NUT Nutrition%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "NUT Nutrition" -e /usr/bin/nut-nutrition
+
+DestroyMenu "/DebianWmIcons/Applications/Science"
+AddToMenu "/DebianWmIcons/Applications/Science" "Science" Title
++ "&Astronomy%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Science/Astronomy"
++ "&Biology%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Science/Biology"
++ "&Chemistry%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Science/Chemistry"
++ "&Data Analysis%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Science/Data_Analysis"
++ "&Engineering%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Science/Engineering"
++ "&Geoscience%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Science/Geoscience"
++ "&Mathematics%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Science/Mathematics"
++ "Med&icine%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Science/Medicine"
+
+DestroyMenu "/DebianWmIcons/Applications/Shells"
+AddToMenu "/DebianWmIcons/Applications/Shells" "Shells" Title
++ "&Bash%menu/file.xpm%" Exec /usr/bin/X11/xterm -T "Bash" -e /bin/bash --login
++ "&Dash%menu/file.xpm%" Exec /usr/bin/X11/xterm -T "Dash" -e /bin/dash -i
++ "&Sh%menu/file.xpm%" Exec /usr/bin/X11/xterm -T "Sh" -e /bin/sh --login
++ "&Zsh%menu/file.xpm%" Exec /usr/bin/X11/xterm -T "Zsh" -e /bin/zsh5
+
+DestroyMenu "/DebianWmIcons/Applications/Sound"
+AddToMenu "/DebianWmIcons/Applications/Sound" "Sound" Title
++ "&Aconnectgui%menu/programs.xpm%" Exec    /usr/bin/aconnectgui
++ "A&lsamixergui%menu/programs.xpm%" Exec    /usr/bin/alsamixergui
++ "Amarok%menu/programs.xpm%" Exec    /usr/bin/amarok
++ "A&udacious%menu/programs.xpm%" Exec    /usr/bin/audacious
++ "&cplay%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "cplay" -e /usr/bin/cplay
++ "eas&ytag%menu/programs.xpm%" Exec    /usr/bin/easytag
++ "&Echomixer%menu/programs.xpm%" Exec    /usr/bin/echomixer
++ "E&nvy24 control%menu/programs.xpm%" Exec    /usr/bin/envy24control
++ "&GNOME ALSA Mixer%menu/programs.xpm%" Exec    /usr/bin/gnome-alsamixer
++ "&HDAJackRetask%menu/programs.xpm%" Exec    /usr/bin/hdajackretask
++ "H&DSPConf%menu/programs.xpm%" Exec    /usr/bin/hdspconf
++ "HDS&PMixer%menu/programs.xpm%" Exec    /usr/bin/hdspmixer
++ "&id3ren%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "id3ren" -e /usr/bin/id3ren
++ "mh&WaveEdit%menu/programs.xpm%" Exec    /usr/bin/mhwaveedit
++ "Mil&kyTracker%menu/programs.xpm%" Exec    /usr/bin/milkytracker
++ "&MP3Diags%menu/programs.xpm%" Exec    /usr/bin/mp3diags
++ "&Open Cubic Player (text)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Open Cubic Player (text)" -e /usr/bin/ocp
++ "rexima%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "rexima" -e /usr/bin/rexima
++ "&Rmedigicontrol%menu/programs.xpm%" Exec    /usr/bin/rmedigicontrol
++ "&Schism Tracker%menu/programs.xpm%" Exec    /usr/bin/schism
++ "&TiMidity++%menu/programs.xpm%" Exec    timidity -ia
++ "&xmix%menu/programs.xpm%" Exec    /usr/bin/xmix
+
+DestroyMenu "/DebianWmIcons/Applications/System/Administration"
+AddToMenu "/DebianWmIcons/Applications/System/Administration" "Administration" Title
++ "&About Myself%menu/programs.xpm%" Exec    /usr/bin/userinfo
++ "&Configure Debian%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Configure Debian" -e /usr/bin/su-to-root -p root -c /usr/sbin/configure-debian --frontend=##CHECK##
++ "Co&nfigure network card%menu/programs.xpm%" Exec    xnetcardconfig
++ "&Debian Task selector%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Debian Task selector" -e su-to-root -c tasksel
++ "Disk Management%menu/programs.xpm%" Exec    /usr/bin/usermount
++ "&Editres%menu/programs.xpm%" Exec    editres
++ "&fetchmailconf%menu/programs.xpm%" Exec    /usr/bin/fetchmailconf
++ "&GConf Cleaner%menu/programs.xpm%" Exec    /usr/bin/gconf-cleaner
++ "Gnome Control Center%menu/programs.xpm%" Exec    /usr/bin/gnome-control-center
++ "GNOME partition editor%menu/programs.xpm%" Exec    su-to-root -X -c /usr/sbin/gparted
++ "gtklp%menu/programs.xpm%" Exec    /usr/bin/gtklp
++ "gtklpq%menu/programs.xpm%" Exec    /usr/bin/gtklpq
++ "&idesk%menu/programs.xpm%" Exec    /usr/bin/idesk
++ "&keyTouch editor%menu/programs.xpm%" Exec    /usr/bin/su-to-root -X -c /usr/sbin/keytouch-editor
++ "&Mail Notification Preferences%menu/programs.xpm%" Exec    /usr/bin/mail-notification -p
++ "menulibre%menu/programs.xpm%" Exec    menulibre
++ "&ODBCCreateDataSourceQ4%menu/programs.xpm%" Exec    ODBCCreateDataSourceQ4
++ "OD&BCManageDataSourcesQ4%menu/programs.xpm%" Exec    ODBCManageDataSourcesQ4
++ "Orphaner (all)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Orphaner (all)" -e su-to-root -c '/usr/sbin/orphaner -a'
++ "Orphaner - editkeep%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Orphaner - editkeep" -e su-to-root -c '/usr/sbin/editkeep'
++ "Orphaner (&libs)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Orphaner (libs)" -e su-to-root -c /usr/sbin/orphaner
++ "&Password%menu/programs.xpm%" Exec    /usr/bin/userpasswd
++ "Property Editor%menu/programs.xpm%" Exec    /usr/bin/props
++ "&QtConfig%menu/programs.xpm%" Exec    /usr/lib/*/qt4/bin/qtconfig
++ "Q&uickSynergy%menu/programs.xpm%" Exec    /usr/bin/quicksynergy
++ "&Reportbug%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Reportbug" -e /usr/bin/reportbug --exit-prompt
++ "Reportbug (GTK+)%menu/programs.xpm%" Exec    /usr/bin/reportbug --exit-prompt --ui gtk2
++ "stalonetray%menu/programs.xpm%" Exec    /usr/bin/stalonetray
++ "&Sun Java 6 Plugin Control Panel%menu/programs.xpm%" Exec    /usr/lib/jvm/java-6-sun-1.6.0.26/bin/ControlPanel
++ "S&ystem Information%menu/programs.xpm%" Exec    /usr/bin/hardinfo
++ "&TeXconfig%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "TeXconfig" -e /usr/bin/texconfig
++ "wininfo%menu/programs.xpm%" Exec    /usr/bin/wininfo
++ "wmcalclock%menu/programs.xpm%" Exec    /usr/bin/wmCalClock
++ "&Wmclock%menu/programs.xpm%" Exec    /usr/bin/wmclock
++ "wms&hutdown%menu/programs.xpm%" Exec    /usr/bin/wmshutdown
++ "&XBindKeys-config%menu/programs.xpm%" Exec    /usr/bin/xbindkeys-config
++ "Xclipboard%menu/programs.xpm%" Exec    xclipboard
++ "Xcolorsel%menu/programs.xpm%" Exec    /usr/bin/xcolorsel
++ "Xfontsel%menu/programs.xpm%" Exec    xfontsel
++ "xkbind%menu/programs.xpm%" Exec    /usr/bin/xkbind
++ "xkeycaps%menu/programs.xpm%" Exec    /usr/bin/xkeycaps
++ "Xkill%menu/programs.xpm%" Exec    xkill
++ "Xrefresh%menu/programs.xpm%" Exec    xrefresh
+
+DestroyMenu "/DebianWmIcons/Applications/System/Hardware"
+AddToMenu "/DebianWmIcons/Applications/System/Hardware" "Hardware" Title
++ "&ARandR%menu/programs.xpm%" Exec    arandr
++ "&Driconf%menu/programs.xpm%" Exec    /usr/bin/driconf
++ "&gscanbus%menu/programs.xpm%" Exec    /usr/bin/gscanbus
++ "&NVIDIA Settings%menu/programs.xpm%" Exec    /usr/lib/nvidia/current/nvidia-settings
++ "&USB View%menu/programs.xpm%" Exec    /usr/bin/usbview
++ "&wmxres%menu/programs.xpm%" Exec    /usr/bin/wmxres
++ "&X Printing Panel%menu/programs.xpm%" Exec    /usr/bin/xpp
++ "X&vidtune%menu/programs.xpm%" Exec    xvidtune
+
+DestroyMenu "/DebianWmIcons/Applications/System/Monitoring"
+AddToMenu "/DebianWmIcons/Applications/System/Monitoring" "Monitoring" Title
++ "&Asmon%menu/programs.xpm%" Exec    /usr/bin/asmon
++ "&bwm-ng%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "bwm-ng" -e /usr/bin/bwm-ng
++ "&GKrellM%menu/programs.xpm%" Exec    /usr/bin/gkrellm
++ "G&NOME system monitor%menu/programs.xpm%" Exec    /usr/bin/gnome-system-monitor
++ "&htop%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "htop" -e /usr/bin/htop
++ "&iptstate%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "iptstate" -e /usr/bin/su-to-root -c /usr/sbin/iptstate
++ "&Loadmeter%menu/programs.xpm%" Exec    /usr/bin/loadmeter
++ "lshw-gtk%menu/programs.xpm%" Exec    lshw-gtk
++ "&osdsh%menu/programs.xpm%" Exec    /usr/bin/osdsh
++ "osdshconfig%menu/programs.xpm%" Exec    /usr/bin/osdshconfig
++ "&Procmeter%menu/programs.xpm%" Exec    procmeter3
++ "Pstree%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Pstree" -e /usr/bin/pstree.x11
++ "pyBootchartG&UI%menu/programs.xpm%" Exec    /usr/bin/pybootchartgui
++ "&seaudit%menu/programs.xpm%" Exec    /usr/sbin/seaudit
++ "s&ysinfo%menu/programs.xpm%" Exec    /usr/bin/sysinfo
++ "&Top%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Top" -e /usr/bin/top
++ "wmclockmon%menu/programs.xpm%" Exec    /usr/bin/wmclockmon
++ "wmCPU%menu/programs.xpm%" Exec    /usr/bin/wmcpu
++ "wmcpuload%menu/programs.xpm%" Exec    /usr/bin/wmcpuload
++ "wm&Date%menu/programs.xpm%" Exec    /usr/bin/wmdate
++ "wmdis&kmon%menu/programs.xpm%" Exec    /usr/bin/wmdiskmon
++ "&WMmon%menu/programs.xpm%" Exec    /usr/bin/wmmon
++ "W&Mtime%menu/programs.xpm%" Exec    /usr/bin/wmtime
++ "X&console%menu/programs.xpm%" Exec    xconsole -file /dev/xconsole
++ "X&ev%menu/programs.xpm%" Exec    x-terminal-emulator -e xev
++ "Xload%menu/programs.xpm%" Exec    xload
++ "Xos&view%menu/programs.xpm%" Exec    /usr/bin/xosview
++ "x&restop%menu/programs.xpm%" Exec    x-terminal-emulator -e /usr/bin/xrestop
++ "&XSensors%menu/programs.xpm%" Exec    /usr/bin/xsensors
++ "XSysIn&fo%menu/programs.xpm%" Exec    /usr/bin/xsysinfo
++ "xwatch%menu/programs.xpm%" Exec    /usr/bin/xwatch /var/log/[a-zA-Z0-9]*.log /var/log/debug /var/log/messages /var/log/smb /var/log/xttpd /var/log/wu-ftpd/xferlog /var/log/apache/[a-zA-Z0-9]*.log
+
+DestroyMenu "/DebianWmIcons/Applications/System/Package_Management"
+AddToMenu "/DebianWmIcons/Applications/System/Package_Management" "Package Management" Title
++ "&Aptitude Package Manager (text)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Aptitude Package Manager (text)" -e /usr/bin/aptitude-curses
++ "&Synaptic Package Manager%menu/programs.xpm%" Exec    x-terminal-emulator -e synaptic-pkexec
+
+DestroyMenu "/DebianWmIcons/Applications/System/Security"
+AddToMenu "/DebianWmIcons/Applications/System/Security" "Security" Title
++ "&apol%menu/programs.xpm%" Exec    /usr/bin/apol
++ "&GNU Privacy Assistant%menu/programs.xpm%" Exec    /usr/bin/gpa
++ "s&ediffx%menu/programs.xpm%" Exec    /usr/bin/sediffx
++ "&Sun Java 6 Policy Tool%menu/programs.xpm%" Exec    /usr/lib/jvm/java-6-sun-1.6.0.26/bin/policytool
++ "&Tiger UNIX security tool%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Tiger UNIX security tool" -e su-to-root -c '/usr/sbin/tiger'
++ "Tiny&CA%menu/programs.xpm%" Exec    /usr/bin/tinyca2
++ "&XCA%menu/programs.xpm%" Exec    /usr/bin/xca
+
+DestroyMenu "/DebianWmIcons/Applications/System"
+AddToMenu "/DebianWmIcons/Applications/System" "System" Title
++ "&Administration%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/System/Administration"
++ "&Hardware%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/System/Hardware"
++ "&Monitoring%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/System/Monitoring"
++ "&Package Management%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/System/Package_Management"
++ "P&erlPanel%menu/programs.xpm%" Exec    /usr/bin/perlpanel
++ "&Security%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/System/Security"
++ "&wmwave%menu/programs.xpm%" Exec    /usr/bin/wmwave
+
+DestroyMenu "/DebianWmIcons/Applications/Terminal_Emulators"
+AddToMenu "/DebianWmIcons/Applications/Terminal_Emulators" "Terminal Emulators" Title
++ "&Aterm%menu/programs.xpm%" Exec    /usr/bin/aterm-xterm
++ "&CAterm (Big5)%menu/programs.xpm%" Exec    /usr/bin/caterm
++ "c&lusterssh%menu/programs.xpm%" Exec    /usr/bin/cssh
++ "C&ommand Tool%menu/programs.xpm%" Exec    /usr/bin/cmdtool
++ "CRxvt (&Big5) %menu/programs.xpm%" Exec    /usr/bin/crxvt-big5 -im xcin -pt Root
++ "CRxvt (GB)%menu/programs.xpm%" Exec    /usr/bin/crxvt-gb -im xcin-zh_CN.GB2312 -pt Root
++ "&Eterm%menu/programs.xpm%" Exec    /usr/bin/Eterm
++ "&GAterm%menu/programs.xpm%" Exec    /usr/bin/gaterm
++ "G&nome Terminal%menu/programs.xpm%" Exec    /usr/bin/gnome-terminal
++ "GRxvt%menu/programs.xpm%" Exec    /usr/bin/grxvt
++ "&KAterm%menu/programs.xpm%" Exec    /usr/bin/katerm
++ "KRxvt%menu/programs.xpm%" Exec    /usr/bin/krxvt
++ "&Multilingual Terminal (client)%menu/programs.xpm%" Exec    /usr/bin/mlclient
++ "Multilingual Terminal (&daemon)%menu/programs.xpm%" Exec    /usr/bin/mlterm -j=genuine
++ "Mult&ilingual Terminal (normal)%menu/programs.xpm%" Exec    /usr/bin/mlterm
++ "&ROXTerm%menu/programs.xpm%" Exec    /usr/bin/roxterm
++ "Rxvt%menu/programs.xpm%" Exec    /usr/bin/rxvt-xterm
++ "Rxvt-&Unicode%menu/programs.xpm%" Exec    urxvt
++ "Rxvt-Unicode (Black, X&ft)%menu/programs.xpm%" Exec    urxvt -fn "xft:Mono" -rv
++ "&Shell Tool%menu/programs.xpm%" Exec    /usr/bin/shelltool
++ "&TAterm%menu/programs.xpm%" Exec    /usr/bin/taterm
++ "XTerm%menu/programs.xpm%" Exec    xterm
++ "&X-Terminal as root (GKsu)%menu/programs.xpm%" Exec    /usr/bin/gksu -u root /usr/bin/x-terminal-emulator
++ "XTerm (Unicode)%menu/programs.xpm%" Exec    uxterm
++ "X&vt%menu/programs.xpm%" Exec    /usr/bin/xvt -ls
+
+DestroyMenu "/DebianWmIcons/Applications/Text"
+AddToMenu "/DebianWmIcons/Applications/Text" "Text" Title
++ "&AiksaurusGTK%menu/programs.xpm%" Exec    /usr/bin/gaiksaurus
++ "c2&bciter%menu/programs.xpm%" Exec    /usr/bin/c2bciter
++ "c2b&import%menu/programs.xpm%" Exec    /usr/bin/c2bimport
++ "cb&2bib%menu/programs.xpm%" Exec    /usr/bin/cb2bib
++ "&Cd-circleprint%menu/programs.xpm%" Exec    /usr/bin/cd-circleprint
++ "&Dictionary OpenDict%menu/programs.xpm%" Exec    /usr/bin/opendict
++ "&Fortune%menu/programs.xpm%" Exec    sh -c 'while /usr/games/fortune | col -x | xmessage -center -buttons OK:1,Another:0 -default OK -file - ; do :; done'
++ "&GNOME Dictionary%menu/programs.xpm%" Exec    /usr/bin/gnome-dictionary
++ "&HTMLDoc%menu/programs.xpm%" Exec    /usr/bin/htmldoc
++ "&Page-crunch%menu/programs.xpm%" Exec    /usr/bin/page-crunch
++ "P&oedit%menu/programs.xpm%" Exec    /usr/bin/poeditor
++ "txt2&regex%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "txt2regex" -e /usr/bin/txt2regex
++ "txt2tag&s%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "txt2tags" -e /usr/bin/txt2tags
++ "&Txt Reader%menu/programs.xpm%" Exec    txtreader
++ "&Xhtml2ps%menu/programs.xpm%" Exec    /usr/bin/xhtml2ps
+
+DestroyMenu "/DebianWmIcons/Applications/Tools"
+AddToMenu "/DebianWmIcons/Applications/Tools" "Tools" Title
++ "&ccal%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "ccal" -e /usr/bin/ccal -p
++ "&Pilot Manager%menu/programs.xpm%" Exec    /usr/bin/PilotManager
++ "&wmPinboard%menu/programs.xpm%" Exec    /usr/bin/wmpinboard
+
+DestroyMenu "/DebianWmIcons/Applications/Video"
+AddToMenu "/DebianWmIcons/Applications/Video" "Video" Title
++ "&guvcview%menu/programs.xpm%" Exec    /usr/bin/guvcview
++ "&luvcview%menu/programs.xpm%" Exec    /usr/bin/luvcview
++ "&minitube%menu/programs.xpm%" Exec    /usr/bin/minitube
++ "&VLC media player%menu/programs.xpm%" Exec    /usr/bin/qvlc
++ "&xine Media Player%menu/programs.xpm%" Exec    /usr/bin/xine
+
+DestroyMenu "/DebianWmIcons/Applications/Viewers"
+AddToMenu "/DebianWmIcons/Applications/Viewers" "Viewers" Title
++ "&DiffPDF%menu/programs.xpm%" Exec    diffpdf
++ "d&vilx%menu/programs.xpm%" Exec    /usr/bin/dvilx
++ "&Evince%menu/programs.xpm%" Exec    /usr/bin/evince
++ "Eye &of GNOME%menu/programs.xpm%" Exec    /usr/bin/eog
++ "Graphics&Magick%menu/programs.xpm%" Exec    /usr/bin/gm display logo:
++ "gThumb &Image Viewer%menu/programs.xpm%" Exec    /usr/bin/gthumb
++ "&GV%menu/programs.xpm%" Exec    /usr/bin/gv
++ "&qPDFview%menu/programs.xpm%" Exec    qpdfview
++ "&Wordview%menu/programs.xpm%" Exec    /usr/bin/wordview
++ "Xdi&tview%menu/programs.xpm%" Exec    xditview
++ "&XDvi%menu/programs.xpm%" Exec    /usr/bin/xdvi
++ "X&Less%menu/programs.xpm%" Exec    xless /usr/share/doc/xless/xless.help
++ "Xmotd%menu/programs.xpm%" Exec    xmotd /etc/motd
+
+DestroyMenu "/DebianWmIcons/Applications"
+AddToMenu "/DebianWmIcons/Applications" "Applications" Title
++ "&Accessibility%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Accessibility"
++ "A&ccessories%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Accessories"
++ "&Data Management%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Data_Management"
++ "&Editors%menu/editor.xpm%" PopUp "/DebianWmIcons/Applications/Editors"
++ "Ed&ucation%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Education"
++ "E&mulators%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Emulators"
++ "&File Management%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/File_Management"
++ "&Graphics%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Graphics"
++ "&Network%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Network"
++ "Normal applications%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Normal_applications"
++ "&Office%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Office"
++ "&Programming%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Programming"
++ "P&roject Management%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Project_Management"
++ "&Science%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Science"
++ "S&hells%menu/file.xpm%" PopUp "/DebianWmIcons/Applications/Shells"
++ "Sound%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Sound"
++ "S&ystem%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/System"
++ "&Terminal Emulators%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Terminal_Emulators"
++ "Te&xt%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Text"
++ "Too&ls%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Tools"
++ "&Video%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Video"
++ "V&iewers%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications/Viewers"
+
+DestroyMenu "/DebianWmIcons/Games/Action"
+AddToMenu "/DebianWmIcons/Games/Action" "Action" Title
++ "&Briquolo%menu/unknown.xpm%" Exec    /usr/games/briquolo
++ "&etracer%menu/unknown.xpm%" Exec    /usr/games/etracer
++ "&Galaga%menu/unknown.xpm%" Exec    xgalaga
++ "Galaga:&Hyperspace%menu/unknown.xpm%" Exec    xgalaga-hyperspace
++ "Geki &2%menu/unknown.xpm%" Exec    /usr/games/geki2
++ "glTron%menu/unknown.xpm%" Exec    /usr/games/gltron
++ "&nInvaders%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "nInvaders" -e /usr/games/nInvaders
++ "&OpenArena%menu/unknown.xpm%" Exec    /usr/games/openarena
++ "Open&City%menu/unknown.xpm%" Exec    /usr/games/opencity
++ "&Penguin Command%menu/unknown.xpm%" Exec    /usr/games/penguin-command
++ "pong2%menu/unknown.xpm%" Exec    /usr/games/pong2
++ "PrBoom+%menu/unknown.xpm%" Exec    /usr/games/prboom-plus
++ "&Robots%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Robots" -e robots
++ "&Snake%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Snake" -e sh -c 'snake;echo PRESS ENTER;read line'
++ "Sna&ke4%menu/unknown.xpm%" Exec    /usr/games/snake4
++ "Space &Aryarya%menu/unknown.xpm%" Exec    /usr/games/spacearyarya
++ "Star Trek%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Star Trek" -e trek
++ "&Typespeed%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Typespeed" -e /usr/games/typespeed
++ "&Worm%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Worm" -e sh -c 'worm;echo PRESS ENTER;read line'
++ "&XBill%menu/unknown.xpm%" Exec    /usr/games/xbill
++ "XBlast-TNT%menu/unknown.xpm%" Exec    /usr/games/xblast-tnt
++ "XBlast-TNT (&mini)%menu/unknown.xpm%" Exec    /usr/games/xblast-tnt-mini
++ "XBlast-TNT (SMP&F)%menu/unknown.xpm%" Exec    /usr/games/xblast-tnt-smpf
++ "XE&vil%menu/unknown.xpm%" Exec    /usr/games/xevil
++ "XInvaders &3D%menu/unknown.xpm%" Exec    /usr/games/xinv3d
++ "x&letters%menu/unknown.xpm%" Exec    /usr/games/xletters
++ "xletters-&duel%menu/unknown.xpm%" Exec    /usr/games/xletters-duel
++ "Xon&ix%menu/unknown.xpm%" Exec    /usr/games/xonix
++ "Xracer racing game%menu/unknown.xpm%" Exec    /usr/games/xracer
+
+DestroyMenu "/DebianWmIcons/Games/Adventure"
+AddToMenu "/DebianWmIcons/Games/Adventure" "Adventure" Title
++ "&Adventure%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Adventure" -e adventure
++ "A&ngband%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Angband" -e /usr/games/angband
++ "&Battlestar%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Battlestar" -e sh -c 'battlestar;echo PRESS ENTER;read line'
++ "&Hack%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Hack" -e hack
++ "Hunt the &Wumpus%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Hunt the Wumpus" -e wump
++ "&Moria%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Moria" -e /usr/games/moria
++ "&Phantasia%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Phantasia" -e phantasia
++ "&Tome%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Tome" -e /usr/games/tome
++ "&X NetHack%menu/unknown.xpm%" Exec    /usr/games/xnethack
++ "&Zangband%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Zangband" -e /usr/games/zangband
+
+DestroyMenu "/DebianWmIcons/Games/Blocks"
+AddToMenu "/DebianWmIcons/Games/Blocks" "Blocks" Title
++ "&Bsd Tetris%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Bsd Tetris" -e sh -c 'tetris-bsd;echo;echo PRESS ENTER;read line'
++ "lb&reakout2%menu/unknown.xpm%" Exec    /usr/games/lbreakout2
++ "&LTris%menu/unknown.xpm%" Exec    /usr/games/ltris
++ "&Netris%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Netris" -e /usr/games/netris
++ "&Stax%menu/unknown.xpm%" Exec    /usr/games/stax
++ "&XJump%menu/unknown.xpm%" Exec    /usr/games/xjump
++ "X&Welltris%menu/unknown.xpm%" Exec    /usr/games/xwelltris
+
+DestroyMenu "/DebianWmIcons/Games/Board"
+AddToMenu "/DebianWmIcons/Games/Board" "Board" Title
++ "&3D Chess%menu/unknown.xpm%" Exec    /usr/games/3Dc
++ "&Backgammon%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Backgammon" -e backgammon -pb
++ "B&rutal Chess%menu/unknown.xpm%" Exec    /usr/games/brutalchess
++ "&Chess Net%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Chess Net" -e /usr/games/xboard -ics -icshost chess.net
++ "&Default%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Default" -e /usr/games/xboard -ics
++ "&eboard%menu/unknown.xpm%" Exec    /usr/games/eboard
++ "&Free I.C.S.%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Free I.C.S." -e /usr/games/xboard -ics -icshost freechess.org
++ "GnuChess%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "GnuChess" -e /usr/games/gnuchess
++ "GNUDo&Q%menu/unknown.xpm%" Exec    /usr/games/GNUDoQ
++ "&GNU Go%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "GNU Go" -e /usr/games/gnugo
++ "G&omoku%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Gomoku" -e gomoku
++ "&Internet Chess Club%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Internet Chess Club" -e /usr/games/xboard -ics -icshost chessclub.com
++ "&Monopoly%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Monopoly" -e monop
++ "&NetToe%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "NetToe" -e /usr/games/nettoe
++ "&Penguin Taipei%menu/unknown.xpm%" Exec    /usr/games/ace-taipei
++ "Penguin &Taipei-Editor%menu/unknown.xpm%" Exec    /usr/games/ace-taipedit
++ "Pente%menu/unknown.xpm%" Exec    /usr/games/pente
++ "P&halanx%menu/unknown.xpm%" Exec    /usr/games/xphalanx
++ "&uliGo%menu/unknown.xpm%" Exec    /usr/games/uligo
++ "&XBoard%menu/unknown.xpm%" Exec    /usr/games/xboard -xncp
++ "XBo&ard (passive chessboard)%menu/unknown.xpm%" Exec    /usr/games/xboard -ncp
++ "Xfri&sk%menu/unknown.xpm%" Exec    /usr/games/risk
++ "Xfrisk &local-client-only%menu/unknown.xpm%" Exec    /usr/games/xfrisk localhost
++ "X&vier%menu/unknown.xpm%" Exec    /usr/games/xvier
+
+DestroyMenu "/DebianWmIcons/Games/Card"
+AddToMenu "/DebianWmIcons/Games/Card" "Card" Title
++ "&Canfield%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Canfield" -e canfield
++ "C&ribbage%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Cribbage" -e cribbage
++ "&Gnome Solitaire Games%menu/unknown.xpm%" Exec    /usr/games/sol
++ "Go &Fish%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Go Fish" -e sh -c 'go-fish;echo;echo PRESS ENTER;read line'
++ "&Mah-Jong%menu/unknown.xpm%" Exec    /usr/games/xmj
++ "Mille &Bornes%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Mille Bornes" -e mille
++ "&Penguin Canfield%menu/unknown.xpm%" Exec    /usr/games/ace-canfield
++ "P&enguin Freecell%menu/unknown.xpm%" Exec    /usr/games/ace-freecell
++ "Pe&nguin Golf%menu/unknown.xpm%" Exec    /usr/games/ace-golf
++ "Penguin &Solitaire%menu/unknown.xpm%" Exec    /usr/games/ace-solitaire
++ "Peng&uin Spider%menu/unknown.xpm%" Exec    /usr/games/ace-spider
++ "Penguin &Thornq%menu/unknown.xpm%" Exec    /usr/games/ace-thornq
++ "PokerT&H (Texas Hold'em)%menu/unknown.xpm%" Exec    /usr/games/pokerth
++ "xm&ahjongg%menu/unknown.xpm%" Exec    /usr/games/xmahjongg
++ "Xm&ille%menu/unknown.xpm%" Exec    /usr/games/xmille
++ "&X Solitaire%menu/unknown.xpm%" Exec    /usr/games/xsol
+
+DestroyMenu "/DebianWmIcons/Games/Puzzles"
+AddToMenu "/DebianWmIcons/Games/Puzzles" "Puzzles" Title
++ "&Boggle%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Boggle" -e boggle
++ "&Freesweep%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Freesweep" -e /usr/games/freesweep
++ "&GFingerPoken%menu/unknown.xpm%" Exec    /usr/games/gfpoken
++ "G&NUbik%menu/unknown.xpm%" Exec    /usr/games/gnubik
++ "&Hangman%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Hangman" -e hangman
++ "&MirrorMagic%menu/unknown.xpm%" Exec    /usr/games/mirrormagic
++ "&Penguin Mastermind%menu/unknown.xpm%" Exec    /usr/games/ace-mastermind
++ "P&enguin Merlin%menu/unknown.xpm%" Exec    /usr/games/ace-merlin
++ "Peng&uin Minesweeper%menu/unknown.xpm%" Exec    /usr/games/ace-minesweeper
++ "Penguin Pegged%menu/unknown.xpm%" Exec    /usr/games/ace-pegged
++ "p&ipenightdreams%menu/unknown.xpm%" Exec    /usr/games/pipenightdreams
++ "&XBomb%menu/unknown.xpm%" Exec    /usr/games/xbomb
++ "X&demineur%menu/unknown.xpm%" Exec    /usr/games/xdemineur
+
+DestroyMenu "/DebianWmIcons/Games/Simulation"
+AddToMenu "/DebianWmIcons/Games/Simulation" "Simulation" Title
++ "&BillardGL%menu/unknown.xpm%" Exec    /usr/games/billard-gl
++ "&FooBillard++%menu/unknown.xpm%" Exec    /usr/games/foobillardplus
++ "&Pinball%menu/unknown.xpm%" Exec    /usr/games/pinball
++ "&Xscorch%menu/unknown.xpm%" Exec    xscorch
+
+DestroyMenu "/DebianWmIcons/Games/Strategy"
+AddToMenu "/DebianWmIcons/Games/Strategy" "Strategy" Title
++ "&Air Traffic Controller%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Air Traffic Controller" -e sh -c 'atc ; echo;echo PRESS ENTER;read line'
++ "&Crimson Fields%menu/unknown.xpm%" Exec    /usr/games/crimson
++ "&LinCity NG%menu/unknown.xpm%" Exec    /usr/games/lincity-ng
++ "&Sail%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Sail" -e sail
+
+DestroyMenu "/DebianWmIcons/Games/Tools"
+AddToMenu "/DebianWmIcons/Games/Tools" "Tools" Title
++ "&Rclock%menu/unknown.xpm%" Exec    /usr/bin/rclock
+
+DestroyMenu "/DebianWmIcons/Games/Toys"
+AddToMenu "/DebianWmIcons/Games/Toys" "Toys" Title
++ "&Cairo-Clock%menu/unknown.xpm%" Exec    /usr/bin/cairo-clock
++ "&dclock%menu/unknown.xpm%" Exec    /usr/bin/dclock
++ "&Flip Screen%menu/unknown.xpm%" Exec    /usr/games/xflip
++ "&Linux Logo%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Linux Logo" -e /etc/init.d/linuxlogo display
++ "&Meltdown%menu/unknown.xpm%" Exec    /usr/games/meltdown
++ "&Oclock%menu/unknown.xpm%" Exec    oclock
++ "&Rain%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Rain" -e rain
++ "wmMa&trix%menu/unknown.xpm%" Exec    /usr/bin/wmmatrix
++ "&Worms%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Worms" -e worms
++ "&Xclock (analog)%menu/unknown.xpm%" Exec    xclock -analog
++ "Xcloc&k (digital)%menu/unknown.xpm%" Exec    xclock -digital -update 1
++ "xd&aliclock%menu/unknown.xpm%" Exec    xdaliclock -cycle
++ "X&eyes%menu/unknown.xpm%" Exec    xeyes
++ "xf&ishtank - start%menu/unknown.xpm%" Exec    xfishtank
++ "xfis&htank - stop%menu/unknown.xpm%" Exec    killall -KILL xfishtank
++ "Xlo&go%menu/unknown.xpm%" Exec    xlogo
++ "Xsnow - &Start%menu/unknown.xpm%" Exec    xsnow
++ "Xs&now - Stop%menu/unknown.xpm%" Exec    skill -c xsnow
+
+DestroyMenu "/DebianWmIcons/Games"
+AddToMenu "/DebianWmIcons/Games" "Games" Title
++ "&Action%menu/folder.xpm%" PopUp "/DebianWmIcons/Games/Action"
++ "A&dventure%menu/folder.xpm%" PopUp "/DebianWmIcons/Games/Adventure"
++ "&Blocks%menu/folder.xpm%" PopUp "/DebianWmIcons/Games/Blocks"
++ "B&oard%menu/folder.xpm%" PopUp "/DebianWmIcons/Games/Board"
++ "&Card%menu/folder.xpm%" PopUp "/DebianWmIcons/Games/Card"
++ "&Puzzles%menu/folder.xpm%" PopUp "/DebianWmIcons/Games/Puzzles"
++ "&Simulation%menu/folder.xpm%" PopUp "/DebianWmIcons/Games/Simulation"
++ "St&rategy%menu/folder.xpm%" PopUp "/DebianWmIcons/Games/Strategy"
++ "&Tools%menu/folder.xpm%" PopUp "/DebianWmIcons/Games/Tools"
++ "To&ys%menu/folder.xpm%" PopUp "/DebianWmIcons/Games/Toys"
+
+DestroyMenu "/DebianWmIcons/Help"
+AddToMenu "/DebianWmIcons/Help" "Help" Title
++ "&Debian Reference%menu/unknown.xpm%" Exec    /usr/bin/debian-reference
++ "&Info%menu/unknown.xpm%" Exec /usr/bin/X11/xterm -T "Info" -e info
++ "&TeXdoctk%menu/unknown.xpm%" Exec    /usr/bin/texdoctk
++ "&Xman%menu/unknown.xpm%" Exec    xman
++ "&yelp%menu/unknown.xpm%" Exec    /usr/bin/yelp
+
+DestroyMenu "/DebianWmIcons/Screen/Locking"
+AddToMenu "/DebianWmIcons/Screen/Locking" "Locking" Title
++ "&Lock Screen (XScreenSaver)%menu/unknown.xpm%" Exec    /usr/bin/xscreensaver-command -lock
+
+DestroyMenu "/DebianWmIcons/Screen/Saving"
+AddToMenu "/DebianWmIcons/Screen/Saving" "Saving" Title
++ "&Activate ScreenSaver (Next)%menu/unknown.xpm%" Exec    /usr/bin/xscreensaver-command -next
++ "Activate ScreenSaver (&Previous)%menu/unknown.xpm%" Exec    /usr/bin/xscreensaver-command -prev
++ "A&ctivate ScreenSaver (Random)%menu/unknown.xpm%" Exec    /usr/bin/xscreensaver-command -activate
++ "&Demo Screen Hacks%menu/unknown.xpm%" Exec    /usr/bin/xscreensaver-command -demo
++ "D&isable XScreenSaver%menu/unknown.xpm%" Exec    /usr/bin/xscreensaver-command -exit
++ "&Enable XScreenSaver%menu/unknown.xpm%" Exec    /usr/bin/xscreensaver
++ "&Reinitialize XScreenSaver%menu/unknown.xpm%" Exec    /usr/bin/xscreensaver-command -restart
++ "&ScreenSaver Preferences%menu/unknown.xpm%" Exec    /usr/bin/xscreensaver-command -prefs
++ "&XStarfish%menu/unknown.xpm%" Exec    /usr/bin/xstarfish
+
+DestroyMenu "/DebianWmIcons/Screen"
+AddToMenu "/DebianWmIcons/Screen" "Screen" Title
++ "&Locking%menu/folder.xpm%" PopUp "/DebianWmIcons/Screen/Locking"
++ "&Saving%menu/folder.xpm%" PopUp "/DebianWmIcons/Screen/Saving"
+
+DestroyMenu "/DebianWmIcons/Window_Managers"
+AddToMenu "/DebianWmIcons/Window_Managers" "Window Managers" Title
++ "&FVWM%menu/unknown.xpm%" Restart /usr/bin/fvwm2
++ "&Mwm%menu/unknown.xpm%" Restart /usr/bin/mwm
++ "&Twm%menu/unknown.xpm%" Restart twm
++ "&Window Maker%menu/unknown.xpm%" Restart /usr/bin/wmaker
+
+DestroyMenu "/DebianWmIcons"
+AddToMenu "/DebianWmIcons" "Debian" Title
++ "&Applications%menu/programs.xpm%" PopUp "/DebianWmIcons/Applications"
++ "&Games%menu/folder.xpm%" PopUp "/DebianWmIcons/Games"
++ "&Help%menu/folder.xpm%" PopUp "/DebianWmIcons/Help"
++ "&Screen%menu/folder.xpm%" PopUp "/DebianWmIcons/Screen"
++ "&Window Managers%menu/folder.xpm%" PopUp "/DebianWmIcons/Window_Managers"
+

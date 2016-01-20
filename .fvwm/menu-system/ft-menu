@@ -1,0 +1,1277 @@
+# Automatically generated file. Do not edit (see /usr/share/doc/menu/html/index.html)
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Accessibility"
+AddToMenu "MenuFvwmMenuSystem/Applications/Accessibility" "Accessibility" Title
++ "&The GNOME Onscreen Keyboard%menu/programs.xpm%" Exec    /usr/bin/gok
++ "x&bindkeys%menu/programs.xpm%" Exec    /usr/bin/xbindkeys
++ "&Xmag%menu/programs.xpm%" Exec    xmag
++ "x&vkbd%menu/programs.xpm%" Exec    /usr/bin/xvkbd
++ "X&zoom%menu/programs.xpm%" Exec    xzoom
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Data_Management"
+AddToMenu "MenuFvwmMenuSystem/Applications/Data_Management" "Data Management" Title
++ "&Gtodo%menu/programs.xpm%" Exec    /usr/bin/gtodo
++ "&JabRef%menu/programs.xpm%" Exec    jabref
++ "&LibreOffice Base%menu/programs.xpm%" Exec    /usr/bin/libreoffice --base
++ "&password-gorilla%menu/programs.xpm%" Exec    /usr/bin/password-gorilla
++ "pgAdmin &III%menu/programs.xpm%" Exec    /usr/bin/pgadmin3
++ "pl&an%menu/programs.xpm%" Exec    /usr/bin/plan
++ "&TOra%menu/programs.xpm%" Exec    /usr/bin/tora
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Editors"
+AddToMenu "MenuFvwmMenuSystem/Applications/Editors" "Editors" Title
++ "Emacs &23 (text)%menu/editor.xpm%" Exec /usr/bin/X11/xterm -T "Emacs 23 (text)" -e /usr/bin/emacs23 -nw
++ "&Emacs 23 (X11)%menu/editor.xpm%" Exec    /usr/bin/emacs23
++ "&Gedit%menu/editor.xpm%" Exec    /usr/bin/gedit
++ "&Kile%menu/editor.xpm%" Exec    /usr/bin/kile
++ "&PDFEdit%menu/editor.xpm%" Exec    /usr/bin/pdfedit
++ "&Textedit%menu/editor.xpm%" Exec    /usr/bin/textedit
++ "&Xedit%menu/editor.xpm%" Exec    xedit
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Education"
+AddToMenu "MenuFvwmMenuSystem/Applications/Education" "Education" Title
++ "&Arithmetic Quiz%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Arithmetic Quiz" -e sh -c 'arithmetic;echo PRESS ENTER;read line'
++ "&Xoscope%menu/programs.xpm%" Exec    /usr/bin/xoscope
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Emulators"
+AddToMenu "MenuFvwmMenuSystem/Applications/Emulators" "Emulators" Title
++ "&aqemu%menu/programs.xpm%" Exec    /usr/bin/aqemu
++ "Q&emulator%menu/programs.xpm%" Exec    /usr/bin/qemulator
++ "&Qemu Launcher%menu/programs.xpm%" Exec    /usr/bin/qemu-launcher
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/File_Management"
+AddToMenu "MenuFvwmMenuSystem/Applications/File_Management" "File Management" Title
++ "&Brasero%menu/programs.xpm%" Exec    /usr/bin/brasero
++ "burn%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "burn" -e /usr/bin/burn
++ "&CdCat%menu/programs.xpm%" Exec    /usr/bin/cdcat
++ "cd&w%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "cdw" -e /usr/bin/cdw
++ "&Dvdisaster%menu/programs.xpm%" Exec    /usr/bin/dvdisaster
++ "&gdmap%menu/programs.xpm%" Exec    /usr/bin/gdmap
++ "&isomaster%menu/programs.xpm%" Exec    /usr/bin/isomaster
++ "&K3b%menu/programs.xpm%" Exec    /usr/bin/k3b
++ "&Nautilus%menu/programs.xpm%" Exec    /usr/bin/nautilus
++ "&ROX Filer%menu/programs.xpm%" Exec    /usr/bin/rox
++ "&Unison 2.32.52 (GTK)%menu/programs.xpm%" Exec    /usr/bin/unison-2.32.52-gtk
++ "&X cd-roast%menu/programs.xpm%" Exec    /usr/bin/xcdroast
++ "xdi&skusage%menu/programs.xpm%" Exec    xdiskusage
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Graphics"
+AddToMenu "MenuFvwmMenuSystem/Applications/Graphics" "Graphics" Title
++ "&Blender%menu/programs.xpm%" Exec    /usr/bin/blender
++ "&colorname%menu/programs.xpm%" Exec    /usr/bin/colorname
++ "&dotty%menu/programs.xpm%" Exec    /usr/bin/dotty
++ "&FontForge%menu/programs.xpm%" Exec    /usr/bin/fontforge
++ "F&racplanet%menu/programs.xpm%" Exec    /usr/bin/fracplanet
++ "G&eeqie%menu/programs.xpm%" Exec    /usr/bin/geeqie-standard
++ "GPS Correlate%menu/programs.xpm%" Exec    /usr/bin/gpscorrelate-gui
++ "GrabC%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "GrabC" -e /usr/bin/grabc
++ "Gt&kmorph%menu/programs.xpm%" Exec    /usr/bin/gtkmorph
++ "&ImageMagick%menu/display.xpm%" Exec    /usr/bin/display logo:
++ "I&nkscape%menu/programs.xpm%" Exec    /usr/bin/inkscape
++ "&LaTeXDraw%menu/programs.xpm%" Exec    /usr/bin/latexdraw
++ "left&y%menu/programs.xpm%" Exec    /usr/bin/lefty
++ "Libre&Office Draw%menu/programs.xpm%" Exec    /usr/bin/libreoffice --draw
++ "&Misfit Model 3d%menu/programs.xpm%" Exec    /usr/bin/mm3d
++ "pdfc&hain%menu/programs.xpm%" Exec    /usr/bin/pdfchain
++ "pixeli&ze%menu/programs.xpm%" Exec    /usr/bin/pixelize
++ "&Pixmap%menu/programs.xpm%" Exec    /usr/bin/pixmap
++ "pLoader%menu/programs.xpm%" Exec    /usr/bin/ploader
++ "&Schism Tracker Font Editor%menu/programs.xpm%" Exec    /usr/bin/schism --font-editor
++ "Screeenie (&Qt)%menu/programs.xpm%" Exec    /usr/bin/screenie-qt
++ "swisswatch%menu/programs.xpm%" Exec    /usr/bin/swisswatch
++ "&Tgif%menu/programs.xpm%" Exec    /usr/bin/tgif
++ "The &GIMP%menu/gimp.xpm%" Exec    /usr/bin/gimp
++ "&whitedune vrml editor%menu/programs.xpm%" Exec    /usr/bin/whitedune
++ "xcam%menu/programs.xpm%" Exec    /usr/bin/xcam
++ "xfig%menu/image-processor.xpm%" Exec    /usr/bin/xfig
++ "Xpaint%menu/image-processor.xpm%" Exec    /usr/bin/xpaint
++ "XS&ane%menu/programs.xpm%" Exec    /usr/bin/xsane
++ "xscanimage%menu/programs.xpm%" Exec    /usr/bin/xscanimage
++ "&X Window Snapshot%menu/programs.xpm%" Exec    xwd | xwud
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Network/Communication"
+AddToMenu "MenuFvwmMenuSystem/Applications/Network/Communication" "Communication" Title
++ "&buffy%menu/programs.xpm%" Exec    /usr/bin/buffy
++ "&Ekiga%menu/programs.xpm%" Exec    /usr/bin/ekiga
++ "E&volution%menu/programs.xpm%" Exec    /usr/bin/evolution
++ "&GMail Notifier%menu/programs.xpm%" Exec    /usr/bin/gmail-notify
++ "gnubiff%menu/programs.xpm%" Exec    /usr/bin/gnubiff
++ "g&rdesktop%menu/programs.xpm%" Exec    /usr/bin/grdesktop
++ "&Icedove Mail%menu/programs.xpm%" Exec    icedove
++ "Identi&Curse%menu/programs.xpm%" Exec    identicurse
++ "&Mail Notification%menu/programs.xpm%" Exec    /usr/bin/mail-notification
++ "mc&abber%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "mcabber" -e /usr/bin/mcabber
++ "Minicom%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Minicom" -e /usr/bin/minicom
++ "Minicom (X&11)%menu/programs.xpm%" Exec    /usr/bin/xminicom
++ "M&utt%menu/mail.xpm%" Exec /usr/bin/X11/xterm -T "Mutt" -e /usr/bin/mutt
++ "&network-config%menu/programs.xpm%" Exec    /usr/bin/network-config
++ "&Seyon%menu/programs.xpm%" Exec    /usr/bin/seyon
++ "&Telnet-SSL%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Telnet-SSL" -e /usr/bin/telnet-ssl
++ "&wmITime%menu/programs.xpm%" Exec    /usr/bin/wmitime
++ "Xbi&ff%menu/programs.xpm%" Exec    xbiff
++ "Xbuff&y%menu/programs.xpm%" Exec    /usr/bin/xbuffy
++ "&X Chat%menu/programs.xpm%" Exec    /usr/bin/xchat
++ "X-Chat GN&OME%menu/programs.xpm%" Exec    /usr/bin/xchat-gnome
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Network/File_Transfer"
+AddToMenu "MenuFvwmMenuSystem/Applications/Network/File_Transfer" "File Transfer" Title
++ "&Azureus%menu/programs.xpm%" Exec    /usr/bin/azureus
++ "&BitTornado Client%menu/programs.xpm%" Exec    /usr/bin/btdownloadgui.bittornado
++ "&FOFF%menu/programs.xpm%" Exec    /usr/bin/foff
++ "&ncftp%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "ncftp" -e /usr/bin/ncftp3
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Network/Monitoring"
+AddToMenu "MenuFvwmMenuSystem/Applications/Network/Monitoring" "Monitoring" Title
++ "&Bandwidthcalc%menu/programs.xpm%" Exec    /usr/bin/bandwidthcalc
++ "b&tscanner%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "btscanner" -e /usr/bin/btscanner
++ "&EtherApe%menu/programs.xpm%" Exec    /usr/bin/etherape
++ "etter&cap%menu/programs.xpm%" Exec    /usr/sbin/ettercap --gtk
++ "etterc&ap (as root)%menu/programs.xpm%" Exec    su-to-root -X -c "/usr/sbin/ettercap --gtk"
++ "&Gip%menu/programs.xpm%" Exec    /usr/bin/gip
++ "&IPTraf%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "IPTraf" -e /usr/bin/su-to-root -c /usr/sbin/iptraf
++ "&jnettop%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "jnettop" -e /usr/bin/su-to-root -c /usr/sbin/jnettop
++ "&Mtr%menu/programs.xpm%" Exec    mtr
++ "Wi&reshark%menu/programs.xpm%" Exec    /usr/bin/wireshark
++ "&WMifs%menu/programs.xpm%" Exec    /usr/bin/wmifs
++ "wm&net%menu/programs.xpm%" Exec    /usr/bin/wmnet -l
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Network/Web_Browsing"
+AddToMenu "MenuFvwmMenuSystem/Applications/Network/Web_Browsing" "Web Browsing" Title
++ "&Chromium%menu/programs.xpm%" Exec    chromium
++ "&ELinks WWW browser%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "ELinks WWW browser" -e /usr/bin/elinks
++ "Epiphany we&b browser%menu/programs.xpm%" Exec    /usr/bin/epiphany-browser
++ "&Iceweasel%menu/programs.xpm%" Exec    iceweasel
++ "&Lynx-cur%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Lynx-cur" -e lynx
++ "&w3m%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "w3m" -e /usr/bin/w3m /usr/share/doc/w3m/MANUAL.html
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Network/Web_News"
+AddToMenu "MenuFvwmMenuSystem/Applications/Network/Web_News" "Web News" Title
++ "&Kitty%menu/programs.xpm%" Exec    /usr/bin/kitty
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Network"
+AddToMenu "MenuFvwmMenuSystem/Applications/Network" "Network" Title
++ "&bmon%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "bmon" -e /usr/bin/bmon
++ "&Communication%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Network/Communication"
++ "&File Transfer%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Network/File_Transfer"
++ "&Monitoring%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Network/Monitoring"
++ "&sirc%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "sirc" -e /usr/bin/sirc
++ "&VNC Viewer%menu/programs.xpm%" Exec    xvnc4viewer
++ "W&eb Browsing%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Network/Web_Browsing"
++ "Web &News%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Network/Web_News"
++ "&WMbiff%menu/programs.xpm%" Exec    /usr/bin/wmbiff
++ "xSMB&rowser%menu/programs.xpm%" Exec    /usr/bin/xsmbrowser
++ "&XTalk%menu/programs.xpm%" Exec    /usr/bin/xtalk
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Normal_applications"
+AddToMenu "MenuFvwmMenuSystem/Applications/Normal_applications" "Normal applications" Title
++ "&xcal%menu/programs.xpm%" Exec    /usr/bin/xcal
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Office"
+AddToMenu "MenuFvwmMenuSystem/Applications/Office" "Office" Title
++ "&AbiWord Word Processor%menu/programs.xpm%" Exec    /usr/bin/abiword
++ "&Email-Reminder%menu/programs.xpm%" Exec    /usr/bin/email-reminder-editor
++ "g&numeric%menu/programs.xpm%" Exec    /usr/bin/gnumeric
++ "&GoldenDict%menu/programs.xpm%" Exec    /usr/bin/goldendict
++ "g&ramps%menu/programs.xpm%" Exec    /usr/bin/gramps
++ "&LibreOffice Calc%menu/programs.xpm%" Exec    /usr/bin/libreoffice --calc
++ "LibreOffice &Impress%menu/programs.xpm%" Exec    /usr/bin/libreoffice --impress
++ "LibreOffice &Writer%menu/programs.xpm%" Exec    /usr/bin/libreoffice --writer
++ "&pdfshuffler%menu/programs.xpm%" Exec    /usr/bin/pdfshuffler
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Programming"
+AddToMenu "MenuFvwmMenuSystem/Applications/Programming" "Programming" Title
++ "alleyoop%menu/programs.xpm%" Exec    /usr/bin/alleyoop
++ "&Autoproject%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Autoproject" -e /usr/bin/autoproject
++ "&BeanShell (text)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "BeanShell (text)" -e /usr/bin/bsh
++ "BeanShell (&windowed)%menu/programs.xpm%" Exec    /usr/bin/xbsh
++ "Bou&ml%menu/programs.xpm%" Exec    /usr/bin/bouml
++ "&Data Display Debugger%menu/programs.xpm%" Exec    /usr/bin/ddd
++ "D&ebian package viewer%menu/programs.xpm%" Exec    /usr/bin/deb-gview
++ "Dev&Help%menu/programs.xpm%" Exec    /usr/bin/devhelp
++ "Dox&ywizard%menu/programs.xpm%" Exec    /usr/bin/doxywizard
++ "&fldiff%menu/programs.xpm%" Exec    /usr/bin/fldiff
++ "&GDB%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "GDB" -e /usr/bin/gdb
++ "Glade &3%menu/programs.xpm%" Exec    /usr/bin/glade
++ "G&NU gnee%menu/programs.xpm%" Exec    gnee
++ "Guile &1.8%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Guile 1.8" -e /usr/bin/guile-1.8
++ "&OpenJDK Java 6 FileChooser Demo%menu/programs.xpm%" Exec    /bin/sh -c 'cd /usr/lib/jvm/java-6-openjdk-amd64/demo/jfc/FileChooserDemo; /usr/lib/jvm/java-6-openjdk-amd64/bin/java -jar FileChooserDemo.jar'
++ "Open&JDK Java 6 Font2DTest Demo%menu/programs.xpm%" Exec    /bin/sh -c 'cd /usr/lib/jvm/java-6-openjdk-amd64/demo/jfc/Font2DTest; /usr/lib/jvm/java-6-openjdk-amd64/bin/java -jar Font2DTest.jar'
++ "OpenJDK Java 6 Java 2D Demo%menu/programs.xpm%" Exec    /bin/sh -c 'cd /usr/lib/jvm/java-6-openjdk-amd64/demo/jfc/Java2D; /usr/lib/jvm/java-6-openjdk-amd64/bin/java -jar Java2Demo.jar'
++ "OpenJDK Java 6 SampleTree Demo%menu/programs.xpm%" Exec    /bin/sh -c 'cd /usr/lib/jvm/java-6-openjdk-amd64/demo/jfc/SampleTree; /usr/lib/jvm/java-6-openjdk-amd64/bin/java -jar SampleTree.jar'
++ "OpenJDK Java 6 Stylepad Demo%menu/programs.xpm%" Exec    /bin/sh -c 'cd /usr/lib/jvm/java-6-openjdk-amd64/demo/jfc/Stylepad; /usr/lib/jvm/java-6-openjdk-amd64/bin/java -jar Stylepad.jar'
++ "OpenJDK Java 6 SwingSet2 Demo%menu/programs.xpm%" Exec    /bin/sh -c 'cd /usr/lib/jvm/java-6-openjdk-amd64/demo/jfc/SwingSet2; /usr/lib/jvm/java-6-openjdk-amd64/bin/java -jar SwingSet2.jar'
++ "OpenJDK Java 6 TableExample Demo%menu/programs.xpm%" Exec    /bin/sh -c 'cd /usr/lib/jvm/java-6-openjdk-amd64/demo/jfc/TableExample; /usr/lib/jvm/java-6-openjdk-amd64/bin/java -jar TableExample.jar'
++ "&ProjectControl%menu/programs.xpm%" Exec    /usr/bin/projectControl
++ "ProjectSynchro%menu/programs.xpm%" Exec    /usr/bin/projectSynchro
++ "Python (v2.&6)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Python (v2.6)" -e /usr/bin/python2.6
++ "Python (v2.&7)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Python (v2.7)" -e /usr/bin/python2.7
++ "Python (v3.&2)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Python (v3.2)" -e /usr/bin/python3.2
++ "&Qt Assistant%menu/programs.xpm%" Exec    /usr/bin/assistant-qt4
++ "Qt &Linguist%menu/programs.xpm%" Exec    /usr/bin/linguist-qt4
++ "&Ruby (irb1.8)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Ruby (irb1.8)" -e /usr/bin/irb1.8
++ "Ruby (&irb1.9.1)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Ruby (irb1.9.1)" -e /usr/bin/irb1.9.1
++ "&Sun Java 6 Web Start%menu/programs.xpm%" Exec    /usr/lib/jvm/java-6-sun-1.6.0.26/bin/javaws -viewer
++ "&Tclsh8.4%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Tclsh8.4" -e /usr/bin/tclsh8.4
++ "Tclsh8.&5%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Tclsh8.5" -e /usr/bin/tclsh8.5
++ "TkWish8.&4%menu/programs.xpm%" Exec    x-terminal-emulator -e /usr/bin/wish8.4
++ "T&kWish8.5%menu/programs.xpm%" Exec    x-terminal-emulator -e /usr/bin/wish8.5
++ "&UniversalIndentgui%menu/programs.xpm%" Exec    /usr/bin/universalindentgui
++ "&Valkyrie - valgrind memckeck GUI frontent%menu/programs.xpm%" Exec    /usr/bin/valkyrie
++ "visual-regexp%menu/programs.xpm%" Exec    /usr/bin/visual-regexp
++ "&xcolmix%menu/programs.xpm%" Exec    /usr/bin/xcolmix
++ "x&colors%menu/programs.xpm%" Exec    /usr/bin/xcolors
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Project_Management"
+AddToMenu "MenuFvwmMenuSystem/Applications/Project_Management" "Project Management" Title
++ "&Alarm Clock%menu/programs.xpm%" Exec    /usr/bin/alarmclock
++ "&debgtd%menu/programs.xpm%" Exec    /usr/bin/debgtd
++ "&GTimer%menu/programs.xpm%" Exec    /usr/bin/gtimer
++ "&wmwork%menu/programs.xpm%" Exec    /usr/bin/wmwork
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Science/Astronomy"
+AddToMenu "MenuFvwmMenuSystem/Applications/Science/Astronomy" "Astronomy" Title
++ "&Celestia (GLUT)%menu/programs.xpm%" Exec    /usr/bin/celestia-glut
++ "Celestia (&Gnome)%menu/programs.xpm%" Exec    /usr/bin/celestia-gnome
++ "&xplanet%menu/programs.xpm%" Exec    /usr/bin/xplanet
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Science/Biology"
+AddToMenu "MenuFvwmMenuSystem/Applications/Science/Biology" "Biology" Title
++ "Rasmol (&classic version)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Rasmol (classic version)" -e /usr/bin/rasmol-classic
++ "&Rasmol (GTK version)%menu/programs.xpm%" Exec    /usr/bin/rasmol-gtk
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Science/Chemistry"
+AddToMenu "MenuFvwmMenuSystem/Applications/Science/Chemistry" "Chemistry" Title
++ "&gElemental%menu/programs.xpm%" Exec    gelemental
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Science/Data_Analysis"
+AddToMenu "MenuFvwmMenuSystem/Applications/Science/Data_Analysis" "Data Analysis" Title
++ "&Imview%menu/programs.xpm%" Exec    /usr/bin/imview
++ "&Open Data Explorer%menu/programs.xpm%" Exec    /usr/bin/dx
++ "&YGraph%menu/programs.xpm%" Exec    /usr/bin/ygraph
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Science/Engineering"
+AddToMenu "MenuFvwmMenuSystem/Applications/Science/Engineering" "Engineering" Title
++ "&Dia%menu/programs.xpm%" Exec    /usr/bin/dia-normal
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Science/Geoscience"
+AddToMenu "MenuFvwmMenuSystem/Applications/Science/Geoscience" "Geoscience" Title
++ "&GPSMan%menu/programs.xpm%" Exec    /usr/bin/gpsman
++ "&MkgmapGui%menu/programs.xpm%" Exec    /usr/bin/mkgmapgui
++ "&SunClock%menu/programs.xpm%" Exec    /usr/bin/sunclock
++ "&wmMoonClock%menu/programs.xpm%" Exec    /usr/bin/wmMoonClock
++ "wmS&un%menu/programs.xpm%" Exec    /usr/bin/wmsun
++ "wmw&eather%menu/programs.xpm%" Exec    /usr/bin/wmweather
++ "wmwe&ather+%menu/programs.xpm%" Exec    /usr/bin/wmweather+
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Science/Mathematics"
+AddToMenu "MenuFvwmMenuSystem/Applications/Science/Mathematics" "Mathematics" Title
++ "&Bc%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Bc" -e /usr/bin/bc
++ "&Calc%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Calc" -e /usr/bin/calc
++ "calcoo%menu/programs.xpm%" Exec    /usr/bin/calcoo
++ "Convert&All%menu/programs.xpm%" Exec    /usr/bin/convertall
++ "&Dc%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Dc" -e /usr/bin/dc
++ "galculato&r%menu/programs.xpm%" Exec    /usr/bin/galculator
++ "&Geomview%menu/programs.xpm%" Exec    /usr/bin/geomview
++ "G&nuplot%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Gnuplot" -e /usr/bin/gnuplot
++ "Graph&Thing%menu/programs.xpm%" Exec    /usr/bin/graphthing
++ "&LibreOffice Math%menu/programs.xpm%" Exec    /usr/bin/libreoffice --math
++ "&Octave (3.2)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Octave (3.2)" -e /usr/bin/octave-3.2.4
++ "&qgfe%menu/programs.xpm%" Exec    /usr/bin/qgfe
++ "&SpeedCrunch%menu/programs.xpm%" Exec    /usr/bin/speedcrunch
++ "Sto&pwatch%menu/programs.xpm%" Exec    stopwatch
++ "&Units%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Units" -e units
++ "&Wcalc%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Wcalc" -e /usr/bin/wcalc
++ "&Xabacus%menu/programs.xpm%" Exec    /usr/games/xabacus
++ "Xcalc%menu/calculator.xpm%" Exec    xcalc
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Science/Medicine"
+AddToMenu "MenuFvwmMenuSystem/Applications/Science/Medicine" "Medicine" Title
++ "&NUT Nutrition%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "NUT Nutrition" -e /usr/bin/nut-nutrition
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Science"
+AddToMenu "MenuFvwmMenuSystem/Applications/Science" "Science" Title
++ "&Astronomy%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Science/Astronomy"
++ "&Biology%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Science/Biology"
++ "&Chemistry%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Science/Chemistry"
++ "&Data Analysis%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Science/Data_Analysis"
++ "&Engineering%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Science/Engineering"
++ "&Geoscience%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Science/Geoscience"
++ "&Mathematics%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Science/Mathematics"
++ "Med&icine%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Science/Medicine"
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Shells"
+AddToMenu "MenuFvwmMenuSystem/Applications/Shells" "Shells" Title
++ "&Bash%menu/file.xpm%" Exec /usr/bin/X11/xterm -T "Bash" -e /bin/bash --login
++ "&Dash%menu/file.xpm%" Exec /usr/bin/X11/xterm -T "Dash" -e /bin/dash -i
++ "&Python (v2.5)%menu/file.xpm%" Exec /usr/bin/X11/xterm -T "Python (v2.5)" -e /usr/bin/python2.5
++ "&Sh%menu/file.xpm%" Exec /usr/bin/X11/xterm -T "Sh" -e /bin/sh --login
++ "&Zsh%menu/file.xpm%" Exec /usr/bin/X11/xterm -T "Zsh" -e /bin/zsh4
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Sound"
+AddToMenu "MenuFvwmMenuSystem/Applications/Sound" "Sound" Title
++ "&Aconnectgui%menu/programs.xpm%" Exec    /usr/bin/aconnectgui
++ "Alsamixergui%menu/programs.xpm%" Exec    /usr/bin/alsamixergui
++ "Amarok%menu/programs.xpm%" Exec    /usr/bin/amarok
++ "A&udacious%menu/programs.xpm%" Exec    /usr/bin/audacious2
++ "&cplay%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "cplay" -e /usr/bin/cplay
++ "easytag%menu/programs.xpm%" Exec    /usr/bin/easytag
++ "&Echomixer%menu/programs.xpm%" Exec    /usr/bin/echomixer
++ "E&nvy24 control%menu/programs.xpm%" Exec    /usr/bin/envy24control
++ "gamix%menu/programs.xpm%" Exec    gamix
++ "&GNOME ALSA Mixer%menu/programs.xpm%" Exec    /usr/bin/gnome-alsamixer
++ "grecord (GNOME &2.0 Recorder)%menu/programs.xpm%" Exec    /usr/bin/gnome-sound-recorder
++ "&HDSPConf%menu/programs.xpm%" Exec    /usr/bin/hdspconf
++ "H&DSPMixer%menu/programs.xpm%" Exec    /usr/bin/hdspmixer
++ "&id3ren%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "id3ren" -e /usr/bin/id3ren
++ "&Last.fm%menu/programs.xpm%" Exec    /usr/bin/lastfm
++ "mh&WaveEdit%menu/programs.xpm%" Exec    /usr/bin/mhwaveedit
++ "Mil&kyTracker%menu/programs.xpm%" Exec    /usr/bin/milkytracker
++ "&MP3Diags%menu/programs.xpm%" Exec    /usr/bin/mp3diags
++ "&Open Cubic Player (text)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Open Cubic Player (text)" -e /usr/bin/ocp
++ "rexima%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "rexima" -e /usr/bin/rexima
++ "&Rmedigicontrol%menu/programs.xpm%" Exec    /usr/bin/rmedigicontrol
++ "sa&ydate%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "saydate" -e /usr/bin/saydate
++ "&Schism Tracker%menu/programs.xpm%" Exec    /usr/bin/schism
++ "&TiMidity++%menu/programs.xpm%" Exec    timidity -ia
++ "&XfreeCD%menu/programs.xpm%" Exec    /usr/bin/xfreecd
++ "Xmcd%menu/programs.xpm%" Exec    /usr/bin/xmcd
++ "xmix%menu/programs.xpm%" Exec    /usr/bin/xmix
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/System/Administration"
+AddToMenu "MenuFvwmMenuSystem/Applications/System/Administration" "Administration" Title
++ "&About Myself%menu/programs.xpm%" Exec    /usr/bin/userinfo
++ "Aptit&ude (terminal)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Aptitude (terminal)" -e /usr/bin/aptitude-curses
++ "&Configure Debian%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Configure Debian" -e /usr/bin/su-to-root -p root -c /usr/sbin/configure-debian --frontend=##CHECK##
++ "Co&nfigure network card%menu/programs.xpm%" Exec    xnetcardconfig
++ "&Debian Task selector%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Debian Task selector" -e su-to-root -c tasksel
++ "Disk Management%menu/programs.xpm%" Exec    /usr/bin/usermount
++ "&Editres%menu/programs.xpm%" Exec    editres
++ "&fetchmailconf%menu/programs.xpm%" Exec    /usr/bin/fetchmailconf
++ "&GConf Cleaner%menu/programs.xpm%" Exec    /usr/bin/gconf-cleaner
++ "Gnome Control Center%menu/programs.xpm%" Exec    /usr/bin/gnome-control-center
++ "GNOME partition editor%menu/programs.xpm%" Exec    su-to-root -X -c /usr/sbin/gparted
++ "gtklp%menu/programs.xpm%" Exec    /usr/bin/gtklp
++ "gtklpq%menu/programs.xpm%" Exec    /usr/bin/gtklpq
++ "&KeySafe Config%menu/programs.xpm%" Exec    /usr/bin/ksed
++ "ke&ytouch%menu/programs.xpm%" Exec    /usr/bin/keytouch
++ "keyTouch editor%menu/programs.xpm%" Exec    /usr/bin/su-to-root -X -c /usr/sbin/keytouch-editor
++ "&Mail Notification Preferences%menu/programs.xpm%" Exec    /usr/bin/mail-notification -p
++ "&ODBCCreateDataSourceQ4%menu/programs.xpm%" Exec    ODBCCreateDataSourceQ4
++ "OD&BCManageDataSourcesQ4%menu/programs.xpm%" Exec    ODBCManageDataSourcesQ4
++ "Open&JDK Java 6 Console%menu/programs.xpm%" Exec    /usr/lib/jvm/java-6-openjdk-amd64/bin/jconsole
++ "OpenJDK Java &6 Policy Tool%menu/programs.xpm%" Exec    /usr/lib/jvm/java-6-openjdk-amd64/bin/policytool
++ "Orphaner (all)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Orphaner (all)" -e su-to-root -c '/usr/sbin/orphaner -a'
++ "Orphaner - editkeep%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Orphaner - editkeep" -e su-to-root -c '/usr/sbin/editkeep'
++ "Orphaner (&libs)%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Orphaner (libs)" -e su-to-root -c /usr/sbin/orphaner
++ "&Password%menu/programs.xpm%" Exec    /usr/bin/userpasswd
++ "Property Editor%menu/programs.xpm%" Exec    /usr/bin/props
++ "&QuickSynergy%menu/programs.xpm%" Exec    /usr/bin/quicksynergy
++ "&Reportbug%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Reportbug" -e /usr/bin/reportbug --exit-prompt
++ "Reportbug (GTK+)%menu/programs.xpm%" Exec    /usr/bin/reportbug --exit-prompt --ui gtk2
++ "stalonetray%menu/programs.xpm%" Exec    /usr/bin/stalonetray
++ "&Sun Java 6 Plugin Control Panel%menu/programs.xpm%" Exec    /usr/lib/jvm/java-6-sun-1.6.0.26/bin/ControlPanel
++ "System &Information%menu/programs.xpm%" Exec    /usr/bin/hardinfo
++ "&TeXconfig%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "TeXconfig" -e /usr/bin/texconfig
++ "wininfo%menu/programs.xpm%" Exec    /usr/bin/wininfo
++ "wmcalclock%menu/programs.xpm%" Exec    /usr/bin/wmCalClock
++ "&Wmclock%menu/programs.xpm%" Exec    /usr/bin/wmclock
++ "wms&hutdown%menu/programs.xpm%" Exec    /usr/bin/wmshutdown
++ "&XBindKeys-config%menu/programs.xpm%" Exec    /usr/bin/xbindkeys-config
++ "Xclipboard%menu/programs.xpm%" Exec    xclipboard
++ "Xfontsel%menu/font.xpm%" Exec    xfontsel
++ "xkbind%menu/programs.xpm%" Exec    /usr/bin/xkbind
++ "xkeycaps%menu/programs.xpm%" Exec    /usr/bin/xkeycaps
++ "Xkill%menu/programs.xpm%" Exec    xkill
++ "Xrefresh%menu/programs.xpm%" Exec    xrefresh
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/System/Hardware"
+AddToMenu "MenuFvwmMenuSystem/Applications/System/Hardware" "Hardware" Title
++ "&gscanbus%menu/programs.xpm%" Exec    /usr/bin/gscanbus
++ "&nvidia-settings%menu/programs.xpm%" Exec    /usr/bin/nvidia-settings
++ "&USB View%menu/programs.xpm%" Exec    /usr/bin/usbview
++ "&wmxres%menu/programs.xpm%" Exec    /usr/bin/wmxres
++ "&X Printing Panel%menu/programs.xpm%" Exec    /usr/bin/xpp
++ "X&vidtune%menu/programs.xpm%" Exec    xvidtune
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/System/Language_Environment"
+AddToMenu "MenuFvwmMenuSystem/Applications/System/Language_Environment" "Language Environment" Title
++ "&Input Method Configuration%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Input Method Configuration" -e /usr/bin/im-config
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/System/Monitoring"
+AddToMenu "MenuFvwmMenuSystem/Applications/System/Monitoring" "Monitoring" Title
++ "&Asmon%menu/programs.xpm%" Exec    /usr/bin/asmon
++ "&bwm-ng%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "bwm-ng" -e /usr/bin/bwm-ng
++ "&GKrellM%menu/programs.xpm%" Exec    /usr/bin/gkrellm
++ "G&NOME system monitor%menu/programs.xpm%" Exec    /usr/bin/gnome-system-monitor
++ "&htop%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "htop" -e /usr/bin/htop
++ "&iptstate%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "iptstate" -e /usr/bin/su-to-root -c /usr/sbin/iptstate
++ "&Loadmeter%menu/programs.xpm%" Exec    /usr/bin/loadmeter
++ "lshw-gtk%menu/programs.xpm%" Exec    lshw-gtk
++ "&Procmeter%menu/programs.xpm%" Exec    procmeter3
++ "Pstree%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Pstree" -e /usr/bin/pstree.x11
++ "pyBootchartG&UI%menu/programs.xpm%" Exec    /usr/bin/pybootchartgui
++ "&seaudit%menu/programs.xpm%" Exec    /usr/sbin/seaudit
++ "s&ysinfo%menu/programs.xpm%" Exec    /usr/bin/sysinfo
++ "&Top%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Top" -e /usr/bin/top
++ "wmclockmon%menu/programs.xpm%" Exec    /usr/bin/wmclockmon
++ "wmCPU%menu/programs.xpm%" Exec    /usr/bin/wmcpu
++ "wmcpuload%menu/programs.xpm%" Exec    /usr/bin/wmcpuload
++ "wm&Date%menu/programs.xpm%" Exec    /usr/bin/wmdate
++ "wmdis&kmon%menu/programs.xpm%" Exec    /usr/bin/wmdiskmon
++ "&WMmon%menu/programs.xpm%" Exec    /usr/bin/wmmon
++ "wmmount%menu/programs.xpm%" Exec    wmmount -- -w -s
++ "wmsensors%menu/programs.xpm%" Exec    /usr/bin/wmsensors
++ "wmsysmon%menu/programs.xpm%" Exec    /usr/bin/wmsysmon
++ "W&Mtime%menu/programs.xpm%" Exec    /usr/bin/wmtime
++ "X&console%menu/programs.xpm%" Exec    xconsole -file /dev/xconsole
++ "X&ev%menu/programs.xpm%" Exec    x-terminal-emulator -e xev
++ "Xload%menu/programs.xpm%" Exec    xload
++ "X&osview%menu/programs.xpm%" Exec    /usr/bin/xosview
++ "x&restop%menu/programs.xpm%" Exec    /usr/bin/xrestop
++ "&XSensors%menu/programs.xpm%" Exec    /usr/bin/xsensors
++ "XSysIn&fo%menu/programs.xpm%" Exec    /usr/bin/xsysinfo
++ "xwatch%menu/programs.xpm%" Exec    /usr/bin/xwatch /var/log/[a-zA-Z0-9]*.log /var/log/debug /var/log/messages /var/log/smb /var/log/xttpd /var/log/wu-ftpd/xferlog /var/log/apache/[a-zA-Z0-9]*.log
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/System/Package_Management"
+AddToMenu "MenuFvwmMenuSystem/Applications/System/Package_Management" "Package Management" Title
++ "&apt-spy%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "apt-spy" -e /usr/bin/apt-spy
++ "&Synaptic Package Manager%menu/programs.xpm%" Exec    /usr/bin/su-to-root -X -c /usr/sbin/synaptic
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/System/Security"
+AddToMenu "MenuFvwmMenuSystem/Applications/System/Security" "Security" Title
++ "&apol%menu/programs.xpm%" Exec    /usr/bin/apol
++ "&GNU Privacy Assistant%menu/programs.xpm%" Exec    /usr/bin/gpa
++ "G&PG Keys%menu/programs.xpm%" Exec    /usr/bin/gpgkeys
++ "&KeySafe%menu/programs.xpm%" Exec    /usr/bin/keysafe
++ "s&ediff%menu/programs.xpm%" Exec    /usr/bin/sediff
++ "&Sun Java 6 Policy Tool%menu/programs.xpm%" Exec    /usr/lib/jvm/java-6-sun-1.6.0.26/bin/policytool
++ "&Tiger UNIX security tool%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "Tiger UNIX security tool" -e su-to-root -c '/usr/sbin/tiger'
++ "Tiny&CA%menu/programs.xpm%" Exec    /usr/bin/tinyca2
++ "&XCA%menu/programs.xpm%" Exec    /usr/bin/xca
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/System"
+AddToMenu "MenuFvwmMenuSystem/Applications/System" "System" Title
++ "&Administration%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/System/Administration"
++ "&bbkeys%menu/programs.xpm%" Exec    /usr/bin/bbkeys
++ "&Hardware%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/System/Hardware"
++ "&Language Environment%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/System/Language_Environment"
++ "&Monitoring%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/System/Monitoring"
++ "&Package Management%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/System/Package_Management"
++ "P&erlPanel%menu/programs.xpm%" Exec    /usr/bin/perlpanel
++ "&recover%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "recover" -e su-to-root -p root -c /usr/sbin/recover
++ "&Security%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/System/Security"
++ "&wmsmpmon%menu/programs.xpm%" Exec    /usr/bin/wmsmpmon
++ "wmwa&ve%menu/programs.xpm%" Exec    /usr/bin/wmwave
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Terminal_Emulators"
+AddToMenu "MenuFvwmMenuSystem/Applications/Terminal_Emulators" "Terminal Emulators" Title
++ "&Aterm%menu/programs.xpm%" Exec    /usr/bin/aterm
++ "&CAterm (Big5)%menu/programs.xpm%" Exec    /usr/bin/caterm
++ "c&lusterssh%menu/programs.xpm%" Exec    /usr/bin/cssh
++ "C&ommand Tool%menu/programs.xpm%" Exec    /usr/bin/cmdtool
++ "CRxvt (&Big5) %menu/programs.xpm%" Exec    /usr/bin/crxvt-big5 -im xcin -pt Root
++ "CRxvt (GB)%menu/programs.xpm%" Exec    /usr/bin/crxvt-gb -im xcin-zh_CN.GB2312 -pt Root
++ "&Eterm%menu/programs.xpm%" Exec    /usr/bin/Eterm
++ "&GAterm%menu/programs.xpm%" Exec    /usr/bin/gaterm
++ "G&nome Terminal%menu/programs.xpm%" Exec    /usr/bin/gnome-terminal
++ "GRxvt%menu/programs.xpm%" Exec    /usr/bin/grxvt
++ "&KAterm%menu/programs.xpm%" Exec    /usr/bin/katerm
++ "KRxvt%menu/programs.xpm%" Exec    /usr/bin/krxvt
++ "&Multilingual Terminal (client)%menu/programs.xpm%" Exec    /usr/bin/mlclient
++ "Multilingual Terminal (&daemon)%menu/programs.xpm%" Exec    /usr/bin/mlterm -j=genuine
++ "Mult&ilingual Terminal (normal)%menu/programs.xpm%" Exec    /usr/bin/mlterm
++ "&ROXTerm%menu/programs.xpm%" Exec    /usr/bin/roxterm
++ "Rxvt%menu/programs.xpm%" Exec    /usr/bin/rxvt-xterm
++ "Rxvt-&Unicode%menu/programs.xpm%" Exec    urxvt
++ "Rxvt-Unicode (Black, X&ft)%menu/programs.xpm%" Exec    urxvt -fn "xft:Mono" -rv
++ "&Shell Tool%menu/programs.xpm%" Exec    /usr/bin/shelltool
++ "&TAterm%menu/programs.xpm%" Exec    /usr/bin/taterm
++ "XTerm%menu/programs.xpm%" Exec    xterm
++ "&X-Terminal as root (GKsu)%menu/programs.xpm%" Exec    /usr/bin/gksu -u root /usr/bin/x-terminal-emulator
++ "XTerm (Unicode)%menu/programs.xpm%" Exec    uxterm
++ "X&vt%menu/programs.xpm%" Exec    /usr/bin/xvt -ls
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Text"
+AddToMenu "MenuFvwmMenuSystem/Applications/Text" "Text" Title
++ "&AiksaurusGTK%menu/programs.xpm%" Exec    /usr/bin/gaiksaurus
++ "c2&bciter%menu/programs.xpm%" Exec    /usr/bin/c2bciter
++ "c2b&import%menu/programs.xpm%" Exec    /usr/bin/c2bimport
++ "cb&2bib%menu/programs.xpm%" Exec    /usr/bin/cb2bib
++ "&Cd-circleprint%menu/programs.xpm%" Exec    /usr/bin/cd-circleprint
++ "&Dhammapada%menu/programs.xpm%" Exec    xdhamma
++ "Dictionary &OpenDict%menu/programs.xpm%" Exec    /usr/bin/opendict
++ "&Fortune%menu/programs.xpm%" Exec    sh -c 'while /usr/games/fortune | col -x | xmessage -center -buttons OK:1,Another:0 -default OK -file - ; do :; done'
++ "&GNOME Dictionary%menu/programs.xpm%" Exec    /usr/bin/gnome-dictionary
++ "&msort-gui%menu/programs.xpm%" Exec    /usr/bin/msort-gui
++ "&Page-crunch%menu/programs.xpm%" Exec    /usr/bin/page-crunch
++ "Po&edit%menu/programs.xpm%" Exec    /usr/bin/poeditor
++ "&TtM%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "TtM" -e /usr/bin/ttm
++ "txt2regex%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "txt2regex" -e /usr/bin/txt2regex
++ "txt2tag&s%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "txt2tags" -e /usr/bin/txt2tags
++ "Txt &Reader%menu/programs.xpm%" Exec    txtreader
++ "&Xhtml2ps%menu/programs.xpm%" Exec    /usr/bin/xhtml2ps
++ "xm&lstarlet%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "xmlstarlet" -e /usr/bin/xmlstarlet
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Tools"
+AddToMenu "MenuFvwmMenuSystem/Applications/Tools" "Tools" Title
++ "cc&al%menu/programs.xpm%" Exec /usr/bin/X11/xterm -T "ccal" -e /usr/bin/ccal -p
++ "&Cryptonit%menu/programs.xpm%" Exec    /usr/bin/cryptonit
++ "&Driconf%menu/programs.xpm%" Exec    /usr/bin/driconf
++ "g&randr%menu/programs.xpm%" Exec    /usr/bin/grandr
++ "&gWaterfall%menu/programs.xpm%" Exec    /usr/bin/waterfall
++ "&MyPasswordSafe%menu/programs.xpm%" Exec    /usr/bin/MyPasswordSafe
++ "&osdsh%menu/programs.xpm%" Exec    /usr/bin/osdsh
++ "o&sdshconfig%menu/programs.xpm%" Exec    /usr/bin/osdshconfig
++ "&Pilot Manager%menu/programs.xpm%" Exec    /usr/bin/PilotManager
++ "wm&button%menu/programs.xpm%" Exec    /usr/bin/wmbutton
++ "&wmPinboard%menu/programs.xpm%" Exec    /usr/bin/wmpinboard
++ "xcb%menu/programs.xpm%" Exec    /usr/X11R6/bin/xcb
++ "&Xcolorsel%menu/colors.xpm%" Exec    /usr/bin/xcolorsel
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Video"
+AddToMenu "MenuFvwmMenuSystem/Applications/Video" "Video" Title
++ "&guvcview%menu/programs.xpm%" Exec    /usr/bin/guvcview
++ "&luvcview%menu/programs.xpm%" Exec    /usr/bin/luvcview
++ "&minitube%menu/programs.xpm%" Exec    /usr/bin/minitube
++ "&Totem%menu/programs.xpm%" Exec    /usr/bin/totem
++ "&VLC media player%menu/programs.xpm%" Exec    /usr/bin/qvlc
++ "&xine Media Player%menu/programs.xpm%" Exec    /usr/bin/xine
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Viewers"
+AddToMenu "MenuFvwmMenuSystem/Applications/Viewers" "Viewers" Title
++ "&DiffPDF%menu/programs.xpm%" Exec    diffpdf
++ "d&igikam%menu/programs.xpm%" Exec    /usr/bin/digikam
++ "d&vilx%menu/programs.xpm%" Exec    /usr/bin/dvilx
++ "&Evince%menu/programs.xpm%" Exec    /usr/bin/evince
++ "Eye &of GNOME%menu/programs.xpm%" Exec    /usr/bin/eog
++ "Graphics&Magick%menu/programs.xpm%" Exec    /usr/bin/gm display logo:
++ "G&utenbrowser%menu/programs.xpm%" Exec    /usr/bin/gutenbrowser
++ "&GV%menu/programs.xpm%" Exec    /usr/bin/gv
++ "&Wordview%menu/programs.xpm%" Exec    /usr/bin/wordview
++ "Xdi&tview%menu/programs.xpm%" Exec    xditview
++ "&XDvi%menu/programs.xpm%" Exec    /usr/bin/xdvi
++ "Xgdvi%menu/programs.xpm%" Exec    /usr/bin/xgdvi
++ "X&Less%menu/programs.xpm%" Exec    xless /usr/share/doc/xless/xless.help
++ "Xmotd%menu/programs.xpm%" Exec    xmotd /etc/motd
++ "X&pdf%menu/programs.xpm%" Exec    /usr/bin/xpdf
+
+DestroyMenu "MenuFvwmMenuSystem/Applications/Web_Development"
+AddToMenu "MenuFvwmMenuSystem/Applications/Web_Development" "Web Development" Title
++ "&webxml%menu/programs.xpm%" Exec    /usr/bin/webxml
+
+DestroyMenu "MenuFvwmMenuSystem/Applications"
+AddToMenu "MenuFvwmMenuSystem/Applications" "Applications" Title
++ "&Accessibility%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Accessibility"
++ "&Data Management%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Data_Management"
++ "&Editors%menu/editor.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Editors"
++ "Ed&ucation%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Education"
++ "E&mulators%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Emulators"
++ "&File Management%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/File_Management"
++ "&Graphics%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Graphics"
++ "&Network%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Network"
++ "Normal appli&cations%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Normal_applications"
++ "&Office%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Office"
++ "&Programming%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Programming"
++ "P&roject Management%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Project_Management"
++ "&Science%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Science"
++ "S&hells%menu/file.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Shells"
++ "Sound%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Sound"
++ "S&ystem%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/System"
++ "&Terminal Emulators%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Terminal_Emulators"
++ "Te&xt%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Text"
++ "Too&ls%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Tools"
++ "&Video%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Video"
++ "V&iewers%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Viewers"
++ "&Web Development%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications/Web_Development"
+
+DestroyMenu "MenuFvwmMenuSystem/FVWM_Modules"
+AddToMenu "MenuFvwmMenuSystem/FVWM_Modules" "FVWM Modules" Title
++ "&FvwmAnimate%menu/item.xpm%" Module FvwmAnimate
++ "Fvwm&Auto%menu/item.xpm%" Module FvwmAuto 300 raise lower
++ "Fvwm&Backer%menu/item.xpm%" Module FvwmBacker
++ "FvwmBa&nner%menu/item.xpm%" Module FvwmBanner
++ "FvwmB&uttons%menu/item.xpm%" Module FvwmButtons
++ "FvwmButtons (&Debian)%menu/item.xpm%" Module FvwmButtons DebianFvwmButtons
++ "Fvwm&CommandS%menu/item.xpm%" Module FvwmCommandS
++ "FvwmC&onsole%menu/item.xpm%" Module FvwmConsole
++ "FvwmCpp%menu/item.xpm%" Module FvwmCpp
++ "FvwmDebug%menu/item.xpm%" Module FvwmDebug
++ "FvwmDragWell%menu/item.xpm%" Module FvwmDragWell
++ "Fvwm&Event%menu/item.xpm%" Module FvwmEvent
++ "FvwmForm%menu/item.xpm%" Module FvwmForm
++ "Fvwm&Gtk%menu/item.xpm%" Module FvwmGtk
++ "Fvwm&IconBox%menu/item.xpm%" Module FvwmIconBox
++ "FvwmIconMan%menu/item.xpm%" Module FvwmIconMan
++ "FvwmIdent%menu/item.xpm%" Module FvwmIdent
++ "Fvwm&M4%menu/item.xpm%" Module FvwmM4
++ "Fvwm&Pager%menu/item.xpm%" Module FvwmPager 0 0
++ "FvwmPro&xy%menu/item.xpm%" Module FvwmProxy
++ "Fvwm&Rearrange (cascade)%menu/item.xpm%" Module FvwmRearrange -cascade
++ "FvwmRearrange (&horiz)%menu/item.xpm%" Module FvwmRearrange -tile -h
++ "F&vwmRearrange (vert)%menu/item.xpm%" Module FvwmRearrange -tile
++ "Fvwm&Save%menu/item.xpm%" Module FvwmSave
++ "FvwmSaveDesk%menu/item.xpm%" Module FvwmSaveDesk
++ "FvwmScript%menu/item.xpm%" Module FvwmScript
++ "FvwmScroll%menu/item.xpm%" Module FvwmScroll
++ "Fvwm&Talk%menu/item.xpm%" Module FvwmTalk
++ "FvwmTas&kBar%menu/item.xpm%" Module FvwmTaskBar
++ "FvwmTheme%menu/item.xpm%" Module FvwmTheme
++ "FvwmTile%menu/item.xpm%" Module FvwmTile
++ "Fvwm&Wharf%menu/item.xpm%" Module FvwmWharf
++ "FvwmWindowMenu%menu/item.xpm%" Module FvwmWindowMenu
++ "FvwmWin&List%menu/item.xpm%" Module FvwmWinList
+
+DestroyMenu "MenuFvwmMenuSystem/Games/Action"
+AddToMenu "MenuFvwmMenuSystem/Games/Action" "Action" Title
++ "&Briquolo%menu/item.xpm%" Exec    /usr/games/briquolo
++ "&etracer%menu/item.xpm%" Exec    /usr/games/etracer
++ "&Galaga%menu/item.xpm%" Exec    xgalaga
++ "Galaga:&Hyperspace%menu/item.xpm%" Exec    xgalaga-hyperspace
++ "Geki &2%menu/item.xpm%" Exec    /usr/games/geki2
++ "glTron%menu/item.xpm%" Exec    /usr/games/gltron
++ "&nInvaders%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "nInvaders" -e /usr/games/nInvaders
++ "&OpenArena%menu/item.xpm%" Exec    /usr/games/openarena
++ "open&city%menu/item.xpm%" Exec    /usr/games/opencity
++ "&Penguin Command%menu/item.xpm%" Exec    /usr/games/penguin-command
++ "pong2%menu/item.xpm%" Exec    /usr/games/pong2
++ "PrBoom%menu/item.xpm%" Exec    /usr/games/prboom
++ "&Robots%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Robots" -e robots
++ "&Sauerbraten%menu/item.xpm%" Exec    /usr/games/sauerbraten
++ "Sna&ke%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Snake" -e sh -c 'snake;echo PRESS ENTER;read line'
++ "Snake&4%menu/item.xpm%" Exec    /usr/games/snake4
++ "Space &Aryarya%menu/item.xpm%" Exec    /usr/games/spacearyarya
++ "Star Trek%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Star Trek" -e trek
++ "&Typespeed%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Typespeed" -e /usr/games/typespeed
++ "&Worm%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Worm" -e sh -c 'worm;echo PRESS ENTER;read line'
++ "&XBill%menu/item.xpm%" Exec    /usr/games/xbill
++ "XBlast-TNT%menu/item.xpm%" Exec    /usr/games/xblast-tnt
++ "XBlast-TNT (&mini)%menu/item.xpm%" Exec    /usr/games/xblast-tnt-mini
++ "XBlast-TNT (SMP&F)%menu/item.xpm%" Exec    /usr/games/xblast-tnt-smpf
++ "XE&vil%menu/item.xpm%" Exec    /usr/games/xevil
++ "XInvaders &3D%menu/item.xpm%" Exec    /usr/games/xinv3d
++ "x&letters%menu/item.xpm%" Exec    /usr/games/xletters
++ "xletters-&duel%menu/item.xpm%" Exec    /usr/games/xletters-duel
++ "Xon&ix%menu/item.xpm%" Exec    /usr/games/xonix
++ "Xracer racing game%menu/item.xpm%" Exec    /usr/games/xracer
+
+DestroyMenu "MenuFvwmMenuSystem/Games/Adventure"
+AddToMenu "MenuFvwmMenuSystem/Games/Adventure" "Adventure" Title
++ "&Adventure%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Adventure" -e adventure
++ "An&gband%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Angband" -e /usr/games/angband
++ "&Battlestar%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Battlestar" -e sh -c 'battlestar;echo PRESS ENTER;read line'
++ "&Hack%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Hack" -e hack
++ "Hunt the &Wumpus%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Hunt the Wumpus" -e wump
++ "&Moria%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Moria" -e /usr/games/moria
++ "&NetHack%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "NetHack" -e /usr/games/nethack
++ "&Phantasia%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Phantasia" -e phantasia
++ "&Tome%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Tome" -e /usr/games/tome
++ "&X NetHack%menu/item.xpm%" Exec    /usr/games/xnethack
++ "&Zangband%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Zangband" -e /usr/games/zangband
+
+DestroyMenu "MenuFvwmMenuSystem/Games/Blocks"
+AddToMenu "MenuFvwmMenuSystem/Games/Blocks" "Blocks" Title
++ "&Bsd Tetris%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Bsd Tetris" -e sh -c 'tetris-bsd;echo;echo PRESS ENTER;read line'
++ "lb&reakout2%menu/item.xpm%" Exec    /usr/games/lbreakout2
++ "&LTris%menu/item.xpm%" Exec    /usr/games/ltris
++ "&Netris%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Netris" -e /usr/games/netris
++ "&Stax%menu/item.xpm%" Exec    /usr/games/stax
++ "Xb&oing%menu/item.xpm%" Exec    /usr/games/xboing
++ "&XJump%menu/item.xpm%" Exec    /usr/games/xjump
++ "X&Welltris%menu/item.xpm%" Exec    /usr/games/xwelltris
+
+DestroyMenu "MenuFvwmMenuSystem/Games/Board"
+AddToMenu "MenuFvwmMenuSystem/Games/Board" "Board" Title
++ "&3D Chess%menu/item.xpm%" Exec    /usr/games/3Dc
++ "&Backgammon%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Backgammon" -e backgammon -pb
++ "B&rutal Chess%menu/item.xpm%" Exec    /usr/games/brutalchess
++ "&Chess Net%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Chess Net" -e /usr/games/xboard -ics -icshost chess.net
++ "&Default%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Default" -e /usr/games/xboard -ics
++ "&eboard%menu/item.xpm%" Exec    /usr/games/eboard
++ "&Free I.C.S.%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Free I.C.S." -e /usr/games/xboard -ics -icshost freechess.org
++ "GnuChess%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "GnuChess" -e /usr/games/gnuchess
++ "GNUDo&Q%menu/item.xpm%" Exec    /usr/games/GNUDoQ
++ "&GNU Go%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "GNU Go" -e /usr/games/gnugo
++ "GNU &Shogi%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "GNU Shogi" -e /usr/games/gnushogi
++ "G&omoku%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Gomoku" -e gomoku
++ "&Internet Chess Club%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Internet Chess Club" -e /usr/games/xboard -ics -icshost chessclub.com
++ "&Monopoly%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Monopoly" -e monop
++ "&NetToe%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "NetToe" -e /usr/games/nettoe
++ "&Penguin Taipei%menu/item.xpm%" Exec    /usr/games/ace-taipei
++ "Penguin &Taipei-Editor%menu/item.xpm%" Exec    /usr/games/ace-taipedit
++ "Pente%menu/item.xpm%" Exec    /usr/games/pente
++ "P&halanx%menu/item.xpm%" Exec    /usr/games/xphalanx
++ "pouetChess%menu/item.xpm%" Exec    /usr/games/pouetChess
++ "&uliGo%menu/item.xpm%" Exec    /usr/games/uligo
++ "&XBoard%menu/item.xpm%" Exec    /usr/games/xboard -xncp
++ "XBo&ard (passive chessboard)%menu/item.xpm%" Exec    /usr/games/xboard -ncp
++ "Xfris&k%menu/item.xpm%" Exec    /usr/games/risk
++ "Xfrisk &local-client-only%menu/item.xpm%" Exec    /usr/games/xfrisk localhost
++ "XShogi%menu/item.xpm%" Exec    /usr/games/xshogi
++ "X&vier%menu/item.xpm%" Exec    /usr/games/xvier
+
+DestroyMenu "MenuFvwmMenuSystem/Games/Card"
+AddToMenu "MenuFvwmMenuSystem/Games/Card" "Card" Title
++ "&Canfield%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Canfield" -e canfield
++ "C&ribbage%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Cribbage" -e cribbage
++ "&Go Fish%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Go Fish" -e sh -c 'go-fish;echo;echo PRESS ENTER;read line'
++ "&Mah-Jong%menu/item.xpm%" Exec    /usr/games/xmj
++ "Mille &Bornes%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Mille Bornes" -e mille
++ "&Penguin Canfield%menu/item.xpm%" Exec    /usr/games/ace-canfield
++ "Penguin &Freecell%menu/item.xpm%" Exec    /usr/games/ace-freecell
++ "P&enguin Golf%menu/item.xpm%" Exec    /usr/games/ace-golf
++ "Penguin &Solitaire%menu/item.xpm%" Exec    /usr/games/ace-solitaire
++ "Pe&nguin Spider%menu/item.xpm%" Exec    /usr/games/ace-spider
++ "Penguin &Thornq%menu/item.xpm%" Exec    /usr/games/ace-thornq
++ "PokerT&H (Texas Hold'em)%menu/item.xpm%" Exec    /usr/games/pokerth
++ "xm&ahjongg%menu/item.xpm%" Exec    /usr/games/xmahjongg
++ "Xm&ille%menu/item.xpm%" Exec    /usr/games/xmille
++ "&X Solitaire%menu/item.xpm%" Exec    /usr/games/xsol
+
+DestroyMenu "MenuFvwmMenuSystem/Games/Puzzles"
+AddToMenu "MenuFvwmMenuSystem/Games/Puzzles" "Puzzles" Title
++ "&Boggle%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Boggle" -e boggle
++ "&Freesweep%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Freesweep" -e /usr/games/freesweep
++ "&GFingerPoken%menu/item.xpm%" Exec    /usr/games/gfpoken
++ "G&NUbik%menu/item.xpm%" Exec    /usr/games/gnubik
++ "&Hangman%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Hangman" -e hangman
++ "&MirrorMagic%menu/item.xpm%" Exec    /usr/games/mirrormagic
++ "&Penguin Mastermind%menu/item.xpm%" Exec    /usr/games/ace-mastermind
++ "P&enguin Merlin%menu/item.xpm%" Exec    /usr/games/ace-merlin
++ "Peng&uin Minesweeper%menu/item.xpm%" Exec    /usr/games/ace-minesweeper
++ "Penguin Pegged%menu/item.xpm%" Exec    /usr/games/ace-pegged
++ "p&ipenightdreams%menu/item.xpm%" Exec    /usr/games/pipenightdreams
++ "&XBomb%menu/item.xpm%" Exec    /usr/games/xbomb
++ "X&demineur%menu/item.xpm%" Exec    /usr/games/xdemineur
+
+DestroyMenu "MenuFvwmMenuSystem/Games/Simulation"
+AddToMenu "MenuFvwmMenuSystem/Games/Simulation" "Simulation" Title
++ "&ACM4%menu/item.xpm%" Exec    /usr/games/acm4
++ "&BillardGL%menu/item.xpm%" Exec    /usr/games/billard-gl
++ "&Foobillard%menu/item.xpm%" Exec    /usr/games/foobillard
++ "&Orbit%menu/item.xpm%" Exec    /usr/games/orbit
++ "&Pinball%menu/item.xpm%" Exec    /usr/games/pinball
++ "&Xscorch%menu/item.xpm%" Exec    xscorch
+
+DestroyMenu "MenuFvwmMenuSystem/Games/Strategy"
+AddToMenu "MenuFvwmMenuSystem/Games/Strategy" "Strategy" Title
++ "&Air Traffic Controller%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Air Traffic Controller" -e sh -c 'atc ; echo;echo PRESS ENTER;read line'
++ "&Crimson Fields%menu/item.xpm%" Exec    /usr/games/crimson
++ "&LinCity NG%menu/item.xpm%" Exec    /usr/games/lincity-ng
++ "&Sail%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Sail" -e sail
+
+DestroyMenu "MenuFvwmMenuSystem/Games/Tools"
+AddToMenu "MenuFvwmMenuSystem/Games/Tools" "Tools" Title
++ "&Rclock%menu/item.xpm%" Exec    /usr/bin/rclock
+
+DestroyMenu "MenuFvwmMenuSystem/Games/Toys"
+AddToMenu "MenuFvwmMenuSystem/Games/Toys" "Toys" Title
++ "&Cairo-Clock%menu/item.xpm%" Exec    /usr/bin/cairo-clock
++ "&dclock%menu/item.xpm%" Exec    /usr/bin/dclock
++ "&Flip Screen%menu/item.xpm%" Exec    /usr/games/xflip
++ "&idesk%menu/item.xpm%" Exec    /usr/bin/idesk
++ "&Linux Logo%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Linux Logo" -e /etc/init.d/linuxlogo display
++ "&Meltdown%menu/item.xpm%" Exec    /usr/games/meltdown
++ "&Oclock%menu/item.xpm%" Exec    oclock
++ "&Rain%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Rain" -e rain
++ "wmMatrix%menu/item.xpm%" Exec    /usr/bin/wmmatrix
++ "wmtictactoe%menu/item.xpm%" Exec    /usr/games/wmtictactoe -q
++ "&Worms%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Worms" -e worms
++ "&Xclock (analog)%menu/item.xpm%" Exec    xclock -analog
++ "Xcloc&k (digital)%menu/item.xpm%" Exec    xclock -digital -update 1
++ "xd&aliclock%menu/clock.xpm%" Exec    xdaliclock -cycle
++ "X&eyes%menu/item.xpm%" Exec    xeyes
++ "xfi&shtank - start%menu/item.xpm%" Exec    xfishtank
++ "xfis&htank - stop%menu/item.xpm%" Exec    killall -KILL xfishtank
++ "Xlo&go%menu/item.xpm%" Exec    xlogo
++ "x&tartan%menu/item.xpm%" Exec    /usr/bin/xtartan
+
+DestroyMenu "MenuFvwmMenuSystem/Games"
+AddToMenu "MenuFvwmMenuSystem/Games" "Games" Title
++ "&Action%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Games/Action"
++ "A&dventure%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Games/Adventure"
++ "&Blocks%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Games/Blocks"
++ "B&oard%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Games/Board"
++ "&Card%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Games/Card"
++ "&Puzzles%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Games/Puzzles"
++ "&Simulation%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Games/Simulation"
++ "St&rategy%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Games/Strategy"
++ "&Tools%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Games/Tools"
++ "To&ys%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Games/Toys"
+
+DestroyMenu "MenuFvwmMenuSystem/Help"
+AddToMenu "MenuFvwmMenuSystem/Help" "Help" Title
++ "&Debian Reference%menu/item.xpm%" Exec    /usr/bin/debian-reference
++ "&Info%menu/item.xpm%" Exec /usr/bin/X11/xterm -T "Info" -e info
++ "&TeXdoctk%menu/item.xpm%" Exec    /usr/bin/texdoctk
++ "&Xman%menu/item.xpm%" Exec    xman
++ "&yelp%menu/item.xpm%" Exec    /usr/bin/yelp
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Lock/Assorted"
+AddToMenu "MenuFvwmMenuSystem/Screen/Lock/Assorted" "Assorted" Title
++ "&Anemone%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode anemone
++ "&Ball%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode ball
++ "B&lot%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode blot
++ "B&ounce%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode bounce
++ "B&ubble%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode bubble
++ "&Clock%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode clock
++ "Crystal%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode crystal
++ "&Daisy%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode daisy
++ "Dclock%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode dclock
++ "Decay%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode decay
++ "Deco%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode deco
++ "Deluxe%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode deluxe
++ "&Eyes%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode eyes +trackmouse
++ "E&yesptr%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode eyes -trackmouse
++ "&Fiberlamp%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode fiberlamp
++ "F&zort%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode fzort
++ "&Goop%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode goop
++ "&Juggle%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode juggle
++ "&Marquee%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode marquee
++ "Matrix%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode matrix
++ "Munc&h%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode munch
++ "&Nose%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode nose
++ "&Pacman%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode pacman
++ "Pyro%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode pyro +use3d
++ "Pyro&2%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode pyro2
++ "Pyro&3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode pyro -use3d
++ "&Rain%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode rain
++ "Roll%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode roll
++ "&Slip%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode slip
++ "Solitare%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode solitaire +trackmouse
++ "Solitareptr%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode solitaire -trackmouse
++ "Starfish%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode starfish -install
++ "Swarm%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode swarm +trackmouse
++ "Swarmptr%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode swarm -trackmouse
++ "Sw&irl%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode swirl -install
++ "&T3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode t3d
++ "Tetris%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode tetris
++ "Tube%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode tube -install
++ "&Worm%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode worm +use3d
++ "Worm3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode worm -use3d
++ "&Xcl%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode xcl
++ "Xjac&k%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode xjack
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Lock/Automata"
+AddToMenu "MenuFvwmMenuSystem/Screen/Lock/Automata" "Automata" Title
++ "&Ant%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode ant -neighbors 4 +truchet
++ "A&nt3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode ant3d
++ "Ant &Truchet%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode ant -neighbors 4 -truchet
++ "&Bee%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode ant -neighbors 6 +truchet
++ "B&ee Truchet%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode ant -neighbors 6 -truchet
++ "B&ug%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode bug
++ "&Demon%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode demon
++ "D&ilemma%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode dilemma
++ "&Life%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode life
++ "Li&fe1d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode life1d
++ "Life&3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode life3d
++ "Life &Callahan%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode life -callahan -size 7
++ "L&oop%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode loop
++ "&Petri%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode petri
++ "&Random%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode random -modelist allautomata -fullrandom -neighbors 0
++ "&Voters%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode voters
++ "&Wator%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode wator
++ "Wire%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode wire
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Lock/Fractal"
+AddToMenu "MenuFvwmMenuSystem/Screen/Lock/Fractal" "Fractal" Title
++ "&Coral%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode coral
++ "&Discrete%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode discrete
++ "Dr&agon%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode dragon
++ "Drift%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode drift -fullrandom
++ "&Euler2d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode euler2d
++ "&Flame%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode flame
++ "Flo&w%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode flow
++ "F&orest%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode forest
++ "&Hop%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode hop -fullrandom
++ "&IFS%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode ifs
++ "&Julia%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode julia +trackmouse
++ "J&uliaptr%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode julia -trackmouse
++ "&Kumppa%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode kumppa
++ "&Lightning%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode lightning
++ "L&yapunov%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode lyapunov -install
++ "&Mandelbrot%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode mandelbrot -install
++ "Mou&ntain%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode mountain
++ "&Random%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode random -modelist allfractal -fullrandom
++ "&Sierpinski%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode sierpinski
++ "Stran&ge%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode strange
++ "&Thornbird%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode thornbird
++ "Triangle%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode triangle
++ "Turtle%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode turtle
++ "&Vines%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode vines
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Lock/Geometry"
+AddToMenu "MenuFvwmMenuSystem/Screen/Lock/Geometry" "Geometry" Title
++ "&Apollonian%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode apollonian
++ "&Braid%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode braid
++ "&Fadeplot%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode fadeplot
++ "&Helix%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode helix -fullrandom
++ "H&yper%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode hyper
++ "&Ico%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode ico
++ "&Kaleid%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode kaleid
++ "&Laser%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode laser
++ "Lisa%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode lisa
++ "Lissie%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode lissie
++ "&Penrose%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode penrose +ammann
++ "Penrose A&mmann%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode penrose -ammann
++ "P&etal%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode petal
++ "P&olyominoes%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode polyominoes
++ "&Qix%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode qix +complete
++ "Qix &complete%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode qix -complete
++ "&Random%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode random -modelist allgeometry -fullrandom
++ "Rotor%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode rotor
++ "&Shape%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode shape
++ "Sphere%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode sphere
++ "Spiral%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode spiral
++ "Spline%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode spline
++ "&Tik_Tak%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode tik_tak
++ "To&neclock%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode toneclock
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Lock/GLmodes"
+AddToMenu "MenuFvwmMenuSystem/Screen/Lock/GLmodes" "GLmodes" Title
++ "&Atlantis%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode atlantis
++ "Atunnels%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode atunnels
++ "&Biof%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode biof
++ "B&ubble3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode bubble3d
++ "&Cage%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode cage
++ "&Fire%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode fire
++ "G&ears%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode gears
++ "&GL-Planet%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode glplanet
++ "&Invert%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode invert
++ "&Juggler3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode juggler3d
++ "&Lament%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode lament
++ "&Moebius%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode moebius
++ "M&olecule%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode molecule
++ "Morp&h3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode morph3d
++ "&Noof%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode noof
++ "&Pipes%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode pipes
++ "&Random%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode random -modelist allgl -fullrandom
++ "Rubik%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode rubik
++ "&Sballs%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode sballs
++ "Sierpinski3&d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode sierpinski3d
++ "S&kewb%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode skewb
++ "Sproingies%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode sproingies
++ "Stairs%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode stairs
++ "Super&quadrics%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode superquadrics
++ "&Text3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode text3d -message "$LOGNAME"
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Lock/MarqueeMessage"
+AddToMenu "MenuFvwmMenuSystem/Screen/Lock/MarqueeMessage" "MarqueeMessage" Title
++ "&Back Soon%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode marquee -message "$LOGNAME will be back soon."
++ "&Overnight%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode marquee -message "$LOGNAME will be back in the morning."
++ "&Rude%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode marquee -message "$LOGNAME not here, please go away!"
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Lock/NoseMessage"
+AddToMenu "MenuFvwmMenuSystem/Screen/Lock/NoseMessage" "NoseMessage" Title
++ "&Back Soon%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode nose -message "$LOGNAME will be back soon."
++ "&Overnight%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode nose -message "$LOGNAME will be back in the morning."
++ "&Rude%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode nose -message "$LOGNAME not here, please go away!"
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Lock/Space"
+AddToMenu "MenuFvwmMenuSystem/Screen/Lock/Space" "Space" Title
++ "&Bouboule%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode bouboule +use3d
++ "B&ouboule3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode bouboule -use3d
++ "&Galaxy%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode galaxy
++ "Gr&av%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode grav +trail +decay
++ "Grav &Decay%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode grav -decay
++ "Grav &Trail%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode grav -trail
++ "&Random Space%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode random -modelist allspace
++ "Ro&ck%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode star -rock
++ "&Scooter%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode scooter
++ "S&pace%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode space
++ "Star%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode star +rock +use3d +trek 0
++ "Star&3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode star -use3d
++ "Star Tr&ek%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode star -trek 100
++ "&World%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode world
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Lock/Special"
+AddToMenu "MenuFvwmMenuSystem/Screen/Lock/Special" "Special" Title
++ "&Blank%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode blank
++ "B&omb%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode bomb
++ "&Random 3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode random -modelist all3d -use3d -fullrandom
++ "R&andom all%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode random -modelist all -fullrandom -neighbors 0
++ "Ra&ndom nice%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode random -modelist allnice -fullrandom -neighbors 0
++ "Random &ptr%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode random -modelist allmouse -trackmouse -fullrandom
++ "Random &standard%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode random -modelist all-allgl -fullrandom -neighbors 0
++ "Random &write%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode random -modelist allwrite -install -fullrandom
++ "&Transparent%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode blank -geometry 1x1 -enablesaver
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Lock/XjackMessage"
+AddToMenu "MenuFvwmMenuSystem/Screen/Lock/XjackMessage" "XjackMessage" Title
++ "&Crazy Boy%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode xjack -message "All work and no play makes $LOGNAME a dull boy."
++ "Crazy &Girl%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode xjack -message "All work and no play makes $LOGNAME a dull girl."
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Lock/XPM"
+AddToMenu "MenuFvwmMenuSystem/Screen/Lock/XPM" "XPM" Title
++ "&Bat%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode bat
++ "&Flag%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode flag
++ "&Image%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode image
++ "&Life%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode life
++ "Lif&e1d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode life1d
++ "&Maze%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode maze
++ "&Puzzle%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode puzzle
++ "&Random%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -mode random -modelist allxpm -fullrandom
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Lock"
+AddToMenu "MenuFvwmMenuSystem/Screen/Lock" "Lock" Title
++ "&Assorted%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Lock/Assorted"
++ "A&utomata%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Lock/Automata"
++ "&Fractal%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Lock/Fractal"
++ "G&eometry%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Lock/Geometry"
++ "&GLmodes%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Lock/GLmodes"
++ "&MarqueeMessage%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Lock/MarqueeMessage"
++ "&NoseMessage%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Lock/NoseMessage"
++ "&Space%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Lock/Space"
++ "S&pecial%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Lock/Special"
++ "X&jackMessage%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Lock/XjackMessage"
++ "&XPM%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Lock/XPM"
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Locking"
+AddToMenu "MenuFvwmMenuSystem/Screen/Locking" "Locking" Title
++ "&Lock Screen (XScreenSaver)%menu/item.xpm%" Exec    /usr/bin/xscreensaver-command -lock
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Save/Assorted"
+AddToMenu "MenuFvwmMenuSystem/Screen/Save/Assorted" "Assorted" Title
++ "&Anemone%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode anemone
++ "&Ball%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode ball
++ "B&lot%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode blot
++ "B&ounce%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode bounce
++ "B&ubble%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode bubble
++ "&Clock%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode clock
++ "Crystal%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode crystal
++ "&Daisy%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode daisy
++ "Dclock%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode dclock
++ "Decay%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode decay
++ "Deco%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode deco
++ "Deluxe%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode deluxe
++ "&Eyes%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode eyes +trackmouse
++ "E&yesptr%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode eyes -trackmouse
++ "&Fiberlamp%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode fiberlamp
++ "F&zort%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode fzort
++ "&Goop%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode goop
++ "&Juggle%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode juggle
++ "&Marquee%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode marquee
++ "Matrix%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode matrix
++ "Munc&h%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode munch
++ "&Nose%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode nose
++ "&Pacman%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode pacman
++ "Pyro%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode pyro +use3d
++ "Pyro&2%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode pyro2
++ "Pyro&3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode pyro -use3d
++ "&Rain%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode rain
++ "Roll%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode roll
++ "&Slip%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode slip
++ "Solitare%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode solitaire +trackmouse
++ "Solitareptr%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode solitaire -trackmouse
++ "Starfish%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode starfish -install
++ "Swarm%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode swarm +trackmouse
++ "Swarmptr%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode swarm -trackmouse
++ "Sw&irl%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode swirl -install
++ "&T3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode t3d
++ "Tetris%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode tetris
++ "Tube%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode tube -install
++ "&Worm%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode worm +use3d
++ "Worm3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode worm -use3d
++ "&Xcl%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode xcl
++ "Xjac&k%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode xjack
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Save/Automata"
+AddToMenu "MenuFvwmMenuSystem/Screen/Save/Automata" "Automata" Title
++ "&Ant%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode ant -neighbors 4 +truchet
++ "A&nt3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode ant3d
++ "Ant &Truchet%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode ant -neighbors 4 -truchet
++ "&Bee%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode ant -neighbors 6 +truchet
++ "B&ee Truchet%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode ant -neighbors 6 -truchet
++ "B&ug%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode bug
++ "&Demon%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode demon
++ "D&ilemma%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode dilemma
++ "&Life%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode life
++ "Li&fe1d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode life1d
++ "Life&3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode life3d
++ "Life &Callahan%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode life -callahan -size 7
++ "L&oop%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode loop
++ "&Petri%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode petri
++ "&Random%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allautomata -fullrandom -neighbors 0
++ "&Voters%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode voters
++ "&Wator%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode wator
++ "Wire%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode wire
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Save/Fractal"
+AddToMenu "MenuFvwmMenuSystem/Screen/Save/Fractal" "Fractal" Title
++ "&Coral%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode coral
++ "&Discrete%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode discrete
++ "Dr&agon%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode dragon
++ "Drift%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode drift -fullrandom
++ "&Euler2d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode euler2d
++ "&Flame%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode flame
++ "Flo&w%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode flow
++ "F&orest%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode forest
++ "&Hop%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode hop -fullrandom
++ "&IFS%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode ifs
++ "&Julia%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode julia +trackmouse
++ "J&uliaptr%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode julia -trackmouse
++ "&Kumppa%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode kumppa
++ "&Lightning%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode lightning
++ "L&yapunov%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode lyapunov -install
++ "&Mandelbrot%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode mandelbrot -install
++ "Mou&ntain%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode mountain
++ "&Random%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allfractal -fullrandom
++ "&Sierpinski%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode sierpinski
++ "Stran&ge%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode strange
++ "&Thornbird%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode thornbird
++ "Triangle%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode triangle
++ "Turtle%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode turtle
++ "&Vines%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode vines
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Save/Geometry"
+AddToMenu "MenuFvwmMenuSystem/Screen/Save/Geometry" "Geometry" Title
++ "&Apollonian%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode apollonian
++ "&Braid%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode braid
++ "&Fadeplot%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode fadeplot
++ "&Helix%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode helix -fullrandom
++ "H&yper%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode hyper
++ "&Ico%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode ico
++ "&Kaleid%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode kaleid
++ "&Laser%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode laser
++ "Lisa%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode lisa
++ "Lissie%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode lissie
++ "&Penrose%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode penrose +ammann
++ "Penrose A&mmann%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode penrose -ammann
++ "P&etal%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode petal
++ "P&olyominoes%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode polyominoes
++ "&Qix%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode qix +complete
++ "Qix &complete%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode qix -complete
++ "&Random%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allgeometry
++ "Rotor%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode rotor
++ "&Shape%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode shape
++ "Sphere%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode sphere
++ "Spiral%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode spiral
++ "Spline%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode spline
++ "&Tik_Tak%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode tik_tak
++ "To&neclock%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode toneclock
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Save/GLmodes"
+AddToMenu "MenuFvwmMenuSystem/Screen/Save/GLmodes" "GLmodes" Title
++ "&Atlantis%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode atlantis
++ "Atunnels%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode atunnels
++ "&Biof%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode biof
++ "B&ubble3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode bubble3d
++ "&Cage%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode cage
++ "&Fire%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode fire
++ "G&ears%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode gears
++ "&GL-Planet%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode glplanet
++ "&Juggler3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode juggler3d
++ "&Lament%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode lament
++ "&Moebius%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode moebius
++ "M&olecule%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode molecule
++ "Morp&h3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode morph3d
++ "&Noof%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode noof
++ "&Pipes%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode pipes
++ "&Random%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allgl -fullrandom
++ "Rubik%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode rubik
++ "&Sballs%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode sballs
++ "S&ierpinski3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode sierpinski3d
++ "S&kewb%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode skewb
++ "Sproingies%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode sproingies
++ "Stairs%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode stairs
++ "Super&quadrics%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode superquadrics
++ "&Text3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode text3d -message "$LOGNAME"
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Save/MarqueeMessage"
+AddToMenu "MenuFvwmMenuSystem/Screen/Save/MarqueeMessage" "MarqueeMessage" Title
++ "&Available%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode marquee -message "Hey, I'm available now!"
++ "&Brilliant!%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode marquee -message "WOW! $LOGNAME, You're Brilliant!"
++ "&Love You%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode marquee -message "You know, I Love You $LOGNAME."
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Save/NoseMessage"
+AddToMenu "MenuFvwmMenuSystem/Screen/Save/NoseMessage" "NoseMessage" Title
++ "&Available%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode nose -message "Hey, I'm available now!"
++ "&Brilliant!%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode nose -message "WOW! $LOGNAME, You're Brilliant!"
++ "&Love You%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode nose -message "You know, I Love You $LOGNAME."
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Save/Space"
+AddToMenu "MenuFvwmMenuSystem/Screen/Save/Space" "Space" Title
++ "&Bouboule%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode bouboule +use3d
++ "B&ouboule3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode bouboule -use3d
++ "&Galaxy%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode galaxy
++ "Gr&av%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode grav +trail +decay
++ "Grav &Decay%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode grav -decay
++ "Grav &Trail%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode grav -trail
++ "&Random Space%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allspace
++ "Ro&ck%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode star -rock
++ "&Scooter%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode scooter
++ "S&pace%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode space
++ "Star%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode star +rock +use3d +trek 0
++ "Star&3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode star -use3d
++ "Star Tr&ek%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode star -trek 100
++ "&World%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode world
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Save/Special"
+AddToMenu "MenuFvwmMenuSystem/Screen/Save/Special" "Special" Title
++ "&Blank%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode blank
++ "B&omb%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode bomb
++ "&Random 3d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist all3d -use3d -fullrandom
++ "R&andom all%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist all -fullrandom -neighbors 0
++ "Ra&ndom nice%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allnice -fullrandom -neighbors 0
++ "Random &ptr%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allmouse -trackmouse -fullrandom
++ "Random &standard%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist all-allgl -fullrandom -neighbors 0
++ "Random &write%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allwrite -fullrandom
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Save/XPM"
+AddToMenu "MenuFvwmMenuSystem/Screen/Save/XPM" "XPM" Title
++ "&Bat%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode bat
++ "&Flag%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode flag
++ "&Image%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode image
++ "&Life%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode life
++ "Lif&e1d%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode life1d
++ "&Maze%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode maze
++ "&Puzzle%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode puzzle
++ "&Random%menu/item.xpm%" Exec    /usr/bin/xlock -remote -nice 19 -nolock -mode random -modelist allxpm -fullrandom
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Save"
+AddToMenu "MenuFvwmMenuSystem/Screen/Save" "Save" Title
++ "&Assorted%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Save/Assorted"
++ "A&utomata%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Save/Automata"
++ "&Fractal%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Save/Fractal"
++ "G&eometry%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Save/Geometry"
++ "&GLmodes%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Save/GLmodes"
++ "&MarqueeMessage%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Save/MarqueeMessage"
++ "&NoseMessage%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Save/NoseMessage"
++ "&Space%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Save/Space"
++ "S&pecial%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Save/Special"
++ "&XPM%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Save/XPM"
+
+DestroyMenu "MenuFvwmMenuSystem/Screen/Saving"
+AddToMenu "MenuFvwmMenuSystem/Screen/Saving" "Saving" Title
++ "&Activate ScreenSaver (Next)%menu/item.xpm%" Exec    /usr/bin/xscreensaver-command -next
++ "Activate ScreenSaver (&Previous)%menu/item.xpm%" Exec    /usr/bin/xscreensaver-command -prev
++ "A&ctivate ScreenSaver (Random)%menu/item.xpm%" Exec    /usr/bin/xscreensaver-command -activate
++ "&Demo Screen Hacks%menu/item.xpm%" Exec    /usr/bin/xscreensaver-command -demo
++ "D&isable XScreenSaver%menu/item.xpm%" Exec    /usr/bin/xscreensaver-command -exit
++ "&Enable XScreenSaver%menu/item.xpm%" Exec    /usr/bin/xscreensaver
++ "&Reinitialize XScreenSaver%menu/item.xpm%" Exec    /usr/bin/xscreensaver-command -restart
++ "&ScreenSaver Preferences%menu/item.xpm%" Exec    /usr/bin/xscreensaver-command -prefs
++ "&XStarfish%menu/item.xpm%" Exec    /usr/bin/xstarfish
+
+DestroyMenu "MenuFvwmMenuSystem/Screen"
+AddToMenu "MenuFvwmMenuSystem/Screen" "Screen" Title
++ "&Lock%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Lock"
++ "L&ocking%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Locking"
++ "&Save%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Save"
++ "S&aving%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen/Saving"
+
+DestroyMenu "MenuFvwmMenuSystem/Window_Managers"
+AddToMenu "MenuFvwmMenuSystem/Window_Managers" "Window Managers" Title
++ "&FVWM%menu/item.xpm%" Restart /usr/bin/fvwm2
++ "&Mwm%menu/item.xpm%" Restart /usr/bin/mwm
++ "&Twm%menu/item.xpm%" Restart twm
++ "&Window Maker%menu/item.xpm%" Restart /usr/bin/wmaker
+
+DestroyMenu "MenuFvwmMenuSystem"
+AddToMenu "MenuFvwmMenuSystem" "Debian" Title
++ "&Applications%menu/programs.xpm%" PopUp "MenuFvwmMenuSystem/Applications"
++ "&FVWM Modules%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/FVWM_Modules"
++ "&Games%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Games"
++ "&Help%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Help"
++ "&Screen%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Screen"
++ "&Window Managers%menu/folder.xpm%" PopUp "MenuFvwmMenuSystem/Window_Managers"
+
