@@ -287,7 +287,8 @@ export LC_ALL="en_US.UTF-8"
 export LC_TYPE="en_US.UTF-8"
 export FVWM_USERDIR=$default_dir/etc/X11/fvwm
 
-(nautilus -q && nice nautilus --no-desktop) &
+#(nautilus -q && nice nautilus --no-desktop) &
+#(nemo -q && nice nemo --no-desktop) &
 # Start some shelltools and the window manager
 if test -x /usr/bin/fvwm2; then
     #fvwm2 -f "FvwmM4 -m4prog /usr/bin/m4 .fvwm2rc" &
