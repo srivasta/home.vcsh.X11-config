@@ -305,6 +305,7 @@ fi
 # xcompmgr -c -C -F -f &
 # transset-df 0.5
 # xkeycaps -kbd ms104 &
+nice xsettingsd &
 
 uxterm -name console -geometry \=78x5+2748+176 &
 uxterm  -iconic +ai -ut -T Work1 -fg Snow -bd GoldenRod -bg Black -geometry \=122x52+915+170 &
