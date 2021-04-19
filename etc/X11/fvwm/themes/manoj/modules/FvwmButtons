@@ -69,8 +69,12 @@ KillModule FvwmButtons
 *FvwmButtons(2x1, Title Util,         Action "Popup Utilities")
 *FvwmButtons(2x1, Title Win,        Action "Popup  Window-Ops" )
 *FvwmButtons(2x1, Title Misc,          Action "Function general_ops_func")
-*FvwmButtons(20x1,Size 370 20,Swallow(UseOld,NoKill,Respawn) "xbuffy" \
-    `Exec xbuffy -fn "$[fvwm_default_font]" -geometry 369 -bg $[bg.cs12] -fg $[fg.cs12] -fill -center -horiz -boxfile ~/etc/xbuffy &`)
+*FvwmButtons(2x1, Title Lutr,          Action `Exec "Lutris" exec lutris`)
+*FvwmButtons(2x1, Title Mmbl,          Action `Exec "Mumble*" exec mumble`)
+*FvwmButtons(2x1, Title Qemu,          Action `Exec "VirtuaL Machine Manager" exec virt-manager`)
+*FvwmButtons(2x1, Title Pavu,          Action `Exec "Volume Control" exec pavucontrol`)
+*FvwmButtons(12x1,Size 223 12,Swallow(UseOld,NoKill,Respawn) "xbuffy" \
+    `Exec xbuffy -fn "$[fvwm_default_font]" -geometry 222 -bg $[bg.cs12] -fg $[fg.cs12] -fill -center -horiz -boxfile ~/etc/xbuffy &`)
 *FvwmButtons(End)
 
 

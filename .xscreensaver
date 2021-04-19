@@ -1,6 +1,6 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.05 for srivasta on Thu Aug  6 23:35:22 2009.
-# http://www.jwz.org/xscreensaver/
+# Written by xscreensaver-demo 5.42 for srivasta on Tue Jun 23 13:27:33 2020.
+# https://www.jwz.org/xscreensaver/
 
 timeout:	0:10:00
 cycle:		0:05:00
@@ -24,7 +24,8 @@ fadeTicks:	20
 captureStderr:	True
 ignoreUninstalledPrograms:False
 font:		*-medium-r-*-140-*-m-*
-dpmsEnabled:	True
+dpmsEnabled:	False
+dpmsQuickOff:	False
 dpmsStandby:	0:30:00
 dpmsSuspend:	1:00:00
 dpmsOff:	2:00:00
@@ -328,15 +329,61 @@ programs:								      \
   GL: 	  "Hypnowheel (dense)" 	hypnowheel -root -count 3 -layers 50	    \n\
   GL: 	"Hypnowheel (trifoil)" 	hypnowheel -root -count 3 -layers 2	      \
 				  -speed 9 -twist 9 -wander		    \n\
+				attraction -root			    \n\
+				qix -root				    \n\
+				unicode -root				    \n\
+				ripples -root				    \n\
+				zoom -root				    \n\
+  GL: 				surfaces -root				    \n\
+  GL: 				pinion -root				    \n\
+  GL: 				photopile -root				    \n\
+  GL: 				skytentacles -root			    \n\
+  GL: 				rubikblocks -root			    \n\
+  GL: 				companioncube -root			    \n\
+  GL: 				hilbert -root				    \n\
+  GL: 				tronbit -root				    \n\
+  GL: 				geodesic -root				    \n\
+				hexadrop -root				    \n\
+  GL: 				kaleidocycle -root			    \n\
+  GL: 				quasicrystal -root			    \n\
+  GL: 				unknownpleasures -root			    \n\
+				binaryring -root			    \n\
+  GL: 				cityflow -root				    \n\
+  GL: 				geodesicgears -root			    \n\
+  GL: 				projectiveplane -root			    \n\
+  GL: 				romanboy -root				    \n\
+				tessellimage -root			    \n\
+  GL: 				winduprobot -root			    \n\
+  GL: 				splitflap -root				    \n\
+  GL: 				cubestack -root				    \n\
+  GL: 				cubetwist -root				    \n\
+  GL: 				discoball -root				    \n\
+  GL: 				dymaxionmap -root			    \n\
+  GL: 				energystream -root			    \n\
+  GL: 				hexstrut -root				    \n\
+  GL: 				hydrostat -root				    \n\
+  GL: 				raverhoop -root				    \n\
+  GL: 				splodesic -root				    \n\
+  GL: 				unicrud -root				    \n\
+  GL: 				esper -root				    \n\
+  GL: 				vigilance -root				    \n\
+  GL: 				crumbler -root				    \n\
+				filmleader -root			    \n\
+				glitchpeg -root				    \n\
+  GL: 				handsy -root				    \n\
+  GL: 				maze3d -root				    \n\
+  GL: 				peepers -root				    \n\
+  GL: 				razzledazzle -root			    \n\
+				vfeedback -root				    \n\
 
 
 pointerPollTime:    0:00:05
 pointerHysteresis:  10
 windowCreationTimeout:0:00:30
 initialDelay:	0:00:00
-sgiSaverExtension:  True
-xidleExtension:	True
 GetViewPortIsFullOfLies:False
 procInterrupts:	True
+xinputExtensionDev: False
 overlayStderr:	True
+authWarningSlack:   20
 
