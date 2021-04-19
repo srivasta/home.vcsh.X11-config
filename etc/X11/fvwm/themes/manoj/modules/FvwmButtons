@@ -79,3 +79,12 @@ KillModule FvwmButtons
 
 
 *FvwmButtons(End)
+
+
+#-*FvwmButtons(20x1,Size 370 20,Swallow(UseOld,NoKill,Respawn) "xbuffy" \
+#-    `Exec xbuffy -fn "$[fvwm_default_font]" -geometry 369 -bg $[bg.cs12] -fg $[fg.cs12] -fill -center -horiz -boxfile ~/etc/xbuffy &`)
+#+*FvwmButtons(10x1,Size 180 20,Swallow(UseOld,NoKill,Respawn) "xbuffy" \
+#+    `Exec xbuffy -fn "$[fvwm_default_font]" -geometry 179 -bg $[bg.cs12] -fg $[fg.cs12] -fill -center -horiz -boxfile ~/etc/xbuffy &`)
+#+*FvwmButtons(10x1,Size 180 20,Swallow(UseOld,NoKill,Respawn) "stalonetray" \
+#+    `Exec stalonetray &`)
+# *FvwmButtons(End)
