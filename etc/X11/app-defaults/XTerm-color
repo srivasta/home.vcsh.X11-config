@@ -1,8 +1,8 @@
 
 !
 ! A set of wonderful color setup from Jonathan Kamens, jik@Athena.MIT.EDU
-! Write your thank you message to him at the address shown above. 
-! 
+! Write your thank you message to him at the address shown above.
+!
 !' To see how neat they are, press your keyboard's Ctrl key, then press
 !' your mouse's left, middle, and right button in turn.
 !
@@ -46,6 +46,35 @@ XTerm*scrollKey: on
 !XTerm*VT100*font5:              -*-*-bold-*-*-*-15-*-*-*-c-*-*-*
 !XTerm*fontMenu.font6.label:    Huge
 !XTerm*VT100*font6:              12x24
+
+! Allow Emacs to detect that 256 colors are available in xterm.
+XTerm.termName: xterm-256color
+
+! Make the 'Alt' work as 'Meta' in Emacs in xterm.
+XTerm*metaSendsEscape: true
+
+! Allow Emacs to add 'killed' text to the system clipboard from xterm.
+XTerm*allowWindowOps: true
+
+
+! Disable OSC codes that read the system clipboard for security reasons.
+XTerm*disallowedWindowOps: GetSelection
+
+
+! Make Ctrl-Shift-v paste from the system clipboard.
+XTerm*VT100*translations: #override \n\
+    Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+
+
+
+! Apply the same settings as above if xterm is launched via the uxterm wrapper.
+! Leading wildcards like *XTerm should work, but for some reason do not.
+UXTerm.termName: xterm-256color
+UXTerm*metaSendsEscape: true
+UXTerm*allowWindowOps: true
+UXTerm*disallowedWindowOps: GetSelection
+UXTerm*VT100*translations: #override \n\
+    Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
 
 !XTerm*foreground:                       yellow
 XTerm*foreground:                       light cyan
