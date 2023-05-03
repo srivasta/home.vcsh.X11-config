@@ -346,4 +346,4 @@ Emacs*EmacsFrame.ximBackground: white
 ! XIM fontset (defaults to system fontset default)
 ! Emacs*EmacsFrame.FontSet: -dt-interface user-medium-r-normal-s*-*-*-*-*-*-*-*-*
 
-#endif
+! #endif
